@@ -5,5 +5,29 @@
   "main": "index.js",
   "repository": "git@github.com:terenceodonoghue/velocity-ui.git",
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "build-storybook": "build-storybook -c .storybook -o .out -s ./static",
+    "lint": "eslint --ext .js,.jsx ./",
+    "storybook": "start-storybook -s ./static --quiet "
+  },
+  "dependencies": {
+    "@emotion/babel-preset-css-prop": "^10.0.9",
+    "@emotion/core": "^10.0.9",
+    "@emotion/styled": "^10.0.9",
+    "@storybook/react": "^5.0.3",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-scripts": "^2.1.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "babel-loader": "^8.0.5",
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "webpack": "^4.29.6"
+  }
 }

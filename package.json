@@ -1,0 +1,9 @@
+{
+  "name": "velocity-ui",
+  "version": "1.0.0",
+  "description": "React components that implement InVision's Velocity UI kit",
+  "main": "index.js",
+  "repository": "git@github.com:terenceodonoghue/velocity-ui.git",
+  "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
+  "license": "MIT"
+}

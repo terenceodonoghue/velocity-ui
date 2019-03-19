@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="22px" viewBox="0 0 28 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Element/Icon/Mail</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4.69841318,24.7026531 L4.69841318,8.17665964 L16.0046911,17.3025931 L27.3015892,8.17665964 L27.3015892,24.7026531 L4.69841318,24.7026531 Z M25.5238095,7.31993703 L16.0634832,14.7696725 L6.47619048,7.31993703 L25.5238095,7.31993703 Z M26.9090909,5.33333333 L5.09090909,5.33333333 C3.75393939,5.33333333 2.66666667,6.39644444 2.66666667,7.7037037 L2.66666667,24.2962963 C2.66666667,25.6035556 3.75393939,26.6666667 5.09090909,26.6666667 L26.9090909,26.6666667 C28.2460606,26.6666667 29.3333333,25.6035556 29.3333333,24.2962963 L29.3333333,7.7037037 C29.3333333,6.39644444 28.2460606,5.33333333 26.9090909,5.33333333 L26.9090909,5.33333333 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Component/Navigation/Top-Bar" transform="translate(-1162.000000, -31.000000)">
+            <g id="Group" transform="translate(1110.000000, 20.000000)">
+                <g id="icon-messages" transform="translate(50.000000, 3.000000)">
+                    <g id="icon-Chat" transform="translate(0.000000, 3.000000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mail" fill="#BFC5D2" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

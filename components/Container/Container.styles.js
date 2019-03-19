@@ -1,0 +1,21 @@
+import styled from '@emotion/styled';
+
+export const Card = styled.div`
+  display: block;
+  border-radius: 1px;
+  border: solid 1px rgba(46, 91, 255, 0.08);
+  box-shadow: 0 10px 20px 0 rgba(46, 91, 255, 0.07);
+  height: ${props => props.height};
+  padding: 32px 24px;
+  width: ${props => props.width};
+  background-color: var(--color-white);
+`;
+
+export const Title = styled.h2`
+  margin: 0 0 24px 0;
+  color: var(--color-bluey-grey);
+  font-size: 13px;
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+`;

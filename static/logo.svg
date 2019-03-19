@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="102px" height="28px" viewBox="0 0 102 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Base/Logo</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Base/Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Logo-Text-" transform="translate(28.000000, 1.000000)" fill="#2E384D" font-family="Rubik-Medium, Rubik" font-size="19" font-weight="400" letter-spacing="-0.475">
+            <text id="Velocity">
+                <tspan x="0" y="18">velocity</tspan>
+            </text>
+        </g>
+        <g id="Loco-Icon-">
+            <path d="M14,0 L14,9.33333333 C14,17.0653198 7.7319865,23.3333333 0,23.3333333 L3.55271368e-15,14 C2.60581843e-15,6.2680135 6.2680135,1.42034288e-15 14,0 Z" id="Rectangle" fill="#2CC2A5"></path>
+            <path d="M21.1361667,5.78828201 L17.9439787,14.5587465 C15.2994836,21.8244371 7.26569066,25.5706563 3.19744231e-14,22.9261612 L3.192188,14.1556967 C5.83668313,6.89000604 13.870476,3.14378688 21.1361667,5.78828201 Z" id="Rectangle" fill="#2E5BFF"></path>
+        </g>
+    </g>
+</svg>

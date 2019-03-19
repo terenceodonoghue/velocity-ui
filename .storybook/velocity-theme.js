@@ -8,8 +8,8 @@ export default create({
   colorSecondary: '#2e5bff',
 
   // UI
-  appBg: '#f4f6fc',
-  appContentBg: 'white',
+  appBg: 'white',
+  appContentBg: '#f4f6fc',
   appBorderColor: 'rgba(46, 91, 255, 0.08)',
   appBorderRadius: '1px',
 
@@ -35,5 +35,5 @@ export default create({
   brandTitle: 'Velocity',
   brandUrl:
     'https://www.invisionapp.com/inside-design/design-resources/design-system-dashboard-ui-kit',
-  brandImage: './logo.png',
+  brandImage: './logo.svg',
 });

@@ -1,3 +1,15 @@
 {
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "root": ["./"],
+        "alias": {
+          "components": "./components",
+          "modules": "./modules"
+        }
+      }
+    ]
+  ],
   "presets": ["@emotion/babel-preset-css-prop"]
 }

@@ -4,12 +4,7 @@ import { storiesOf } from '@storybook/react';
 import faker from 'faker';
 import Profile from './Profile';
 
-const stories = storiesOf('Modules|User Profile', module);
-stories.addParameters({
-  options: { showAddonPanel: false },
-});
-
-stories.add('Sidebar', () => (
+storiesOf('Modules|User Profile', module).add('Sidebar', () => (
   <Profile.Sidebar
     avatarSrc={faker.image.avatar()}
     bio={faker.lorem.paragraph()}

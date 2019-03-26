@@ -9,12 +9,7 @@ const MAX_REVENUE = 30000;
 const MIN_TRIPS = 0;
 const MAX_TRIPS = 15000;
 
-const stories = storiesOf('Modules|Analytics', module);
-stories.addParameters({
-  options: { showAddonPanel: false },
-});
-
-stories.add('Revenue', () => (
+storiesOf('Modules|Analytics', module).add('Revenue', () => (
   <Analytics.Revenue
     data={[
       {

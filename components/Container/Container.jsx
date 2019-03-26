@@ -3,9 +3,9 @@ import { jsx } from '@emotion/core';
 import PropTypes from 'prop-types';
 import * as S from './Container.styles';
 
-const Card = ({ children, title, ...rest }) => (
+const Card = ({ children, heading, ...rest }) => (
   <S.Card {...rest}>
-    {title && <S.Title>{title}</S.Title>}
+    {heading && <S.Heading>{heading}</S.Heading>}
     {children}
   </S.Card>
 );
@@ -15,11 +15,11 @@ Card.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]).isRequired,
-  title: PropTypes.string,
+  heading: PropTypes.string,
 };
 
 Card.defaultProps = {
-  title: null,
+  heading: null,
 };
 
 export default {

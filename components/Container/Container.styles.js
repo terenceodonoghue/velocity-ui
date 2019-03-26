@@ -11,7 +11,7 @@ export const Card = styled.div`
   background-color: var(--color-white);
 `;
 
-export const Title = styled.h2`
+export const Heading = styled.h3`
   margin: 0 0 24px 0;
   color: var(--color-bluey-grey);
   font-size: 13px;

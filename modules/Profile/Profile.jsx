@@ -8,7 +8,7 @@ const Sidebar = ({
   avatarSrc, bio, email, location, name, phone, title,
 }) => (
   <S.Sidebar>
-    <Container.Card height="100%" width="100%">
+    <Container.Card>
       <S.Avatar>
         <Avatar.Round src={avatarSrc} height="140" width="140" />
       </S.Avatar>

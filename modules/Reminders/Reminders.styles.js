@@ -13,7 +13,7 @@ export const Column = styled.div`
 `;
 
 export const Heading = styled.h3`
-  margin: 8px 0;
+  margin: 7px 0;
   color: #b0bac9;
   font-size: 80%;
   font-weight: var(--font-weight-medium);
@@ -71,15 +71,20 @@ export const Tickets = styled.ul`
 export const Ticket = styled.li`
   display: inline-block;
   border-radius: 5px;
-  margin: 4px 0;
+  margin: 5px 0;
   padding-left: 2px;
   width: 100%;
-  cursor: pointer;
+  cursor: move;
 
   & > * {
-    border-radius: inherit !important;
-    box-shadow: none !important;
+    border-color: none !important;
+    border-radius: 0 5px 5px 0 !important;
     padding: 21px 24px 21px 22px !important;
+    transition: var(--transition) !important;
+  }
+
+  &:not(:hover) > * {
+    box-shadow: none !important;
   }
 
   ${Column}[data-role="service-needed"] & {

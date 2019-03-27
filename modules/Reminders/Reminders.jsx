@@ -1,93 +1,76 @@
+/* eslint-disable react/no-array-index-key */
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { useState } from 'react';
 import { arrayOf, shape, string } from 'prop-types';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { Container } from 'components';
 import * as S from './Reminders.styles';
 
-const Kanban = ({ data }) => (
-  <S.Kanban>
-    <S.Column data-role="service-needed">
-      <S.Heading count={data[0].length}>Service needed</S.Heading>
-      <S.Tickets>
-        {data[0].map((ticket, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <S.Ticket key={`${ticket.name.toLowerCase()}-${index}`}>
-            <Container.Card>
-              <S.Row>
-                <span>{ticket.name}</span>
-                <span>{ticket.price}</span>
-              </S.Row>
-              <S.Row>
-                <span>{ticket.type}</span>
-                <span>{ticket.date}</span>
-              </S.Row>
-            </Container.Card>
-          </S.Ticket>
+
+const columns = [
+  'Service needed',
+  'Waiting',
+  'In service',
+  'Fully serviced',
+];
+
+const Kanban = ({ data }) => {
+  const [tickets] = useState(data);
+
+  const onDragEnd = (result) => {
+    const { source, destination } = result;
+    if (!destination) {
+      // TODO
+    }
+  };
+
+  return (
+    <DragDropContext onDragEnd={onDragEnd}>
+      <S.Kanban>
+        {columns.map((column, i) => (
+          <S.Column data-role={column.split(' ').join('-').toLowerCase()} key={column.split(' ').join('-').toLowerCase()}>
+            <S.Heading count={tickets[i].length}>{column}</S.Heading>
+            <Droppable droppableId={column.split(' ').join('-').toLowerCase()}>
+              {
+                (provided, snapshot) => (
+                  <S.Tickets
+                    ref={provided.innerRef}
+                  >
+                    {tickets[i].map((ticket, j) => (
+                      <Draggable draggableId={`${ticket.name.toLowerCase()}-${j}`} index={j} key={`${ticket.name.toLowerCase()}-${j}`}>
+                        {
+                        (provided, snapshot) => (
+                          <S.Ticket
+                            ref={provided.innerRef}
+                            {...provided.draggableProps}
+                            {...provided.dragHandleProps}
+                          >
+                            <Container.Card>
+                              <S.Row>
+                                <span>{ticket.name}</span>
+                                <span>{ticket.price}</span>
+                              </S.Row>
+                              <S.Row>
+                                <span>{ticket.type}</span>
+                                <span>{ticket.date}</span>
+                              </S.Row>
+                            </Container.Card>
+                          </S.Ticket>
+                        )
+                      }
+                      </Draggable>
+                    ))}
+                  </S.Tickets>
+                )
+              }
+            </Droppable>
+          </S.Column>
         ))}
-      </S.Tickets>
-    </S.Column>
-    <S.Column data-role="waiting">
-      <S.Heading count={data[1].length}>Waiting</S.Heading>
-      <S.Tickets>
-        {data[1].map((ticket, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <S.Ticket key={`${ticket.name.toLowerCase()}-${index}`}>
-            <Container.Card>
-              <S.Row>
-                <span>{ticket.name}</span>
-                <span>{ticket.price}</span>
-              </S.Row>
-              <S.Row>
-                <span>{ticket.type}</span>
-                <span>{ticket.date}</span>
-              </S.Row>
-            </Container.Card>
-          </S.Ticket>
-        ))}
-      </S.Tickets>
-    </S.Column>
-    <S.Column data-role="in-service">
-      <S.Heading count={data[2].length}>In service</S.Heading>
-      <S.Tickets>
-        {data[2].map((ticket, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <S.Ticket key={`${ticket.name.toLowerCase()}-${index}`}>
-            <Container.Card>
-              <S.Row>
-                <span>{ticket.name}</span>
-                <span>{ticket.price}</span>
-              </S.Row>
-              <S.Row>
-                <span>{ticket.type}</span>
-                <span>{ticket.date}</span>
-              </S.Row>
-            </Container.Card>
-          </S.Ticket>
-        ))}
-      </S.Tickets>
-    </S.Column>
-    <S.Column data-role="fully-serviced">
-      <S.Heading count={data[3].length}>Fully serviced</S.Heading>
-      <S.Tickets>
-        {data[3].map((ticket, index) => (
-          // eslint-disable-next-line react/no-array-index-key
-          <S.Ticket key={`${ticket.name.toLowerCase()}-${index}`}>
-            <Container.Card>
-              <S.Row>
-                <span>{ticket.name}</span>
-                <span>{ticket.price}</span>
-              </S.Row>
-              <S.Row>
-                <span>{ticket.type}</span>
-                <span>{ticket.date}</span>
-              </S.Row>
-            </Container.Card>
-          </S.Ticket>
-        ))}
-      </S.Tickets>
-    </S.Column>
-  </S.Kanban>
-);
+      </S.Kanban>
+    </DragDropContext>
+  );
+};
 
 Kanban.propTypes = {
   data: arrayOf(

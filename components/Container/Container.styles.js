@@ -5,9 +5,7 @@ export const Card = styled.div`
   border-radius: 1px;
   border: solid 1px rgba(46, 91, 255, 0.08);
   box-shadow: 0 10px 20px 0 rgba(46, 91, 255, 0.07);
-  height: 100%;
   padding: 32px 24px;
-  width: 100%;
   background-color: var(--color-white);
 `;
 

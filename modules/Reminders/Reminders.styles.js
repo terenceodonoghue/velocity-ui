@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 
 export const Kanban = styled.div`
   margin: 0 -12px;
-  width: 1164px;
 `;
 
 export const Column = styled.div`

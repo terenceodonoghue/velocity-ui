@@ -1,10 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 import styled from '@emotion/styled';
 
-export const Personal = styled.div`
-  height: 492px;
-  width: 1140px;
-`;
+export const Personal = styled.div``;
 
 export const Notifications = styled.div`
   height: 297px;

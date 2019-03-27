@@ -1,14 +1,22 @@
 /* eslint-disable import/no-extraneous-dependencies, react/jsx-filename-extension */
-import React, { Fragment } from 'react';
+import React from 'react';
 import { addDecorator, addParameters, configure } from '@storybook/react';
 import { Global } from 'components';
 import theme from './velocity-theme';
 
+
+const styles = {
+  position: 'relative',
+  margin: '-8px',
+  maxWidth: '1360px',
+  padding: '110px',
+};
+
 addDecorator(storyFn => (
-  <Fragment>
+  <div style={styles}>
     <Global />
     {storyFn()}
-  </Fragment>
+  </div>
 ));
 
 addParameters({

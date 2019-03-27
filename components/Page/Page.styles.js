@@ -7,7 +7,6 @@ export const AppBar = styled.div`
   border-bottom: solid 1px #e4e8f0;
   padding: 0 112px;
   height: 80px;
-  width: 100%;
   background-color: var(--color-white);
 `;
 

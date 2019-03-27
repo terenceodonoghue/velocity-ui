@@ -2,8 +2,6 @@
 import styled from '@emotion/styled';
 
 export const Revenue = styled.div`
-  width: 1136px;
-
   .recharts-area-dot {
     fill: var(--color-white);
   }

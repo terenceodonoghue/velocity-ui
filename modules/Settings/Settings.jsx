@@ -5,7 +5,7 @@ import * as S from './Settings.styles';
 
 const Personal = () => (
   <S.Personal>
-    <Container.Card heading="Personal data" height="100%" width="100%">
+    <Container.Card heading="Personal data">
       <S.Content>
         <S.Paragraph>
           Use this page to update your contact information and change your
@@ -71,7 +71,7 @@ const Personal = () => (
 
 const Notifications = () => (
   <S.Notifications>
-    <Container.Card heading="Notifications" height="100%" width="100%">
+    <Container.Card heading="Notifications">
       <S.Content>
         <S.Paragraph>
           Control your notification and auto-follow settings.

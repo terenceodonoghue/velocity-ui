@@ -29,6 +29,15 @@ const Kanban = ({ data }) => {
     tickets[parseInt(droppableDestination.droppableId, 10)] = destClone;
   };
 
+  const reorder = (source, droppableSource, droppableDestination) => {
+    const sourceClone = Array.from(source);
+
+    const [removed] = sourceClone.splice(droppableSource.index, 1);
+    sourceClone.splice(droppableDestination.index, 0, removed);
+
+    tickets[parseInt(droppableSource.droppableId, 10)] = sourceClone;
+  };
+
   const onDragEnd = (dragResult) => {
     const { source, destination } = dragResult;
     if (!destination) {
@@ -36,7 +45,11 @@ const Kanban = ({ data }) => {
     }
 
     if (source.droppableId === destination.droppableId) {
-      // TODO
+      reorder(
+        tickets[parseInt(source.droppableId, 10)],
+        source,
+        destination,
+      );
     } else {
       move(
         tickets[parseInt(source.droppableId, 10)],

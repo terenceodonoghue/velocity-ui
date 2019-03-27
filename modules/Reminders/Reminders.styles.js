@@ -74,7 +74,6 @@ export const Ticket = styled.li`
   margin: 5px 0;
   padding-left: 2px;
   width: 100%;
-  cursor: move;
 
   & > * {
     border-color: none !important;

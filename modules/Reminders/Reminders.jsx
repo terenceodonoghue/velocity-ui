@@ -18,12 +18,35 @@ const columns = [
 const Kanban = ({ data }) => {
   const [tickets] = useState(data);
 
-  const onDragEnd = (result) => {
-    const { source, destination } = result;
+  const move = (source, destination, droppableSource, droppableDestination) => {
+    const sourceClone = Array.from(source);
+    const destClone = Array.from(destination);
+
+    const [removed] = sourceClone.splice(droppableSource.index, 1);
+    destClone.splice(droppableDestination.index, 0, removed);
+
+    tickets[parseInt(droppableSource.droppableId, 10)] = sourceClone;
+    tickets[parseInt(droppableDestination.droppableId, 10)] = destClone;
+  };
+
+  const onDragEnd = (dragResult) => {
+    const { source, destination } = dragResult;
     if (!destination) {
+      return;
+    }
+
+    if (source.droppableId === destination.droppableId) {
       // TODO
+    } else {
+      move(
+        tickets[parseInt(source.droppableId, 10)],
+        tickets[parseInt(destination.droppableId, 10)],
+        source,
+        destination,
+      );
     }
   };
+
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
@@ -31,20 +54,20 @@ const Kanban = ({ data }) => {
         {columns.map((column, i) => (
           <S.Column data-role={column.split(' ').join('-').toLowerCase()} key={column.split(' ').join('-').toLowerCase()}>
             <S.Heading count={tickets[i].length}>{column}</S.Heading>
-            <Droppable droppableId={column.split(' ').join('-').toLowerCase()}>
+            <Droppable droppableId={`${i}`}>
               {
-                (provided, snapshot) => (
+                providedDrop => (
                   <S.Tickets
-                    ref={provided.innerRef}
+                    ref={providedDrop.innerRef}
                   >
                     {tickets[i].map((ticket, j) => (
-                      <Draggable draggableId={`${ticket.name.toLowerCase()}-${j}`} index={j} key={`${ticket.name.toLowerCase()}-${j}`}>
+                      <Draggable draggableId={`${ticket.name.toLowerCase()}-${i}${j}`} index={j} key={`${ticket.name.toLowerCase()}-${i}${j}`}>
                         {
-                        (provided, snapshot) => (
+                        providedDrag => (
                           <S.Ticket
-                            ref={provided.innerRef}
-                            {...provided.draggableProps}
-                            {...provided.dragHandleProps}
+                            ref={providedDrag.innerRef}
+                            {...providedDrag.draggableProps}
+                            {...providedDrag.dragHandleProps}
                           >
                             <Container.Card>
                               <S.Row>
@@ -61,6 +84,7 @@ const Kanban = ({ data }) => {
                       }
                       </Draggable>
                     ))}
+                    {providedDrop.placeholder}
                   </S.Tickets>
                 )
               }

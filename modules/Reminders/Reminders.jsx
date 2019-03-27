@@ -8,7 +8,7 @@ import { Container } from 'components';
 import * as S from './Reminders.styles';
 
 
-const columns = [
+const labels = [
   'Service needed',
   'Waiting',
   'In service',
@@ -16,26 +16,30 @@ const columns = [
 ];
 
 const Kanban = ({ data }) => {
-  const [tickets] = useState(data);
+  const [tickets, setTickets] = useState(data);
 
   const move = (source, destination, droppableSource, droppableDestination) => {
+    const columns = Array.from(tickets);
     const sourceClone = Array.from(source);
     const destClone = Array.from(destination);
 
     const [removed] = sourceClone.splice(droppableSource.index, 1);
     destClone.splice(droppableDestination.index, 0, removed);
 
-    tickets[parseInt(droppableSource.droppableId, 10)] = sourceClone;
-    tickets[parseInt(droppableDestination.droppableId, 10)] = destClone;
+    columns[parseInt(droppableSource.droppableId, 10)] = sourceClone;
+    columns[parseInt(droppableDestination.droppableId, 10)] = destClone;
+    setTickets(columns);
   };
 
   const reorder = (source, droppableSource, droppableDestination) => {
+    const columns = Array.from(tickets);
     const sourceClone = Array.from(source);
 
     const [removed] = sourceClone.splice(droppableSource.index, 1);
     sourceClone.splice(droppableDestination.index, 0, removed);
 
-    tickets[parseInt(droppableSource.droppableId, 10)] = sourceClone;
+    columns[parseInt(droppableSource.droppableId, 10)] = sourceClone;
+    setTickets(columns);
   };
 
   const onDragEnd = (dragResult) => {
@@ -64,14 +68,15 @@ const Kanban = ({ data }) => {
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <S.Kanban>
-        {columns.map((column, i) => (
-          <S.Column data-role={column.split(' ').join('-').toLowerCase()} key={column.split(' ').join('-').toLowerCase()}>
-            <S.Heading count={tickets[i].length}>{column}</S.Heading>
+        {labels.map((label, i) => (
+          <S.Column data-role={label.split(' ').join('-').toLowerCase()} key={label.split(' ').join('-').toLowerCase()}>
+            <S.Heading count={tickets[i].length}>{label}</S.Heading>
             <Droppable droppableId={`${i}`}>
               {
                 providedDrop => (
                   <S.Tickets
                     ref={providedDrop.innerRef}
+                    {...providedDrop.droppableProps}
                   >
                     {tickets[i].map((ticket, j) => (
                       <Draggable draggableId={`${ticket.name.toLowerCase()}-${i}${j}`} index={j} key={`${ticket.name.toLowerCase()}-${i}${j}`}>

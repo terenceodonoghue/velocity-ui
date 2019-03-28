@@ -3,10 +3,7 @@ import styled from '@emotion/styled';
 
 export const Personal = styled.div``;
 
-export const Notifications = styled.div`
-  height: 297px;
-  width: 1140px;
-`;
+export const Notifications = styled.div``;
 
 export const Content = styled.div`
   padding: 0 8px;

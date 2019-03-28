@@ -124,7 +124,6 @@ export const Row = styled.div`
   line-height: 1.47;
 
   &:nth-of-type(1) {
-    color: var(--color-dark);
     font-weight: var(--font-weight-medium);
   }
 

@@ -55,6 +55,7 @@ export const Toggle = styled.span`
   right: 0;
   top: 0;
   border-radius: 10px;
+  width: 36px;
   background-color: rgba(135, 152, 173, 0.4);
   cursor: pointer;
   transition: var(--transition);

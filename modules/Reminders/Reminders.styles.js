@@ -74,15 +74,15 @@ export const Ticket = styled.li`
   padding-left: 2px;
   width: 100%;
 
-  & > * {
-    border-color: none !important;
-    border-radius: 0 5px 5px 0 !important;
-    padding: 21px 24px 21px 22px !important;
-    transition: var(--transition) !important;
+  & > div {
+    border-color: none;
+    border-radius: 0 5px 5px 0;
+    padding: 21px 24px 21px 22px;
+    transition: var(--transition);
   }
 
-  &:not(:hover) > * {
-    box-shadow: none !important;
+  &:not(:hover) > div {
+    box-shadow: none;
   }
 
   ${Column}[data-role="service-needed"] & {

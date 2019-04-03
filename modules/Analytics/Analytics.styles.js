@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 import styled from '@emotion/styled';
 
 export const Revenue = styled.div`
@@ -43,9 +42,9 @@ export const Metric = styled.div`
   flex: 1 0 25%;
   padding: 12px;
 
-  & > * {
+  & > div {
     height: 100%;
-    padding: 18px 24px !important;
+    padding: 18px 24px;
   }
 `;
 

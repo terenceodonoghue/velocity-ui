@@ -39,7 +39,7 @@ export const Button = styled.div`
 
 export const Rule = styled.hr`
   border: 0;
-  height 1px;
+  height: 1px;
   margin-bottom: 42px;
   background-color: #e4e8f0;
 `;

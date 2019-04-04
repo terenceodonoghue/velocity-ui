@@ -49,36 +49,36 @@ export const Metric = styled.div`
 `;
 
 export const MetricIcon = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  height: 48px;
-  margin-bottom: 16px;
-  width: 48px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 19px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+height: 48px;
+margin-bottom: 16px;
+width: 48px;
+background-position: center;
+background-repeat: no-repeat;
+background-size: 19px;
 
-  ${Metric}[data-role="vehicles-on-track"] & {
-    background-color: rgba(51, 172, 46, 0.15);
-    background-image: url(./check.svg);
-  }
+[data-role="vehicles-on-track"] & {
+  background-color: rgba(51, 172, 46, 0.15);
+  background-image: url(./check.svg);
+}
 
-  ${Metric}[data-role="distance-driven"] & {
-    background-color: rgba(0, 193, 212, 0.15);
-    background-image: url(./marker.svg);
-  }
+[data-role="distance-driven"] & {
+  background-color: rgba(0, 193, 212, 0.15);
+  background-image: url(./marker.svg);
+}
 
-  ${Metric}[data-role="energy-consumed"] & {
-    background-color: rgba(140, 84, 255, 0.15);
-    background-image: url(./energy.svg);
-  }
+[data-role="energy-consumed"] & {
+  background-color: rgba(140, 84, 255, 0.15);
+  background-image: url(./energy.svg);
+}
 
-  ${Metric}[data-role="total-drive-time"] & {
-    background-color: rgba(247, 193, 55, 0.15);
-    background-image: url(./dynamic.svg);
-  }
+[data-role="total-drive-time"] & {
+  background-color: rgba(247, 193, 55, 0.15);
+  background-image: url(./dynamic.svg);
+}
 `;
 
 export const MetricValue = styled.div`

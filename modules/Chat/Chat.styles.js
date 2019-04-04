@@ -26,9 +26,6 @@ export const Conversations = styled.ul`
 
 export const Conversation = styled.li`
   display: flex;
-
-
-
 `;
 
 export const Avatar = styled.div`

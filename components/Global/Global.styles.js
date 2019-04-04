@@ -12,7 +12,7 @@ export const Global = css`
     --color-macaroni-and-cheese: #f7c137;
     --color-medium-green: #33ac2e;
     --color-turquoise-blue: #00c1d4;
-    --color-white: #ffffff;
+    --color-white: #fff;
     --font-family: "Rubik", sans-serif;
     --font-weight-light: 300;
     --font-weight-regular: 400;

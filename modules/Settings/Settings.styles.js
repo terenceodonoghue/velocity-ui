@@ -18,12 +18,12 @@ export const Options = styled.div`
 export const Option = styled.div`
   display: flex;
   align-items: center;
-  padding: 13px 11px;
+  padding: 12px 11px;
 `;
 
 export const Text = styled.div`
   flex: 1;
-  margin: -3px 0;
+  margin: -2px 0;
 `;
 
 export const Label = styled.p`

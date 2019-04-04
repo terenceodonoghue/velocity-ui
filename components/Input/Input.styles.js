@@ -94,10 +94,6 @@ export const Slider = styled.input`
   outline: none;
   transition: var(--transition);
 
-  &:disabled {
-    opacity: 0.3;
-  }
-
   &::-moz-range-progress {
     background-color: var(--color-clear-blue);
   }
@@ -119,5 +115,9 @@ export const Slider = styled.input`
     width: 16px;
     background: var(--color-white);
     cursor: pointer;
+  }
+
+  &:disabled {
+    opacity: 0.3;
   }
 `;

@@ -60,17 +60,17 @@ export const Toggle = styled.span`
   cursor: pointer;
   transition: var(--transition);
 
-  ${Checkbox}:checked:enabled + & {
-    background-color: var(--color-medium-green);
-  }
-
   ${Checkbox}:disabled + & {
     opacity: 0.4;
   }
 
+  ${Checkbox}:checked:enabled + & {
+    background-color: var(--color-medium-green);
+  }
+
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     left: 2px;
     top: 2px;
     border-radius: 50%;

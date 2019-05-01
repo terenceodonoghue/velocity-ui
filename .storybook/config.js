@@ -1,4 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies, react/jsx-filename-extension */
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { Global, css } from '@emotion/core';
 import { addDecorator, addParameters, configure } from '@storybook/react';

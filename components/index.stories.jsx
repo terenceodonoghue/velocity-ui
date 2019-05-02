@@ -26,7 +26,7 @@ storiesOf('Basics|Style Guide', module).add('Components', () => (
       <S.Stories>
         <Button.Contained>Button Text</Button.Contained>
         <Button.Outlined>Button Text</Button.Outlined>
-        <Button.Text>Butclear ton Text</Button.Text>
+        <Button.Text>Button Text</Button.Text>
         <Button.Fab>
           <img alt="Fab" src="./plus.svg" />
         </Button.Fab>

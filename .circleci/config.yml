@@ -2,20 +2,13 @@ version: 2
 jobs:
   deploy:
     docker:
-      - image: circleci/node:dubnium
+      - image: circleci/python:3-node
     steps:
       - checkout
-      - add_ssh_keys:
-          fingerprints:
-            - "9d:87:37:c8:d1:12:4d:75:6f:53:be:d2:99:58:9c:ba"
       - run: yarn
-      - run: yarn global add gh-pages@2.0.1
-      - run: git config user.email "1697905+terenceodonoghue@users.noreply.github.com"
-      - run: git config user.name "Terence O'Donoghue"
       - run: yarn build-storybook
-      - run: |
-          PATH=$PATH:$(yarn global bin)
-          gh-pages -d .out -m "Deploy [ci skip]"
+      - run: sudo pip install awscli
+      - run: aws s3 sync .out s3://terenceodonoghue.dev/velocity-ui/ --delete
 
 workflows:
   version: 2

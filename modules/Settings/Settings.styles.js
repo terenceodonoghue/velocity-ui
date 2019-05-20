@@ -1,36 +1,5 @@
 import styled from '@emotion/styled';
-
-export const Content = styled.div`
-  padding: 0 8px;
-`;
-
-export const Paragraph = styled.p`
-  margin: 25px 0;
-  line-height: 1.47;
-`;
-
-export const Options = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  margin: 0 -11px;
-`;
-
-export const Option = styled.div`
-  display: flex;
-  align-items: center;
-  padding: 12px 11px;
-`;
-
-export const Text = styled.div`
-  flex: 1;
-  margin: -2px 0;
-`;
-
-export const Label = styled.p`
-  margin: 0;
-  font-weight: var(--font-weight-medium);
-  line-height: 1.47;
-`;
+import { Button, Container, Input } from 'components';
 
 export const Description = styled.p`
   margin: 0;
@@ -39,14 +8,47 @@ export const Description = styled.p`
   line-height: 1.47;
 `;
 
-export const Integrations = styled.div``;
+export const FieldSet = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 -11px;
+  padding: 0 8px;
+`;
 
-export const Personal = styled.div``;
+export const Label = styled.p`
+  margin: 0;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.47;
+`;
 
-export const Notifications = styled.div`
-  ${Option} {
-    flex: 0 1 35%;
-    margin-right: 85px;
-    max-width: 297px;
-  }
+export const Legend = styled.p`
+  flex-basis: 100%;
+  margin: 0 0 25px 0;
+  padding: 0 12px;
+  line-height: 1.47;
+`;
+
+export const SaveButton = styled(Button.Contained)`
+  margin: 13px 0 18px 8px;
+`;
+
+export const Settings = styled(Container.Card)`
+  padding: 32px 24px;
+`;
+
+export const SwitchField = styled.label`
+  display: flex;
+  align-items: center;
+  flex: 0 1 297px;
+  margin-right: 85px;
+  padding: 10px 11px;
+`;
+
+export const SwitchText = styled.div`
+  flex: 1;
+`;
+
+export const TextField = styled(Input.Label)`
+  flex: ${props => (props.flexBasis ? `0 1 ${props.flexBasis}` : '0 1 290px')};
+  padding: 12px 11px;
 `;

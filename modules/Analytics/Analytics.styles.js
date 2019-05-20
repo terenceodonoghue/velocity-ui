@@ -1,33 +1,9 @@
 import styled from '@emotion/styled';
+import { Container } from 'components';
 
-export const Revenue = styled.div`
-  .recharts-area-dot {
-    fill: var(--color-white);
-  }
-
-  .recharts-cartesian-axis-tick-value {
-    fill: #b0bac9;
-  }
-
-  .recharts-legend-item {
-    margin-left: 12px;
-    color: var(--color-bluey-grey);
-    font-size: var(--base-font-size);
-  }
-
-  .recharts-legend-item-text {
-    margin-left: 6px;
-    vertical-align: middle;
-  }
-
-  .recharts-legend-wrapper {
-    margin: 0 -10px;
-    transform: translateY(-60%);
-  }
-
-  .recharts-responsive-container {
-    margin: 45px -10px 0;
-  }
+export const Metric = styled(Container.Card)`
+  height: 100%;
+  padding: 18px 24px;
 `;
 
 export const Metrics = styled.div`
@@ -35,15 +11,10 @@ export const Metrics = styled.div`
   flex-flow: row wrap;
   align-items: stretch;
   margin: -12px;
-`;
-
-export const Metric = styled.div`
-  flex: 1 0 25%;
-  padding: 12px;
 
   & > div {
-    height: 100%;
-    padding: 18px 24px;
+    flex: 1 0 25%;
+    padding: 12px;
   }
 `;
 
@@ -80,14 +51,48 @@ export const MetricIcon = styled.div`
   }
 `;
 
+export const MetricLabel = styled.div`
+  margin-top: 1px;
+  color: var(--color-bluey-grey);
+  line-height: 1.47;
+`;
+
+
 export const MetricValue = styled.div`
   font-size: 320%;
   font-weight: var(--font-weight-light);
   letter-spacing: -0.6px;
 `;
 
-export const MetricLabel = styled.div`
-  margin-top: 1px;
-  color: var(--color-bluey-grey);
-  line-height: 1.47;
+
+export const Revenue = styled(Container.Card)`
+  padding: 32px 24px;
+
+  .recharts-area-dot {
+    fill: var(--color-white);
+  }
+
+  .recharts-cartesian-axis-tick-value {
+    fill: #b0bac9;
+  }
+
+  .recharts-legend-item {
+    margin-left: 12px;
+    color: var(--color-bluey-grey);
+    font-size: var(--base-font-size);
+  }
+
+  .recharts-legend-item-text {
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  .recharts-legend-wrapper {
+    margin: 0 -10px;
+    transform: translateY(-60%);
+  }
+
+  .recharts-responsive-container {
+    margin: 45px -10px 0;
+  }
 `;

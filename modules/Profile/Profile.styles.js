@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
+import { Container } from 'components';
 
-export const Sidebar = styled.div`
-  position: absolute;
-  right: 0;
-  top: 0;
+export const Sidebar = styled(Container.Card)`
+  height: 100%;
+  padding: 32px 24px;
   width: 357px;
 `;
 

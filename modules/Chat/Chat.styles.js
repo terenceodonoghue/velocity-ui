@@ -1,32 +1,5 @@
 import styled from '@emotion/styled';
-
-export const Conversations = styled.ul`
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-radius: 1px;
-  margin: 0;
-  padding: 0;
-  width: 378px;
-  background-color: var(--color-white);
-  list-style: none;
-  overflow: hidden;
-
-  & > div {
-    border-left: 0;
-    border-top: 0;
-    padding: 17px 25px;
-    cursor: pointer;
-
-    &:hover {
-      background-color: rgba(46, 91, 255, 0.08);
-    }
-  }
-`;
-
-export const Conversation = styled.li`
-  display: flex;
-`;
+import { Container } from 'components';
 
 export const Avatar = styled.div`
   flex-grow: 0;
@@ -40,6 +13,30 @@ export const Body = styled.div`
   flex-grow: 1;
 `;
 
+export const Conversation = styled(Container.Card)`
+  display: flex;
+  border-left: 0;
+  border-top: 0;
+  padding: 17px 25px;
+  cursor: pointer;
+  transition: var(--transition);
+
+  &:hover {
+    background-color: rgba(46, 91, 255, 0.08);
+  }
+`;
+
+export const Conversations = styled.ul`
+  border-radius: 1px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 378px;
+  background-color: var(--color-white);
+  list-style: none;
+  overflow: hidden;
+`;
+
 export const Details = styled.div`
   display: flex;
   justify-content: space-between;
@@ -51,10 +48,6 @@ export const Name = styled.span`
   font-weight: var(--font-weight-medium);
 `;
 
-export const Time = styled.span`
-  color: var(--color-bluey-grey);
-`;
-
 export const Preview = styled.span`
   display: block;
   color: var(--color-bluey-grey);
@@ -63,4 +56,8 @@ export const Preview = styled.span`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+`;
+
+export const Time = styled.span`
+  color: var(--color-bluey-grey);
 `;

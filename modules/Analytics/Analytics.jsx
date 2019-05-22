@@ -12,6 +12,26 @@ import * as S from './Analytics.styles';
 
 const yTickFormatter = value => (value > 999 ? numeral(Math.abs(value)).format('$0[.]0a') : Math.abs(value));
 
+const Metrics = ({ data }) => (
+  <S.Metrics>
+    {
+      data.map((metric, index) => (
+        <S.Metric
+          data-role={metric.label.split(' ').join('-').toLowerCase()}
+          key={`${metric.label
+            .split(' ')
+            .join('-')
+            .toLowerCase()}-${index}`}
+        >
+          <S.MetricIcon />
+          <S.MetricValue>{metric.value}</S.MetricValue>
+          <S.MetricLabel>{metric.label}</S.MetricLabel>
+        </S.Metric>
+      ))
+    }
+  </S.Metrics>
+);
+
 const Revenue = ({ data }) => (
   <S.Revenue heading="Revenue">
     <ResponsiveContainer width="100%" height={340}>
@@ -74,25 +94,14 @@ const Revenue = ({ data }) => (
   </S.Revenue>
 );
 
-const Metrics = ({ data }) => (
-  <S.Metrics>
-    {
-      data.map((metric, index) => (
-        <div key={`${metric.label
-          .split(' ')
-          .join('-')
-          .toLowerCase()}-${index}`}
-        >
-          <S.Metric data-role={metric.label.split(' ').join('-').toLowerCase()}>
-            <S.MetricIcon />
-            <S.MetricValue>{metric.value}</S.MetricValue>
-            <S.MetricLabel>{metric.label}</S.MetricLabel>
-          </S.Metric>
-        </div>
-      ))
-    }
-  </S.Metrics>
-);
+Metrics.propTypes = {
+  data: arrayOf(
+    shape({
+      label: string.isRequired,
+      value: string.isRequired,
+    }),
+  ).isRequired,
+};
 
 Revenue.propTypes = {
   data: arrayOf(
@@ -104,16 +113,7 @@ Revenue.propTypes = {
   ).isRequired,
 };
 
-Metrics.propTypes = {
-  data: arrayOf(
-    shape({
-      label: string.isRequired,
-      value: string.isRequired,
-    }),
-  ).isRequired,
-};
-
 export default {
-  Revenue,
   Metrics,
+  Revenue,
 };

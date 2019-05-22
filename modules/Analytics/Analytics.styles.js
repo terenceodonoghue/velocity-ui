@@ -2,7 +2,8 @@ import styled from '@emotion/styled';
 import { Container } from 'components';
 
 export const Metric = styled(Container.Card)`
-  height: 100%;
+  flex: 0 0 264px;
+  margin: 12px;
   padding: 18px 24px;
 `;
 
@@ -11,11 +12,6 @@ export const Metrics = styled.div`
   flex-flow: row wrap;
   align-items: stretch;
   margin: -12px;
-
-  & > div {
-    flex: 1 0 25%;
-    padding: 12px;
-  }
 `;
 
 export const MetricIcon = styled.div`

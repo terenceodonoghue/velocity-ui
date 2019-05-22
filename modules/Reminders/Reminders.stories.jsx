@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import Reminders from './Reminders';
 
-storiesOf('Modules|Reminders', module).add('Kanban', () => (
+storiesOf('Modules|Service Reminders', module).add('Kanban', () => (
   <Reminders.Kanban
     data={[
       [

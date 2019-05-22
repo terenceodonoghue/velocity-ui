@@ -1,16 +1,14 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { string } from 'prop-types';
-import { Avatar, Button } from 'components';
+import { Button } from 'components';
 import * as S from './Profile.styles';
 
 const Sidebar = ({
-  avatarSrc, bio, email, location, name, phone, title,
+  bio, email, location, name, phone, srcUrl, title,
 }) => (
   <S.Sidebar>
-    <S.Avatar>
-      <Avatar.Round src={avatarSrc} height="140" width="140" />
-    </S.Avatar>
+    <S.ProfilePicture src={srcUrl} />
     <S.Name>{name}</S.Name>
     <S.Title>{title}</S.Title>
     <S.Buttons>
@@ -22,7 +20,7 @@ const Sidebar = ({
       </S.Button>
     </S.Buttons>
     <S.Rule />
-    <S.DetailsList>
+    <dl>
       <S.DetailsTerm>Role</S.DetailsTerm>
       <S.DetailsDescription>Administrator, Moderator</S.DetailsDescription>
       <S.DetailsTerm>E-mail</S.DetailsTerm>
@@ -35,17 +33,17 @@ const Sidebar = ({
       <S.DetailsDescription>{location}</S.DetailsDescription>
       <S.DetailsTerm>Bio</S.DetailsTerm>
       <S.DetailsDescription>{bio}</S.DetailsDescription>
-    </S.DetailsList>
+    </dl>
   </S.Sidebar>
 );
 
 Sidebar.propTypes = {
-  avatarSrc: string.isRequired,
   bio: string.isRequired,
   email: string.isRequired,
   location: string.isRequired,
   name: string.isRequired,
   phone: string.isRequired,
+  srcUrl: string.isRequired,
   title: string.isRequired,
 };
 

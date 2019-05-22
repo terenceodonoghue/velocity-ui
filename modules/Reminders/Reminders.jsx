@@ -4,7 +4,6 @@ import { jsx } from '@emotion/core';
 import { useState } from 'react';
 import { arrayOf, shape, string } from 'prop-types';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import { Container } from 'components';
 import * as S from './Reminders.styles';
 
 
@@ -83,20 +82,19 @@ const Kanban = ({ data }) => {
                         {
                         providedDrag => (
                           <S.Ticket
+                            as="li"
                             ref={providedDrag.innerRef}
                             {...providedDrag.draggableProps}
                             {...providedDrag.dragHandleProps}
                           >
-                            <Container.Card>
-                              <S.Row>
-                                <span>{ticket.name}</span>
-                                <span>{ticket.price}</span>
-                              </S.Row>
-                              <S.Row>
-                                <span>{ticket.type}</span>
-                                <span>{ticket.date}</span>
-                              </S.Row>
-                            </Container.Card>
+                            <S.Row>
+                              <span>{ticket.name}</span>
+                              <span>{ticket.price}</span>
+                            </S.Row>
+                            <S.Row>
+                              <span>{ticket.type}</span>
+                              <span>{ticket.date}</span>
+                            </S.Row>
                           </S.Ticket>
                         )
                       }

@@ -1,8 +1,5 @@
 import styled from '@emotion/styled';
-
-export const Kanban = styled.div`
-  margin: 0 -12px;
-`;
+import { Container } from 'components';
 
 export const Column = styled.div`
   display: inline-block;
@@ -61,45 +58,8 @@ export const Heading = styled.h3`
   }
 `;
 
-export const Tickets = styled.ul`
-  margin: 0;
-  padding: 0;
-  list-style: none;
-`;
-
-export const Ticket = styled.li`
-  display: inline-block;
-  border-radius: 5px;
-  margin: 5px 0;
-  padding-left: 2px;
-  width: 100%;
-
-  & > div {
-    border-color: none;
-    border-radius: 0 5px 5px 0;
-    padding: 21px 24px 21px 22px;
-    transition: var(--transition);
-  }
-
-  &:not(:hover) > div {
-    box-shadow: none;
-  }
-
-  [data-role='service-needed'] & {
-    background: linear-gradient(90deg, var(--color-clear-blue) 2px, transparent 2px);
-  }
-
-  [data-role='waiting'] & {
-    background: linear-gradient(90deg, var(--color-lighter-purple) 2px, transparent 2px);
-  }
-
-  [data-role='in-service'] & {
-    background: linear-gradient(90deg, var(--color-turquoise-blue) 2px, transparent 2px);
-  }
-
-  [data-role='fully-serviced'] & {
-    background: linear-gradient(90deg, var(--color-macaroni-and-cheese) 2px, transparent 2px);
-  }
+export const Kanban = styled.div`
+  margin: 0 -12px;
 `;
 
 export const Row = styled.div`
@@ -114,4 +74,40 @@ export const Row = styled.div`
   &:nth-of-type(2) {
     color: var(--color-bluey-grey);
   }
+`;
+
+export const Ticket = styled(Container.Card)`
+  display: inline-block;
+  border: none;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding: 22px 25px;
+  width: 100%;
+  transition: var(--transition);
+
+  &:not(:hover) {
+    box-shadow: none;
+  }
+
+  [data-role='service-needed'] & {
+    background: linear-gradient(90deg, var(--color-clear-blue) 2px, var(--color-white) 2px) no-repeat;
+  }
+
+  [data-role='waiting'] & {
+    background: linear-gradient(90deg, var(--color-lighter-purple) 2px, var(--color-white) 2px) no-repeat;
+  }
+
+  [data-role='in-service'] & {
+    background: linear-gradient(90deg, var(--color-turquoise-blue) 2px, var(--color-white) 2px) no-repeat;
+  }
+
+  [data-role='fully-serviced'] & {
+    background: linear-gradient(90deg, var(--color-macaroni-and-cheese) 2px, var(--color-white) 2px) no-repeat;
+  }
+`;
+
+export const Tickets = styled.ul`
+  margin: 0;
+  padding: 0;
+  list-style: none;
 `;

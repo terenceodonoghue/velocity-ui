@@ -1,6 +1,33 @@
 import styled from '@emotion/styled';
 import { Button, Container, Input } from 'components';
 
+export const CheckboxField = styled.label`
+  flex: 0 1 365px;
+  padding: 13px 11px;
+`;
+
+export const CheckboxText = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+  border: ${props => `solid 1px ${props.active ? 'var(--color-clear-blue)' : '#e0e7ff'}`};
+  border-radius: 5px;
+  padding: 19px 21px;
+  ${props => props.active && `&::after {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    content: '';
+    background-color: var(--color-clear-blue);
+    background-image: url(./check-white.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+  }`}
+`;
+
 export const Description = styled.p`
   margin: 0;
   color: var(--color-bluey-grey);
@@ -13,6 +40,17 @@ export const FieldSet = styled.div`
   flex-flow: row wrap;
   margin: 0 -11px;
   padding: 0 8px;
+`;
+
+export const Icon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 70px;
+  margin: 0 12px 0 0;
+  width: 70px;
+  background-color: rgba(128, 151, 177, 0.1);
 `;
 
 export const Label = styled.p`
@@ -40,7 +78,7 @@ export const SwitchField = styled.label`
   display: flex;
   align-items: center;
   flex: 0 1 297px;
-  margin-right: 85px;
+  margin: 0 85px 0 0;
   padding: 10px 11px;
 `;
 

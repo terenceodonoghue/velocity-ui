@@ -28,7 +28,7 @@ export const MetricIcon = styled.div`
 
   [data-role='vehicles-on-track'] & {
     background-color: rgba(51, 172, 46, 0.15);
-    background-image: url(./check.svg);
+    background-image: url(./check-purple.svg);
   }
 
   [data-role='distance-driven'] & {

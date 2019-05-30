@@ -20,6 +20,7 @@ addDecorator(storyFn => (
           --color-clear-blue: #2e5bff;
           --color-clear-blue-dark: #0036fa;
           --color-dark: #2e384d;
+          --color-light-blue-grey: #bfc5d2;
           --color-lighter-purple: #8c54ff;
           --color-macaroni-and-cheese: #f7c137;
           --color-medium-green: #33ac2e;

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="18px" height="14px" viewBox="0 0 18 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Menu Icon</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols-Page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Component/Navigation/Left-Bar" transform="translate(-31.000000, -33.000000)" fill="#BFC5D2">
+            <path d="M31,33 L49,33 L49,35 L31,35 L31,33 Z M31,39 L49,39 L49,41 L31,41 L31,39 Z M31,45 L42,45 L42,47 L31,47 L31,45 Z" id="Menu-Icon"></path>
+        </g>
+    </g>
+</svg>

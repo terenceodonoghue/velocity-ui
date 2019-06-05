@@ -62,8 +62,8 @@ addParameters({
 });
 
 const loadStories = () => {
-  const components = require.context('../components', true, /\.stories\.jsx$/);
-  const modules = require.context('../modules', true, /\.stories\.jsx$/);
+  const components = require.context('../src/components', true, /\.stories\.jsx$/);
+  const modules = require.context('../src/modules', true, /\.stories\.jsx$/);
   components.keys().forEach(filename => components(filename));
   modules.keys().forEach(filename => modules(filename));
 };

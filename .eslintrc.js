@@ -16,7 +16,9 @@ module.exports = {
     sourceType: "module"
   },
   plugins: ["react"],
-  rules: {},
+  rules: {
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": [".storybook/*", "src/setupTests.js", "**/*.spec.jsx", "**/*.stories.jsx"]}]
+  },
   settings: {
     "import/resolver": {
       "babel-module": {}

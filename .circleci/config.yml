@@ -5,8 +5,11 @@ jobs:
       - image: circleci/python:3-node
     steps:
       - checkout
-      - run: yarn
-      - run: yarn build-storybook
+      - run:
+          command: |
+            yarn
+            yarn test
+            yarn build-storybook
       - run: sudo pip install awscli
       - run: aws s3 sync .out s3://terenceodonoghue.dev/velocity-ui/ --delete
 

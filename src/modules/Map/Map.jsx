@@ -16,16 +16,29 @@ const Passenger = ({
             <S.Interactions>{`${interactions} interaction${interactions === 1 ? '' : 's'}`}</S.Interactions>
           </S.ProfileText>
         </S.Profile>
-        <dl>
+        <S.DetailsList>
           <S.Label>Email</S.Label>
           <S.Value>{email}</S.Value>
           <S.Label>Phone</S.Label>
           <S.Value>{phone}</S.Value>
           <S.Label>Location</S.Label>
           <S.Value>{location}</S.Value>
-        </dl>
+        </S.DetailsList>
       </S.Details>
-      <S.Payment>...</S.Payment>
+      <S.Payment>
+        <S.PaymentType>
+          <S.PaymentLogo><img alt="PayPal" src="./paypal.png" /></S.PaymentLogo>
+        </S.PaymentType>
+        <S.PaymentType>
+          <S.PaymentLogo active><img alt="Visa" src="./visa.png" /></S.PaymentLogo>
+        </S.PaymentType>
+        <S.PaymentType>
+          <S.PaymentLogo><img alt="Mastercard" src="./mastercard.png" /></S.PaymentLogo>
+        </S.PaymentType>
+        <S.PaymentType>
+          <S.PaymentLogo><img alt="Apple Pay" src="./applepay.png" /></S.PaymentLogo>
+        </S.PaymentType>
+      </S.Payment>
     </S.FieldSet>
   </S.Passenger>
 );

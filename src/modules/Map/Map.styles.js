@@ -2,7 +2,11 @@ import styled from '@emotion/styled';
 import { Avatar, Container } from 'components';
 
 export const Details = styled.div`
-  flex: 1;
+  flex: 0 0 253px;
+`;
+
+export const DetailsList = styled.dl`
+  padding: 0 6px;
 `;
 
 export const FieldSet = styled.div`
@@ -35,9 +39,36 @@ export const Passenger = styled(Container.Card)`
   width: 655px;
 `;
 
+export const Payment = styled.div`
+  flex: 1;
+  display: flex;
+  align-content: flex-start;
+  flex-flow: row wrap;
+  margin: -5px -12px -12px;
+`;
+
+export const PaymentLogo = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 75px;
+  width: 140px;
+  border-radius: 5px;
+  border: solid 1px #e0e7ff;
+  background-color: ${props => (props.active ? 'var(--color-clear-blue)' : null)};
+
+  img {
+    transform: scale(0.5);
+  }
+`;
+
+export const PaymentType = styled.div`
+  padding: 12px;
+`;
+
 export const Profile = styled.div`
   display: flex;
-  margin: 9px 0;
+  margin: 9px 0 19px;
 `;
 
 export const ProfilePicture = styled(Avatar.Round)`
@@ -50,10 +81,10 @@ export const ProfileText = styled.div`
   margin-left: 15px;
 `;
 
-export const Payment = styled.div`
-  flex: 1;
-`;
-
 export const Value = styled.dd`
-  margin: 0 0 18px;
+  margin: 0 0 20px;
+  max-width: 241px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;

@@ -7,7 +7,7 @@
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "build-storybook": "build-storybook -c .storybook -o .out -s ./static",
+    "build-storybook": "build-storybook -c .storybook -o .out -s ./static --quiet",
     "lint:js": "eslint --ext .js,.jsx ./",
     "lint:css": "stylelint './**/*.styles.js'",
     "storybook": "start-storybook -s ./static --quiet",
@@ -44,7 +44,6 @@
     "faker": "^4.1.0",
     "jest": "^24.8.0",
     "react-scripts": "^3.0.1",
-    "react-test-renderer": "^16.8.6",
     "stylelint": "^10.0.1",
     "stylelint-config-standard": "^18.3.0",
     "stylelint-config-styled-components": "^0.1.1",

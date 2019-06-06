@@ -10,21 +10,33 @@ describe('Container', () => {
     const words = faker.lorem.words();
 
     it('should render a heading when present', () => {
-      expect(shallow(<Container.Card heading={heading}>{words}</Container.Card>)
-        .contains(<S.Heading>{heading}</S.Heading>))
-        .toBe(true);
+      const component = shallow(
+        <Container.Card heading={heading}><p>{words}</p></Container.Card>,
+      );
+
+      expect(
+        component.contains(<S.Heading>{heading}</S.Heading>),
+      ).toBe(true);
     });
 
     it('should not render a heading when absent', () => {
-      expect(shallow(<Container.Card>{words}</Container.Card>)
-        .contains(<S.Heading>{heading}</S.Heading>))
-        .toBe(false);
+      const component = shallow(
+        <Container.Card><p>{words}</p></Container.Card>,
+      );
+
+      expect(
+        component.contains(<S.Heading>{heading}</S.Heading>),
+      ).toBe(false);
     });
 
     it('should render a child component', () => {
-      expect(shallow(<Container.Card><p>{words}</p></Container.Card>)
-        .contains(<p>{words}</p>))
-        .toBe(true);
+      const component = shallow(
+        <Container.Card><p>{words}</p></Container.Card>,
+      );
+
+      expect(
+        component.contains(<p>{words}</p>),
+      ).toBe(true);
     });
   });
 });

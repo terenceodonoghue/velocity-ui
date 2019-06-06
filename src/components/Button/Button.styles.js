@@ -23,7 +23,7 @@ const base = css`
 `;
 
 export const Contained = styled.button`
-  ${base}
+  ${base};
   border-radius: 4px;
   height: 40px;
   width: ${props => props.width || '200px'};
@@ -36,7 +36,7 @@ export const Contained = styled.button`
 `;
 
 export const Outlined = styled.button`
-  ${base}
+  ${base};
   border-radius: 4px;
   height: 40px;
   width: ${props => props.width || '200px'};
@@ -49,7 +49,7 @@ export const Outlined = styled.button`
 `;
 
 export const Text = styled.button`
-  ${base}
+  ${base};
   border-radius: 4px;
   height: 40px;
   width: ${props => props.width || '200px'};
@@ -62,7 +62,7 @@ export const Text = styled.button`
 `;
 
 export const Fab = styled.button`
-  ${base}
+  ${base};
   border-radius: 50%;
   height: 70px;
   width: 70px;

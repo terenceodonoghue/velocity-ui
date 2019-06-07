@@ -23,8 +23,8 @@ describe('Profile', () => {
       );
 
       expect(
-        component.contains(<S.DetailsTerm>Bio</S.DetailsTerm>)
-        && component.contains(<S.DetailsDescription>{props.bio}</S.DetailsDescription>),
+        component.contains(<S.Label>Bio</S.Label>)
+        && component.contains(<S.Value>{props.bio}</S.Value>),
       ).toBe(true);
     });
 
@@ -34,8 +34,8 @@ describe('Profile', () => {
       );
 
       expect(
-        component.contains(<S.DetailsTerm>E-mail</S.DetailsTerm>)
-        && component.contains(<S.DetailsDescription>{props.email}</S.DetailsDescription>),
+        component.contains(<S.Label>E-mail</S.Label>)
+        && component.contains(<S.Value>{props.email}</S.Value>),
       ).toBe(true);
     });
 
@@ -45,8 +45,8 @@ describe('Profile', () => {
       );
 
       expect(
-        component.contains(<S.DetailsTerm>Location</S.DetailsTerm>)
-        && component.contains(<S.DetailsDescription>{props.location}</S.DetailsDescription>),
+        component.contains(<S.Label>Location</S.Label>)
+        && component.contains(<S.Value>{props.location}</S.Value>),
       ).toBe(true);
     });
 
@@ -66,8 +66,8 @@ describe('Profile', () => {
       );
 
       expect(
-        component.contains(<S.DetailsTerm>Phone</S.DetailsTerm>)
-        && component.contains(<S.DetailsDescription>{props.phone}</S.DetailsDescription>),
+        component.contains(<S.Label>Phone</S.Label>)
+        && component.contains(<S.Value>{props.phone}</S.Value>),
       ).toBe(true);
     });
 
@@ -87,8 +87,8 @@ describe('Profile', () => {
       );
 
       expect(
-        component.contains(<S.DetailsTerm>Role</S.DetailsTerm>)
-        && component.contains(<S.DetailsDescription>{props.roles}</S.DetailsDescription>),
+        component.contains(<S.Label>Role</S.Label>)
+        && component.contains(<S.Value>{props.roles}</S.Value>),
       ).toBe(true);
     });
 

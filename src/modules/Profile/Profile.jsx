@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { string } from 'prop-types';
-import { Button } from 'components';
 import * as S from './Profile.styles';
 
 const Sidebar = ({
@@ -12,27 +11,27 @@ const Sidebar = ({
     <S.Name>{name}</S.Name>
     <S.Title>{title}</S.Title>
     <S.Buttons>
-      <S.Button>
-        <Button.Contained width="100%">Edit profile</Button.Contained>
-      </S.Button>
-      <S.Button>
-        <Button.Outlined width="100%">Change status</Button.Outlined>
-      </S.Button>
+      <S.EditButton>
+        Edit profile
+      </S.EditButton>
+      <S.StatusButton>
+        Change status
+      </S.StatusButton>
     </S.Buttons>
     <S.Rule />
     <dl>
-      <S.DetailsTerm>Role</S.DetailsTerm>
-      <S.DetailsDescription>{roles}</S.DetailsDescription>
-      <S.DetailsTerm>E-mail</S.DetailsTerm>
-      <S.DetailsDescription>{email}</S.DetailsDescription>
-      <S.DetailsTerm>Phone</S.DetailsTerm>
-      <S.DetailsDescription>{phone}</S.DetailsDescription>
-      <S.DetailsTerm>Twitter</S.DetailsTerm>
-      <S.DetailsDescription>@invisionapp</S.DetailsDescription>
-      <S.DetailsTerm>Location</S.DetailsTerm>
-      <S.DetailsDescription>{location}</S.DetailsDescription>
-      <S.DetailsTerm>Bio</S.DetailsTerm>
-      <S.DetailsDescription>{bio}</S.DetailsDescription>
+      <S.Label>Role</S.Label>
+      <S.Value>{roles}</S.Value>
+      <S.Label>E-mail</S.Label>
+      <S.Value>{email}</S.Value>
+      <S.Label>Phone</S.Label>
+      <S.Value>{phone}</S.Value>
+      <S.Label>Twitter</S.Label>
+      <S.Value>@invisionapp</S.Value>
+      <S.Label>Location</S.Label>
+      <S.Value>{location}</S.Value>
+      <S.Label>Bio</S.Label>
+      <S.Value>{bio}</S.Value>
     </dl>
   </S.Sidebar>
 );

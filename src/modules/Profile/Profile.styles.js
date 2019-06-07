@@ -1,23 +1,19 @@
 import styled from '@emotion/styled';
-import { Avatar, Container } from 'components';
+import { Avatar, Button, Container } from 'components';
 
-export const Button = styled.div`
-  flex: 1;
-  padding: 0 8px;
-`;
 
 export const Buttons = styled.div`
   display: flex;
   margin: 0 -8px 40px;
 `;
 
-export const DetailsDescription = styled.dd`
-  margin: 0 0 24px;
-  line-height: 1.47;
+export const EditButton = styled(Button.Contained)`
+  flex: 1;
+  margin: 0 8px;
+  width: unset;
 `;
 
-
-export const DetailsTerm = styled.dt`
+export const Label = styled.dt`
   color: #b0bac9;
   margin-bottom: 10px;
   font-size: 12px;
@@ -52,10 +48,21 @@ export const Sidebar = styled(Container.Card)`
   width: 357px;
 `;
 
+export const StatusButton = styled(Button.Outlined)`
+  flex: 1;
+  margin: 0 8px;
+  width: unset;
+`;
+
 export const Title = styled.h3`
   margin: 0 0 33px;
   color: var(--color-bluey-grey);
   font-size: var(--base-font-size);
   font-weight: var(--font-weight-regular);
   text-align: center;
+`;
+
+export const Value = styled.dd`
+  margin: 0 0 24px;
+  line-height: 1.47;
 `;

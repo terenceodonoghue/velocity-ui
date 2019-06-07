@@ -26,7 +26,7 @@ export const Contained = styled.button`
   ${base};
   border-radius: 4px;
   height: 40px;
-  width: ${props => props.width || '200px'};
+  width: 200px;
   background-color: var(--color-clear-blue);
   color: white;
 
@@ -39,7 +39,7 @@ export const Outlined = styled.button`
   ${base};
   border-radius: 4px;
   height: 40px;
-  width: ${props => props.width || '200px'};
+  width: 200px;
   background: rgba(46, 91, 255, 0.2);
   color: var(--color-clear-blue);
 
@@ -52,7 +52,7 @@ export const Text = styled.button`
   ${base};
   border-radius: 4px;
   height: 40px;
-  width: ${props => props.width || '200px'};
+  width: 200px;
   background: none;
   color: var(--color-clear-blue);
 

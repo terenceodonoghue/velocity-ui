@@ -10,12 +10,12 @@ storiesOf('Basics|Style Guide', module).add('Components', () => (
   <Fragment>
     <Page.AppBar>
       <Avatar.Round alt="Avatar" src={faker.image.avatar()} height="40" width="40" />
-      <Button.Text width="40px">
+      <S.IconButton>
         <img alt="Mail" src="./mail.svg" />
-      </Button.Text>
-      <Button.Text width="40px">
+      </S.IconButton>
+      <S.IconButton width="40px">
         <img alt="Notifications" src="./notifications.svg" />
-      </Button.Text>
+      </S.IconButton>
     </Page.AppBar>
     <S.Story heading="Avatars">
       <S.Components>

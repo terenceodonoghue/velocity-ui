@@ -5,7 +5,7 @@ import { Button } from 'components';
 import * as S from './Profile.styles';
 
 const Sidebar = ({
-  bio, email, location, name, phone, srcUrl, title,
+  bio, email, location, name, phone, roles, srcUrl, title,
 }) => (
   <S.Sidebar>
     <S.ProfilePicture src={srcUrl} />
@@ -22,7 +22,7 @@ const Sidebar = ({
     <S.Rule />
     <dl>
       <S.DetailsTerm>Role</S.DetailsTerm>
-      <S.DetailsDescription>Administrator, Moderator</S.DetailsDescription>
+      <S.DetailsDescription>{roles}</S.DetailsDescription>
       <S.DetailsTerm>E-mail</S.DetailsTerm>
       <S.DetailsDescription>{email}</S.DetailsDescription>
       <S.DetailsTerm>Phone</S.DetailsTerm>
@@ -43,6 +43,7 @@ Sidebar.propTypes = {
   location: string.isRequired,
   name: string.isRequired,
   phone: string.isRequired,
+  roles: string.isRequired,
   srcUrl: string.isRequired,
   title: string.isRequired,
 };

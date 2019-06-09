@@ -11,9 +11,7 @@
     "lint:css": "stylelint './**/*.styles.js'",
     "lint:js": "eslint --ext .js,.jsx ./",
     "storybook": "start-storybook -s ./static --quiet",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test": "jest"
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",

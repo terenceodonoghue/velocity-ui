@@ -35,7 +35,6 @@ export const Name = styled.p`
 `;
 
 export const Passenger = styled(Container.Card)`
-  padding: 32px 24px;
   width: 655px;
 `;
 

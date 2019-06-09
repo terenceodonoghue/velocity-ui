@@ -1,5 +1,36 @@
+import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { Container } from 'components';
+
+const recharts = css`
+  .recharts-area-dot {
+    fill: var(--color-white);
+  }
+
+  .recharts-cartesian-axis-tick-value {
+    fill: #b0bac9;
+  }
+
+  .recharts-legend-item {
+    margin-left: 12px;
+    color: var(--color-bluey-grey);
+    font-size: var(--base-font-size);
+  }
+
+  .recharts-legend-item-text {
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  .recharts-legend-wrapper {
+    margin: 0 -10px;
+    transform: translateY(-60%);
+  }
+
+  .recharts-responsive-container {
+    margin: 45px -10px 0;
+  }
+`;
 
 export const Metric = styled(Container.Card)`
   flex: 0 0 264px;
@@ -62,33 +93,10 @@ export const MetricValue = styled.div`
 
 
 export const Revenue = styled(Container.Card)`
-  padding: 32px 24px;
+  ${recharts};
+`;
 
-  .recharts-area-dot {
-    fill: var(--color-white);
-  }
-
-  .recharts-cartesian-axis-tick-value {
-    fill: #b0bac9;
-  }
-
-  .recharts-legend-item {
-    margin-left: 12px;
-    color: var(--color-bluey-grey);
-    font-size: var(--base-font-size);
-  }
-
-  .recharts-legend-item-text {
-    margin-left: 6px;
-    vertical-align: middle;
-  }
-
-  .recharts-legend-wrapper {
-    margin: 0 -10px;
-    transform: translateY(-60%);
-  }
-
-  .recharts-responsive-container {
-    margin: 45px -10px 0;
-  }
+export const Weekday = styled(Container.Card)`
+  ${recharts};
+  width: 752px;
 `;

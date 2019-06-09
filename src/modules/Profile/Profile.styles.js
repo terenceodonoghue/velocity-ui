@@ -44,7 +44,6 @@ export const Rule = styled.hr`
 
 export const Sidebar = styled(Container.Card)`
   height: 100%;
-  padding: 32px 24px;
   width: 357px;
 `;
 

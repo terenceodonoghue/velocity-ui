@@ -18,5 +18,4 @@ export const IconButton = styled(Button.Text)`
 
 export const Story = styled(Container.Card)`
   margin: 24px 0;
-  padding: 32px 24px;
 `;

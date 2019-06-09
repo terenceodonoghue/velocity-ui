@@ -6,7 +6,16 @@ import {
 } from 'prop-types';
 import numeral from 'numeral';
 import {
-  AreaChart, Area, XAxis, YAxis, CartesianGrid, Legend, ResponsiveContainer,
+  AreaChart,
+  Area,
+  Bar,
+  CartesianGrid,
+  ComposedChart,
+  Legend,
+  Line,
+  ResponsiveContainer,
+  XAxis,
+  YAxis,
 } from 'recharts';
 import * as S from './Analytics.styles';
 
@@ -66,7 +75,7 @@ const Revenue = ({ data }) => (
         />
         <CartesianGrid
           stroke="#8097b1"
-          strokeDasharray="1 2"
+          strokeDasharray="2 2"
           strokeOpacity="0.3"
         />
         <Legend
@@ -83,15 +92,59 @@ const Revenue = ({ data }) => (
           tickMargin={8.5}
         />
         <YAxis
+          stroke="#e0e7ff"
           tickFormatter={yTickFormatter}
           tickLine={false}
           tickMargin={13.5}
-          stroke="#e0e7ff"
           ticks={[0, 5000, 10000, 15000, 20000, 25000, 30000]}
         />
       </AreaChart>
     </ResponsiveContainer>
   </S.Revenue>
+);
+
+const Weekday = ({ data }) => (
+  <S.Weekday heading="Trips by Weekday">
+    <ResponsiveContainer width="100%" height={340}>
+      <ComposedChart
+        data={data}
+        margin={{
+          top: -3, right: 0, bottom: 2, left: -16,
+        }}
+        width={500}
+      >
+        <Bar barSize={7} dataKey="comfort" fill="#2e5bff" name="Comfort" radius={5} />
+        <Bar barSize={7} dataKey="premium" fill="#8c54ff" name="Premium" radius={5} />
+        <CartesianGrid
+          stroke="#8097b1"
+          strokeDasharray="2 2"
+          strokeOpacity="0.3"
+        />
+        <Legend
+          align="right"
+          iconSize={10}
+          iconType="circle"
+          verticalAlign="top"
+        />
+        <Line dataKey="average" name="Average" stroke="#f7c137" strokeWidth={2} />
+        <XAxis
+          dataKey="name"
+          interval="preserveStartEnd"
+          padding={{ left: 17, right: 16 }}
+          stroke="#e0e7ff"
+          tickLine={false}
+          tickMargin={7.5}
+
+        />
+        <YAxis
+          tickLine={false}
+          tickMargin={1}
+          stroke="#e0e7ff"
+          ticks={[0, 25, 50, 75, 100, 125, 150]}
+        />
+      </ComposedChart>
+    </ResponsiveContainer>
+  </S.Weekday>
 );
 
 Metrics.propTypes = {
@@ -113,7 +166,19 @@ Revenue.propTypes = {
   ).isRequired,
 };
 
+Weekday.propTypes = {
+  data: arrayOf(
+    shape({
+      average: number.isRequired,
+      name: string.isRequired,
+      comfort: number.isRequired,
+      premium: number.isRequired,
+    }),
+  ).isRequired,
+};
+
 export default {
   Metrics,
   Revenue,
+  Weekday,
 };

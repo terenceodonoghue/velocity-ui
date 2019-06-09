@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Button, Container, Input } from 'components';
+import { Button, Input } from 'components';
 
 export const CheckboxField = styled.label`
   flex: 0 1 365px;
@@ -68,10 +68,6 @@ export const Legend = styled.p`
 
 export const SaveButton = styled(Button.Contained)`
   margin: 13px 0 18px 8px;
-`;
-
-export const Settings = styled(Container.Card)`
-  padding: 32px 24px;
 `;
 
 export const SwitchField = styled.label`

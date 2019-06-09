@@ -7,8 +7,32 @@ const MIN_REVENUE = 15000;
 const MAX_REVENUE = 30000;
 const MIN_TRIPS = 0;
 const MAX_TRIPS = 15000;
+const MIN_WEEKDAY = 0;
+const MAX_WEEKDAY = 150;
 
 storiesOf('Modules|Analytics', module)
+  .add('Metrics', () => (
+    <Analytics.Metrics
+      data={[
+        {
+          label: 'Vehicles on track',
+          value: '$1,428',
+        },
+        {
+          label: 'Distance driven',
+          value: '158.3 mi',
+        },
+        {
+          label: 'Energy consumed',
+          value: '87.4 kWh',
+        },
+        {
+          label: 'Total drive time',
+          value: '24.2 h',
+        },
+      ]}
+    />
+  ))
   .add('Revenue', () => (
     <Analytics.Revenue
       data={[
@@ -80,24 +104,51 @@ storiesOf('Modules|Analytics', module)
       ]}
     />
   ))
-  .add('Metrics', () => (
-    <Analytics.Metrics
+
+  .add('Trips by Weekday', () => (
+    <Analytics.Weekday
       data={[
         {
-          label: 'Vehicles on track',
-          value: '$1,428',
+          average: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
+          name: 'Mon',
+          comfort: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
+          premium: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
         },
         {
-          label: 'Distance driven',
-          value: '158.3 mi',
+          average: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
+          name: 'Tue',
+          comfort: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
+          premium: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
         },
         {
-          label: 'Energy consumed',
-          value: '87.4 kWh',
+          average: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
+          name: 'Wed',
+          comfort: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
+          premium: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
         },
         {
-          label: 'Total drive time',
-          value: '24.2 h',
+          average: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
+          name: 'Thu',
+          comfort: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
+          premium: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
+        },
+        {
+          average: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
+          name: 'Fri',
+          comfort: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
+          premium: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
+        },
+        {
+          average: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
+          name: 'Sat',
+          comfort: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
+          premium: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
+        },
+        {
+          average: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
+          name: 'Sun',
+          comfort: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
+          premium: faker.random.number({ min: MIN_WEEKDAY, max: MAX_WEEKDAY }),
         },
       ]}
     />

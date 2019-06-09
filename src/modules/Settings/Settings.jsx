@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Input } from 'components';
+import { Container, Input } from 'components';
 import * as S from './Settings.styles';
 
 const Personal = () => (
-  <S.Settings heading="Personal data">
+  <Container.Card heading="Personal data">
     <S.FieldSet>
       <S.Legend>
         Use this page to update your contact information and change your
@@ -40,11 +40,11 @@ const Personal = () => (
       </S.TextField>
     </S.FieldSet>
     <S.SaveButton>Save Changes</S.SaveButton>
-  </S.Settings>
+  </Container.Card>
 );
 
 const Integrations = () => (
-  <S.Settings heading="Integrations">
+  <Container.Card heading="Integrations">
     <S.FieldSet>
       <S.Legend>Manage third-party app integrations.</S.Legend>
       <S.CheckboxField>
@@ -114,11 +114,11 @@ const Integrations = () => (
         </S.CheckboxText>
       </S.CheckboxField>
     </S.FieldSet>
-  </S.Settings>
+  </Container.Card>
 );
 
 const Notifications = () => (
-  <S.Settings heading="Notifications">
+  <Container.Card heading="Notifications">
     <S.FieldSet>
       <S.Legend>
         Control your notification and auto-follow settings.
@@ -152,7 +152,7 @@ const Notifications = () => (
         <Input.Switch />
       </S.SwitchField>
     </S.FieldSet>
-  </S.Settings>
+  </Container.Card>
 );
 
 export default {

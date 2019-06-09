@@ -27,8 +27,11 @@ describe('Reminders', () => {
       );
 
       expect(component.find(S.Column).at(0).props()['data-role']).toBe('service-needed');
-      expect(component.find(S.Heading).at(0).text()).toBe('Service needed');
-      expect(component.find(S.Heading).at(0).props().count).toBe(props.data[0].length);
+      expect(component.find(S.Column).at(0).containsMatchingElement(
+        <S.Heading count={props.data[0].length}>
+          Service needed
+        </S.Heading>,
+      )).toBe(true);
     });
 
     it('should render second column', () => {
@@ -37,8 +40,11 @@ describe('Reminders', () => {
       );
 
       expect(component.find(S.Column).at(1).props()['data-role']).toBe('waiting');
-      expect(component.find(S.Heading).at(1).text()).toBe('Waiting');
-      expect(component.find(S.Heading).at(1).props().count).toBe(props.data[1].length);
+      expect(component.find(S.Column).at(1).containsMatchingElement(
+        <S.Heading count={props.data[1].length}>
+          Waiting
+        </S.Heading>,
+      )).toBe(true);
     });
 
     it('should render third column', () => {
@@ -47,8 +53,11 @@ describe('Reminders', () => {
       );
 
       expect(component.find(S.Column).at(2).props()['data-role']).toBe('in-service');
-      expect(component.find(S.Heading).at(2).text()).toBe('In service');
-      expect(component.find(S.Heading).at(2).props().count).toBe(props.data[2].length);
+      expect(component.find(S.Column).at(2).containsMatchingElement(
+        <S.Heading count={props.data[2].length}>
+          In service
+        </S.Heading>,
+      )).toBe(true);
     });
 
     it('should render fourth column', () => {
@@ -57,8 +66,11 @@ describe('Reminders', () => {
       );
 
       expect(component.find(S.Column).at(3).props()['data-role']).toBe('fully-serviced');
-      expect(component.find(S.Heading).at(3).text()).toBe('Fully serviced');
-      expect(component.find(S.Heading).at(3).props().count).toBe(props.data[3].length);
+      expect(component.find(S.Column).at(3).containsMatchingElement(
+        <S.Heading count={props.data[3].length}>
+          Fully serviced
+        </S.Heading>,
+      )).toBe(true);
     });
   });
 });

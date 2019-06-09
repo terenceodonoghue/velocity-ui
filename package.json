@@ -8,11 +8,12 @@
   "license": "MIT",
   "scripts": {
     "build-storybook": "build-storybook -c .storybook -o .out -s ./static --quiet",
-    "lint:js": "eslint --ext .js,.jsx ./",
     "lint:css": "stylelint './**/*.styles.js'",
+    "lint:js": "eslint --ext .js,.jsx ./",
     "storybook": "start-storybook -s ./static --quiet",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@emotion/core": "^10.0.10",

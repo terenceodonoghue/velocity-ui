@@ -1232,6 +1232,13 @@
   dependencies:
     "@emotion/memoize" "0.7.1"
 
+"@emotion/is-prop-valid@0.8.1":
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.1.tgz#6fb3ae2d24f07c8cd090f233e45771d9cd826d48"
+  integrity sha512-Wtaek/KGUP+HusWIa8DqtOR6U/Tl+QIdVkfJQHV3IT6ZImnJwklP5UVVPKZvkfljeFk3Q45CAPJ5N10gJ5XoLA==
+  dependencies:
+    "@emotion/memoize" "0.7.1"
+
 "@emotion/memoize@0.7.1":
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/@emotion/memoize/-/memoize-0.7.1.tgz#e93c13942592cf5ef01aa8297444dc192beee52f"
@@ -1241,6 +1248,17 @@
   version "0.11.6"
   resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-0.11.6.tgz#78be8b9ee9ff49e0196233ba6ec1c1768ba1e1fc"
   integrity sha512-n4zVv2qGLmspF99jaEUwnMV0fnEGsyUMsC/8KZKUSUTZMYljHE+j+B6rSD8PIFtaUIhHaxCG2JawN6L+OgLN0Q==
+  dependencies:
+    "@emotion/hash" "0.7.1"
+    "@emotion/memoize" "0.7.1"
+    "@emotion/unitless" "0.7.3"
+    "@emotion/utils" "0.11.1"
+    csstype "^2.5.7"
+
+"@emotion/serialize@^0.11.7":
+  version "0.11.7"
+  resolved "https://registry.yarnpkg.com/@emotion/serialize/-/serialize-0.11.7.tgz#dd9583dbf753002738676fa8c1eb8df77f95fb53"
+  integrity sha512-GfzJIMue9eIEPFgBL340hBbjfki11vjYkfmY2LXoCDAFPuG6S+hkOlfinRXLnPVlXnKu7WWp587cVa6/xQriNQ==
   dependencies:
     "@emotion/hash" "0.7.1"
     "@emotion/memoize" "0.7.1"
@@ -1263,7 +1281,25 @@
     "@emotion/utils" "0.11.1"
     object-assign "^4.1.1"
 
-"@emotion/styled@^10.0.11", "@emotion/styled@^10.0.7":
+"@emotion/styled-base@^10.0.12":
+  version "10.0.13"
+  resolved "https://registry.yarnpkg.com/@emotion/styled-base/-/styled-base-10.0.13.tgz#f27b398556df3f69b97ac9fe06dcc91fe7576a96"
+  integrity sha512-6zhj3njNEnMYcVMv3rOpM7qLwe1Osike+xVgw7gkbp9a/r6zx5cUA5sRvCrtCa28yV5x7ePotKNHMZ1GLQJo2g==
+  dependencies:
+    "@babel/runtime" "^7.4.3"
+    "@emotion/is-prop-valid" "0.8.1"
+    "@emotion/serialize" "^0.11.7"
+    "@emotion/utils" "0.11.1"
+
+"@emotion/styled@^10.0.12":
+  version "10.0.12"
+  resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-10.0.12.tgz#923531b3baa2ad670f821c6ca724caab26b08aad"
+  integrity sha512-oxvSoLi3AbI5bEfqkFE1hLTC3eMpifwj6klJ4bvzgE6EDqj4w859KQyZR7ekGRAcfGNFyEYhw67bm8FlMBlX7Q==
+  dependencies:
+    "@emotion/styled-base" "^10.0.12"
+    babel-plugin-emotion "^10.0.9"
+
+"@emotion/styled@^10.0.7":
   version "10.0.11"
   resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-10.0.11.tgz#f749ca95bfe398b3e511b65ea14b16984f049e6d"
   integrity sha512-c/M/JJHTQuqdY9viSZD41ccCJDe07/VMrj+JgOcyb8uDnRAr+3cCQ03tyrgl72bQD0YWcjXHhpA7Ja9S3+vuRw==

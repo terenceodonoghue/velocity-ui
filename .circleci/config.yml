@@ -8,10 +8,13 @@ jobs:
       - run:
           command: |
             yarn
-            yarn test
+            yarn test --coverage
             yarn build-storybook
       - run: sudo pip install awscli
       - run: aws s3 sync .out s3://terenceodonoghue.dev/velocity-ui/ --delete
+      - store_artifacts:
+          path: coverage
+          destination: coverage
 
 workflows:
   version: 2

@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import faker from 'faker';
 import Reminders from './Reminders';
 import * as S from './Reminders.styles';
@@ -20,6 +20,16 @@ describe('Reminders', () => {
         ),
       ),
     };
+
+    it('should apply correct styles to column heading', () => {
+      const count = Math.floor(Math.random() * 10);
+
+      const component = mount(
+        <S.Heading count={count} />,
+      );
+
+      expect(component).toHaveStyleRule('content', `"${count.toString()}"`, { target: '::after' });
+    });
 
     it('should render first column', () => {
       const component = shallow(

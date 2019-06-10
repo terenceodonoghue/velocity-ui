@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import { Input } from 'components';
 import Settings from './Settings';
 import * as S from './Settings.styles';
@@ -22,6 +22,22 @@ describe('Settings', () => {
       expect(component.find(S.Legend).text()).toBe(
         'Use this page to update your contact information and change your password.',
       );
+    });
+
+    it('should apply correct styles to custom input', () => {
+      const component = mount(
+        <S.TextField flexBasis="100%" />,
+      );
+
+      expect(component).toHaveStyleRule('flex', '0 1 100%');
+    });
+
+    it('should apply correct styles to default input', () => {
+      const component = mount(
+        <S.TextField />,
+      );
+
+      expect(component).toHaveStyleRule('flex', '0 1 290px');
     });
 
     it('should render e-mail field', () => {
@@ -103,6 +119,22 @@ describe('Settings', () => {
   });
 
   describe('Integrations', () => {
+    it('should apply correct styles to active integration', () => {
+      const component = mount(
+        <S.CheckboxText active />,
+      );
+
+      expect(component).toHaveStyleRule('border', 'solid 1px var(--color-clear-blue)');
+    });
+
+    it('should apply correct styles to inactive integration', () => {
+      const component = mount(
+        <S.CheckboxText />,
+      );
+
+      expect(component).toHaveStyleRule('border', 'solid 1px #e0e7ff');
+    });
+
     it('should render a heading', () => {
       const component = shallow(
         <Settings.Integrations />,

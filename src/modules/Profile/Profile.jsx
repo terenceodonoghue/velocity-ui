@@ -4,10 +4,10 @@ import { string } from 'prop-types';
 import * as S from './Profile.styles';
 
 const Sidebar = ({
-  bio, email, location, name, phone, roles, srcUrl, title,
+  avatarSrc, bio, email, location, name, phone, roles, title,
 }) => (
   <S.Sidebar>
-    <S.ProfilePicture src={srcUrl} />
+    <S.ProfilePicture src={avatarSrc} />
     <S.Name>{name}</S.Name>
     <S.Title>{title}</S.Title>
     <S.Buttons>
@@ -37,13 +37,13 @@ const Sidebar = ({
 );
 
 Sidebar.propTypes = {
+  avatarSrc: string.isRequired,
   bio: string.isRequired,
   email: string.isRequired,
   location: string.isRequired,
   name: string.isRequired,
   phone: string.isRequired,
   roles: string.isRequired,
-  srcUrl: string.isRequired,
   title: string.isRequired,
 };
 

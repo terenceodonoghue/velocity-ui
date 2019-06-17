@@ -1,25 +1,13 @@
 import React from 'react';
-import Button from './Button';
+import Input from './Input';
 
-describe('Button', () => {
-  describe('Contained', () => {
+describe('Input', () => {
+  describe('Label', () => {
     it('matches snapshot', () => {
       const tree = renderer.create(
-        <Button.Contained>
-          Button Text
-        </Button.Contained>,
-      ).toJSON();
-
-      expect(tree).toMatchSnapshot();
-    });
-  });
-
-  describe('Outlined', () => {
-    it('matches snapshot', () => {
-      const tree = renderer.create(
-        <Button.Outlined>
-          Button Text
-        </Button.Outlined>,
+        <Input.Label>
+          Label Text
+        </Input.Label>,
       ).toJSON();
 
       expect(tree).toMatchSnapshot();
@@ -29,21 +17,27 @@ describe('Button', () => {
   describe('Text', () => {
     it('matches snapshot', () => {
       const tree = renderer.create(
-        <Button.Text>
-          Button Text
-        </Button.Text>,
+        <Input.Text type="text" placeholder="Placeholder" />,
       ).toJSON();
 
       expect(tree).toMatchSnapshot();
     });
   });
 
-  describe('Fab', () => {
+  describe('Switch', () => {
     it('matches snapshot', () => {
       const tree = renderer.create(
-        <Button.Fab>
-          +
-        </Button.Fab>,
+        <Input.Switch />,
+      ).toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
+  });
+
+  describe('Slider', () => {
+    it('matches snapshot', () => {
+      const tree = renderer.create(
+        <Input.Slider min={0} max={100} />,
       ).toJSON();
 
       expect(tree).toMatchSnapshot();

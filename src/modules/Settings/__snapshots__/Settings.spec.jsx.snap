@@ -1,0 +1,822 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Settings Integrations matches snapshot 1`] = `
+.emotion-66 {
+  display: block;
+  border-radius: 1px;
+  border: solid 1px rgba(46,91,255,0.08);
+  box-shadow: 0 10px 20px 0 rgba(46,91,255,0.07);
+  padding: 32px 24px;
+  background-color: var(--color-white);
+}
+
+.emotion-0 {
+  margin: 0 0 26px 0;
+  color: var(--color-bluey-grey);
+  font-size: 13px;
+  font-weight: var(--font-weight-normal);
+  -webkit-letter-spacing: 1.2px;
+  -moz-letter-spacing: 1.2px;
+  -ms-letter-spacing: 1.2px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.emotion-64 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin: 0 -11px;
+  padding: 0 8px;
+}
+
+.emotion-2 {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  margin: 0 0 25px 0;
+  padding: 0 12px;
+  line-height: 1.47;
+}
+
+.emotion-12 {
+  -webkit-flex: 0 1 365px;
+  -ms-flex: 0 1 365px;
+  flex: 0 1 365px;
+  padding: 13px 11px;
+}
+
+.emotion-10 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px var(--color-clear-blue);
+  border-radius: 5px;
+  padding: 19px 21px;
+}
+
+.emotion-10::after {
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  content: '';
+  background-color: var(--color-clear-blue);
+  background-image: url(./check-white.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+}
+
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 50%;
+  height: 70px;
+  margin: 0 12px 0 0;
+  width: 70px;
+  background-color: rgba(128,151,177,0.1);
+}
+
+.emotion-6 {
+  margin: 0;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.47;
+}
+
+.emotion-8 {
+  margin: 0;
+  color: var(--color-bluey-grey);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.47;
+}
+
+.emotion-30 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: solid 1px #e0e7ff;
+  border-radius: 5px;
+  padding: 19px 21px;
+}
+
+<div
+  className="emotion-66 emotion-67"
+>
+  <h3
+    className="emotion-0 emotion-1"
+  >
+    Integrations
+  </h3>
+  <div
+    className="emotion-64 emotion-65"
+  >
+    <p
+      className="emotion-2 emotion-3"
+    >
+      Manage third-party app integrations.
+    </p>
+    <label
+      className="emotion-12 emotion-13"
+    >
+      <div
+        className="emotion-10 emotion-11"
+      >
+        <div
+          className="emotion-4 emotion-5"
+        >
+          <img
+            alt="InVision"
+            src="./invision.svg"
+          />
+        </div>
+        <div>
+          <p
+            className="emotion-6 emotion-7"
+          >
+            InVision
+          </p>
+          <p
+            className="emotion-8 emotion-9"
+          >
+            Boards and prototypes
+          </p>
+        </div>
+      </div>
+    </label>
+    <label
+      className="emotion-12 emotion-13"
+    >
+      <div
+        className="emotion-10 emotion-11"
+      >
+        <div
+          className="emotion-4 emotion-5"
+        >
+          <img
+            alt="GitHub"
+            src="./github.svg"
+          />
+        </div>
+        <div>
+          <p
+            className="emotion-6 emotion-7"
+          >
+            GitHub
+          </p>
+          <p
+            className="emotion-8 emotion-9"
+          >
+            Commits data and history
+          </p>
+        </div>
+      </div>
+    </label>
+    <label
+      className="emotion-12 emotion-13"
+    >
+      <div
+        className="emotion-30 emotion-11"
+      >
+        <div
+          className="emotion-4 emotion-5"
+        >
+          <img
+            alt="Slack"
+            src="./slack.svg"
+          />
+        </div>
+        <div>
+          <p
+            className="emotion-6 emotion-7"
+          >
+            Slack
+          </p>
+          <p
+            className="emotion-8 emotion-9"
+          >
+            Messages and channels
+          </p>
+        </div>
+      </div>
+    </label>
+    <label
+      className="emotion-12 emotion-13"
+    >
+      <div
+        className="emotion-30 emotion-11"
+      >
+        <div
+          className="emotion-4 emotion-5"
+        >
+          <img
+            alt="Mailchimp"
+            src="./mailchimp.svg"
+          />
+        </div>
+        <div>
+          <p
+            className="emotion-6 emotion-7"
+          >
+            Mailchimp
+          </p>
+          <p
+            className="emotion-8 emotion-9"
+          >
+            Subscribers list
+          </p>
+        </div>
+      </div>
+    </label>
+    <label
+      className="emotion-12 emotion-13"
+    >
+      <div
+        className="emotion-30 emotion-11"
+      >
+        <div
+          className="emotion-4 emotion-5"
+        >
+          <img
+            alt="Twitter"
+            src="./twitter.svg"
+          />
+        </div>
+        <div>
+          <p
+            className="emotion-6 emotion-7"
+          >
+            Twitter
+          </p>
+          <p
+            className="emotion-8 emotion-9"
+          >
+            Tweets data
+          </p>
+        </div>
+      </div>
+    </label>
+    <label
+      className="emotion-12 emotion-13"
+    >
+      <div
+        className="emotion-30 emotion-11"
+      >
+        <div
+          className="emotion-4 emotion-5"
+        >
+          <img
+            alt="Medium"
+            src="./medium.svg"
+          />
+        </div>
+        <div>
+          <p
+            className="emotion-6 emotion-7"
+          >
+            Medium
+          </p>
+          <p
+            className="emotion-8 emotion-9"
+          >
+            Followers count
+          </p>
+        </div>
+      </div>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Settings Notifications matches snapshot 1`] = `
+.emotion-62 {
+  display: block;
+  border-radius: 1px;
+  border: solid 1px rgba(46,91,255,0.08);
+  box-shadow: 0 10px 20px 0 rgba(46,91,255,0.07);
+  padding: 32px 24px;
+  background-color: var(--color-white);
+}
+
+.emotion-0 {
+  margin: 0 0 26px 0;
+  color: var(--color-bluey-grey);
+  font-size: 13px;
+  font-weight: var(--font-weight-normal);
+  -webkit-letter-spacing: 1.2px;
+  -moz-letter-spacing: 1.2px;
+  -ms-letter-spacing: 1.2px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.emotion-60 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin: 0 -11px;
+  padding: 0 8px;
+}
+
+.emotion-2 {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  margin: 0 0 25px 0;
+  padding: 0 12px;
+  line-height: 1.47;
+}
+
+.emotion-4 {
+  margin: 0;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.47;
+}
+
+.emotion-6 {
+  margin: 0;
+  color: var(--color-bluey-grey);
+  font-weight: var(--font-weight-regular);
+  line-height: 1.47;
+}
+
+.emotion-16 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-flex: 0 1 297px;
+  -ms-flex: 0 1 297px;
+  flex: 0 1 297px;
+  margin: 0 85px 0 0;
+  padding: 10px 11px;
+}
+
+.emotion-8 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.emotion-14 {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 36px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.emotion-10 {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.emotion-12 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-radius: 10px;
+  width: 36px;
+  background-color: rgba(135,152,173,0.4);
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.emotion-11:disabled + .emotion-12 {
+  opacity: 0.4;
+}
+
+.emotion-11:checked:enabled + .emotion-12 {
+  background-color: var(--color-medium-green);
+}
+
+.emotion-12::before {
+  position: absolute;
+  content: '';
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+  background-color: var(--color-white);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.emotion-11:checked + .emotion-12::before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+<div
+  className="emotion-62 emotion-63"
+>
+  <h3
+    className="emotion-0 emotion-1"
+  >
+    Notifications
+  </h3>
+  <div
+    className="emotion-60 emotion-61"
+  >
+    <p
+      className="emotion-2 emotion-3"
+    >
+      Control your notification and auto-follow settings.
+    </p>
+    <label
+      className="emotion-16 emotion-17"
+    >
+      <div
+        className="emotion-8 emotion-9"
+      >
+        <p
+          className="emotion-4 emotion-5"
+        >
+          Email Notification
+        </p>
+        <p
+          className="emotion-6 emotion-7"
+        >
+          Commits data and history
+        </p>
+      </div>
+      <label
+        className="emotion-14 emotion-15"
+      >
+        <input
+          className="emotion-10 emotion-11"
+          type="checkbox"
+        />
+        <span
+          className="emotion-12 emotion-13"
+        />
+      </label>
+    </label>
+    <label
+      className="emotion-16 emotion-17"
+    >
+      <div
+        className="emotion-8 emotion-9"
+      >
+        <p
+          className="emotion-4 emotion-5"
+        >
+          Monthly Reports
+        </p>
+        <p
+          className="emotion-6 emotion-7"
+        >
+          Commits data and history
+        </p>
+      </div>
+      <label
+        className="emotion-14 emotion-15"
+      >
+        <input
+          className="emotion-10 emotion-11"
+          type="checkbox"
+        />
+        <span
+          className="emotion-12 emotion-13"
+        />
+      </label>
+    </label>
+    <label
+      className="emotion-16 emotion-17"
+    >
+      <div
+        className="emotion-8 emotion-9"
+      >
+        <p
+          className="emotion-4 emotion-5"
+        >
+          Push Notification
+        </p>
+        <p
+          className="emotion-6 emotion-7"
+        >
+          Commits data and history
+        </p>
+      </div>
+      <label
+        className="emotion-14 emotion-15"
+      >
+        <input
+          className="emotion-10 emotion-11"
+          defaultChecked={true}
+          type="checkbox"
+        />
+        <span
+          className="emotion-12 emotion-13"
+        />
+      </label>
+    </label>
+    <label
+      className="emotion-16 emotion-17"
+    >
+      <div
+        className="emotion-8 emotion-9"
+      >
+        <p
+          className="emotion-4 emotion-5"
+        >
+          Quarter Reports
+        </p>
+        <p
+          className="emotion-6 emotion-7"
+        >
+          Commits data and history
+        </p>
+      </div>
+      <label
+        className="emotion-14 emotion-15"
+      >
+        <input
+          className="emotion-10 emotion-11"
+          type="checkbox"
+        />
+        <span
+          className="emotion-12 emotion-13"
+        />
+      </label>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Settings Personal Data matches snapshot 1`] = `
+.emotion-44 {
+  display: block;
+  border-radius: 1px;
+  border: solid 1px rgba(46,91,255,0.08);
+  box-shadow: 0 10px 20px 0 rgba(46,91,255,0.07);
+  padding: 32px 24px;
+  background-color: var(--color-white);
+}
+
+.emotion-0 {
+  margin: 0 0 26px 0;
+  color: var(--color-bluey-grey);
+  font-size: 13px;
+  font-weight: var(--font-weight-normal);
+  -webkit-letter-spacing: 1.2px;
+  -moz-letter-spacing: 1.2px;
+  -ms-letter-spacing: 1.2px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.emotion-39 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin: 0 -11px;
+  padding: 0 8px;
+}
+
+.emotion-2 {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  margin: 0 0 25px 0;
+  padding: 0 12px;
+  line-height: 1.47;
+}
+
+.emotion-7 {
+  display: inline-block;
+  color: #b0bac9;
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  -webkit-letter-spacing: 1.2px;
+  -moz-letter-spacing: 1.2px;
+  -ms-letter-spacing: 1.2px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  -webkit-flex: 0 1 100%;
+  -ms-flex: 0 1 100%;
+  flex: 0 1 100%;
+  padding: 12px 11px;
+}
+
+.emotion-4 {
+  display: block;
+  border: solid 1px #e0e7ff;
+  border-radius: 5px;
+  height: 38px;
+  margin: 7px 0;
+  max-width: 270px;
+  padding: 10px 16px;
+  width: 100%;
+  background-color: rgba(224,231,255,0.2);
+  color: var(--color-dark);
+  font-family: inherit;
+  font-size: var(--base-font-size);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.emotion-4:disabled {
+  opacity: 0.3;
+}
+
+.emotion-4:focus {
+  border: solid 1px var(--color-clear-blue);
+  outline: 0;
+}
+
+.emotion-12 {
+  display: inline-block;
+  color: #b0bac9;
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  -webkit-letter-spacing: 1.2px;
+  -moz-letter-spacing: 1.2px;
+  -ms-letter-spacing: 1.2px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  -webkit-flex: 0 1 290px;
+  -ms-flex: 0 1 290px;
+  flex: 0 1 290px;
+  padding: 12px 11px;
+}
+
+.emotion-42 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  font-size: var(--base-font-size);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-radius: 4px;
+  height: 40px;
+  width: 200px;
+  background-color: var(--color-clear-blue);
+  color: white;
+  margin: 13px 0 18px 8px;
+}
+
+.emotion-42:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.emotion-42:focus {
+  outline: 0;
+}
+
+.emotion-42:enabled:hover {
+  background-color: var(--color-clear-blue-dark);
+}
+
+<div
+  className="emotion-44 emotion-45"
+>
+  <h3
+    className="emotion-0 emotion-1"
+  >
+    Personal data
+  </h3>
+  <div
+    className="emotion-39 emotion-40"
+  >
+    <p
+      className="emotion-2 emotion-3"
+    >
+      Use this page to update your contact information and change your password.
+    </p>
+    <label
+      className="emotion-6 emotion-7 emotion-8"
+    >
+      Email address
+      <input
+        className="emotion-4 emotion-5"
+        defaultValue="appleseed_jane@mac.com"
+        type="text"
+      />
+    </label>
+    <label
+      className="emotion-6 emotion-12 emotion-8"
+    >
+      First name
+      <input
+        className="emotion-4 emotion-5"
+        defaultValue="Jane"
+        type="text"
+      />
+    </label>
+    <label
+      className="emotion-6 emotion-12 emotion-8"
+    >
+      Last name
+      <input
+        className="emotion-4 emotion-5"
+        defaultValue="Appleseed"
+        type="text"
+      />
+    </label>
+    <label
+      className="emotion-6 emotion-12 emotion-8"
+    >
+      Birth date
+      <input
+        className="emotion-4 emotion-5"
+        defaultValue="1965-05-25"
+        type="date"
+      />
+    </label>
+    <label
+      className="emotion-6 emotion-12 emotion-8"
+    >
+      Current password
+      <input
+        className="emotion-4 emotion-5"
+        defaultValue="password"
+        type="password"
+      />
+    </label>
+    <label
+      className="emotion-6 emotion-12 emotion-8"
+    >
+      New password
+      <input
+        className="emotion-4 emotion-5"
+        type="password"
+      />
+    </label>
+    <label
+      className="emotion-6 emotion-12 emotion-8"
+    >
+      Confirm
+      <input
+        className="emotion-4 emotion-5"
+        type="password"
+      />
+    </label>
+  </div>
+  <button
+    className="emotion-41 emotion-42 emotion-43"
+  >
+    Save Changes
+  </button>
+</div>
+`;

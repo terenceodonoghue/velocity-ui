@@ -1,21 +1,21 @@
 import React from 'react';
-import Avatar from './Avatar';
+import Vehicles from './Vehicles';
 
-describe('Avatar', () => {
-  describe('Round', () => {
+describe('Vehicles', () => {
+  describe('Filter', () => {
     it('matches snapshot', () => {
       const tree = renderer.create(
-        <Avatar.Round src="https://goo.gl/fbAQLP" />,
+        <Vehicles.Filter />,
       ).toJSON();
 
       expect(tree).toMatchSnapshot();
     });
   });
 
-  describe('Square', () => {
+  describe('Vehicles', () => {
     it('matches snapshot', () => {
       const tree = renderer.create(
-        <Avatar.Square src="https://goo.gl/fbAQLP" />,
+        <Vehicles.Vehicles />,
       ).toJSON();
 
       expect(tree).toMatchSnapshot();

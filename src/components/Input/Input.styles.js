@@ -19,7 +19,7 @@ export const Slider = styled.input`
   appearance: none;
   border-radius: 7px;
   height: 4px;
-  width: ${props => props.width || '210px'};
+  width: 210px;
   background-color: rgba(46, 91, 255, 0.15);
   outline: none;
   transition: var(--transition);

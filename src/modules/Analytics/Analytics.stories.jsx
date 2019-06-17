@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import faker from 'faker';
 import Analytics from './Analytics';
+import { metrics } from './Analytics.fixtures';
 
 const MIN_REVENUE = 15000;
 const MAX_REVENUE = 30000;
@@ -12,26 +13,7 @@ const MAX_WEEKDAY = 150;
 
 storiesOf('Modules|Analytics', module)
   .add('Metrics', () => (
-    <Analytics.Metrics
-      data={[
-        {
-          label: 'Vehicles on track',
-          value: '$1,428',
-        },
-        {
-          label: 'Distance driven',
-          value: '158.3 mi',
-        },
-        {
-          label: 'Energy consumed',
-          value: '87.4 kWh',
-        },
-        {
-          label: 'Total drive time',
-          value: '24.2 h',
-        },
-      ]}
-    />
+    <Analytics.Metrics {...metrics} />
   ))
   .add('Revenue', () => (
     <Analytics.Revenue

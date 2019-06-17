@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Page AppBar matches snapshot 1`] = `
+.emotion-4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: solid 1px #e4e8f0;
+  padding: 0 112px;
+  height: 80px;
+  background-color: var(--color-white);
+}
+
+.emotion-0 {
+  cursor: pointer;
+}
+
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 -5px;
+}
+
+.emotion-2 > button {
+  margin: 0 5px;
+}
+
+.emotion-2 > img {
+  margin: 0 5px 0 8px;
+}
+
+<div
+  className="emotion-4 emotion-5"
+>
+  <img
+    alt="Velocity"
+    className="emotion-0 emotion-1"
+    src="./logo.svg"
+  />
+  <div
+    className="emotion-2 emotion-3"
+  >
+    AppBar Content
+  </div>
+</div>
+`;

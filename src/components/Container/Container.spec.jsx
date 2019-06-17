@@ -1,26 +1,16 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import faker from 'faker';
 import Container from './Container';
-import * as S from './Container.styles';
 
 describe('Container', () => {
   describe('Card', () => {
-    const props = {
-      children: <p>{faker.lorem.words()}</p>,
-      heading: faker.lorem.word(),
-    };
+    it('matches snapshot', () => {
+      const tree = renderer.create(
+        <Container.Card heading="Card Heading">
+          Card Content
+        </Container.Card>,
+      ).toJSON();
 
-    it('should render a heading', () => {
-      const component = shallow(
-        <Container.Card {...props} />,
-      );
-
-      expect(
-        component.contains(
-          <S.Heading>{props.heading}</S.Heading>,
-        ),
-      ).toBe(true);
+      expect(tree).toMatchSnapshot();
     });
   });
 });

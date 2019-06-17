@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Welcome matches snapshot 1`] = `
+.emotion-7 {
+  display: block;
+  border-radius: 1px;
+  border: solid 1px rgba(46,91,255,0.08);
+  box-shadow: 0 10px 20px 0 rgba(46,91,255,0.07);
+  padding: 32px 24px;
+  background-color: var(--color-white);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 230px;
+  padding: 0 27px 0 46px;
+  width: 558px;
+}
+
+.emotion-4 {
+  padding: 45px 0 42px 61px;
+}
+
+.emotion-0 {
+  margin: 0 0 13px;
+  width: 135px;
+  font-size: 28px;
+  font-weight: var(--font-weight-light);
+  line-height: 1.14;
+}
+
+.emotion-2 {
+  margin: 0;
+  color: var(--color-bluey-grey);
+  line-height: 1.47;
+}
+
+<div
+  className="emotion-6 emotion-7 emotion-8"
+>
+  <div
+    className="recharts-responsive-container"
+    style={
+      Object {
+        "height": "100%",
+        "maxHeight": undefined,
+        "minHeight": undefined,
+        "minWidth": undefined,
+        "width": 203.5,
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "display": "none",
+          "height": 0,
+          "position": "absolute",
+          "visibility": "hidden",
+          "width": 0,
+        }
+      }
+    />
+  </div>
+  <div
+    className="emotion-4 emotion-5"
+  >
+    <h2
+      className="emotion-0 emotion-1"
+    >
+      Welcome to Velocity
+    </h2>
+    <p
+      className="emotion-2 emotion-3"
+    >
+      All cars are operating well. There were 1,233 trips since your last login.
+    </p>
+  </div>
+</div>
+`;

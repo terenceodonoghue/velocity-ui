@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Contained matches snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  font-size: var(--base-font-size);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-radius: 4px;
+  height: 40px;
+  width: 200px;
+  background-color: var(--color-clear-blue);
+  color: white;
+}
+
+.emotion-0:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.emotion-0:focus {
+  outline: 0;
+}
+
+.emotion-0:enabled:hover {
+  background-color: var(--color-clear-blue-dark);
+}
+
+<button
+  className="emotion-0 emotion-1"
+>
+  Button Text
+</button>
+`;
+
+exports[`Button Fab matches snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  font-size: var(--base-font-size);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-radius: 50%;
+  height: 70px;
+  width: 70px;
+  background-color: var(--color-clear-blue);
+  color: white;
+}
+
+.emotion-0:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.emotion-0:focus {
+  outline: 0;
+}
+
+.emotion-0:enabled:hover {
+  background-color: var(--color-clear-blue-dark);
+}
+
+<button
+  className="emotion-0 emotion-1"
+>
+  +
+</button>
+`;
+
+exports[`Button Outlined matches snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  font-size: var(--base-font-size);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-radius: 4px;
+  height: 40px;
+  width: 200px;
+  background: rgba(46,91,255,0.2);
+  color: var(--color-clear-blue);
+}
+
+.emotion-0:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.emotion-0:focus {
+  outline: 0;
+}
+
+.emotion-0:enabled:hover {
+  background-color: rgba(46,91,255,0.3);
+}
+
+<button
+  className="emotion-0 emotion-1"
+>
+  Button Text
+</button>
+`;
+
+exports[`Button Text matches snapshot 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  font-size: var(--base-font-size);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-radius: 4px;
+  height: 40px;
+  width: 200px;
+  background: none;
+  color: var(--color-clear-blue);
+}
+
+.emotion-0:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.emotion-0:focus {
+  outline: 0;
+}
+
+.emotion-0:enabled:hover {
+  background-color: rgba(46,91,255,0.1);
+}
+
+<button
+  className="emotion-0 emotion-1"
+>
+  Button Text
+</button>
+`;

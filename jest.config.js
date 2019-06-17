@@ -1,5 +1,5 @@
 module.exports = {
-  collectCoverageFrom: ['src/**/*.{js,jsx}', '!**/index.*', '!**/*.stories.{js,jsx}'],
-  setupFilesAfterEnv: ['<rootDir>src/setupTests.js'],
-  snapshotSerializers: ['jest-emotion'],
+  collectCoverageFrom: ['src/**/*.{js,jsx}', '!**/index.*', '!**/*.{fixtures,stories}.{js,jsx}'],
+  setupFilesAfterEnv: ['<rootDir>.jest/setupTests.js'],
+  snapshotSerializers: ['enzyme-to-json/serializer', 'jest-emotion'],
 };

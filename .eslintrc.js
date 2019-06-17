@@ -7,6 +7,9 @@ module.exports = {
   extends: "airbnb",
   globals: {
     Atomics: "readonly",
+    "mount": "readonly",
+    "renderer": "readonly",
+    "shallow": "readonly",
     SharedArrayBuffer: "readonly"
   },
   parserOptions: {
@@ -18,7 +21,8 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
-    "import/no-extraneous-dependencies": ["error", {"devDependencies": [".storybook/*", "src/setupTests.js", "**/*.spec.jsx", "**/*.stories.jsx"]}]
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": [".storybook/*", "**/*.spec.jsx", "**/*.stories.jsx"] }],
+    "import/prefer-default-export": "off"
   },
   settings: {
     "import/resolver": {

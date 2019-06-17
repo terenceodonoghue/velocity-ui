@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation Menu matches snapshot 1`] = `
+.emotion-41 {
+  height: 100%;
+  padding: 20px;
+  width: 80px;
+  background-color: var(--color-white);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  overflow-x: hidden;
+}
+
+.emotion-15 {
+  margin-left: 18px;
+  color: #b0bac9;
+  opacity: 0;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  -webkit-transition-delay: var(--transition);
+  transition-delay: var(--transition);
+}
+
+.emotion-11 {
+  margin-left: 18px;
+  color: var(--color-clear-blue);
+  opacity: 0;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  -webkit-transition-delay: var(--transition);
+  transition-delay: var(--transition);
+}
+
+.emotion-9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 24px;
+  padding: 0 8px;
+  width: 215px;
+  opacity: 0;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  -webkit-transition-delay: var(--transition);
+  transition-delay: var(--transition);
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border: none;
+  padding: 0;
+  font-size: var(--base-font-size);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  border-radius: 4px;
+  height: 40px;
+  width: 200px;
+  background: none;
+  color: var(--color-clear-blue);
+  margin: 0 0 58px;
+  width: 40px;
+}
+
+.emotion-1:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.emotion-1:focus {
+  outline: 0;
+}
+
+.emotion-1:enabled:hover {
+  background-color: rgba(46,91,255,0.1);
+}
+
+.emotion-3 {
+  border-radius: 6px;
+}
+
+.emotion-7 {
+  margin-left: 10px;
+}
+
+.emotion-5 {
+  display: block;
+  color: var(--color-light-blue-grey);
+}
+
+.emotion-39 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.emotion-13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  border-left: solid 3px var(--color-clear-blue);
+  height: 56px;
+  margin: 0 -20px;
+  padding: 0 0 0 27px;
+  background-color: rgba(46,91,255,0.1);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.emotion-17 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  border-left: solid 3px transparent;
+  height: 56px;
+  margin: 0 -20px;
+  padding: 0 0 0 27px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.emotion-17:hover {
+  background-color: rgba(46,91,255,0.1);
+}
+
+<div
+  className="emotion-41 emotion-42"
+  open={false}
+>
+  <button
+    className="emotion-0 emotion-1 emotion-2"
+    onClick={[Function]}
+  >
+    <img
+      alt="Menu"
+      src="./menu.svg"
+    />
+  </button>
+  <div
+    className="emotion-9 emotion-10"
+  >
+    <img
+      alt="Welcome"
+      className="emotion-3 emotion-4"
+      height="32"
+      src="./users/joan.png"
+      width="32"
+    />
+    <div
+      className="emotion-7 emotion-8"
+    >
+      <span>
+        Welcome
+      </span>
+      <span
+        className="emotion-5 emotion-6"
+      >
+        Joan Wilkins
+      </span>
+    </div>
+  </div>
+  <nav>
+    <ul
+      className="emotion-39 emotion-40"
+    >
+      <li
+        className="emotion-13 emotion-14"
+        selected={true}
+      >
+        <img
+          alt="Overview"
+          src="./overview.svg"
+        />
+        <span
+          className="emotion-11 emotion-12"
+          selected={true}
+        >
+          Overview
+        </span>
+      </li>
+      <li
+        className="emotion-17 emotion-14"
+      >
+        <img
+          alt="Analytics"
+          src="./analytics.svg"
+        />
+        <span
+          className="emotion-15 emotion-12"
+        >
+          Analytics
+        </span>
+      </li>
+      <li
+        className="emotion-17 emotion-14"
+      >
+        <img
+          alt="Vehicles"
+          src="./vehicles.svg"
+        />
+        <span
+          className="emotion-15 emotion-12"
+        >
+          Vehicles
+        </span>
+      </li>
+      <li
+        className="emotion-17 emotion-14"
+      >
+        <img
+          alt="Service"
+          src="./service.svg"
+        />
+        <span
+          className="emotion-15 emotion-12"
+        >
+          Service
+        </span>
+      </li>
+      <li
+        className="emotion-17 emotion-14"
+      >
+        <img
+          alt="Map"
+          src="./map.svg"
+        />
+        <span
+          className="emotion-15 emotion-12"
+        >
+          Map
+        </span>
+      </li>
+      <li
+        className="emotion-17 emotion-14"
+      >
+        <img
+          alt="Chat"
+          src="./chat.svg"
+        />
+        <span
+          className="emotion-15 emotion-12"
+        >
+          Chat
+        </span>
+      </li>
+      <li
+        className="emotion-17 emotion-14"
+      >
+        <img
+          alt="Settings"
+          src="./settings.svg"
+        />
+        <span
+          className="emotion-15 emotion-12"
+        >
+          Settings
+        </span>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

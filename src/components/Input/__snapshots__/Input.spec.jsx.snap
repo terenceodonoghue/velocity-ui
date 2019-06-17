@@ -1,0 +1,176 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Label matches snapshot 1`] = `
+.emotion-0 {
+  display: inline-block;
+  color: #b0bac9;
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  -webkit-letter-spacing: 1.2px;
+  -moz-letter-spacing: 1.2px;
+  -ms-letter-spacing: 1.2px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+<label
+  className="emotion-0 emotion-1"
+>
+  Label Text
+</label>
+`;
+
+exports[`Input Slider matches snapshot 1`] = `
+.emotion-0 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 7px;
+  height: 4px;
+  width: 210px;
+  background-color: rgba(46,91,255,0.15);
+  outline: none;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.emotion-0::-moz-range-progress {
+  background-color: var(--color-clear-blue);
+}
+
+.emotion-0::-moz-range-thumb {
+  border: solid 4px var(--color-clear-blue);
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  background: var(--color-white);
+  cursor: pointer;
+}
+
+.emotion-0::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: solid 4px var(--color-clear-blue);
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+  background: var(--color-white);
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.3;
+}
+
+<input
+  className="emotion-0 emotion-1"
+  max={100}
+  min={0}
+  type="range"
+/>
+`;
+
+exports[`Input Switch matches snapshot 1`] = `
+.emotion-4 {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 36px;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.emotion-0 {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.emotion-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-radius: 10px;
+  width: 36px;
+  background-color: rgba(135,152,173,0.4);
+  cursor: pointer;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.emotion-1:disabled + .emotion-2 {
+  opacity: 0.4;
+}
+
+.emotion-1:checked:enabled + .emotion-2 {
+  background-color: var(--color-medium-green);
+}
+
+.emotion-2::before {
+  position: absolute;
+  content: '';
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+  background-color: var(--color-white);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.emotion-1:checked + .emotion-2::before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+<label
+  className="emotion-4 emotion-5"
+>
+  <input
+    className="emotion-0 emotion-1"
+    type="checkbox"
+  />
+  <span
+    className="emotion-2 emotion-3"
+  />
+</label>
+`;
+
+exports[`Input Text matches snapshot 1`] = `
+.emotion-0 {
+  display: block;
+  border: solid 1px #e0e7ff;
+  border-radius: 5px;
+  height: 38px;
+  margin: 7px 0;
+  max-width: 270px;
+  padding: 10px 16px;
+  width: 100%;
+  background-color: rgba(224,231,255,0.2);
+  color: var(--color-dark);
+  font-family: inherit;
+  font-size: var(--base-font-size);
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+.emotion-0:disabled {
+  opacity: 0.3;
+}
+
+.emotion-0:focus {
+  border: solid 1px var(--color-clear-blue);
+  outline: 0;
+}
+
+<input
+  className="emotion-0 emotion-1"
+  placeholder="Placeholder"
+  type="text"
+/>
+`;

@@ -1,86 +1,72 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
-import faker from 'faker';
 import Reminders from './Reminders';
+import { kanban } from './Reminders.fixtures';
 import * as S from './Reminders.styles';
 
 describe('Reminders', () => {
   describe('Kanban', () => {
-    const props = {
-      data: Array.from(
-        { length: 4 },
-        () => Array.from(
-          { length: Math.floor(Math.random() * 10) },
-          () => ({
-            date: faker.lorem.word(),
-            name: faker.lorem.word(),
-            price: faker.lorem.word(),
-            type: faker.lorem.word(),
-          }),
-        ),
-      ),
-    };
-
-    it('should apply correct styles to column heading', () => {
-      const count = Math.floor(Math.random() * 10);
-
-      const component = mount(
-        <S.Heading count={count} />,
-      );
-
-      expect(component).toHaveStyleRule('content', `"${count.toString()}"`, { target: '::after' });
-    });
-
-    it('should render first column', () => {
+    it('renders first column', () => {
       const component = shallow(
-        <Reminders.Kanban {...props} />,
+        <Reminders.Kanban {...kanban} />,
       );
 
       expect(component.find(S.Column).at(0).props()['data-role']).toBe('service-needed');
-      expect(component.find(S.Column).at(0).containsMatchingElement(
-        <S.Heading count={props.data[0].length}>
+
+      expect(component.find(S.Column).at(0).contains(
+        <S.Heading count={kanban.data[0].length}>
           Service needed
         </S.Heading>,
-      )).toBe(true);
+      )).toBeTruthy();
     });
 
-    it('should render second column', () => {
+    it('renders second column', () => {
       const component = shallow(
-        <Reminders.Kanban {...props} />,
+        <Reminders.Kanban {...kanban} />,
       );
 
       expect(component.find(S.Column).at(1).props()['data-role']).toBe('waiting');
-      expect(component.find(S.Column).at(1).containsMatchingElement(
-        <S.Heading count={props.data[1].length}>
+      expect(component.find(S.Column).at(1).contains(
+        <S.Heading count={kanban.data[1].length}>
           Waiting
         </S.Heading>,
-      )).toBe(true);
+      )).toBeTruthy();
     });
 
-    it('should render third column', () => {
+    it('renders third column', () => {
       const component = shallow(
-        <Reminders.Kanban {...props} />,
+        <Reminders.Kanban {...kanban} />,
       );
 
       expect(component.find(S.Column).at(2).props()['data-role']).toBe('in-service');
-      expect(component.find(S.Column).at(2).containsMatchingElement(
-        <S.Heading count={props.data[2].length}>
+      expect(component.find(S.Column).at(2).contains(
+        <S.Heading count={kanban.data[2].length}>
           In service
         </S.Heading>,
-      )).toBe(true);
+      )).toBeTruthy();
     });
 
-    it('should render fourth column', () => {
+    it('renders fourth column', () => {
       const component = shallow(
-        <Reminders.Kanban {...props} />,
+        <Reminders.Kanban {...kanban} />,
       );
 
       expect(component.find(S.Column).at(3).props()['data-role']).toBe('fully-serviced');
-      expect(component.find(S.Column).at(3).containsMatchingElement(
-        <S.Heading count={props.data[3].length}>
+      expect(component.find(S.Column).at(3).contains(
+        <S.Heading count={kanban.data[3].length}>
           Fully serviced
         </S.Heading>,
-      )).toBe(true);
+      )).toBeTruthy();
+    });
+
+    it('shows a ticket count in each column', () => {
+      const component = mount(
+        <Reminders.Kanban {...kanban} />,
+      );
+
+      expect(component.find(S.Heading).at(0)).toHaveStyleRule('content', `"${kanban.data[0].length}"`, { target: '::after' });
+      expect(component.find(S.Heading).at(1)).toHaveStyleRule('content', `"${kanban.data[1].length}"`, { target: '::after' });
+      expect(component.find(S.Heading).at(2)).toHaveStyleRule('content', `"${kanban.data[2].length}"`, { target: '::after' });
+      expect(component.find(S.Heading).at(3)).toHaveStyleRule('content', `"${kanban.data[3].length}"`, { target: '::after' });
     });
   });
 });

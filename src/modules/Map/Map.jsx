@@ -4,13 +4,13 @@ import { number, string } from 'prop-types';
 import * as S from './Map.styles';
 
 const Passenger = ({
-  avatarUrl, email, interactions, location, name, phone,
+  avatarSrc, email, interactions, location, name, phone,
 }) => (
   <S.Passenger heading="Passenger info">
     <S.FieldSet>
       <S.Details>
         <S.Profile>
-          <S.ProfilePicture src={avatarUrl}></S.ProfilePicture>
+          <S.ProfilePicture src={avatarSrc}></S.ProfilePicture>
           <S.ProfileText>
             <S.Name>{name}</S.Name>
             <S.Interactions>{`${interactions} interaction${interactions === 1 ? '' : 's'}`}</S.Interactions>
@@ -44,7 +44,7 @@ const Passenger = ({
 );
 
 Passenger.propTypes = {
-  avatarUrl: string.isRequired,
+  avatarSrc: string.isRequired,
   email: string.isRequired,
   interactions: number.isRequired,
   location: string.isRequired,

@@ -76,5 +76,6 @@ renderCustomizedLabel.propTypes = {
 };
 
 export default {
+  renderCustomizedLabel,
   Welcome,
 };

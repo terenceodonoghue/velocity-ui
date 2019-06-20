@@ -181,4 +181,5 @@ export default {
   Metrics,
   Revenue,
   Weekday,
+  yTickFormatter,
 };

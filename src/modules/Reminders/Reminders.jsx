@@ -6,7 +6,6 @@ import { arrayOf, shape, string } from 'prop-types';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import * as S from './Reminders.styles';
 
-
 const labels = [
   'Service needed',
   'Waiting',
@@ -14,58 +13,56 @@ const labels = [
   'Fully serviced',
 ];
 
+export const move = (droppableSource, droppableDestination, tickets) => {
+  const columns = Array.from(tickets);
+  const sourceClone = Array.from(tickets[parseInt(droppableSource.droppableId, 10)]);
+  const destClone = Array.from(tickets[parseInt(droppableDestination.droppableId, 10)]);
+
+  const [removed] = sourceClone.splice(droppableSource.index, 1);
+  destClone.splice(droppableDestination.index, 0, removed);
+
+  columns[parseInt(droppableSource.droppableId, 10)] = sourceClone;
+  columns[parseInt(droppableDestination.droppableId, 10)] = destClone;
+  return columns;
+};
+
+export const reorder = (droppableSource, droppableDestination, tickets) => {
+  const columns = Array.from(tickets);
+  const sourceClone = Array.from(tickets[parseInt(droppableSource.droppableId, 10)]);
+
+  const [removed] = sourceClone.splice(droppableSource.index, 1);
+  sourceClone.splice(droppableDestination.index, 0, removed);
+
+  columns[parseInt(droppableSource.droppableId, 10)] = sourceClone;
+  return columns;
+};
+
+export const onDragEnd = (dragResult, tickets, setTickets) => {
+  const { source, destination } = dragResult;
+  if (!destination) {
+    return;
+  }
+
+  if (source.droppableId === destination.droppableId) {
+    setTickets(reorder(
+      source,
+      destination,
+      tickets,
+    ));
+  } else {
+    setTickets(move(
+      source,
+      destination,
+      tickets,
+    ));
+  }
+};
+
 const Kanban = ({ data }) => {
   const [tickets, setTickets] = useState(data);
 
-  const move = (source, destination, droppableSource, droppableDestination) => {
-    const columns = Array.from(tickets);
-    const sourceClone = Array.from(source);
-    const destClone = Array.from(destination);
-
-    const [removed] = sourceClone.splice(droppableSource.index, 1);
-    destClone.splice(droppableDestination.index, 0, removed);
-
-    columns[parseInt(droppableSource.droppableId, 10)] = sourceClone;
-    columns[parseInt(droppableDestination.droppableId, 10)] = destClone;
-    setTickets(columns);
-  };
-
-  const reorder = (source, droppableSource, droppableDestination) => {
-    const columns = Array.from(tickets);
-    const sourceClone = Array.from(source);
-
-    const [removed] = sourceClone.splice(droppableSource.index, 1);
-    sourceClone.splice(droppableDestination.index, 0, removed);
-
-    columns[parseInt(droppableSource.droppableId, 10)] = sourceClone;
-    setTickets(columns);
-  };
-
-  const onDragEnd = (dragResult) => {
-    const { source, destination } = dragResult;
-    if (!destination) {
-      return;
-    }
-
-    if (source.droppableId === destination.droppableId) {
-      reorder(
-        tickets[parseInt(source.droppableId, 10)],
-        source,
-        destination,
-      );
-    } else {
-      move(
-        tickets[parseInt(source.droppableId, 10)],
-        tickets[parseInt(destination.droppableId, 10)],
-        source,
-        destination,
-      );
-    }
-  };
-
-
   return (
-    <DragDropContext onDragEnd={onDragEnd}>
+    <DragDropContext onDragEnd={dragResult => onDragEnd(dragResult, tickets, setTickets)}>
       <S.Kanban>
         {labels.map((label, i) => (
           <S.Column data-role={label.split(' ').join('-').toLowerCase()} key={label.split(' ').join('-').toLowerCase()}>
@@ -80,24 +77,24 @@ const Kanban = ({ data }) => {
                     {tickets[i].map((ticket, j) => (
                       <Draggable draggableId={`${ticket.name.toLowerCase()}-${i}${j}`} index={j} key={`${ticket.name.toLowerCase()}-${i}${j}`}>
                         {
-                        providedDrag => (
-                          <S.Ticket
-                            as="li"
-                            ref={providedDrag.innerRef}
-                            {...providedDrag.draggableProps}
-                            {...providedDrag.dragHandleProps}
-                          >
-                            <S.Row>
-                              <span>{ticket.name}</span>
-                              <span>{ticket.price}</span>
-                            </S.Row>
-                            <S.Row>
-                              <span>{ticket.type}</span>
-                              <span>{ticket.date}</span>
-                            </S.Row>
-                          </S.Ticket>
-                        )
-                      }
+                          providedDrag => (
+                            <S.Ticket
+                              as="li"
+                              ref={providedDrag.innerRef}
+                              {...providedDrag.draggableProps}
+                              {...providedDrag.dragHandleProps}
+                            >
+                              <S.Row>
+                                <span>{ticket.name}</span>
+                                <span>{ticket.price}</span>
+                              </S.Row>
+                              <S.Row>
+                                <span>{ticket.type}</span>
+                                <span>{ticket.date}</span>
+                              </S.Row>
+                            </S.Ticket>
+                          )
+                        }
                       </Draggable>
                     ))}
                     {providedDrop.placeholder}

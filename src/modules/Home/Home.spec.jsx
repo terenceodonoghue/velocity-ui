@@ -1,5 +1,5 @@
 import React from 'react';
-import Home from './Home';
+import Home, { renderCustomizedLabel as CustomizedLabel } from './Home';
 import { customizedLabel } from './Home.fixtures';
 
 describe('Home', () => {
@@ -21,7 +21,7 @@ describe('Home', () => {
   describe('renderCustomizedLabel', () => {
     it('matches snapshot', () => {
       const tree = renderer.create(
-        <Home.renderCustomizedLabel {...customizedLabel} />,
+        <CustomizedLabel {...customizedLabel} />,
       ).toJSON();
 
       expect(tree).toMatchSnapshot();

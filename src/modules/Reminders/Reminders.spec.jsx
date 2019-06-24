@@ -1,4 +1,5 @@
 import React from 'react';
+import { act } from 'react-dom/test-utils';
 import Reminders, { move, onDragEnd, reorder } from './Reminders';
 import { kanban } from './Reminders.fixtures';
 import * as S from './Reminders.styles';
@@ -10,7 +11,7 @@ describe('Reminders', () => {
         <Reminders.Kanban {...kanban} />,
       );
 
-      expect(component.find(S.Column).at(0).props()['data-role']).toBe('service-needed');
+      expect(component.find(S.Column).at(0).prop('data-role')).toBe('service-needed');
 
       expect(component.find(S.Column).at(0).contains(
         <S.Heading count={kanban.data[0].length}>
@@ -24,7 +25,7 @@ describe('Reminders', () => {
         <Reminders.Kanban {...kanban} />,
       );
 
-      expect(component.find(S.Column).at(1).props()['data-role']).toBe('waiting');
+      expect(component.find(S.Column).at(1).prop('data-role')).toBe('waiting');
       expect(component.find(S.Column).at(1).contains(
         <S.Heading count={kanban.data[1].length}>
           Waiting
@@ -37,7 +38,7 @@ describe('Reminders', () => {
         <Reminders.Kanban {...kanban} />,
       );
 
-      expect(component.find(S.Column).at(2).props()['data-role']).toBe('in-service');
+      expect(component.find(S.Column).at(2).prop('data-role')).toBe('in-service');
       expect(component.find(S.Column).at(2).contains(
         <S.Heading count={kanban.data[2].length}>
           In service
@@ -50,7 +51,7 @@ describe('Reminders', () => {
         <Reminders.Kanban {...kanban} />,
       );
 
-      expect(component.find(S.Column).at(3).props()['data-role']).toBe('fully-serviced');
+      expect(component.find(S.Column).at(3).prop('data-role')).toBe('fully-serviced');
       expect(component.find(S.Column).at(3).contains(
         <S.Heading count={kanban.data[3].length}>
           Fully serviced
@@ -67,6 +68,16 @@ describe('Reminders', () => {
       expect(component.find(S.Heading).at(1)).toHaveStyleRule('content', `"${kanban.data[1].length}"`, { target: '::after' });
       expect(component.find(S.Heading).at(2)).toHaveStyleRule('content', `"${kanban.data[2].length}"`, { target: '::after' });
       expect(component.find(S.Heading).at(3)).toHaveStyleRule('content', `"${kanban.data[3].length}"`, { target: '::after' });
+    });
+
+    it('updates state', () => {
+      const component = mount(
+        <Reminders.Kanban {...kanban} />,
+      );
+
+      act(() => component.children().at(0).invoke('onDragEnd')(
+        { source: { droppableId: 0, index: 0 }, destination: { droppableId: 1, index: 1 } },
+      ));
     });
   });
 

@@ -77,16 +77,16 @@ describe('Navigation', () => {
 
       component.find(S.MenuButton).simulate('click');
 
-      expect(component.find(S.Menu).props().open).toBeTruthy();
-      expect(component.find(S.Welcome).props().show).toBeTruthy();
-      component.find(S.NavLabel).forEach(node => expect(node.props().show).toBeTruthy());
+      expect(component.find(S.Menu).prop('open')).toBeTruthy();
+      expect(component.find(S.Welcome).prop('show')).toBeTruthy();
+      component.find(S.NavLabel).forEach(node => expect(node.prop('show')).toBeTruthy());
 
 
       component.find(S.MenuButton).simulate('click');
 
-      expect(component.find(S.Menu).props().open).toBeFalsy();
-      expect(component.find(S.Welcome).props().show).toBeFalsy();
-      component.find(S.NavLabel).forEach(node => expect(node.props().show).toBeFalsy());
+      expect(component.find(S.Menu).prop('open')).toBeFalsy();
+      expect(component.find(S.Welcome).prop('show')).toBeFalsy();
+      component.find(S.NavLabel).forEach(node => expect(node.prop('show')).toBeFalsy());
     });
   });
 });

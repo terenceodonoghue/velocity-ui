@@ -10,10 +10,10 @@ export const CheckboxText = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  border: ${props => `solid 1px ${props.active ? 'var(--color-clear-blue)' : '#e0e7ff'}`};
+  border: ${(props) => `solid 1px ${props.active ? 'var(--color-clear-blue)' : '#e0e7ff'}`};
   border-radius: 5px;
   padding: 19px 21px;
-  ${props => props.active && `&::after {
+  ${(props) => props.active && `&::after {
     position: absolute;
     right: -8px;
     top: -8px;
@@ -83,6 +83,6 @@ export const SwitchText = styled.div`
 `;
 
 export const TextField = styled(Input.Label)`
-  flex: ${props => (props.flexBasis ? `0 1 ${props.flexBasis}` : '0 1 290px')};
+  flex: ${(props) => (props.flexBasis ? `0 1 ${props.flexBasis}` : '0 1 290px')};
   padding: 12px 11px;
 `;

@@ -62,14 +62,14 @@ const Kanban = ({ data }) => {
   const [tickets, setTickets] = useState(data);
 
   return (
-    <DragDropContext onDragEnd={dragResult => onDragEnd(dragResult, tickets, setTickets)}>
+    <DragDropContext onDragEnd={(dragResult) => onDragEnd(dragResult, tickets, setTickets)}>
       <S.Kanban>
         {labels.map((label, i) => (
           <S.Column data-role={label.split(' ').join('-').toLowerCase()} key={label.split(' ').join('-').toLowerCase()}>
             <S.Heading count={tickets[i].length}>{label}</S.Heading>
             <Droppable droppableId={`${i}`}>
               {
-                providedDrop => (
+                (providedDrop) => (
                   <S.Tickets
                     ref={providedDrop.innerRef}
                     {...providedDrop.droppableProps}
@@ -77,7 +77,7 @@ const Kanban = ({ data }) => {
                     {tickets[i].map((ticket, j) => (
                       <Draggable draggableId={`${ticket.name.toLowerCase()}-${i}${j}`} index={j} key={`${ticket.name.toLowerCase()}-${i}${j}`}>
                         {
-                          providedDrag => (
+                          (providedDrag) => (
                             <S.Ticket
                               as="li"
                               ref={providedDrag.innerRef}

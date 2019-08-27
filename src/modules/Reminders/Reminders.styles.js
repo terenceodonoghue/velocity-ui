@@ -20,7 +20,7 @@ export const Heading = styled.h3`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    content: "${props => props.count.toString()}";
+    content: "${(props) => props.count.toString()}";
     border-radius: 10px;
     height: 20px;
     margin-left: 6px;

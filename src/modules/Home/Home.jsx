@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Fragment } from 'react';
+import { Fragment } from 'react'; // eslint-disable-line no-unused-vars
 import PropTypes from 'prop-types';
 import {
   PieChart, Pie, ResponsiveContainer,
@@ -20,7 +20,7 @@ export const renderCustomizedLabel = ({
   index, percent,
 }) => (
   index === 0 && (
-  <Fragment>
+  <>
     <text fill="#2e384d" fontFamily="Rubik-Light, Rubik" fontSize="48" fontWeight="300" letterSpacing="-0.600000024" x="50%" y="50%">
       <tspan x="75" y="140">{`${(percent * 100).toFixed(0)}`}</tspan>
     </text>
@@ -37,7 +37,7 @@ export const renderCustomizedLabel = ({
       <tspan x="62" y="162">OPERATING</tspan>
       <tspan x="78" y="177">SCORE</tspan>
     </text>
-  </Fragment>
+  </>
   )
 );
 

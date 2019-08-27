@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment } from 'react'; // eslint-disable-line no-unused-vars
 import { storiesOf } from '@storybook/react';
 import faker from 'faker';
 import {
@@ -7,7 +7,7 @@ import {
 import * as S from './index.styles';
 
 storiesOf('Basics|Style Guide', module).add('Components', () => (
-  <Fragment>
+  <>
     <Page.AppBar>
       <Avatar.Round alt="Avatar" src={faker.image.avatar()} height="40" width="40" />
       <S.IconButton>
@@ -42,5 +42,5 @@ storiesOf('Basics|Style Guide', module).add('Components', () => (
         <Input.Slider min={0} max={100} />
       </S.Components>
     </S.Story>
-  </Fragment>
+  </>
 ));

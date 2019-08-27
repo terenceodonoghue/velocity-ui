@@ -54,7 +54,7 @@ export const PaymentLogo = styled.div`
   width: 140px;
   border-radius: 5px;
   border: solid 1px #e0e7ff;
-  background-color: ${props => (props.active ? 'var(--color-clear-blue)' : null)};
+  background-color: ${(props) => (props.active ? 'var(--color-clear-blue)' : null)};
 
   img {
     transform: scale(0.5);

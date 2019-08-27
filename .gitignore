@@ -88,5 +88,5 @@ typings/
 .dynamodb/
 
 # Build output
-.out
-lib
+.out/
+lib/

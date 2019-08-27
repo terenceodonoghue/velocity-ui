@@ -24,6 +24,7 @@ module.exports = {
     "import/no-extraneous-dependencies": ["error", { "devDependencies": [".storybook/*", "**/*.spec.jsx", "**/*.stories.jsx"] }],
     "import/prefer-default-export": "off",
     "max-len": "off",
+    "react/jsx-props-no-spreading": "off",
   },
   settings: {
     "import/resolver": {

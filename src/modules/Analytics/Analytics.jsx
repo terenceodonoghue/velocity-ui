@@ -19,7 +19,7 @@ import {
 } from 'recharts';
 import * as S from './Analytics.styles';
 
-const yTickFormatter = value => (value > 999 ? numeral(Math.abs(value)).format('$0[.]0a') : Math.abs(value));
+const yTickFormatter = (value) => (value > 999 ? numeral(Math.abs(value)).format('$0[.]0a') : Math.abs(value));
 
 const Metrics = ({ data }) => (
   <S.Metrics>

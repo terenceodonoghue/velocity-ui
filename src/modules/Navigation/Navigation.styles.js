@@ -4,7 +4,7 @@ import { Button } from 'components';
 export const Menu = styled.div`
   height: 100%;
   padding: 20px;
-  width: ${props => (props.open ? '215px' : '80px')};
+  width: ${(props) => (props.open ? '215px' : '80px')};
   background-color: var(--color-white);
   transition: var(--transition);
   overflow-x: hidden;
@@ -30,14 +30,14 @@ export const NavItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-left: ${props => `solid 3px ${props.selected ? 'var(--color-clear-blue)' : 'transparent'}`};
+  border-left: ${(props) => `solid 3px ${props.selected ? 'var(--color-clear-blue)' : 'transparent'}`};
   height: 56px;
   margin: 0 -20px;
   padding: 0 0 0 27px;
-  background-color: ${props => (props.selected ? 'rgba(46, 91, 255, 0.1)' : null)};
+  background-color: ${(props) => (props.selected ? 'rgba(46, 91, 255, 0.1)' : null)};
   transition: var(--transition);
   cursor: pointer;
-  ${props => !props.selected && `
+  ${(props) => !props.selected && `
     &:hover {
       background-color: rgba(46, 91, 255, 0.1);
     }
@@ -46,8 +46,8 @@ export const NavItem = styled.li`
 
 export const NavLabel = styled.span`
   margin-left: 18px;
-  color: ${props => (props.selected ? 'var(--color-clear-blue)' : '#b0bac9')};
-  opacity: ${props => (props.show ? '1' : '0')};
+  color: ${(props) => (props.selected ? 'var(--color-clear-blue)' : '#b0bac9')};
+  opacity: ${(props) => (props.show ? '1' : '0')};
   transition: var(--transition);
   transition-delay: var(--transition);
 `;
@@ -57,7 +57,7 @@ export const Welcome = styled.div`
   margin: 0 0 24px;
   padding: 0 8px;
   width: 215px;
-  opacity: ${props => (props.show ? '1' : '0')};
+  opacity: ${(props) => (props.show ? '1' : '0')};
   transition: var(--transition);
   transition-delay: var(--transition);
 `;

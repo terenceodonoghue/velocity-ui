@@ -1,10 +1,10 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import React from 'react';
+import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 import * as S from './Container.styles';
 
-const Card = React.forwardRef(({ children, heading, ...rest }, ref) => (
+const Card = forwardRef(({ children, heading, ...rest }, ref) => (
   <S.Card ref={ref} {...rest}>
     {heading && <S.Heading>{heading}</S.Heading>}
     {children}

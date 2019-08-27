@@ -1,14 +1,21 @@
 {
-  "name": "velocity-ui",
+  "name": "@terenceodonoghue/velocity-ui",
   "version": "1.0.0",
   "description": "React components that implement InVision's Velocity UI kit",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "yarn.lock"
+  ],
   "repository": "git@github.com:terenceodonoghue/velocity-ui.git",
   "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
+    "build": "babel src/components --ignore 'src/**/*.fixtures.js','src/**/*.spec.jsx','src/**/*.stories.jsx' --out-dir lib --source-maps inline",
     "build-storybook": "build-storybook -c .storybook -o .out -s ./static --quiet",
     "lint": "eslint --ext .js,.jsx ./ && stylelint './**/*.styles.js'",
+    "prebuild": "rimraf lib",
+    "prepublish": "yarn run build",
     "storybook": "start-storybook -s ./static --quiet",
     "test": "jest"
   },
@@ -23,6 +30,7 @@
     "recharts": "^1.7.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
@@ -47,6 +55,7 @@
     "jest-emotion": "^10.0.14",
     "react-scripts": "^3.1.1",
     "react-test-renderer": "^16.9.0",
+    "rimraf": "^3.0.0",
     "stylelint": "^10.1.0",
     "stylelint-config-standard": "^18.3.0",
     "stylelint-config-styled-components": "^0.1.1",

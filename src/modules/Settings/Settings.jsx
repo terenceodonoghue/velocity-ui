@@ -155,8 +155,17 @@ const Notifications = () => (
   </Container.Card>
 );
 
+export const Theme = () => (
+  <Container.Card heading="Theme">
+    <S.FieldSet>
+      <S.Legend>Select a color scheme for your Velocity app.</S.Legend>
+    </S.FieldSet>
+  </Container.Card>
+);
+
 export default {
   Personal,
   Integrations,
   Notifications,
+  Theme,
 };

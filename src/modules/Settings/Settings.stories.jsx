@@ -5,4 +5,5 @@ import Settings from './Settings';
 storiesOf('Modules|Settings', module)
   .add('Personal Data', () => <Settings.Personal />)
   .add('Integrations', () => <Settings.Integrations />)
-  .add('Notifications', () => <Settings.Notifications />);
+  .add('Notifications', () => <Settings.Notifications />)
+  .add('Theme', () => <Settings.Theme />);

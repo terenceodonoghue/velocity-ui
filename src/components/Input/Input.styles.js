@@ -15,6 +15,8 @@ export const Label = styled.label`
   text-transform: uppercase;
 `;
 
+export const Radio = styled.input``;
+
 export const Slider = styled.input`
   appearance: none;
   border-radius: 7px;
@@ -98,11 +100,11 @@ export const Toggle = styled.span`
   cursor: pointer;
   transition: var(--transition);
 
-  ${Checkbox}:disabled + & {
+  ${/* sc-selector */Checkbox}:disabled + & {
     opacity: 0.4;
   }
 
-  ${Checkbox}:checked:enabled + & {
+  ${/* sc-selector */Checkbox}:checked:enabled + & {
     background-color: var(--color-medium-green);
   }
 
@@ -117,7 +119,7 @@ export const Toggle = styled.span`
     background-color: var(--color-white);
     transition: var(--transition);
 
-    ${Checkbox}:checked + & {
+    ${/* sc-selector */Checkbox}:checked + & {
       transform: translateX(16px);
     }
   }

@@ -82,7 +82,11 @@ export const SwitchText = styled.div`
   flex: 1;
 `;
 
-export const TextField = styled(Input.Label)`
-  flex: ${(props) => (props.flexBasis ? `0 1 ${props.flexBasis}` : '0 1 290px')};
+export const TextField = styled(Input.Text)`
+  flex: 0 1 290px;
   padding: 12px 11px;
+
+  &:first-of-type {
+    flex: 0 1 100%;
+  }
 `;

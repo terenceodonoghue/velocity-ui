@@ -10,34 +10,13 @@ const Personal = () => (
         Use this page to update your contact information and change your
         password.
       </S.Legend>
-      <S.TextField flexBasis="100%">
-        Email address
-        <Input.Text type="text" defaultValue="appleseed_jane@mac.com" />
-      </S.TextField>
-      <S.TextField>
-        First name
-        <Input.Text type="text" defaultValue="Jane" />
-      </S.TextField>
-      <S.TextField>
-        Last name
-        <Input.Text type="text" defaultValue="Appleseed" />
-      </S.TextField>
-      <S.TextField>
-        Birth date
-        <Input.Text type="date" defaultValue="1965-05-25" />
-      </S.TextField>
-      <S.TextField>
-        Current password
-        <Input.Text type="password" defaultValue="password" />
-      </S.TextField>
-      <S.TextField>
-        New password
-        <Input.Text type="password" />
-      </S.TextField>
-      <S.TextField>
-        Confirm
-        <Input.Text type="password" />
-      </S.TextField>
+      <S.TextField defaultValue="appleseed_jane@mac.com" label="Email address" type="text" />
+      <S.TextField defaultValue="Jane" label="First name" type="text" />
+      <S.TextField defaultValue="Appleseed" label="Last name" type="text" />
+      <S.TextField defaultValue="1965-05-25" label="Birth date" type="date" />
+      <S.TextField defaultValue="password" label="Current password" type="password" />
+      <S.TextField label="New password" type="password" />
+      <S.TextField label="Confirm" type="password" />
     </S.FieldSet>
     <S.SaveButton>Save Changes</S.SaveButton>
   </Container.Card>

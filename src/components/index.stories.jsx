@@ -34,10 +34,7 @@ storiesOf('Basics|Style Guide', module).add('Components', () => (
     </S.Story>
     <S.Story heading="Inputs">
       <S.Components>
-        <Input.Label>
-          Label
-          <Input.Text type="text" placeholder="Placeholder" />
-        </Input.Label>
+        <Input.Text label="Label" type="text" placeholder="Placeholder" />
         <Input.Switch />
         <Input.Slider min={0} max={100} />
       </S.Components>

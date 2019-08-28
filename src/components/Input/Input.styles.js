@@ -1,23 +1,22 @@
 import styled from '@emotion/styled';
 
-export const Checkbox = styled.input`
+export const CheckboxInput = styled.input`
   height: 0;
   width: 0;
   opacity: 0;
 `;
 
-export const Label = styled.label`
+export const CheckboxLabel = styled.label`
+  position: relative;
   display: inline-block;
-  color: #b0bac9;
-  font-size: 12px;
-  font-weight: var(--font-weight-medium);
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
+  height: 20px;
+  width: 36px;
+  transition: var(--transition);
 `;
 
 export const Radio = styled.input``;
 
-export const Slider = styled.input`
+export const SliderInput = styled.input`
   appearance: none;
   border-radius: 7px;
   height: 4px;
@@ -54,16 +53,44 @@ export const Slider = styled.input`
   }
 `;
 
-
-export const Switch = styled.label`
-  position: relative;
-  display: inline-block;
-  height: 20px;
+export const Switch = styled.span`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-radius: 10px;
   width: 36px;
+  background-color: rgba(135, 152, 173, 0.4);
+  cursor: pointer;
   transition: var(--transition);
+
+  ${/* sc-selector */CheckboxInput}:disabled + & {
+    opacity: 0.4;
+  }
+
+  ${/* sc-selector */CheckboxInput}:checked:enabled + & {
+    background-color: var(--color-medium-green);
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    background-color: var(--color-white);
+    transition: var(--transition);
+
+    ${/* sc-selector */CheckboxInput}:checked + & {
+      transform: translateX(16px);
+    }
+  }
 `;
 
-export const Text = styled.input`
+export const TextInput = styled.input`
   display: block;
   border: solid 1px #e0e7ff;
   border-radius: 5px;
@@ -88,39 +115,11 @@ export const Text = styled.input`
   }
 `;
 
-export const Toggle = styled.span`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  border-radius: 10px;
-  width: 36px;
-  background-color: rgba(135, 152, 173, 0.4);
-  cursor: pointer;
-  transition: var(--transition);
-
-  ${/* sc-selector */Checkbox}:disabled + & {
-    opacity: 0.4;
-  }
-
-  ${/* sc-selector */Checkbox}:checked:enabled + & {
-    background-color: var(--color-medium-green);
-  }
-
-  &::before {
-    position: absolute;
-    content: '';
-    left: 2px;
-    top: 2px;
-    border-radius: 50%;
-    height: 16px;
-    width: 16px;
-    background-color: var(--color-white);
-    transition: var(--transition);
-
-    ${/* sc-selector */Checkbox}:checked + & {
-      transform: translateX(16px);
-    }
-  }
+export const TextLabel = styled.label`
+  display: inline-block;
+  color: #b0bac9;
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
 `;

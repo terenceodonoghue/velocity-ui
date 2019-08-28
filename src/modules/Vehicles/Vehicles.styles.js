@@ -6,7 +6,7 @@ export const Filter = styled(Container.Card)`
   width: 268px;
 `;
 
-export const FilterField = styled(Input.Label)`
+export const FilterField = styled(Input.Text)`
   padding: 0 6px 19px;
   color: var(--color-dark);
   font-size: 15px;

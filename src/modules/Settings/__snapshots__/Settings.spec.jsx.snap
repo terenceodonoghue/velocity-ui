@@ -639,10 +639,16 @@ exports[`Settings Personal Data matches snapshot 1`] = `
   -ms-letter-spacing: 1.2px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
+  -webkit-flex: 0 1 290px;
+  -ms-flex: 0 1 290px;
+  flex: 0 1 290px;
+  padding: 12px 11px;
+}
+
+.emotion-7:first-of-type {
   -webkit-flex: 0 1 100%;
   -ms-flex: 0 1 100%;
   flex: 0 1 100%;
-  padding: 12px 11px;
 }
 
 .emotion-4 {
@@ -669,22 +675,6 @@ exports[`Settings Personal Data matches snapshot 1`] = `
 .emotion-4:focus {
   border: solid 1px var(--color-clear-blue);
   outline: 0;
-}
-
-.emotion-12 {
-  display: inline-block;
-  color: #b0bac9;
-  font-size: 12px;
-  font-weight: var(--font-weight-medium);
-  -webkit-letter-spacing: 1.2px;
-  -moz-letter-spacing: 1.2px;
-  -ms-letter-spacing: 1.2px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  -webkit-flex: 0 1 290px;
-  -ms-flex: 0 1 290px;
-  flex: 0 1 290px;
-  padding: 12px 11px;
 }
 
 .emotion-42 {
@@ -755,7 +745,7 @@ exports[`Settings Personal Data matches snapshot 1`] = `
       />
     </label>
     <label
-      className="emotion-6 emotion-12 emotion-8"
+      className="emotion-6 emotion-7 emotion-8"
     >
       First name
       <input
@@ -765,7 +755,7 @@ exports[`Settings Personal Data matches snapshot 1`] = `
       />
     </label>
     <label
-      className="emotion-6 emotion-12 emotion-8"
+      className="emotion-6 emotion-7 emotion-8"
     >
       Last name
       <input
@@ -775,7 +765,7 @@ exports[`Settings Personal Data matches snapshot 1`] = `
       />
     </label>
     <label
-      className="emotion-6 emotion-12 emotion-8"
+      className="emotion-6 emotion-7 emotion-8"
     >
       Birth date
       <input
@@ -785,7 +775,7 @@ exports[`Settings Personal Data matches snapshot 1`] = `
       />
     </label>
     <label
-      className="emotion-6 emotion-12 emotion-8"
+      className="emotion-6 emotion-7 emotion-8"
     >
       Current password
       <input
@@ -795,7 +785,7 @@ exports[`Settings Personal Data matches snapshot 1`] = `
       />
     </label>
     <label
-      className="emotion-6 emotion-12 emotion-8"
+      className="emotion-6 emotion-7 emotion-8"
     >
       New password
       <input
@@ -804,7 +794,7 @@ exports[`Settings Personal Data matches snapshot 1`] = `
       />
     </label>
     <label
-      className="emotion-6 emotion-12 emotion-8"
+      className="emotion-6 emotion-7 emotion-8"
     >
       Confirm
       <input

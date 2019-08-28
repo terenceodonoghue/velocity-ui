@@ -1,25 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input Label matches snapshot 1`] = `
-.emotion-0 {
-  display: inline-block;
-  color: #b0bac9;
-  font-size: 12px;
-  font-weight: var(--font-weight-medium);
-  -webkit-letter-spacing: 1.2px;
-  -moz-letter-spacing: 1.2px;
-  -ms-letter-spacing: 1.2px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-}
-
-<label
-  className="emotion-0 emotion-1"
->
-  Label Text
-</label>
-`;
-
 exports[`Input Slider matches snapshot 1`] = `
 .emotion-0 {
   -webkit-appearance: none;
@@ -142,6 +122,18 @@ exports[`Input Switch matches snapshot 1`] = `
 `;
 
 exports[`Input Text matches snapshot 1`] = `
+.emotion-2 {
+  display: inline-block;
+  color: #b0bac9;
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  -webkit-letter-spacing: 1.2px;
+  -moz-letter-spacing: 1.2px;
+  -ms-letter-spacing: 1.2px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
 .emotion-0 {
   display: block;
   border: solid 1px #e0e7ff;
@@ -168,9 +160,14 @@ exports[`Input Text matches snapshot 1`] = `
   outline: 0;
 }
 
-<input
-  className="emotion-0 emotion-1"
-  placeholder="Placeholder"
-  type="text"
-/>
+<label
+  className="emotion-2 emotion-3"
+>
+  Label Text
+  <input
+    className="emotion-0 emotion-1"
+    placeholder="Placeholder"
+    type="text"
+  />
+</label>
 `;

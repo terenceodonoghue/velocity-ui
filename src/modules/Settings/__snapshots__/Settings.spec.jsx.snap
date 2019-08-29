@@ -316,7 +316,7 @@ exports[`Settings Integrations matches snapshot 1`] = `
 `;
 
 exports[`Settings Notifications matches snapshot 1`] = `
-.emotion-62 {
+.emotion-42 {
   display: block;
   border-radius: 1px;
   border: solid 1px rgba(46,91,255,0.08);
@@ -337,7 +337,7 @@ exports[`Settings Notifications matches snapshot 1`] = `
   text-transform: uppercase;
 }
 
-.emotion-60 {
+.emotion-40 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -358,20 +358,7 @@ exports[`Settings Notifications matches snapshot 1`] = `
   line-height: 1.47;
 }
 
-.emotion-4 {
-  margin: 0;
-  font-weight: var(--font-weight-medium);
-  line-height: 1.47;
-}
-
-.emotion-6 {
-  margin: 0;
-  color: var(--color-bluey-grey);
-  font-weight: var(--font-weight-regular);
-  line-height: 1.47;
-}
-
-.emotion-16 {
+.emotion-11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -380,41 +367,41 @@ exports[`Settings Notifications matches snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-flex: 0 1 297px;
-  -ms-flex: 0 1 297px;
-  flex: 0 1 297px;
-  margin: 0 85px 0 0;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-width: 36px;
+  margin: 0 87px 0 0;
   padding: 10px 11px;
 }
 
-.emotion-8 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+.emotion-4 {
+  margin-right: 58px;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.47;
 }
 
-.emotion-14 {
-  position: relative;
-  display: inline-block;
-  height: 20px;
-  width: 36px;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+.emotion-4 p {
+  margin: 0;
 }
 
-.emotion-10 {
+.emotion-4 p:nth-of-type(2) {
+  color: var(--color-bluey-grey);
+  font-weight: var(--font-weight-regular);
+}
+
+.emotion-6 {
   height: 0;
+  margin: 0;
   width: 0;
   opacity: 0;
 }
 
-.emotion-12 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
+.emotion-8 {
+  position: relative;
   border-radius: 10px;
+  height: 20px;
   width: 36px;
   background-color: rgba(135,152,173,0.4);
   cursor: pointer;
@@ -422,15 +409,15 @@ exports[`Settings Notifications matches snapshot 1`] = `
   transition: var(--transition);
 }
 
-.emotion-11:disabled + .emotion-12 {
+.emotion-7:disabled + .emotion-8 {
   opacity: 0.4;
 }
 
-.emotion-11:checked:enabled + .emotion-12 {
+.emotion-7:checked:enabled + .emotion-8 {
   background-color: var(--color-medium-green);
 }
 
-.emotion-12::before {
+.emotion-8::before {
   position: absolute;
   content: '';
   left: 2px;
@@ -443,14 +430,14 @@ exports[`Settings Notifications matches snapshot 1`] = `
   transition: var(--transition);
 }
 
-.emotion-11:checked + .emotion-12::before {
+.emotion-7:checked + .emotion-8::before {
   -webkit-transform: translateX(16px);
   -ms-transform: translateX(16px);
   transform: translateX(16px);
 }
 
 <div
-  className="emotion-62 emotion-63"
+  className="emotion-42 emotion-43"
 >
   <h3
     className="emotion-0 emotion-1"
@@ -458,7 +445,7 @@ exports[`Settings Notifications matches snapshot 1`] = `
     Notifications
   </h3>
   <div
-    className="emotion-60 emotion-61"
+    className="emotion-40 emotion-41"
   >
     <p
       className="emotion-2 emotion-3"
@@ -466,121 +453,88 @@ exports[`Settings Notifications matches snapshot 1`] = `
       Control your notification and auto-follow settings.
     </p>
     <label
-      className="emotion-16 emotion-17"
+      className="emotion-10 emotion-11 emotion-12"
     >
       <div
-        className="emotion-8 emotion-9"
+        className="emotion-4 emotion-5"
       >
-        <p
-          className="emotion-4 emotion-5"
-        >
+        <p>
           Email Notification
         </p>
-        <p
-          className="emotion-6 emotion-7"
-        >
+        <p>
           Commits data and history
         </p>
       </div>
-      <label
-        className="emotion-14 emotion-15"
-      >
-        <input
-          className="emotion-10 emotion-11"
-          type="checkbox"
-        />
-        <span
-          className="emotion-12 emotion-13"
-        />
-      </label>
+      <input
+        className="emotion-6 emotion-7"
+        type="checkbox"
+      />
+      <span
+        className="emotion-8 emotion-9"
+      />
     </label>
     <label
-      className="emotion-16 emotion-17"
+      className="emotion-10 emotion-11 emotion-12"
     >
       <div
-        className="emotion-8 emotion-9"
+        className="emotion-4 emotion-5"
       >
-        <p
-          className="emotion-4 emotion-5"
-        >
+        <p>
           Monthly Reports
         </p>
-        <p
-          className="emotion-6 emotion-7"
-        >
+        <p>
           Commits data and history
         </p>
       </div>
-      <label
-        className="emotion-14 emotion-15"
-      >
-        <input
-          className="emotion-10 emotion-11"
-          type="checkbox"
-        />
-        <span
-          className="emotion-12 emotion-13"
-        />
-      </label>
+      <input
+        className="emotion-6 emotion-7"
+        type="checkbox"
+      />
+      <span
+        className="emotion-8 emotion-9"
+      />
     </label>
     <label
-      className="emotion-16 emotion-17"
+      className="emotion-10 emotion-11 emotion-12"
     >
       <div
-        className="emotion-8 emotion-9"
+        className="emotion-4 emotion-5"
       >
-        <p
-          className="emotion-4 emotion-5"
-        >
+        <p>
           Push Notification
         </p>
-        <p
-          className="emotion-6 emotion-7"
-        >
+        <p>
           Commits data and history
         </p>
       </div>
-      <label
-        className="emotion-14 emotion-15"
-      >
-        <input
-          className="emotion-10 emotion-11"
-          defaultChecked={true}
-          type="checkbox"
-        />
-        <span
-          className="emotion-12 emotion-13"
-        />
-      </label>
+      <input
+        className="emotion-6 emotion-7"
+        type="checkbox"
+      />
+      <span
+        className="emotion-8 emotion-9"
+      />
     </label>
     <label
-      className="emotion-16 emotion-17"
+      className="emotion-10 emotion-11 emotion-12"
     >
       <div
-        className="emotion-8 emotion-9"
+        className="emotion-4 emotion-5"
       >
-        <p
-          className="emotion-4 emotion-5"
-        >
+        <p>
           Quarter Reports
         </p>
-        <p
-          className="emotion-6 emotion-7"
-        >
+        <p>
           Commits data and history
         </p>
       </div>
-      <label
-        className="emotion-14 emotion-15"
-      >
-        <input
-          className="emotion-10 emotion-11"
-          type="checkbox"
-        />
-        <span
-          className="emotion-12 emotion-13"
-        />
-      </label>
+      <input
+        className="emotion-6 emotion-7"
+        type="checkbox"
+      />
+      <span
+        className="emotion-8 emotion-9"
+      />
     </label>
   </div>
 </div>

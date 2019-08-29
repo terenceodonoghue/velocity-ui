@@ -5,8 +5,17 @@ import * as S from './Input.styles';
 
 const Radio = (props) => <S.Radio {...props} />;
 const Slider = (props) => <S.SliderInput type="range" {...props} />;
-const Switch = ({ className, ...rest }) => (
+const Switch = ({
+  className, description, label, ...rest
+}) => (
   <S.CheckboxLabel className={className}>
+    {(label || description)
+      && (
+      <S.CheckboxText>
+        {label && <p>{label}</p>}
+        {description && <p>{description}</p>}
+      </S.CheckboxText>
+      )}
     <S.CheckboxInput type="checkbox" {...rest} />
     <S.Switch />
   </S.CheckboxLabel>
@@ -18,7 +27,8 @@ const Text = ({ className, label, ...rest }) => (
   </S.TextLabel>
 );
 
-Switch.propTypes = { className: string.isRequired };
+Switch.propTypes = { className: string.isRequired, description: string, label: string };
+Switch.defaultProps = { label: '', description: '' };
 Text.propTypes = { className: string.isRequired, label: string };
 Text.defaultProps = { label: null };
 

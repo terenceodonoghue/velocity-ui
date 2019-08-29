@@ -70,16 +70,9 @@ export const SaveButton = styled(Button.Contained)`
   margin: 13px 0 18px 8px;
 `;
 
-export const SwitchField = styled.label`
-  display: flex;
-  align-items: center;
-  flex: 0 1 297px;
-  margin: 0 85px 0 0;
+export const SwitchField = styled(Input.Switch)`
+  margin: 0 87px 0 0;
   padding: 10px 11px;
-`;
-
-export const SwitchText = styled.div`
-  flex: 1;
 `;
 
 export const TextField = styled(Input.Text)`

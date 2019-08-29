@@ -2,16 +2,31 @@ import styled from '@emotion/styled';
 
 export const CheckboxInput = styled.input`
   height: 0;
+  margin: 0;
   width: 0;
   opacity: 0;
 `;
 
 export const CheckboxLabel = styled.label`
-  position: relative;
-  display: inline-block;
-  height: 20px;
-  width: 36px;
-  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 36px;
+`;
+
+export const CheckboxText = styled.div`
+  margin-right: 58px;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.47;
+
+  p {
+    margin: 0;
+
+    &:nth-of-type(2) {
+      color: var(--color-bluey-grey);
+      font-weight: var(--font-weight-regular);
+    }
+  }
 `;
 
 export const Radio = styled.input``;
@@ -54,12 +69,9 @@ export const SliderInput = styled.input`
 `;
 
 export const Switch = styled.span`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
+  position: relative;
   border-radius: 10px;
+  height: 20px;
   width: 36px;
   background-color: rgba(135, 152, 173, 0.4);
   cursor: pointer;

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Container, Input } from 'components';
+import { Container } from 'components';
 import * as S from './Settings.styles';
 
 const Personal = () => (
@@ -102,34 +102,10 @@ const Notifications = () => (
       <S.Legend>
         Control your notification and auto-follow settings.
       </S.Legend>
-      <S.SwitchField>
-        <S.SwitchText>
-          <S.Label>Email Notification</S.Label>
-          <S.Description>Commits data and history</S.Description>
-        </S.SwitchText>
-        <Input.Switch />
-      </S.SwitchField>
-      <S.SwitchField>
-        <S.SwitchText>
-          <S.Label>Monthly Reports</S.Label>
-          <S.Description>Commits data and history</S.Description>
-        </S.SwitchText>
-        <Input.Switch />
-      </S.SwitchField>
-      <S.SwitchField>
-        <S.SwitchText>
-          <S.Label>Push Notification</S.Label>
-          <S.Description>Commits data and history</S.Description>
-        </S.SwitchText>
-        <Input.Switch defaultChecked />
-      </S.SwitchField>
-      <S.SwitchField>
-        <S.SwitchText>
-          <S.Label>Quarter Reports</S.Label>
-          <S.Description>Commits data and history</S.Description>
-        </S.SwitchText>
-        <Input.Switch />
-      </S.SwitchField>
+      <S.SwitchField description="Commits data and history" label="Email Notification" />
+      <S.SwitchField description="Commits data and history" label="Monthly Reports" />
+      <S.SwitchField description="Commits data and history" label="Push Notification" />
+      <S.SwitchField description="Commits data and history" label="Quarter Reports" />
     </S.FieldSet>
   </Container.Card>
 );

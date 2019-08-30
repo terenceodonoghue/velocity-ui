@@ -1,7 +1,9 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { forwardRef } from 'react';
-import PropTypes from 'prop-types';
+import {
+  arrayOf, node, oneOfType, string,
+} from 'prop-types';
 import * as S from './Container.styles';
 
 const Card = forwardRef(({ children, heading, ...rest }, ref) => (
@@ -12,11 +14,8 @@ const Card = forwardRef(({ children, heading, ...rest }, ref) => (
 ));
 
 Card.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
-  heading: PropTypes.string,
+  children: oneOfType([arrayOf(node), node]).isRequired,
+  heading: string,
 };
 
 Card.defaultProps = {

@@ -3,8 +3,15 @@ import { jsx } from '@emotion/core';
 import { string } from 'prop-types';
 import * as S from './Input.styles';
 
-const Radio = (props) => <S.Radio {...props} />;
+const Radio = ({ className, label, ...rest }) => (
+  <S.RadioLabel>
+    <S.RadioInput type="radio" {...rest} />
+    {label}
+  </S.RadioLabel>
+);
+
 const Slider = (props) => <S.SliderInput type="range" {...props} />;
+
 const Switch = ({
   className, description, label, ...rest
 }) => (
@@ -20,6 +27,7 @@ const Switch = ({
     <S.Switch />
   </S.CheckboxLabel>
 );
+
 const Text = ({ className, label, ...rest }) => (
   <S.TextLabel className={className}>
     {label}
@@ -27,10 +35,12 @@ const Text = ({ className, label, ...rest }) => (
   </S.TextLabel>
 );
 
-Switch.propTypes = { className: string.isRequired, description: string, label: string };
-Switch.defaultProps = { label: '', description: '' };
-Text.propTypes = { className: string.isRequired, label: string };
-Text.defaultProps = { label: null };
+Radio.propTypes = { className: string, label: string };
+Radio.defaultProps = { className: null, label: null };
+Switch.propTypes = { className: string, description: string, label: string };
+Switch.defaultProps = { className: null, label: null, description: null };
+Text.propTypes = { className: string, label: string };
+Text.defaultProps = { className: null, label: null };
 
 export default {
   Radio,

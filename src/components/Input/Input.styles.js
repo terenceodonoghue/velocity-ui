@@ -29,7 +29,13 @@ export const CheckboxText = styled.div`
   }
 `;
 
-export const Radio = styled.input``;
+export const RadioInput = styled.input`
+  margin-right: 8px;
+`;
+
+export const RadioLabel = styled.label`
+  font-weight: var(--font-weight-medium);
+`;
 
 export const SliderInput = styled.input`
   appearance: none;

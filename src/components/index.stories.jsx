@@ -35,8 +35,10 @@ storiesOf('Basics|Style Guide', module).add('Components', () => (
     <S.Story heading="Inputs">
       <S.Components>
         <Input.Text label="Label" type="text" placeholder="Placeholder" />
-        <Input.Switch />
         <Input.Slider min={0} max={100} />
+        <Input.Switch description="Description" label="Label" />
+        <Input.Radio label="Label" name="storybook" />
+        <Input.Radio label="Label" name="storybook" />
       </S.Components>
     </S.Story>
   </>

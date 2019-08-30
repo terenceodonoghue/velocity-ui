@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Fragment } from 'react'; // eslint-disable-line no-unused-vars
-import PropTypes from 'prop-types';
+import { number } from 'prop-types';
 import {
   PieChart, Pie, ResponsiveContainer,
 } from 'recharts';
@@ -71,8 +71,8 @@ const Welcome = () => (
 );
 
 renderCustomizedLabel.propTypes = {
-  index: PropTypes.number.isRequired,
-  percent: PropTypes.number.isRequired,
+  index: number.isRequired,
+  percent: number.isRequired,
 };
 
 export default {

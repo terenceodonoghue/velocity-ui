@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { useState } from 'react';
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
 import { Avatar } from 'components';
 import * as S from './Navigation.styles';
 
@@ -57,8 +57,8 @@ const Menu = ({ avatarSrc, name }) => {
 };
 
 Menu.propTypes = {
-  avatarSrc: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
+  avatarSrc: string.isRequired,
+  name: string.isRequired,
 };
 
 export default {

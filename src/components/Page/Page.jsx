@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import PropTypes from 'prop-types';
+import { arrayOf, oneOfType, node } from 'prop-types';
 import * as S from './Page.styles';
 
 const AppBar = ({ children, ...rest }) => (
@@ -11,10 +11,7 @@ const AppBar = ({ children, ...rest }) => (
 );
 
 AppBar.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]).isRequired,
+  children: oneOfType([arrayOf(node), node]).isRequired,
 };
 
 export default {

@@ -20,6 +20,7 @@ storiesOf('Basics|Style Guide', module).add('Components', () => (
     <S.Story heading="Avatars">
       <S.Components>
         <Avatar.Round src={faker.image.avatar()} height="48" width="48" />
+        <Avatar.Square src={faker.image.avatar()} height="48" width="48" />
       </S.Components>
     </S.Story>
     <S.Story heading="Buttons">
@@ -37,7 +38,7 @@ storiesOf('Basics|Style Guide', module).add('Components', () => (
         <Input.Text label="Label" type="text" placeholder="Placeholder" />
         <Input.Slider min={0} max={100} />
         <Input.Switch description="Description" label="Label" />
-        <Input.Radio label="Label" name="storybook" />
+        <Input.Radio defaultChecked label="Label" name="storybook" />
         <Input.Radio label="Label" name="storybook" />
       </S.Components>
     </S.Story>

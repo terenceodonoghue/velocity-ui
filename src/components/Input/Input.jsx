@@ -6,6 +6,7 @@ import * as S from './Input.styles';
 const Radio = ({ className, label, ...rest }) => (
   <S.RadioLabel>
     <S.RadioInput type="radio" {...rest} />
+    <S.RadioSwitch />
     {label}
   </S.RadioLabel>
 );
@@ -24,7 +25,7 @@ const Switch = ({
       </S.CheckboxText>
       )}
     <S.CheckboxInput type="checkbox" {...rest} />
-    <S.Switch />
+    <S.CheckboxSwitch />
   </S.CheckboxLabel>
 );
 

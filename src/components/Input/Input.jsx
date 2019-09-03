@@ -4,7 +4,7 @@ import { string } from 'prop-types';
 import * as S from './Input.styles';
 
 const Radio = ({ className, label, ...rest }) => (
-  <S.RadioLabel>
+  <S.RadioLabel className={className}>
     <S.RadioInput type="radio" {...rest} />
     <S.RadioSwitch />
     {label}

@@ -66,6 +66,10 @@ export const Legend = styled.p`
   line-height: 1.47;
 `;
 
+export const RadioField = styled(Input.Radio)`
+  padding: 0 11px;
+`;
+
 export const SaveButton = styled(Button.Contained)`
   margin: 13px 0 18px 8px;
 `;

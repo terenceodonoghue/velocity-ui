@@ -372,6 +372,10 @@ exports[`Settings Notifications matches snapshot 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   min-width: 36px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   margin: 0 87px 0 0;
   padding: 10px 11px;
 }

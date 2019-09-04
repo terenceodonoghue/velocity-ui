@@ -66,6 +66,10 @@ exports[`Input Switch matches snapshot 1`] = `
   -ms-flex-pack: justify;
   justify-content: space-between;
   min-width: 36px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .emotion-0 {
@@ -116,7 +120,6 @@ exports[`Input Switch matches snapshot 1`] = `
 <label
   className="emotion-4 emotion-5"
 >
-  
   <input
     className="emotion-0 emotion-1"
     type="checkbox"

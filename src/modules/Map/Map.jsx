@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { number, string } from 'prop-types';
+import { number, shape, string } from 'prop-types';
 import * as S from './Map.styles';
 
 const Passenger = ({
@@ -44,9 +44,13 @@ const Passenger = ({
 );
 
 const Trip = ({
-  distance, energy, price, time,
+  distance, energy, from, price, time, to,
 }) => (
   <S.Trip>
+    {from.suburb}
+    {from.streetAddress}
+    {to.suburb}
+    {to.streetAddress}
     <S.Stats>
       {distance}
       {energy}
@@ -68,8 +72,10 @@ Passenger.propTypes = {
 Trip.propTypes = {
   distance: number.isRequired,
   energy: number.isRequired,
+  from: shape({ streetAddress: string, suburb: string }).isRequired,
   price: number.isRequired,
   time: number.isRequired,
+  to: shape({ streetAddress: string, suburb: string }).isRequired,
 };
 
 export default {

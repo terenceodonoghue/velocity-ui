@@ -80,6 +80,22 @@ export const ProfileText = styled.div`
   margin-left: 15px;
 `;
 
+export const Stats = styled.div`
+  margin: 0 -24px;
+
+  &::before {
+    display: block;
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: #e4e8f0;
+  }
+`;
+
+export const Trip = styled(Container.Card)`
+  width: 463px;
+`;
+
 export const Value = styled.dd`
   margin: 0 0 20px;
   max-width: 241px;

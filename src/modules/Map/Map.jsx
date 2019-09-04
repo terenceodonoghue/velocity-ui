@@ -43,6 +43,19 @@ const Passenger = ({
   </S.Passenger>
 );
 
+const Trip = ({
+  distance, energy, price, time,
+}) => (
+  <S.Trip>
+    <S.Stats>
+      {distance}
+      {energy}
+      {price}
+      {time}
+    </S.Stats>
+  </S.Trip>
+);
+
 Passenger.propTypes = {
   avatarSrc: string.isRequired,
   email: string.isRequired,
@@ -52,6 +65,14 @@ Passenger.propTypes = {
   phone: string.isRequired,
 };
 
+Trip.propTypes = {
+  distance: number.isRequired,
+  energy: number.isRequired,
+  price: number.isRequired,
+  time: number.isRequired,
+};
+
 export default {
   Passenger,
+  Trip,
 };

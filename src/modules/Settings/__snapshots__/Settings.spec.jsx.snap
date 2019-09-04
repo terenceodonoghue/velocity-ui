@@ -768,3 +768,246 @@ exports[`Settings Personal Data matches snapshot 1`] = `
   </button>
 </div>
 `;
+
+exports[`Settings Theme matches snapshot 1`] = `
+.emotion-61 {
+  display: block;
+  border-radius: 1px;
+  border: solid 1px rgba(46,91,255,0.08);
+  box-shadow: 0 10px 20px 0 rgba(46,91,255,0.07);
+  padding: 32px 24px;
+  background-color: var(--color-white);
+}
+
+.emotion-0 {
+  margin: 0 0 26px 0;
+  color: var(--color-bluey-grey);
+  font-size: 13px;
+  font-weight: var(--font-weight-normal);
+  -webkit-letter-spacing: 1.2px;
+  -moz-letter-spacing: 1.2px;
+  -ms-letter-spacing: 1.2px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.emotion-59 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin: 0 -11px;
+  padding: 0 8px;
+}
+
+.emotion-2 {
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  margin: 0 0 25px 0;
+  padding: 0 12px;
+  line-height: 1.47;
+}
+
+.emotion-13 {
+  padding: 8px 11px;
+  margin: 0 13px 0 0;
+}
+
+.emotion-4 {
+  border-radius: 4px;
+  height: 65px;
+  width: 120px;
+  background: linear-gradient(90deg,#2e5bff 33.33%,#e0e7ff 33.33%,#e0e7ff 66.66%,#8097b1 66.66%) no-repeat;
+}
+
+.emotion-11 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: var(--font-weight-medium);
+  padding: 12px 0;
+}
+
+.emotion-6 {
+  height: 0;
+  margin: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.emotion-8 {
+  display: inline-block;
+  border: solid 1px rgba(128,151,177,0.5);
+  border-radius: 50%;
+  height: 16px;
+  margin: 0 8px 0 0;
+  width: 16px;
+  background-color: var(--color-white);
+}
+
+.emotion-7:disabled + .emotion-8 {
+  opacity: 0.4;
+}
+
+.emotion-7:checked:enabled + .emotion-8 {
+  border: solid 4px var(--color-clear-blue);
+  background-color: var(--color-white);
+}
+
+.emotion-15 {
+  border-radius: 4px;
+  height: 65px;
+  width: 120px;
+  background: linear-gradient(90deg,#8c54ff 33.33%,#00c1d4 33.33%,#00c1d4 66.66%,#fad050 66.66%) no-repeat;
+}
+
+.emotion-26 {
+  border-radius: 4px;
+  height: 65px;
+  width: 120px;
+  background: linear-gradient(90deg,#00a4de 33.33%,#3b7ed5 33.33%,#3b7ed5 66.66%,#00a550 66.66%) no-repeat;
+}
+
+.emotion-37 {
+  border-radius: 4px;
+  height: 65px;
+  width: 120px;
+  background: linear-gradient(90deg,#232a64 33.33%,#85c800 33.33%,#85c800 66.66%,#616266 66.66%) no-repeat;
+}
+
+.emotion-48 {
+  border-radius: 4px;
+  height: 65px;
+  width: 120px;
+  background: linear-gradient(90deg,#a728a3 33.33%,#f7e0ff 33.33%,#f7e0ff 66.66%,#7675ac 66.66%) no-repeat;
+}
+
+<div
+  className="emotion-61 emotion-62"
+>
+  <h3
+    className="emotion-0 emotion-1"
+  >
+    Theme
+  </h3>
+  <div
+    className="emotion-59 emotion-60"
+  >
+    <p
+      className="emotion-2 emotion-3"
+    >
+      Select a color scheme for your Velocity app.
+    </p>
+    <div
+      className="emotion-13 emotion-14"
+    >
+      <div
+        className="emotion-4 emotion-5"
+      />
+      <label
+        className="emotion-10 emotion-11 emotion-12"
+      >
+        <input
+          className="emotion-6 emotion-7"
+          defaultChecked={true}
+          name="theme"
+          type="radio"
+        />
+        <span
+          className="emotion-8 emotion-9"
+        />
+        Shelob
+      </label>
+    </div>
+    <div
+      className="emotion-13 emotion-14"
+    >
+      <div
+        className="emotion-15 emotion-5"
+      />
+      <label
+        className="emotion-10 emotion-11 emotion-12"
+      >
+        <input
+          className="emotion-6 emotion-7"
+          name="theme"
+          type="radio"
+        />
+        <span
+          className="emotion-8 emotion-9"
+        />
+        Denethor
+      </label>
+    </div>
+    <div
+      className="emotion-13 emotion-14"
+    >
+      <div
+        className="emotion-26 emotion-5"
+      />
+      <label
+        className="emotion-10 emotion-11 emotion-12"
+      >
+        <input
+          className="emotion-6 emotion-7"
+          name="theme"
+          type="radio"
+        />
+        <span
+          className="emotion-8 emotion-9"
+        />
+        Quickbeam
+      </label>
+    </div>
+    <div
+      className="emotion-13 emotion-14"
+    >
+      <div
+        className="emotion-37 emotion-5"
+      />
+      <label
+        className="emotion-10 emotion-11 emotion-12"
+      >
+        <input
+          className="emotion-6 emotion-7"
+          name="theme"
+          type="radio"
+        />
+        <span
+          className="emotion-8 emotion-9"
+        />
+        Shadowfax
+      </label>
+    </div>
+    <div
+      className="emotion-13 emotion-14"
+    >
+      <div
+        className="emotion-48 emotion-5"
+      />
+      <label
+        className="emotion-10 emotion-11 emotion-12"
+      >
+        <input
+          className="emotion-6 emotion-7"
+          name="theme"
+          type="radio"
+        />
+        <span
+          className="emotion-8 emotion-9"
+        />
+        Grima
+      </label>
+    </div>
+  </div>
+</div>
+`;

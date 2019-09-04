@@ -2,10 +2,10 @@ import React from 'react';
 import Input from './Input';
 
 describe('Input', () => {
-  describe('Switch', () => {
+  describe('Radio', () => {
     it('matches snapshot', () => {
       const tree = renderer.create(
-        <Input.Switch />,
+        <Input.Radio />,
       ).toJSON();
 
       expect(tree).toMatchSnapshot();
@@ -16,6 +16,16 @@ describe('Input', () => {
     it('matches snapshot', () => {
       const tree = renderer.create(
         <Input.Slider min={0} max={100} />,
+      ).toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
+  });
+
+  describe('Switch', () => {
+    it('matches snapshot', () => {
+      const tree = renderer.create(
+        <Input.Switch />,
       ).toJSON();
 
       expect(tree).toMatchSnapshot();

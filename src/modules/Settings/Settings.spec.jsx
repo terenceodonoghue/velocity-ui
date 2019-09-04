@@ -31,4 +31,14 @@ describe('Settings', () => {
       expect(tree).toMatchSnapshot();
     });
   });
+
+  describe('Theme', () => {
+    it('matches snapshot', () => {
+      const tree = renderer.create(
+        <Settings.Theme />,
+      ).toJSON();
+
+      expect(tree).toMatchSnapshot();
+    });
+  });
 });

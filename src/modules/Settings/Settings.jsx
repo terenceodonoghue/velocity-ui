@@ -114,24 +114,24 @@ export const Theme = () => (
   <Container.Card heading="Theme">
     <S.FieldSet>
       <S.Legend>Select a color scheme for your Velocity app.</S.Legend>
-      <S.Theme data-role="shelob">
-        <S.Palette />
+      <S.Theme>
+        <S.Palette colors={['#2e5bff', '#e0e7ff', '#8097b1']} />
         <S.RadioField defaultChecked label="Shelob" name="theme" />
       </S.Theme>
-      <S.Theme data-role="denethor">
-        <S.Palette />
+      <S.Theme>
+        <S.Palette colors={['#8c54ff', '#00c1d4', '#fad050']} />
         <S.RadioField label="Denethor" name="theme" />
       </S.Theme>
-      <S.Theme data-role="quickbeam">
-        <S.Palette />
+      <S.Theme>
+        <S.Palette colors={['#00a4de', '#3b7ed5', '#00a550']} />
         <S.RadioField label="Quickbeam" name="theme" />
       </S.Theme>
-      <S.Theme data-role="shadowfax">
-        <S.Palette />
+      <S.Theme>
+        <S.Palette colors={['#232a64', '#85c800', '#616266']} />
         <S.RadioField label="Shadowfax" name="theme" />
       </S.Theme>
-      <S.Theme data-role="grima">
-        <S.Palette />
+      <S.Theme>
+        <S.Palette colors={['#a728a3', '#f7e0ff', '#7675ac']} />
         <S.RadioField label="Grima" name="theme" />
       </S.Theme>
     </S.FieldSet>

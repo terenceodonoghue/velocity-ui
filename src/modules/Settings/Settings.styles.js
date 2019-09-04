@@ -87,3 +87,29 @@ export const TextField = styled(Input.Text)`
     flex: 0 1 100%;
   }
 `;
+
+export const Theme = styled.div`
+  border-radius: 4px;
+  height: 65px;
+  width: 120px;
+
+  &[data-role='shelob'] {
+    background: linear-gradient(90deg, var(--color-clear-blue) 33.33%, #e0e7ff 33.33%, #e0e7ff 66.66%, #8097b1 66.66%) no-repeat;
+  }
+
+  &[data-role='denethor'] {
+    background: linear-gradient(90deg, var(--color-clear-blue) 33.33%, #e0e7ff 33.33%, #e0e7ff 66.66%, #8097b1 66.66%) no-repeat;
+  }
+
+  &[data-role='quickbeam'] {
+    background: linear-gradient(90deg, var(--color-clear-blue) 33.33%, #e0e7ff 33.33%, #e0e7ff 66.66%, #8097b1 66.66%) no-repeat;
+  }
+
+  &[data-role='shadowfax'] {
+    background: linear-gradient(90deg, var(--color-clear-blue) 33.33%, #e0e7ff 33.33%, #e0e7ff 66.66%, #8097b1 66.66%) no-repeat;
+  }
+
+  &[data-role='grima'] {
+    background: linear-gradient(90deg, var(--color-clear-blue) 33.33%, #e0e7ff 33.33%, #e0e7ff 66.66%, #8097b1 66.66%) no-repeat;
+  }
+`;

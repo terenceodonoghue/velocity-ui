@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import {
   arrayOf, node, oneOfType, string,
 } from 'prop-types';

@@ -1,6 +1,4 @@
-/* eslint-disable react/no-array-index-key */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import React from 'react';
 import {
   arrayOf, bool, shape, string,
 } from 'prop-types';
@@ -11,6 +9,7 @@ const Conversations = ({ data }) => (
   <S.Conversations>
     {data.map((conversation, index) => (
       <S.Conversation
+        // eslint-disable-next-line react/no-array-index-key
         key={`${conversation.name
           .split(' ')
           .join('-')

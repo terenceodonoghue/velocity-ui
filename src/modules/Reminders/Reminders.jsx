@@ -1,7 +1,4 @@
-/* eslint-disable react/no-array-index-key */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { arrayOf, shape, string } from 'prop-types';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import * as S from './Reminders.styles';
@@ -75,6 +72,7 @@ const Kanban = ({ data }) => {
                     {...providedDrop.droppableProps}
                   >
                     {tickets[i].map((ticket, j) => (
+                      // eslint-disable-next-line react/no-array-index-key
                       <Draggable draggableId={`${ticket.name.toLowerCase()}-${i}${j}`} index={j} key={`${ticket.name.toLowerCase()}-${i}${j}`}>
                         {
                           (providedDrag) => (

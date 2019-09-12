@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import React from 'react';
 import * as S from './Vehicles.styles';
 
 const Filter = () => (

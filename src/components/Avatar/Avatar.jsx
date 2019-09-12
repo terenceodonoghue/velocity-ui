@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import React from 'react';
 import * as S from './Avatar.styles';
 
 const Round = (props) => <S.Round {...props} />;

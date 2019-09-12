@@ -1,6 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
-import { Fragment } from 'react'; // eslint-disable-line no-unused-vars
+import React from 'react';
 import { number } from 'prop-types';
 import {
   PieChart, Pie, ResponsiveContainer,

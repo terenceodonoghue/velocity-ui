@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import React from 'react';
 import { number, shape, string } from 'prop-types';
 import * as S from './Map.styles';
 

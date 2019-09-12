@@ -1,6 +1,4 @@
-/* eslint-disable react/no-array-index-key */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import React from 'react';
 import {
   arrayOf, number, shape, string,
 } from 'prop-types';
@@ -27,6 +25,7 @@ const Metrics = ({ data }) => (
       data.map((metric, index) => (
         <S.Metric
           data-role={metric.label.split(' ').join('-').toLowerCase()}
+          // eslint-disable-next-line react/no-array-index-key
           key={`${metric.label
             .split(' ')
             .join('-')

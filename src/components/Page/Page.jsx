@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import React from 'react';
 import { arrayOf, oneOfType, node } from 'prop-types';
 import * as S from './Page.styles';
 

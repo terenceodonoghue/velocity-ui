@@ -13,6 +13,30 @@ export const FieldSet = styled.div`
   display: flex;
 `;
 
+export const Address = styled.div`
+  flex: 1;
+
+  p {
+    margin: 0;
+    line-height: 1.47;
+
+    &:nth-of-type(1) {
+      font-weight: var(--font-weight-medium);
+    }
+
+    &:nth-of-type(2) {
+      color: var(--color-bluey-grey);
+      font-weight: var(--font-weight-regular);
+    }
+  }
+`;
+
+export const Addresses = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  padding: 10px 0 32px;
+`;
+
 export const Interactions = styled.p`
   margin: 0;
   color: var(--color-bluey-grey);
@@ -80,6 +104,25 @@ export const ProfileText = styled.div`
   margin-left: 15px;
 `;
 
+export const Stat = styled.div`
+  flex: 1;
+  padding: 24px 24px 0;
+
+  p {
+    margin: 0;
+    line-height: 1.47;
+
+    &:nth-of-type(1) {
+      font-weight: var(--font-weight-medium);
+    }
+
+    &:nth-of-type(2) {
+      color: var(--color-bluey-grey);
+      font-weight: var(--font-weight-regular);
+    }
+  }
+`;
+
 export const Stats = styled.div`
   display: flex;
   flex-flow: row wrap;
@@ -90,24 +133,6 @@ export const Stats = styled.div`
     height: 1px;
     width: 100%;
     background-color: #e4e8f0;
-  }
-`;
-
-export const Stat = styled.div`
-  flex: 1;
-  padding: 24px 24px 0;
-
-  p {
-    margin: 0;
-
-    &:nth-of-type(1) {
-      font-weight: var(--font-weight-medium);
-    }
-
-    &:nth-of-type(2) {
-      color: var(--color-bluey-grey);
-      font-weight: var(--font-weight-regular);
-    }
   }
 `;
 

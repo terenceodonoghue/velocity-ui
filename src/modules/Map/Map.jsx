@@ -46,10 +46,16 @@ const Trip = ({
   distance, energy, from, price, time, to,
 }) => (
   <S.Trip>
-    {from.suburb}
-    {from.streetAddress}
-    {to.suburb}
-    {to.streetAddress}
+    <S.Addresses>
+      <S.Address>
+        <p>{from.suburb}</p>
+        <p>{from.streetAddress}</p>
+      </S.Address>
+      <S.Address>
+        <p>{to.suburb}</p>
+        <p>{to.streetAddress}</p>
+      </S.Address>
+    </S.Addresses>
     <S.Stats>
       <S.Stat>
         <p>

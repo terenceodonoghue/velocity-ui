@@ -52,10 +52,37 @@ const Trip = ({
     {to.suburb}
     {to.streetAddress}
     <S.Stats>
-      {distance}
-      {energy}
-      {price}
-      {time}
+      <S.Stat>
+        <p>
+          {distance}
+          {' '}
+          km
+        </p>
+        <p>Distance</p>
+      </S.Stat>
+      <S.Stat>
+        <p>
+          {time}
+          {' '}
+          min
+        </p>
+        <p>Time</p>
+      </S.Stat>
+      <S.Stat>
+        <p>
+          $
+          {price}
+        </p>
+        <p>Price</p>
+      </S.Stat>
+      <S.Stat>
+        <p>
+          {energy}
+          {' '}
+          kWh
+        </p>
+        <p>Energy</p>
+      </S.Stat>
     </S.Stats>
   </S.Trip>
 );

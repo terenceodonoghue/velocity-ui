@@ -9,9 +9,9 @@ export const passenger = {
 
 export const trip = {
   distance: 12.3,
-  energy: 42,
+  energy: 12.4,
   from: { streetAddress: '37-27 74th Street', suburb: 'Jackson Heights' },
   price: 34.20,
-  time: 12.4,
+  time: 42,
   to: { streetAddress: '81 Gate St Brooklyn', suburb: 'Greenpoint' },
 };

@@ -81,10 +81,11 @@ export const ProfileText = styled.div`
 `;
 
 export const Stats = styled.div`
+  display: flex;
+  flex-flow: row wrap;
   margin: 0 -24px;
 
   &::before {
-    display: block;
     content: '';
     height: 1px;
     width: 100%;
@@ -92,7 +93,26 @@ export const Stats = styled.div`
   }
 `;
 
+export const Stat = styled.div`
+  flex: 1;
+  padding: 24px 24px 0;
+
+  p {
+    margin: 0;
+
+    &:nth-of-type(1) {
+      font-weight: var(--font-weight-medium);
+    }
+
+    &:nth-of-type(2) {
+      color: var(--color-bluey-grey);
+      font-weight: var(--font-weight-regular);
+    }
+  }
+`;
+
 export const Trip = styled(Container.Card)`
+  padding: 24px;
   width: 463px;
 `;
 

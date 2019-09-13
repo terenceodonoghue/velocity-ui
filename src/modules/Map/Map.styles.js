@@ -26,13 +26,21 @@ export const Addresses = styled.div`
 `;
 
 export const CircleIcon = styled.div`
-  display: inline-flex;
+  flex-grow: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
   height: 32px;
   width: 32px;
   border-radius: 50%;
-  background-color: rgba(46, 91, 255, 0.2);
+
+  &:nth-of-type(1) {
+    background-color: rgba(46, 91, 255, 0.2);
+  }
+
+  &:nth-of-type(2) {
+    background-color: rgba(51, 172, 46, 0.2);
+  }
 `;
 
 export const Details = styled.div`
@@ -47,7 +55,9 @@ export const FieldSet = styled.div`
   display: flex;
 `;
 
-export const IconGroup = styled.div``;
+export const IconGroup = styled.div`
+  display: flex;
+`;
 
 export const Interactions = styled.p`
   margin: 0;

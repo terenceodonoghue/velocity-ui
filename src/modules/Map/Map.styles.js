@@ -1,18 +1,6 @@
 import styled from '@emotion/styled';
 import { Avatar, Container } from 'components';
 
-export const Details = styled.div`
-  flex: 0 0 253px;
-`;
-
-export const DetailsList = styled.dl`
-  padding: 0 6px;
-`;
-
-export const FieldSet = styled.div`
-  display: flex;
-`;
-
 export const Address = styled.div`
   flex: 1;
 
@@ -36,6 +24,30 @@ export const Addresses = styled.div`
   flex-flow: row wrap;
   padding: 10px 0 32px;
 `;
+
+export const CircleIcon = styled.div`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: rgba(46, 91, 255, 0.2);
+`;
+
+export const Details = styled.div`
+  flex: 0 0 253px;
+`;
+
+export const DetailsList = styled.dl`
+  padding: 0 6px;
+`;
+
+export const FieldSet = styled.div`
+  display: flex;
+`;
+
+export const IconGroup = styled.div``;
 
 export const Interactions = styled.p`
   margin: 0;

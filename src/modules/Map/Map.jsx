@@ -46,6 +46,11 @@ const Trip = ({
   distance, energy, from, price, time, to,
 }) => (
   <S.Trip>
+    <S.IconGroup>
+      <S.CircleIcon>
+        <img alt="From" src="./check-blue.svg" />
+      </S.CircleIcon>
+    </S.IconGroup>
     <S.Addresses>
       <S.Address>
         <p>{from.suburb}</p>

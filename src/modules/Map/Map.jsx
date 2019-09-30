@@ -51,7 +51,7 @@ const Trip = ({
         <img alt="From" src="./check-blue.svg" />
       </S.CircleIcon>
       <S.CircleIcon>
-        <img alt="To" src="./marker.svg" />
+        <img alt="To" src="./marker-green.svg" />
       </S.CircleIcon>
     </S.IconGroup>
     <S.Addresses>

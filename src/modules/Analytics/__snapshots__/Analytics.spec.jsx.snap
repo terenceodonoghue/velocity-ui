@@ -59,7 +59,7 @@ exports[`Analytics Metrics matches snapshot 1`] = `
 
 [data-role='distance-driven'] .emotion-0 {
   background-color: rgba(0,193,212,0.15);
-  background-image: url(./marker.svg);
+  background-image: url(./marker-blue.svg);
 }
 
 [data-role='energy-consumed'] .emotion-0 {

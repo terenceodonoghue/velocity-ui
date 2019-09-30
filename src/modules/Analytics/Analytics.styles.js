@@ -64,7 +64,7 @@ export const MetricIcon = styled.div`
 
   [data-role='distance-driven'] & {
     background-color: rgba(0, 193, 212, 0.15);
-    background-image: url(./marker.svg);
+    background-image: url(./marker-blue.svg);
   }
 
   [data-role='energy-consumed'] & {

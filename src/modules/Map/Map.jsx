@@ -50,6 +50,7 @@ const Trip = ({
       <S.CircleIcon>
         <img alt="From" src="./check-blue.svg" />
       </S.CircleIcon>
+      <S.Divider />
       <S.CircleIcon>
         <img alt="To" src="./marker-green.svg" />
       </S.CircleIcon>

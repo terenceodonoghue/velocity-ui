@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { Avatar, Container } from 'components';
 
 export const Address = styled.div`
-  flex: 1;
+  flex: 0 1 157px;
 
   p {
     margin: 0;
@@ -31,6 +31,7 @@ export const CircleIcon = styled.div`
   align-items: center;
   justify-content: center;
   height: 32px;
+  margin: 0 7px;
   width: 32px;
   border-radius: 50%;
 
@@ -51,12 +52,19 @@ export const DetailsList = styled.dl`
   padding: 0 6px;
 `;
 
+export const Divider = styled.span`
+  flex: 0 1 196px;
+  border: solid 1px rgba(46, 91, 255, 0.15);
+`;
+
 export const FieldSet = styled.div`
   display: flex;
 `;
 
 export const IconGroup = styled.div`
   display: flex;
+  align-items: center;
+  margin: 0 -7px;
 `;
 
 export const Interactions = styled.p`

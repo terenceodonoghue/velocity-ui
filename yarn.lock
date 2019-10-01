@@ -6470,7 +6470,7 @@ eslint-plugin-react-hooks@^2.1.1:
   resolved "https://registry.yarnpkg.com/eslint-plugin-react-hooks/-/eslint-plugin-react-hooks-2.1.1.tgz#b416390b642113f444ee175b667c3222a045a98e"
   integrity sha512-AYitPYzwHyKpZKpzMH5sCkld68vP8wn29Lq716h4jk1ll9Gp4BBFoPq/iCjBBT35eXFJvOPjgMlvhIXFB0OhXg==
 
-eslint-plugin-react@7.14.3, eslint-plugin-react@^7.14.3:
+eslint-plugin-react@7.14.3:
   version "7.14.3"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.14.3.tgz#911030dd7e98ba49e1b2208599571846a66bdf13"
   integrity sha512-EzdyyBWC4Uz2hPYBiEJrKCUi2Fn+BJ9B/pJQcjw5X+x/H2Nm59S4MJIvL4O5NEE0+WbnQwEBxWY03oUk+Bc3FA==
@@ -6484,6 +6484,21 @@ eslint-plugin-react@7.14.3, eslint-plugin-react@^7.14.3:
     object.values "^1.1.0"
     prop-types "^15.7.2"
     resolve "^1.10.1"
+
+eslint-plugin-react@^7.15.1:
+  version "7.15.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.15.1.tgz#db5f8ed66c6ba46922518f08e1df9dac52ccaa49"
+  integrity sha512-YotSItgMPwLGlr3df44MGVyXnHkmKcpkHTzpte3QwJtocr3nFqCXCuoxFZeBtnT8RHdj038NlTvam3dcAFrMcA==
+  dependencies:
+    array-includes "^3.0.3"
+    doctrine "^2.1.0"
+    has "^1.0.3"
+    jsx-ast-utils "^2.2.1"
+    object.entries "^1.1.0"
+    object.fromentries "^2.0.0"
+    object.values "^1.1.0"
+    prop-types "^15.7.2"
+    resolve "^1.12.0"
 
 eslint-scope@^4.0.0, eslint-scope@^4.0.3:
   version "4.0.3"
@@ -6566,10 +6581,10 @@ eslint@^6.1.0:
     text-table "^0.2.0"
     v8-compile-cache "^2.0.3"
 
-eslint@^6.5.0:
-  version "6.5.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-6.5.0.tgz#304623eec903969dd5c9f2d61c6ce3d6ecec8750"
-  integrity sha512-IIbSW+vKOqMatPmS9ayyku4tvWxHY2iricSRtOz6+ZA5IPRlgXzEL0u/j6dr4eha0ugmhMwDTqxtmNu3kj9O4w==
+eslint@^6.5.1:
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-6.5.1.tgz#828e4c469697d43bb586144be152198b91e96ed6"
+  integrity sha512-32h99BoLYStT1iq1v2P9uwpyznQ4M2jRiFB6acitKz52Gqn+vPaMDUTB1bYi1WN4Nquj2w+t+bimYUG83DC55A==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     ajv "^6.10.0"

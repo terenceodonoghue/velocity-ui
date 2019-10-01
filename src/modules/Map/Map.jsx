@@ -50,7 +50,7 @@ const Trip = ({
       <S.CircleIcon>
         <img alt="From" src="./check-blue.svg" />
       </S.CircleIcon>
-      <S.Divider />
+      <S.Line />
       <S.CircleIcon>
         <img alt="To" src="./marker-green.svg" />
       </S.CircleIcon>
@@ -85,7 +85,7 @@ const Trip = ({
       <S.Stat>
         <p>
           $
-          {price}
+          {price.toFixed(2)}
         </p>
         <p>Price</p>
       </S.Stat>

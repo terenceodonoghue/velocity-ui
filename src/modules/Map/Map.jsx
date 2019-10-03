@@ -69,16 +69,14 @@ const Trip = ({
       <S.Stat>
         <p>
           {distance}
-          {' '}
-          km
+          &nbsp;km
         </p>
         <p>Distance</p>
       </S.Stat>
       <S.Stat>
         <p>
           {time}
-          {' '}
-          min
+          &nbsp;min
         </p>
         <p>Time</p>
       </S.Stat>
@@ -92,8 +90,7 @@ const Trip = ({
       <S.Stat>
         <p>
           {energy}
-          {' '}
-          kWh
+          &nbsp;kWh
         </p>
         <p>Energy</p>
       </S.Stat>

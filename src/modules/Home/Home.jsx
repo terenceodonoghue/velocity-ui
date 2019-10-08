@@ -18,24 +18,24 @@ export const renderCustomizedLabel = ({
   index, percent,
 }) => (
   index === 0 && (
-  <>
-    <text fill="#2e384d" fontFamily="Rubik-Light, Rubik" fontSize="48" fontWeight="300" letterSpacing="-0.600000024" x="50%" y="50%">
-      <tspan x="75" y="140">{`${(percent * 100).toFixed(0)}`}</tspan>
-    </text>
-    <text
-      dominantBaseline="central"
-      fill="#8798ad"
-      fontFamily="Rubik-Regular, Rubik"
-      fontSize="13"
-      fontWeight="normal"
-      letterSpacing="1.213333"
-      x="50%"
-      y="50%"
-    >
-      <tspan x="62" y="162">OPERATING</tspan>
-      <tspan x="78" y="177">SCORE</tspan>
-    </text>
-  </>
+    <>
+      <text fill="#2e384d" fontFamily="Rubik-Light, Rubik" fontSize="48" fontWeight="300" letterSpacing="-0.600000024" x="50%" y="50%">
+        <tspan x="75" y="140">{`${(percent * 100).toFixed(0)}`}</tspan>
+      </text>
+      <text
+        dominantBaseline="central"
+        fill="#8798ad"
+        fontFamily="Rubik-Regular, Rubik"
+        fontSize="13"
+        fontWeight="normal"
+        letterSpacing="1.213333"
+        x="50%"
+        y="50%"
+      >
+        <tspan x="62" y="162">OPERATING</tspan>
+        <tspan x="78" y="177">SCORE</tspan>
+      </text>
+    </>
   )
 );
 

@@ -4,6 +4,10 @@ import { Avatar, Container } from 'components';
 export const Address = styled.div`
   flex: 1;
 
+  &:nth-of-type(1) {
+    margin: 0 71px 0 0;
+  }
+
   p {
     margin: 0;
     line-height: 1.47;

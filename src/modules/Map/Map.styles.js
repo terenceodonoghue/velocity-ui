@@ -4,12 +4,15 @@ import { Avatar, Container } from 'components';
 export const Address = styled.div`
   flex: 1;
 
+  &:nth-of-type(1) {
+    margin: 0 71px 0 0;
+  }
+
   p { /* stylelint-disable-line no-descending-specificity */
     margin: 0;
     line-height: 1.47;
 
     &:nth-of-type(1) {
-      margin: 0 71px 0 0;
       font-weight: var(--font-weight-medium);
     }
 

@@ -24,11 +24,11 @@ export const CheckboxSwitch = styled.span`
   cursor: pointer;
   transition: var(--transition);
 
-  ${/* sc-selector */CheckboxInput}:disabled + & {
+  ${/* sc-selector */ CheckboxInput}:disabled + & {
     opacity: 0.4;
   }
 
-  ${/* sc-selector */CheckboxInput}:checked:enabled + & {
+  ${/* sc-selector */ CheckboxInput}:checked:enabled + & {
     background-color: var(--color-medium-green);
   }
 
@@ -43,7 +43,7 @@ export const CheckboxSwitch = styled.span`
     background-color: var(--color-white);
     transition: var(--transition);
 
-    ${/* sc-selector */CheckboxInput}:checked + & {
+    ${/* sc-selector */ CheckboxInput}:checked + & {
       transform: translateX(16px);
     }
   }
@@ -86,11 +86,11 @@ export const RadioSwitch = styled.span`
   width: 16px;
   background-color: var(--color-white);
 
-  ${/* sc-selector */RadioInput}:disabled + & {
+  ${/* sc-selector */ RadioInput}:disabled + & {
     opacity: 0.4;
   }
 
-  ${/* sc-selector */RadioInput}:checked:enabled + & {
+  ${/* sc-selector */ RadioInput}:checked:enabled + & {
     border: solid 4px var(--color-clear-blue);
     background-color: var(--color-white);
   }

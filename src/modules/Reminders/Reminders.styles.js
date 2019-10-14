@@ -90,19 +90,39 @@ export const Ticket = styled(Container.Card)`
   }
 
   [data-role='service-needed'] & {
-    background: linear-gradient(90deg, var(--color-clear-blue) 2px, var(--color-white) 2px) no-repeat;
+    background: linear-gradient(
+        90deg,
+        var(--color-clear-blue) 2px,
+        var(--color-white) 2px
+      )
+      no-repeat;
   }
 
   [data-role='waiting'] & {
-    background: linear-gradient(90deg, var(--color-lighter-purple) 2px, var(--color-white) 2px) no-repeat;
+    background: linear-gradient(
+        90deg,
+        var(--color-lighter-purple) 2px,
+        var(--color-white) 2px
+      )
+      no-repeat;
   }
 
   [data-role='in-service'] & {
-    background: linear-gradient(90deg, var(--color-turquoise-blue) 2px, var(--color-white) 2px) no-repeat;
+    background: linear-gradient(
+        90deg,
+        var(--color-turquoise-blue) 2px,
+        var(--color-white) 2px
+      )
+      no-repeat;
   }
 
   [data-role='fully-serviced'] & {
-    background: linear-gradient(90deg, var(--color-macaroni-and-cheese) 2px, var(--color-white) 2px) no-repeat;
+    background: linear-gradient(
+        90deg,
+        var(--color-macaroni-and-cheese) 2px,
+        var(--color-white) 2px
+      )
+      no-repeat;
   }
 `;
 

@@ -7,9 +7,7 @@ describe('Navigation', () => {
   describe('Components', () => {
     describe('S.Menu', () => {
       it('changes width', () => {
-        const component = shallow(
-          <S.Menu />,
-        );
+        const component = shallow(<S.Menu />);
 
         component.setProps({ open: false });
         expect(component.dive()).toHaveStyleRule('width', '80px');
@@ -19,24 +17,22 @@ describe('Navigation', () => {
       });
     });
 
-
     describe('S.NavLabel', () => {
       it('changes color', () => {
-        const component = shallow(
-          <S.NavLabel />,
-        );
+        const component = shallow(<S.NavLabel />);
 
         component.setProps({ selected: false });
         expect(component.dive()).toHaveStyleRule('color', '#b0bac9');
 
         component.setProps({ selected: true });
-        expect(component.dive()).toHaveStyleRule('color', 'var(--color-clear-blue)');
+        expect(component.dive()).toHaveStyleRule(
+          'color',
+          'var(--color-clear-blue)',
+        );
       });
 
       it('changes opacity', () => {
-        const component = shallow(
-          <S.NavLabel />,
-        );
+        const component = shallow(<S.NavLabel />);
 
         component.setProps({ show: false });
         expect(component.dive()).toHaveStyleRule('opacity', '0');
@@ -48,9 +44,7 @@ describe('Navigation', () => {
 
     describe('S.Welcome', () => {
       it('changes opacity', () => {
-        const component = shallow(
-          <S.Welcome />,
-        );
+        const component = shallow(<S.Welcome />);
 
         component.setProps({ show: false });
         expect(component.dive()).toHaveStyleRule('opacity', '0');
@@ -63,30 +57,29 @@ describe('Navigation', () => {
 
   describe('Menu', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(
-        <Navigation.Menu {...menu} />,
-      ).toJSON();
+      const tree = renderer.create(<Navigation.Menu {...menu} />).toJSON();
 
       expect(tree).toMatchSnapshot();
     });
 
     it('toggles on button click', () => {
-      const component = shallow(
-        <Navigation.Menu {...menu} />,
-      );
+      const component = shallow(<Navigation.Menu {...menu} />);
 
       component.find(S.MenuButton).simulate('click');
 
       expect(component.find(S.Menu).prop('open')).toBeTruthy();
       expect(component.find(S.Welcome).prop('show')).toBeTruthy();
-      component.find(S.NavLabel).forEach((node) => expect(node.prop('show')).toBeTruthy());
-
+      component
+        .find(S.NavLabel)
+        .forEach((node) => expect(node.prop('show')).toBeTruthy());
 
       component.find(S.MenuButton).simulate('click');
 
       expect(component.find(S.Menu).prop('open')).toBeFalsy();
       expect(component.find(S.Welcome).prop('show')).toBeFalsy();
-      component.find(S.NavLabel).forEach((node) => expect(node.prop('show')).toBeFalsy());
+      component
+        .find(S.NavLabel)
+        .forEach((node) => expect(node.prop('show')).toBeFalsy());
     });
   });
 });

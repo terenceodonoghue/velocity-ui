@@ -12,17 +12,14 @@ const Radio = ({ className, label, ...rest }) => (
 
 const Slider = (props) => <S.SliderInput type="range" {...props} />;
 
-const Switch = ({
-  className, description, label, ...rest
-}) => (
+const Switch = ({ className, description, label, ...rest }) => (
   <S.CheckboxLabel className={className}>
-    {(label || description)
-      && (
+    {(label || description) && (
       <S.CheckboxText>
         {label && <p>{label}</p>}
         {description && <p>{description}</p>}
       </S.CheckboxText>
-      )}
+    )}
     <S.CheckboxInput type="checkbox" {...rest} />
     <S.CheckboxSwitch />
   </S.CheckboxLabel>

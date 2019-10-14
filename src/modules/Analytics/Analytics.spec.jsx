@@ -5,9 +5,7 @@ import { metrics, revenue, weekday } from './Analytics.fixtures';
 describe('Analytics', () => {
   describe('Metrics', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(
-        <Analytics.Metrics {...metrics} />,
-      ).toJSON();
+      const tree = renderer.create(<Analytics.Metrics {...metrics} />).toJSON();
 
       expect(tree).toMatchSnapshot();
     });
@@ -15,14 +13,13 @@ describe('Analytics', () => {
 
   describe('Revenue', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(
-        <Analytics.Revenue {...revenue} />,
-        {
-          createNodeMock: () => (
-            { parentElement: document.implementation.createHTMLDocument().body }
-          ),
-        },
-      ).toJSON();
+      const tree = renderer
+        .create(<Analytics.Revenue {...revenue} />, {
+          createNodeMock: () => ({
+            parentElement: document.implementation.createHTMLDocument().body,
+          }),
+        })
+        .toJSON();
 
       expect(tree).toMatchSnapshot();
     });
@@ -30,14 +27,13 @@ describe('Analytics', () => {
 
   describe('Weekday', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(
-        <Analytics.Weekday {...weekday} />,
-        {
-          createNodeMock: () => (
-            { parentElement: document.implementation.createHTMLDocument().body }
-          ),
-        },
-      ).toJSON();
+      const tree = renderer
+        .create(<Analytics.Weekday {...weekday} />, {
+          createNodeMock: () => ({
+            parentElement: document.implementation.createHTMLDocument().body,
+          }),
+        })
+        .toJSON();
 
       expect(tree).toMatchSnapshot();
     });
@@ -46,7 +42,7 @@ describe('Analytics', () => {
   describe('yTickFormatter', () => {
     const { yTickFormatter } = Analytics;
 
-    it('doesn\'t format values <= 999', () => {
+    it("doesn't format values <= 999", () => {
       const value = yTickFormatter(999);
       expect(value).toBe(999);
     });

@@ -10,10 +10,13 @@ export const CheckboxText = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  border: ${(props) => `solid 1px ${props.active ? 'var(--color-clear-blue)' : '#e0e7ff'}`};
+  border: ${(props) =>
+    `solid 1px ${props.active ? 'var(--color-clear-blue)' : '#e0e7ff'}`};
   border-radius: 5px;
   padding: 19px 21px;
-  ${(props) => props.active && `&::after {
+  ${(props) =>
+    props.active &&
+    `&::after {
     position: absolute;
     right: -8px;
     top: -8px;
@@ -70,7 +73,12 @@ export const Palette = styled.div`
   border-radius: 4px;
   height: 65px;
   width: 120px;
-  background: ${(props) => `linear-gradient(90deg, ${props.colors[0]} 33.33%, ${props.colors[1]} 33.33%, ${props.colors[1]} 66.66%, ${props.colors[2]} 66.66%) no-repeat;`};
+  background: ${(props) =>
+    `linear-gradient(90deg, ${props.colors[0]} 33.33%, ${
+      props.colors[1]
+    } 33.33%, ${props.colors[1]} 66.66%, ${
+      props.colors[2]
+    } 66.66%) no-repeat;`};
 `;
 
 export const RadioField = styled(Input.Radio)`

@@ -6,9 +6,7 @@ import * as S from './Map.styles';
 describe('Map', () => {
   describe('Passenger', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(
-        <Map.Passenger {...passenger} />,
-      ).toJSON();
+      const tree = renderer.create(<Map.Passenger {...passenger} />).toJSON();
 
       expect(tree).toMatchSnapshot();
     });

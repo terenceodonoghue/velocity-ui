@@ -8,7 +8,7 @@ export const Address = styled.div`
     margin: 0 71px 0 0;
   }
 
-  p { /* stylelint-disable-line no-descending-specificity */
+  p {
     margin: 0;
     line-height: 1.47;
 
@@ -112,7 +112,8 @@ export const PaymentLogo = styled.div`
   width: 140px;
   border-radius: 5px;
   border: solid 1px #e0e7ff;
-  background-color: ${(props) => (props.active ? 'var(--color-clear-blue)' : null)};
+  background-color: ${(props) =>
+    props.active ? 'var(--color-clear-blue)' : null};
 
   img {
     transform: scale(0.5);
@@ -142,7 +143,7 @@ export const Stat = styled.div`
   flex: 1;
   padding: 30px 24px 0;
 
-  p {  /* stylelint-disable-line no-descending-specificity */
+  p {
     margin: 0;
     line-height: 1.47;
 

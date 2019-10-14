@@ -4,7 +4,7 @@ export const conversations = {
       avatarSrc: './users/lisa.png',
       isOnline: true,
       name: 'Lisa F. Bogar',
-      preview: 'If you\'re still having trouble loading...',
+      preview: "If you're still having trouble loading...",
       time: '2m',
     },
     {
@@ -25,14 +25,14 @@ export const conversations = {
       avatarSrc: './users/james.png',
       isOnline: false,
       name: 'James A. Parker',
-      preview: 'Let\'s look into this together.',
+      preview: "Let's look into this together.",
       time: '2h',
     },
     {
       avatarSrc: './users/emma.png',
       isOnline: false,
       name: 'Emma R. Joiner',
-      preview: 'We\'re happy to take a look into...',
+      preview: "We're happy to take a look into...",
       time: '7h',
     },
     {

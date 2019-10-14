@@ -5,9 +5,9 @@ import { conversations } from './Chat.fixtures';
 describe('Chat', () => {
   describe('Conversations', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(
-        <Chat.Conversations {...conversations} />,
-      ).toJSON();
+      const tree = renderer
+        .create(<Chat.Conversations {...conversations} />)
+        .toJSON();
 
       expect(tree).toMatchSnapshot();
     });

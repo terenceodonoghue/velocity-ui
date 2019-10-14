@@ -1,7 +1,7 @@
 {
-  "extends": [
-    "stylelint-config-standard",
-    "stylelint-config-styled-components"
-  ],
-  "processors": ["stylelint-processor-styled-components"]
+  "extends": ["stylelint-config-standard", "stylelint-prettier/recommended"],
+  "rules": {
+    "declaration-empty-line-before": null,
+    "no-empty-source": null
+  }
 }

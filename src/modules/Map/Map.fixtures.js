@@ -11,7 +11,7 @@ export const trip = {
   distance: 12.3,
   energy: 12.4,
   from: { streetAddress: '37-27 74th Street', suburb: 'Jackson Heights' },
-  price: 34.20,
+  price: 34.2,
   time: 42,
   to: { streetAddress: '81 Gate St Brooklyn', suburb: 'Greenpoint' },
 };

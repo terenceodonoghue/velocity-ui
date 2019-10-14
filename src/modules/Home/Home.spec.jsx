@@ -5,14 +5,13 @@ import { customizedLabel } from './Home.fixtures';
 describe('Home', () => {
   describe('Welcome', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(
-        <Home.Welcome />,
-        {
-          createNodeMock: () => (
-            { parentElement: document.implementation.createHTMLDocument().body }
-          ),
-        },
-      ).toJSON();
+      const tree = renderer
+        .create(<Home.Welcome />, {
+          createNodeMock: () => ({
+            parentElement: document.implementation.createHTMLDocument().body,
+          }),
+        })
+        .toJSON();
 
       expect(tree).toMatchSnapshot();
     });
@@ -20,9 +19,9 @@ describe('Home', () => {
 
   describe('renderCustomizedLabel', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(
-        <CustomizedLabel {...customizedLabel} />,
-      ).toJSON();
+      const tree = renderer
+        .create(<CustomizedLabel {...customizedLabel} />)
+        .toJSON();
 
       expect(tree).toMatchSnapshot();
     });

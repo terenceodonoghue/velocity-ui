@@ -4,32 +4,37 @@ module.exports = {
     es6: true,
     jest: true,
   },
-  extends: "airbnb",
+  extends: ['airbnb', 'plugin:prettier/recommended', 'prettier/react'],
   globals: {
-    Atomics: "readonly",
-    "mount": "readonly",
-    "renderer": "readonly",
-    "shallow": "readonly",
-    SharedArrayBuffer: "readonly"
+    Atomics: 'readonly',
+    mount: 'readonly',
+    renderer: 'readonly',
+    shallow: 'readonly',
+    SharedArrayBuffer: 'readonly',
   },
   parser: 'babel-eslint',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
     ecmaVersion: 2018,
-    sourceType: "module"
+    sourceType: 'module',
   },
-  plugins: ["emotion", "react"],
+  plugins: ['emotion', 'react'],
   rules: {
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": [".storybook/*", "**/*.spec.jsx", "**/*.stories.jsx"] }],
-    "import/prefer-default-export": "off",
-    "max-len": "off",
-    "react/jsx-props-no-spreading": "off",
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: ['.storybook/*', '**/*.spec.jsx', '**/*.stories.jsx'],
+      },
+    ],
+    'import/prefer-default-export': 'off',
+    'max-len': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
   settings: {
-    "import/resolver": {
-      "babel-module": {}
-    }
-  }
+    'import/resolver': {
+      'babel-module': {},
+    },
+  },
 };

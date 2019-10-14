@@ -3,19 +3,22 @@ import { string } from 'prop-types';
 import * as S from './Profile.styles';
 
 const Sidebar = ({
-  avatarSrc, bio, email, location, name, phone, roles, title,
+  avatarSrc,
+  bio,
+  email,
+  location,
+  name,
+  phone,
+  roles,
+  title,
 }) => (
   <S.Sidebar>
     <S.ProfilePicture src={avatarSrc} />
     <S.Name>{name}</S.Name>
     <S.Title>{title}</S.Title>
     <S.Buttons>
-      <S.EditButton>
-        Edit profile
-      </S.EditButton>
-      <S.StatusButton>
-        Change status
-      </S.StatusButton>
+      <S.EditButton>Edit profile</S.EditButton>
+      <S.StatusButton>Change status</S.StatusButton>
     </S.Buttons>
     <S.Rule />
     <dl>

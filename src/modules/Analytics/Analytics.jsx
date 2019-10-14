@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  arrayOf, number, shape, string,
-} from 'prop-types';
+import { arrayOf, number, shape, string } from 'prop-types';
 import numeral from 'numeral';
 import {
   AreaChart,
@@ -17,26 +15,28 @@ import {
 } from 'recharts';
 import * as S from './Analytics.styles';
 
-const yTickFormatter = (value) => (value > 999 ? numeral(Math.abs(value)).format('$0[.]0a') : Math.abs(value));
+const yTickFormatter = (value) =>
+  value > 999 ? numeral(Math.abs(value)).format('$0[.]0a') : Math.abs(value);
 
 const Metrics = ({ data }) => (
   <S.Metrics>
-    {
-      data.map((metric, index) => (
-        <S.Metric
-          data-role={metric.label.split(' ').join('-').toLowerCase()}
-          // eslint-disable-next-line react/no-array-index-key
-          key={`${metric.label
-            .split(' ')
-            .join('-')
-            .toLowerCase()}-${index}`}
-        >
-          <S.MetricIcon />
-          <S.MetricValue>{metric.value}</S.MetricValue>
-          <S.MetricLabel>{metric.label}</S.MetricLabel>
-        </S.Metric>
-      ))
-    }
+    {data.map((metric, index) => (
+      <S.Metric
+        data-role={metric.label
+          .split(' ')
+          .join('-')
+          .toLowerCase()}
+        // eslint-disable-next-line react/no-array-index-key
+        key={`${metric.label
+          .split(' ')
+          .join('-')
+          .toLowerCase()}-${index}`}
+      >
+        <S.MetricIcon />
+        <S.MetricValue>{metric.value}</S.MetricValue>
+        <S.MetricLabel>{metric.label}</S.MetricLabel>
+      </S.Metric>
+    ))}
   </S.Metrics>
 );
 
@@ -108,12 +108,27 @@ const Weekday = ({ data }) => (
       <ComposedChart
         data={data}
         margin={{
-          top: -3, right: 0, bottom: 2, left: -16,
+          top: -3,
+          right: 0,
+          bottom: 2,
+          left: -16,
         }}
         width={500}
       >
-        <Bar barSize={7} dataKey="comfort" fill="#2e5bff" name="Comfort" radius={5} />
-        <Bar barSize={7} dataKey="premium" fill="#8c54ff" name="Premium" radius={5} />
+        <Bar
+          barSize={7}
+          dataKey="comfort"
+          fill="#2e5bff"
+          name="Comfort"
+          radius={5}
+        />
+        <Bar
+          barSize={7}
+          dataKey="premium"
+          fill="#8c54ff"
+          name="Premium"
+          radius={5}
+        />
         <CartesianGrid
           stroke="#8097b1"
           strokeDasharray="2 2"
@@ -125,7 +140,12 @@ const Weekday = ({ data }) => (
           iconType="circle"
           verticalAlign="top"
         />
-        <Line dataKey="average" name="Average" stroke="#f7c137" strokeWidth={2} />
+        <Line
+          dataKey="average"
+          name="Average"
+          stroke="#f7c137"
+          strokeWidth={2}
+        />
         <XAxis
           dataKey="name"
           interval="preserveStartEnd"
@@ -133,7 +153,6 @@ const Weekday = ({ data }) => (
           stroke="#e0e7ff"
           tickLine={false}
           tickMargin={7.5}
-
         />
         <YAxis
           tickLine={false}

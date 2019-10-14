@@ -1,7 +1,5 @@
 import React, { forwardRef } from 'react';
-import {
-  arrayOf, node, oneOfType, string,
-} from 'prop-types';
+import { arrayOf, node, oneOfType, string } from 'prop-types';
 import * as S from './Container.styles';
 
 const Card = forwardRef(({ children, heading, ...rest }, ref) => (
@@ -19,7 +17,6 @@ Card.propTypes = {
 Card.defaultProps = {
   heading: null,
 };
-
 
 export default {
   Card,

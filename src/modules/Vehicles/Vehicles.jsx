@@ -32,9 +32,7 @@ const Filter = () => (
   </S.Filter>
 );
 
-const Vehicles = () => (
-  <S.Vehicles />
-);
+const Vehicles = () => <S.Vehicles />;
 
 export default {
   Filter,

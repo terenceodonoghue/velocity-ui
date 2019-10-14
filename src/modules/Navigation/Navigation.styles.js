@@ -30,14 +30,18 @@ export const NavItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  border-left: ${(props) => `solid 3px ${props.selected ? 'var(--color-clear-blue)' : 'transparent'}`};
+  border-left: ${(props) =>
+    `solid 3px ${props.selected ? 'var(--color-clear-blue)' : 'transparent'}`};
   height: 56px;
   margin: 0 -20px;
   padding: 0 0 0 27px;
-  background-color: ${(props) => (props.selected ? 'rgba(46, 91, 255, 0.1)' : null)};
+  background-color: ${(props) =>
+    props.selected ? 'rgba(46, 91, 255, 0.1)' : null};
   transition: var(--transition);
   cursor: pointer;
-  ${(props) => !props.selected && `
+  ${(props) =>
+    !props.selected &&
+    `
     &:hover {
       background-color: rgba(46, 91, 255, 0.1);
     }

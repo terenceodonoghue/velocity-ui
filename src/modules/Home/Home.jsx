@@ -1,8 +1,6 @@
 import React from 'react';
 import { number } from 'prop-types';
-import {
-  PieChart, Pie, ResponsiveContainer,
-} from 'recharts';
+import { PieChart, Pie, ResponsiveContainer } from 'recharts';
 import * as S from './Home.styles';
 
 const outerTicks = [
@@ -10,16 +8,20 @@ const outerTicks = [
   { name: 'max', value: 14, fill: '#e0e7ff' },
 ];
 
-const innerTicks = [
-  { name: 'score', value: 100, fill: '#e0e7ff' },
-];
+const innerTicks = [{ name: 'score', value: 100, fill: '#e0e7ff' }];
 
-export const renderCustomizedLabel = ({
-  index, percent,
-}) => (
+export const renderCustomizedLabel = ({ index, percent }) =>
   index === 0 && (
     <>
-      <text fill="#2e384d" fontFamily="Rubik-Light, Rubik" fontSize="48" fontWeight="300" letterSpacing="-0.600000024" x="50%" y="50%">
+      <text
+        fill="#2e384d"
+        fontFamily="Rubik-Light, Rubik"
+        fontSize="48"
+        fontWeight="300"
+        letterSpacing="-0.600000024"
+        x="50%"
+        y="50%"
+      >
         <tspan x="75" y="140">{`${(percent * 100).toFixed(0)}`}</tspan>
       </text>
       <text
@@ -32,18 +34,30 @@ export const renderCustomizedLabel = ({
         x="50%"
         y="50%"
       >
-        <tspan x="62" y="162">OPERATING</tspan>
-        <tspan x="78" y="177">SCORE</tspan>
+        <tspan x="62" y="162">
+          OPERATING
+        </tspan>
+        <tspan x="78" y="177">
+          SCORE
+        </tspan>
       </text>
     </>
-  )
-);
+  );
 
 const Welcome = () => (
   <S.Welcome>
     <ResponsiveContainer width={203.5}>
       <PieChart>
-        <Pie cx="50%" cy="64%" data={innerTicks} dataKey="value" innerRadius={66} outerRadius={69} startAngle={190} endAngle={-10} />
+        <Pie
+          cx="50%"
+          cy="64%"
+          data={innerTicks}
+          dataKey="value"
+          innerRadius={66}
+          outerRadius={69}
+          startAngle={190}
+          endAngle={-10}
+        />
         <Pie
           cx="50%"
           cy="64%"
@@ -62,7 +76,8 @@ const Welcome = () => (
     <S.Text>
       <S.Heading>Welcome to Velocity</S.Heading>
       <S.Paragraph>
-        All cars are operating well. There were 1,233 trips since your last login.
+        All cars are operating well. There were 1,233 trips since your last
+        login.
       </S.Paragraph>
     </S.Text>
   </S.Welcome>

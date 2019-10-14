@@ -1,15 +1,18 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import faker from 'faker';
-import {
-  Avatar, Button, Input, Page,
-} from 'components';
+import { Avatar, Button, Input, Page } from 'components';
 import * as S from './index.styles';
 
 storiesOf('Basics|Style Guide', module).add('Components', () => (
   <>
     <Page.AppBar>
-      <Avatar.Round alt="Avatar" src={faker.image.avatar()} height="40" width="40" />
+      <Avatar.Round
+        alt="Avatar"
+        src={faker.image.avatar()}
+        height="40"
+        width="40"
+      />
       <S.IconButton>
         <img alt="Mail" src="./mail.svg" />
       </S.IconButton>

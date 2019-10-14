@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  arrayOf, bool, shape, string,
-} from 'prop-types';
+import { arrayOf, bool, shape, string } from 'prop-types';
 import { Avatar } from 'components';
 import * as S from './Chat.styles';
 
@@ -20,12 +18,8 @@ const Conversations = ({ data }) => (
         </S.Avatar>
         <S.Body>
           <S.Details>
-            <S.Name>
-              {conversation.name}
-            </S.Name>
-            <S.Time>
-              {conversation.time}
-            </S.Time>
+            <S.Name>{conversation.name}</S.Name>
+            <S.Time>{conversation.time}</S.Time>
           </S.Details>
           <S.Preview>{conversation.preview}</S.Preview>
         </S.Body>

@@ -84,13 +84,11 @@ export const MetricLabel = styled.div`
   line-height: 1.47;
 `;
 
-
 export const MetricValue = styled.div`
   font-size: 320%;
   font-weight: var(--font-weight-light);
   letter-spacing: -0.6px;
 `;
-
 
 export const Revenue = styled(Container.Card)`
   ${recharts};

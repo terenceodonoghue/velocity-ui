@@ -3,7 +3,12 @@ import { number, shape, string } from 'prop-types';
 import * as S from './Map.styles';
 
 const Passenger = ({
-  avatarSrc, email, interactions, location, name, phone,
+  avatarSrc,
+  email,
+  interactions,
+  location,
+  name,
+  phone,
 }) => (
   <S.Passenger heading="Passenger info">
     <S.FieldSet>
@@ -12,7 +17,9 @@ const Passenger = ({
           <S.ProfilePicture src={avatarSrc}></S.ProfilePicture>
           <S.ProfileText>
             <S.Name>{name}</S.Name>
-            <S.Interactions>{`${interactions} interaction${interactions === 1 ? '' : 's'}`}</S.Interactions>
+            <S.Interactions>
+              {`${interactions} interaction${interactions === 1 ? '' : 's'}`}
+            </S.Interactions>
           </S.ProfileText>
         </S.Profile>
         <S.DetailsList>
@@ -26,25 +33,31 @@ const Passenger = ({
       </S.Details>
       <S.Payment>
         <S.PaymentType>
-          <S.PaymentLogo><img alt="PayPal" src="./paypal.png" /></S.PaymentLogo>
+          <S.PaymentLogo>
+            <img alt="PayPal" src="./paypal.png" />
+          </S.PaymentLogo>
         </S.PaymentType>
         <S.PaymentType>
-          <S.PaymentLogo active><img alt="Visa" src="./visa.png" /></S.PaymentLogo>
+          <S.PaymentLogo active>
+            <img alt="Visa" src="./visa.png" />
+          </S.PaymentLogo>
         </S.PaymentType>
         <S.PaymentType>
-          <S.PaymentLogo><img alt="Mastercard" src="./mastercard.png" /></S.PaymentLogo>
+          <S.PaymentLogo>
+            <img alt="Mastercard" src="./mastercard.png" />
+          </S.PaymentLogo>
         </S.PaymentType>
         <S.PaymentType>
-          <S.PaymentLogo><img alt="Apple Pay" src="./applepay.png" /></S.PaymentLogo>
+          <S.PaymentLogo>
+            <img alt="Apple Pay" src="./applepay.png" />
+          </S.PaymentLogo>
         </S.PaymentType>
       </S.Payment>
     </S.FieldSet>
   </S.Passenger>
 );
 
-const Trip = ({
-  distance, energy, from, price, time, to,
-}) => (
+const Trip = ({ distance, energy, from, price, time, to }) => (
   <S.Trip>
     <S.IconGroup>
       <S.CircleIcon>
@@ -81,10 +94,7 @@ const Trip = ({
         <p>Time</p>
       </S.Stat>
       <S.Stat>
-        <p>
-          $
-          {price.toFixed(2)}
-        </p>
+        <p>${price.toFixed(2)}</p>
         <p>Price</p>
       </S.Stat>
       <S.Stat>

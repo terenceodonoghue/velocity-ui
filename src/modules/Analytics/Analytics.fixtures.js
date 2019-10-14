@@ -20,71 +20,73 @@ export const metrics = {
 };
 
 export const revenue = {
-  data: [{
-    name: 'Mar 1',
-    revenue: 7850,
-    trips: 3900,
-  },
-  {
-    name: 'Mar 8',
-    revenue: 11100,
-    trips: 4700,
-  },
-  {
-    name: 'Mar 15',
-    revenue: 9100,
-    trips: 7150,
-  },
-  {
-    name: 'Mar 22',
-    revenue: 15200,
-    trips: 6400,
-  },
-  {
-    name: 'Mar 29',
-    revenue: 23000,
-    trips: 11000,
-  },
-  {
-    name: 'Apr 5',
-    revenue: 21400,
-    trips: 12500,
-  },
-  {
-    name: 'Apr 12',
-    revenue: 15950,
-    trips: 7000,
-  },
-  {
-    name: 'Apr 19',
-    revenue: 12750,
-    trips: 8250,
-  },
-  {
-    name: 'Apr 26',
-    revenue: 16100,
-    trips: 5850,
-  },
-  {
-    name: 'May 2',
-    revenue: 17600,
-    trips: 13000,
-  },
-  {
-    name: 'May 9',
-    revenue: 23700,
-    trips: 18050,
-  },
-  {
-    name: 'May 16',
-    revenue: 18900,
-    trips: 17200,
-  },
-  {
-    name: 'May 23',
-    revenue: 11300,
-    trips: 2200,
-  }],
+  data: [
+    {
+      name: 'Mar 1',
+      revenue: 7850,
+      trips: 3900,
+    },
+    {
+      name: 'Mar 8',
+      revenue: 11100,
+      trips: 4700,
+    },
+    {
+      name: 'Mar 15',
+      revenue: 9100,
+      trips: 7150,
+    },
+    {
+      name: 'Mar 22',
+      revenue: 15200,
+      trips: 6400,
+    },
+    {
+      name: 'Mar 29',
+      revenue: 23000,
+      trips: 11000,
+    },
+    {
+      name: 'Apr 5',
+      revenue: 21400,
+      trips: 12500,
+    },
+    {
+      name: 'Apr 12',
+      revenue: 15950,
+      trips: 7000,
+    },
+    {
+      name: 'Apr 19',
+      revenue: 12750,
+      trips: 8250,
+    },
+    {
+      name: 'Apr 26',
+      revenue: 16100,
+      trips: 5850,
+    },
+    {
+      name: 'May 2',
+      revenue: 17600,
+      trips: 13000,
+    },
+    {
+      name: 'May 9',
+      revenue: 23700,
+      trips: 18050,
+    },
+    {
+      name: 'May 16',
+      revenue: 18900,
+      trips: 17200,
+    },
+    {
+      name: 'May 23',
+      revenue: 11300,
+      trips: 2200,
+    },
+  ],
 };
 
 export const weekday = {

@@ -12,7 +12,7 @@ const Menu = ({ avatarSrc, name }) => {
         <img alt="Menu" src="./menu.svg" />
       </S.MenuButton>
       <S.Welcome show={open}>
-        <Avatar.Square src={avatarSrc} alt="Welcome" height="32" width="32"></Avatar.Square>
+        <Avatar.Square src={avatarSrc} alt="Welcome" height="32" width="32" />
         <S.WelcomeText>
           <span>Welcome</span>
           <S.Name>{name}</S.Name>
@@ -22,7 +22,9 @@ const Menu = ({ avatarSrc, name }) => {
         <S.NavList>
           <S.NavItem selected>
             <img alt="Overview" src="./overview.svg" />
-            <S.NavLabel show={open} selected>Overview</S.NavLabel>
+            <S.NavLabel show={open} selected>
+              Overview
+            </S.NavLabel>
           </S.NavItem>
           <S.NavItem>
             <img alt="Analytics" src="./analytics.svg" />

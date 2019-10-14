@@ -9,11 +9,19 @@ const Personal = () => (
         Use this page to update your contact information and change your
         password.
       </S.Legend>
-      <S.TextField defaultValue="appleseed_jane@mac.com" label="Email address" type="text" />
+      <S.TextField
+        defaultValue="appleseed_jane@mac.com"
+        label="Email address"
+        type="text"
+      />
       <S.TextField defaultValue="Jane" label="First name" type="text" />
       <S.TextField defaultValue="Appleseed" label="Last name" type="text" />
       <S.TextField defaultValue="1965-05-25" label="Birth date" type="date" />
-      <S.TextField defaultValue="password" label="Current password" type="password" />
+      <S.TextField
+        defaultValue="password"
+        label="Current password"
+        type="password"
+      />
       <S.TextField label="New password" type="password" />
       <S.TextField label="Confirm" type="password" />
     </S.FieldSet>
@@ -98,13 +106,23 @@ const Integrations = () => (
 const Notifications = () => (
   <Container.Card heading="Notifications">
     <S.FieldSet>
-      <S.Legend>
-        Control your notification and auto-follow settings.
-      </S.Legend>
-      <S.SwitchField description="Commits data and history" label="Email Notification" />
-      <S.SwitchField description="Commits data and history" label="Monthly Reports" />
-      <S.SwitchField description="Commits data and history" label="Push Notification" />
-      <S.SwitchField description="Commits data and history" label="Quarter Reports" />
+      <S.Legend>Control your notification and auto-follow settings.</S.Legend>
+      <S.SwitchField
+        description="Commits data and history"
+        label="Email Notification"
+      />
+      <S.SwitchField
+        description="Commits data and history"
+        label="Monthly Reports"
+      />
+      <S.SwitchField
+        description="Commits data and history"
+        label="Push Notification"
+      />
+      <S.SwitchField
+        description="Commits data and history"
+        label="Quarter Reports"
+      />
     </S.FieldSet>
   </Container.Card>
 );

@@ -20,7 +20,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: "module"
   },
-  plugins: ["react"],
+  plugins: ["emotion", "react"],
   rules: {
     "import/no-extraneous-dependencies": ["error", { "devDependencies": [".storybook/*", "**/*.spec.jsx", "**/*.stories.jsx"] }],
     "import/prefer-default-export": "off",

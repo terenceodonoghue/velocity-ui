@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import faker from 'faker';
-import { Avatar, Button, Input, Page } from 'components';
+import { Avatar, Button, Input, Page } from '.';
 import * as S from './index.styles';
 
 storiesOf('Basics|Style Guide', module).add('Components', () => (

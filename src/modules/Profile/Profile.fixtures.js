@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 export const sidebar = {
   avatarSrc: './users/joan.png',
   bio:

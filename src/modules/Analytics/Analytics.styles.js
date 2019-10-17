@@ -1,6 +1,6 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { Container } from 'components';
+import { Container } from '../../components';
 
 const recharts = css`
   .recharts-area-dot {

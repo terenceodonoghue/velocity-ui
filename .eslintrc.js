@@ -20,7 +20,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['emotion', 'react'],
+  plugins: ['emotion', 'prettier', 'react'],
   rules: {
     'import/no-extraneous-dependencies': [
       'error',
@@ -28,13 +28,6 @@ module.exports = {
         devDependencies: ['.storybook/*', '**/*.spec.jsx', '**/*.stories.jsx'],
       },
     ],
-    'import/prefer-default-export': 'off',
-    'max-len': 'off',
     'react/jsx-props-no-spreading': 'off',
-  },
-  settings: {
-    'import/resolver': {
-      'babel-module': {},
-    },
   },
 };

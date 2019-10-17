@@ -1,6 +1,6 @@
 import React from 'react';
 import { arrayOf, bool, shape, string } from 'prop-types';
-import { Avatar } from 'components';
+import { Avatar } from '../../components';
 import * as S from './Chat.styles';
 
 const Conversations = ({ data }) => (

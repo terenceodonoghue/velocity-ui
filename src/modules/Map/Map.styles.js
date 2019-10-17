@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Avatar, Container } from 'components';
+import { Avatar, Container } from '../../components';
 
 export const Address = styled.div`
   flex: 1;

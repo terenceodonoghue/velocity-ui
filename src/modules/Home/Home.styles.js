@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Container } from 'components';
+import { Container } from '../../components';
 
 export const Heading = styled.h2`
   margin: 0 0 13px;

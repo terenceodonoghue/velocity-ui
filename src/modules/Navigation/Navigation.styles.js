@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Button } from 'components';
+import { Button } from '../../components';
 
 export const Menu = styled.div`
   height: 100%;

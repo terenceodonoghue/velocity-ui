@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Container } from 'components';
+import { Container } from '../../components';
 
 export const Column = styled.div`
   display: inline-block;

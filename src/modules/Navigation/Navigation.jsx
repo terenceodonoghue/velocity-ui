@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { string } from 'prop-types';
-import { Avatar } from 'components';
+import { Avatar } from '../../components';
 import * as S from './Navigation.styles';
 
 const Menu = ({ avatarSrc, name }) => {

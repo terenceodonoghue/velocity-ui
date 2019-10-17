@@ -1,21 +1,18 @@
 {
   "name": "@terenceodonoghue/velocity-ui",
   "version": "1.0.0",
-  "description": "React components that implement InVision's Velocity UI kit",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "files": [
-    "lib",
+    "dist",
     "yarn.lock"
   ],
-  "repository": "git@github.com:terenceodonoghue/velocity-ui.git",
-  "author": "Terence O'Donoghue <1697905+terenceodonoghue@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel src/components --ignore 'src/**/*.fixtures.js','src/**/*.spec.jsx','src/**/*.stories.jsx' --out-dir lib --source-maps inline",
+    "build": "babel src/components --ignore 'src/**/*.fixtures.js','src/**/*.spec.jsx','src/**/*.stories.jsx' --out-dir dist --source-maps inline",
     "build-storybook": "build-storybook -c .storybook -o .out -s ./static --quiet",
     "eslint-check": "eslint --print-config src/components/index.js | eslint-config-prettier-check",
     "lint": "eslint --ext .js,.jsx ./ && stylelint './**/*.styles.js'",
-    "prebuild": "rimraf lib",
+    "prebuild": "rimraf dist",
     "prepublish": "yarn run build",
     "storybook": "start-storybook -s ./static --quiet",
     "stylelint-check": "stylelint-config-prettier-check",
@@ -29,7 +26,7 @@
     "react": "^16.10.2",
     "react-beautiful-dnd": "^11.0.5",
     "react-dom": "^16.10.2",
-    "recharts": "^1.7.1"
+    "recharts": "^1.8.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.6.4",
@@ -37,19 +34,17 @@
     "@babel/preset-env": "^7.6.3",
     "@babel/preset-react": "^7.6.3",
     "@emotion/babel-preset-css-prop": "^10.0.17",
-    "@storybook/react": "^5.2.3",
-    "@storybook/theming": "^5.2.3",
+    "@storybook/react": "^5.2.4",
+    "@storybook/theming": "^5.2.4",
     "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
-    "babel-plugin-module-resolver": "^3.2.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "enzyme-to-json": "^3.4.2",
     "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.4.0",
-    "eslint-import-resolver-babel-module": "^5.1.0",
     "eslint-plugin-emotion": "^10.0.14",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
@@ -68,7 +63,7 @@
     "stylelint-config-standard": "^19.0.0",
     "stylelint-prettier": "^1.1.1",
     "typescript": "^3.6.4",
-    "webpack": "^4.41.1"
+    "webpack": "^4.41.2"
   },
   "prettier": {
     "arrowParens": "always",

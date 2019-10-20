@@ -14,6 +14,10 @@ export const FilterField = styled(Input.Text)`
   letter-spacing: normal;
   line-height: 1.47;
   text-transform: none;
+
+  input {
+    color: var(--color-clear-blue);
+  }
 `;
 
 export const FilterLabel = styled.span`

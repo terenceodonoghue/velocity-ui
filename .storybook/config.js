@@ -1,55 +1,59 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import { Global, css } from '@emotion/core';
 import { addDecorator, addParameters, configure } from '@storybook/react';
-import theme from './velocity-theme';
+import { create } from '@storybook/theming';
+import { Global } from '../src/components';
 
-const styles = {
-  position: 'relative',
-  maxWidth: '1360px',
-  padding: '110px',
-};
+const {
+  variables: { colors, typography },
+} = Global;
 
-addDecorator(storyFn => (
-  <div style={styles}>
-    <Global
-      styles={css`
-        :root {
-          --base-font-size: 15px;
-          --color-bluey-grey: #8798ad;
-          --color-clear-blue: #2e5bff;
-          --color-clear-blue-dark: #0036fa;
-          --color-dark: #2e384d;
-          --color-light-blue-grey: #bfc5d2;
-          --color-lighter-purple: #8c54ff;
-          --color-macaroni-and-cheese: #f7c137;
-          --color-medium-green: #33ac2e;
-          --color-turquoise-blue: #00c1d4;
-          --color-white: #fff;
-          --font-family: 'Rubik', sans-serif;
-          --font-weight-light: 300;
-          --font-weight-regular: 400;
-          --font-weight-medium: 500;
-          --font-weight-bold: 700;
-          --transition: all 0.2s linear;
-        }
+const theme = create({
+  base: 'light',
 
-        :any-link {
-          text-decoration: none;
-          transition: var(--transition);
-        }
+  colorPrimary: 'hotpink',
+  colorSecondary: colors.clearBlue,
 
-        * {
-          box-sizing: border-box;
-        }
+  // UI
+  appBg: colors.white,
+  appContentBg: '#f4f6fc',
+  appBorderColor: 'rgba(46, 91, 255, 0.08)',
+  appBorderRadius: '1px',
 
-        body {
-          color: var(--color-dark);
-          font-family: var(--font-family);
-          font-size: var(--base-font-size);
-        }
-      `}
-    />
+  // Typography
+  fontBase: typography.baseFontFamily,
+  fontCode: 'monospace',
+
+  // Text colors
+  textColor: colors.dark,
+  textInverseColor: 'rgba(255,255,255,0.9)',
+
+  // Toolbar default and active colors
+  barTextColor: colors.blueyGrey,
+  barSelectedColor: colors.black,
+  barBg: colors.white,
+
+  // Form colors
+  inputBg: '#f4f6fc',
+  inputBorder: 'silver',
+  inputTextColor: colors.dark,
+  inputBorderRadius: '5px',
+
+  brandTitle: 'Velocity',
+  brandUrl:
+    'https://www.invisionapp.com/inside-design/design-resources/design-system-dashboard-ui-kit',
+  brandImage: './logo.svg',
+});
+
+addDecorator((storyFn) => (
+  <div
+    style={{
+      position: 'relative',
+      maxWidth: '1360px',
+      padding: '110px',
+    }}
+  >
+    <Global.Styles />
     {storyFn()}
   </div>
 ));
@@ -62,10 +66,14 @@ addParameters({
 });
 
 const loadStories = () => {
-  const components = require.context('../src/components', true, /\.stories\.jsx$/);
+  const components = require.context(
+    '../src/components',
+    true,
+    /\.stories\.jsx$/,
+  );
   const modules = require.context('../src/modules', true, /\.stories\.jsx$/);
-  components.keys().forEach(filename => components(filename));
-  modules.keys().forEach(filename => modules(filename));
+  components.keys().forEach((filename) => components(filename));
+  modules.keys().forEach((filename) => modules(filename));
 };
 
 configure(loadStories, module);

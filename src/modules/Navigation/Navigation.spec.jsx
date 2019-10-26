@@ -2,6 +2,11 @@ import React from 'react';
 import Navigation from './Navigation';
 import { menu } from './Navigation.fixtures';
 import * as S from './Navigation.styles';
+import { Global } from '../../components';
+
+const {
+  variables: { colors },
+} = Global;
 
 describe('Navigation', () => {
   describe('Components', () => {
@@ -25,10 +30,7 @@ describe('Navigation', () => {
         expect(component.dive()).toHaveStyleRule('color', '#b0bac9');
 
         component.setProps({ selected: true });
-        expect(component.dive()).toHaveStyleRule(
-          'color',
-          'var(--color-clear-blue)',
-        );
+        expect(component.dive()).toHaveStyleRule('color', colors.clearBlue);
       });
 
       it('changes opacity', () => {

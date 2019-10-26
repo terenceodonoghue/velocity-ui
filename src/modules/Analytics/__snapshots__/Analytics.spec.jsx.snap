@@ -22,7 +22,7 @@ exports[`Analytics Metrics matches snapshot 1`] = `
   border: solid 1px rgba(46,91,255,0.08);
   box-shadow: 0 10px 20px 0 rgba(46,91,255,0.07);
   padding: 32px 24px;
-  background-color: var(--color-white);
+  background-color: #fff;
   -webkit-flex: 0 0 264px;
   -ms-flex: 0 0 264px;
   flex: 0 0 264px;
@@ -74,7 +74,7 @@ exports[`Analytics Metrics matches snapshot 1`] = `
 
 .emotion-2 {
   font-size: 320%;
-  font-weight: var(--font-weight-light);
+  font-weight: 300;
   -webkit-letter-spacing: -0.6px;
   -moz-letter-spacing: -0.6px;
   -ms-letter-spacing: -0.6px;
@@ -83,7 +83,7 @@ exports[`Analytics Metrics matches snapshot 1`] = `
 
 .emotion-4 {
   margin-top: 1px;
-  color: var(--color-bluey-grey);
+  color: #8798ad;
   line-height: 1.47;
 }
 
@@ -172,11 +172,11 @@ exports[`Analytics Revenue matches snapshot 1`] = `
   border: solid 1px rgba(46,91,255,0.08);
   box-shadow: 0 10px 20px 0 rgba(46,91,255,0.07);
   padding: 32px 24px;
-  background-color: var(--color-white);
+  background-color: #fff;
 }
 
 .emotion-3 .recharts-area-dot {
-  fill: var(--color-white);
+  fill: #fff;
 }
 
 .emotion-3 .recharts-cartesian-axis-tick-value {
@@ -185,8 +185,8 @@ exports[`Analytics Revenue matches snapshot 1`] = `
 
 .emotion-3 .recharts-legend-item {
   margin-left: 12px;
-  color: var(--color-bluey-grey);
-  font-size: var(--base-font-size);
+  color: #8798ad;
+  font-size: 15px;
 }
 
 .emotion-3 .recharts-legend-item-text {
@@ -207,9 +207,9 @@ exports[`Analytics Revenue matches snapshot 1`] = `
 
 .emotion-0 {
   margin: 0 0 26px 0;
-  color: var(--color-bluey-grey);
+  color: #8798ad;
   font-size: 13px;
-  font-weight: var(--font-weight-normal);
+  font-weight: 400;
   -webkit-letter-spacing: 1.2px;
   -moz-letter-spacing: 1.2px;
   -ms-letter-spacing: 1.2px;
@@ -255,9 +255,9 @@ exports[`Analytics Revenue matches snapshot 1`] = `
 exports[`Analytics Weekday matches snapshot 1`] = `
 .emotion-0 {
   margin: 0 0 26px 0;
-  color: var(--color-bluey-grey);
+  color: #8798ad;
   font-size: 13px;
-  font-weight: var(--font-weight-normal);
+  font-weight: 400;
   -webkit-letter-spacing: 1.2px;
   -moz-letter-spacing: 1.2px;
   -ms-letter-spacing: 1.2px;
@@ -271,12 +271,12 @@ exports[`Analytics Weekday matches snapshot 1`] = `
   border: solid 1px rgba(46,91,255,0.08);
   box-shadow: 0 10px 20px 0 rgba(46,91,255,0.07);
   padding: 32px 24px;
-  background-color: var(--color-white);
+  background-color: #fff;
   width: 752px;
 }
 
 .emotion-3 .recharts-area-dot {
-  fill: var(--color-white);
+  fill: #fff;
 }
 
 .emotion-3 .recharts-cartesian-axis-tick-value {
@@ -285,8 +285,8 @@ exports[`Analytics Weekday matches snapshot 1`] = `
 
 .emotion-3 .recharts-legend-item {
   margin-left: 12px;
-  color: var(--color-bluey-grey);
-  font-size: var(--base-font-size);
+  color: #8798ad;
+  font-size: 15px;
 }
 
 .emotion-3 .recharts-legend-item-text {

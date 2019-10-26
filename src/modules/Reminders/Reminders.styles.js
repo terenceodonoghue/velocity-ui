@@ -1,5 +1,9 @@
 import styled from '@emotion/styled';
-import { Container } from '../../components';
+import { Container, Global } from '../../components';
+
+const {
+  variables: { colors, effects, typography },
+} = Global;
 
 export const Column = styled.div`
   display: inline-block;
@@ -12,7 +16,7 @@ export const Heading = styled.h3`
   margin: 7px 0;
   color: #b0bac9;
   font-size: 80%;
-  font-weight: var(--font-weight-medium);
+  font-weight: ${typography.fontWeightMedium};
   letter-spacing: 1.1px;
   text-transform: uppercase;
 
@@ -32,28 +36,28 @@ export const Heading = styled.h3`
   [data-role="service-needed"] & {
     &::after {
       background-color: rgba(46, 91, 255, 0.2);
-      color: var(--color-clear-blue);
+      color: ${colors.clearBlue};
     }
   }
 
   [data-role="waiting"] & {
     &::after {
       background-color: rgba(140, 84, 255, 0.2);
-      color: var(--color-lighter-purple);
+      color: ${colors.lighterPurple};
     }
   }
 
   [data-role="in-service"] & {
     &::after {
       background-color: rgba(0, 193, 212, 0.2);
-      color: var(--color-turquoise-blue);
+      color: ${colors.turquoiseBlue};
     }
   }
 
   [data-role="fully-serviced"] & {
     &::after {
       background-color: rgba(247, 193, 55, 0.2);
-      color: var(--color-macaroni-and-cheese);
+      color: ${colors.macaroniAndCheese};
     }
   }
 `;
@@ -68,11 +72,11 @@ export const Row = styled.div`
   line-height: 1.47;
 
   &:nth-of-type(1) {
-    font-weight: var(--font-weight-medium);
+    font-weight: ${typography.fontWeightMedium};
   }
 
   &:nth-of-type(2) {
-    color: var(--color-bluey-grey);
+    color: ${colors.blueyGrey};
   }
 `;
 
@@ -83,7 +87,7 @@ export const Ticket = styled(Container.Card)`
   margin: 5px 0;
   padding: 22px 25px;
   width: 100%;
-  transition: var(--transition);
+  transition: ${effects.transition};
 
   &:not(:hover) {
     box-shadow: none;
@@ -92,8 +96,8 @@ export const Ticket = styled(Container.Card)`
   [data-role='service-needed'] & {
     background: linear-gradient(
         90deg,
-        var(--color-clear-blue) 2px,
-        var(--color-white) 2px
+        ${colors.clearBlue} 2px,
+        ${colors.white} 2px
       )
       no-repeat;
   }
@@ -101,8 +105,8 @@ export const Ticket = styled(Container.Card)`
   [data-role='waiting'] & {
     background: linear-gradient(
         90deg,
-        var(--color-lighter-purple) 2px,
-        var(--color-white) 2px
+        ${colors.lighterPurple} 2px,
+        ${colors.white} 2px
       )
       no-repeat;
   }
@@ -110,8 +114,8 @@ export const Ticket = styled(Container.Card)`
   [data-role='in-service'] & {
     background: linear-gradient(
         90deg,
-        var(--color-turquoise-blue) 2px,
-        var(--color-white) 2px
+        ${colors.turquoiseBlue} 2px,
+        ${colors.white} 2px
       )
       no-repeat;
   }
@@ -119,8 +123,8 @@ export const Ticket = styled(Container.Card)`
   [data-role='fully-serviced'] & {
     background: linear-gradient(
         90deg,
-        var(--color-macaroni-and-cheese) 2px,
-        var(--color-white) 2px
+        ${colors.macaroniAndCheese} 2px,
+        ${colors.white} 2px
       )
       no-repeat;
   }

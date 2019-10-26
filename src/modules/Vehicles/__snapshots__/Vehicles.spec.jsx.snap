@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Vehicles Filter matches snapshot 1`] = `
-.emotion-61 {
+.emotion-18 {
   display: block;
   border-radius: 1px;
   border: solid 1px rgba(46,91,255,0.08);
   box-shadow: 0 10px 20px 0 rgba(46,91,255,0.07);
   padding: 32px 24px;
-  background-color: var(--color-white);
+  background-color: #fff;
   padding: 32px 24px 3px;
   width: 268px;
 }
 
 .emotion-0 {
   margin: 0 0 26px 0;
-  color: var(--color-bluey-grey);
+  color: #8798ad;
   font-size: 13px;
-  font-weight: var(--font-weight-normal);
+  font-weight: 400;
   -webkit-letter-spacing: 1.2px;
   -moz-letter-spacing: 1.2px;
   -ms-letter-spacing: 1.2px;
@@ -24,20 +24,20 @@ exports[`Vehicles Filter matches snapshot 1`] = `
   text-transform: uppercase;
 }
 
-.emotion-14 {
+.emotion-5 {
   display: inline-block;
   color: #b0bac9;
   font-size: 12px;
-  font-weight: var(--font-weight-medium);
+  font-weight: 500;
   -webkit-letter-spacing: 1.2px;
   -moz-letter-spacing: 1.2px;
   -ms-letter-spacing: 1.2px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
   padding: 0 6px 19px;
-  color: var(--color-dark);
+  color: #2e384d;
   font-size: 15px;
-  font-weight: var(--font-weight-regular);
+  font-weight: 400;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
@@ -46,7 +46,11 @@ exports[`Vehicles Filter matches snapshot 1`] = `
   text-transform: none;
 }
 
-.emotion-11 {
+.emotion-5 input {
+  color: #2e5bff;
+}
+
+.emotion-2 {
   display: block;
   border: solid 1px #e0e7ff;
   border-radius: 5px;
@@ -56,98 +60,24 @@ exports[`Vehicles Filter matches snapshot 1`] = `
   padding: 10px 16px;
   width: 100%;
   background-color: rgba(224,231,255,0.2);
-  color: var(--color-dark);
+  color: #2e384d;
   font-family: inherit;
-  font-size: var(--base-font-size);
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  font-size: 15px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
-.emotion-11:disabled {
+.emotion-2:disabled {
   opacity: 0.3;
 }
 
-.emotion-11:focus {
-  border: solid 1px var(--color-clear-blue);
+.emotion-2:focus {
+  border: solid 1px #2e5bff;
   outline: 0;
 }
 
-.emotion-6 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.emotion-2 {
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.emotion-4 {
-  color: var(--color-bluey-grey);
-}
-
-.emotion-9 {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border-radius: 7px;
-  height: 4px;
-  width: 210px;
-  background-color: rgba(46,91,255,0.15);
-  outline: none;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-  margin: 12px 0 18px;
-}
-
-.emotion-9::-moz-range-progress {
-  background-color: var(--color-clear-blue);
-}
-
-.emotion-9::-moz-range-thumb {
-  border: solid 4px var(--color-clear-blue);
-  border-radius: 50%;
-  height: 8px;
-  width: 8px;
-  background: var(--color-white);
-  cursor: pointer;
-}
-
-.emotion-9::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  border: solid 4px var(--color-clear-blue);
-  border-radius: 50%;
-  height: 16px;
-  width: 16px;
-  background: var(--color-white);
-  cursor: pointer;
-}
-
-.emotion-9:disabled {
-  opacity: 0.3;
-}
-
-.emotion-33 {
-  display: inline-block;
-  color: #b0bac9;
-  font-size: 12px;
-  font-weight: var(--font-weight-medium);
-  -webkit-letter-spacing: 1.2px;
-  -moz-letter-spacing: 1.2px;
-  -ms-letter-spacing: 1.2px;
-  letter-spacing: 1.2px;
-  text-transform: uppercase;
-  background: var(--color-white);
-  color: var(--color-clear-blue);
-}
-
 <div
-  className="emotion-60 emotion-61 emotion-62"
+  className="emotion-17 emotion-18 emotion-19"
 >
   <h3
     className="emotion-0 emotion-1"
@@ -155,109 +85,36 @@ exports[`Vehicles Filter matches snapshot 1`] = `
     Filter
   </h3>
   <label
-    className="emotion-13 emotion-14 emotion-15"
+    className="emotion-4 emotion-5 emotion-6"
   >
+    Vehicle model
     <input
-      className="emotion-11 emotion-12"
-    >
-      <div
-        className="emotion-6 emotion-7"
-      >
-        <span
-          className="emotion-2 emotion-3"
-        >
-          Trips taken
-        </span>
-        <span
-          className="emotion-4 emotion-5"
-        >
-          753
-        </span>
-      </div>
-      <input
-        className="emotion-8 emotion-9 emotion-10"
-        type="range"
-      />
-    </input>
+      className="emotion-2 emotion-3"
+      placeholder="Vehicle model"
+      type="text"
+    />
   </label>
   <label
-    className="emotion-13 emotion-14 emotion-15"
+    className="emotion-4 emotion-5 emotion-6"
   >
+    Status
     <input
-      className="emotion-11 emotion-12"
-    >
-      <div
-        className="emotion-6 emotion-7"
-      >
-        <span
-          className="emotion-2 emotion-3"
-        >
-          Service due
-        </span>
-        <span
-          className="emotion-4 emotion-5"
-        >
-          14 days
-        </span>
-      </div>
-      <input
-        className="emotion-8 emotion-9 emotion-10"
-        type="range"
-      />
-    </input>
+      className="emotion-2 emotion-3"
+      defaultValue="Service needed"
+      placeholder="Status"
+      type="text"
+    />
   </label>
   <label
-    className="emotion-13 emotion-14 emotion-15"
+    className="emotion-4 emotion-5 emotion-6"
   >
+    Location
     <input
-      className="emotion-11 emotion-12"
-    >
-      Vehicle model
-      <label
-        className="emotion-32 emotion-33 emotion-15"
-      >
-        <input
-          className="emotion-11 emotion-12"
-          placeholder="Vehicle model"
-        />
-      </label>
-    </input>
-  </label>
-  <label
-    className="emotion-13 emotion-14 emotion-15"
-  >
-    <input
-      className="emotion-11 emotion-12"
-    >
-      Status
-      <label
-        className="emotion-32 emotion-33 emotion-15"
-      >
-        <input
-          className="emotion-11 emotion-12"
-          placeholder="Status"
-          value="Service needed"
-        />
-      </label>
-    </input>
-  </label>
-  <label
-    className="emotion-13 emotion-14 emotion-15"
-  >
-    <input
-      className="emotion-11 emotion-12"
-    >
-      Location
-      <label
-        className="emotion-32 emotion-33 emotion-15"
-      >
-        <input
-          className="emotion-11 emotion-12"
-          placeholder="Location"
-          value="USA"
-        />
-      </label>
-    </input>
+      className="emotion-2 emotion-3"
+      defaultValue="USA"
+      placeholder="Location"
+      type="text"
+    />
   </label>
 </div>
 `;

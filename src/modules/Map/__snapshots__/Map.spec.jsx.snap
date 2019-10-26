@@ -7,15 +7,15 @@ exports[`Map Passenger matches snapshot 1`] = `
   border: solid 1px rgba(46,91,255,0.08);
   box-shadow: 0 10px 20px 0 rgba(46,91,255,0.07);
   padding: 32px 24px;
-  background-color: var(--color-white);
+  background-color: #fff;
   width: 655px;
 }
 
 .emotion-0 {
   margin: 0 0 26px 0;
-  color: var(--color-bluey-grey);
+  color: #8798ad;
   font-size: 13px;
-  font-weight: var(--font-weight-normal);
+  font-weight: 400;
   -webkit-letter-spacing: 1.2px;
   -moz-letter-spacing: 1.2px;
   -ms-letter-spacing: 1.2px;
@@ -60,13 +60,13 @@ exports[`Map Passenger matches snapshot 1`] = `
 .emotion-5 {
   margin: 0 0 2px;
   font-size: 15px;
-  font-weight: var(--font-weight-medium);
+  font-weight: 500;
   line-height: 1.47;
 }
 
 .emotion-7 {
   margin: 0;
-  color: var(--color-bluey-grey);
+  color: #8798ad;
 }
 
 .emotion-25 {
@@ -77,7 +77,7 @@ exports[`Map Passenger matches snapshot 1`] = `
   color: #b0bac9;
   margin-bottom: 10px;
   font-size: 12px;
-  font-weight: var(--font-weight-medium);
+  font-weight: 500;
   -webkit-letter-spacing: 1.1px;
   -moz-letter-spacing: 1.1px;
   -ms-letter-spacing: 1.1px;
@@ -156,7 +156,7 @@ exports[`Map Passenger matches snapshot 1`] = `
   width: 140px;
   border-radius: 5px;
   border: solid 1px #e0e7ff;
-  background-color: var(--color-clear-blue);
+  background-color: #2e5bff;
 }
 
 .emotion-33 img {

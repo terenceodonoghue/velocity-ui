@@ -1,4 +1,9 @@
 import styled from '@emotion/styled';
+import Global from '../Global/Global';
+
+const {
+  variables: { colors, effects, typography },
+} = Global;
 
 export const CheckboxInput = styled.input`
   height: 0;
@@ -22,14 +27,14 @@ export const CheckboxSwitch = styled.span`
   width: 36px;
   background-color: rgba(135, 152, 173, 0.4);
   cursor: pointer;
-  transition: var(--transition);
+  transition: ${effects.transition};
 
   ${/* sc-selector */ CheckboxInput}:disabled + & {
     opacity: 0.4;
   }
 
   ${/* sc-selector */ CheckboxInput}:checked:enabled + & {
-    background-color: var(--color-medium-green);
+    background-color: ${colors.mediumGreen};
   }
 
   &::before {
@@ -40,8 +45,8 @@ export const CheckboxSwitch = styled.span`
     border-radius: 50%;
     height: 16px;
     width: 16px;
-    background-color: var(--color-white);
-    transition: var(--transition);
+    background-color: ${colors.white};
+    transition: ${effects.transition};
 
     ${/* sc-selector */ CheckboxInput}:checked + & {
       transform: translateX(16px);
@@ -51,15 +56,15 @@ export const CheckboxSwitch = styled.span`
 
 export const CheckboxText = styled.div`
   margin-right: 58px;
-  font-weight: var(--font-weight-medium);
+  font-weight: ${typography.fontWeightMedium};
   line-height: 1.47;
 
   p {
     margin: 0;
 
     &:nth-of-type(2) {
-      color: var(--color-bluey-grey);
-      font-weight: var(--font-weight-regular);
+      color: ${colors.blueyGrey};
+      font-weight: ${typography.fontWeightRegular};
     }
   }
 `;
@@ -74,7 +79,7 @@ export const RadioInput = styled.input`
 export const RadioLabel = styled.label`
   display: flex;
   align-items: center;
-  font-weight: var(--font-weight-medium);
+  font-weight: ${typography.fontWeightMedium};
 `;
 
 export const RadioSwitch = styled.span`
@@ -84,15 +89,15 @@ export const RadioSwitch = styled.span`
   height: 16px;
   margin: 0 8px 0 0;
   width: 16px;
-  background-color: var(--color-white);
+  background-color: ${colors.white};
 
   ${/* sc-selector */ RadioInput}:disabled + & {
     opacity: 0.4;
   }
 
   ${/* sc-selector */ RadioInput}:checked:enabled + & {
-    border: solid 4px var(--color-clear-blue);
-    background-color: var(--color-white);
+    border: solid 4px ${colors.clearBlue};
+    background-color: ${colors.white};
   }
 `;
 
@@ -103,28 +108,28 @@ export const SliderInput = styled.input`
   width: 210px;
   background-color: rgba(46, 91, 255, 0.15);
   outline: none;
-  transition: var(--transition);
+  transition: ${effects.transition};
 
   &::-moz-range-progress {
-    background-color: var(--color-clear-blue);
+    background-color: ${colors.clearBlue};
   }
 
   &::-moz-range-thumb {
-    border: solid 4px var(--color-clear-blue);
+    border: solid 4px ${colors.clearBlue};
     border-radius: 50%;
     height: 8px;
     width: 8px;
-    background: var(--color-white);
+    background: ${colors.white};
     cursor: pointer;
   }
 
   &::-webkit-slider-thumb {
     appearance: none;
-    border: solid 4px var(--color-clear-blue);
+    border: solid 4px ${colors.clearBlue};
     border-radius: 50%;
     height: 16px;
     width: 16px;
-    background: var(--color-white);
+    background: ${colors.white};
     cursor: pointer;
   }
 
@@ -143,17 +148,17 @@ export const TextInput = styled.input`
   padding: 10px 16px;
   width: 100%;
   background-color: rgba(224, 231, 255, 0.2);
-  color: var(--color-dark);
+  color: ${colors.dark};
   font-family: inherit;
-  font-size: var(--base-font-size);
-  transition: var(--transition);
+  font-size: ${typography.baseFontSize};
+  transition: ${effects.transition};
 
   &:disabled {
     opacity: 0.3;
   }
 
   &:focus {
-    border: solid 1px var(--color-clear-blue);
+    border: solid 1px ${colors.clearBlue};
     outline: 0;
   }
 `;
@@ -162,7 +167,7 @@ export const TextLabel = styled.label`
   display: inline-block;
   color: #b0bac9;
   font-size: 12px;
-  font-weight: var(--font-weight-medium);
+  font-weight: ${typography.fontWeightMedium};
   letter-spacing: 1.2px;
   text-transform: uppercase;
 `;

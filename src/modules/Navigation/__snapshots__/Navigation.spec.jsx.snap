@@ -5,9 +5,9 @@ exports[`Navigation Menu matches snapshot 1`] = `
   height: 100%;
   padding: 20px;
   width: 80px;
-  background-color: var(--color-white);
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  background-color: #fff;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   overflow-x: hidden;
 }
 
@@ -15,20 +15,20 @@ exports[`Navigation Menu matches snapshot 1`] = `
   margin-left: 18px;
   color: #b0bac9;
   opacity: 0;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-  -webkit-transition-delay: var(--transition);
-  transition-delay: var(--transition);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  -webkit-transition-delay: all 0.2s linear;
+  transition-delay: all 0.2s linear;
 }
 
 .emotion-11 {
   margin-left: 18px;
-  color: var(--color-clear-blue);
+  color: #2e5bff;
   opacity: 0;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-  -webkit-transition-delay: var(--transition);
-  transition-delay: var(--transition);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  -webkit-transition-delay: all 0.2s linear;
+  transition-delay: all 0.2s linear;
 }
 
 .emotion-9 {
@@ -40,10 +40,10 @@ exports[`Navigation Menu matches snapshot 1`] = `
   padding: 0 8px;
   width: 215px;
   opacity: 0;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
-  -webkit-transition-delay: var(--transition);
-  transition-delay: var(--transition);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  -webkit-transition-delay: all 0.2s linear;
+  transition-delay: all 0.2s linear;
 }
 
 .emotion-1 {
@@ -61,16 +61,16 @@ exports[`Navigation Menu matches snapshot 1`] = `
   justify-content: center;
   border: none;
   padding: 0;
-  font-size: var(--base-font-size);
-  font-weight: var(--font-weight-medium);
+  font-size: 15px;
+  font-weight: 500;
   cursor: pointer;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   border-radius: 4px;
   height: 40px;
   width: 200px;
   background: none;
-  color: var(--color-clear-blue);
+  color: #2e5bff;
   margin: 0 0 58px;
   width: 40px;
 }
@@ -98,7 +98,7 @@ exports[`Navigation Menu matches snapshot 1`] = `
 
 .emotion-5 {
   display: block;
-  color: var(--color-light-blue-grey);
+  color: #bfc5d2;
 }
 
 .emotion-39 {
@@ -120,13 +120,13 @@ exports[`Navigation Menu matches snapshot 1`] = `
   -webkit-justify-content: flex-start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  border-left: solid 3px var(--color-clear-blue);
+  border-left: solid 3px #2e5bff;
   height: 56px;
   margin: 0 -20px;
   padding: 0 0 0 27px;
   background-color: rgba(46,91,255,0.1);
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   cursor: pointer;
 }
 
@@ -147,8 +147,8 @@ exports[`Navigation Menu matches snapshot 1`] = `
   height: 56px;
   margin: 0 -20px;
   padding: 0 0 0 27px;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   cursor: pointer;
 }
 

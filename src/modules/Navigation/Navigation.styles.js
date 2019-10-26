@@ -1,12 +1,16 @@
 import styled from '@emotion/styled';
-import { Button } from '../../components';
+import { Button, Global } from '../../components';
+
+const {
+  variables: { colors, effects },
+} = Global;
 
 export const Menu = styled.div`
   height: 100%;
   padding: 20px;
   width: ${(props) => (props.open ? '215px' : '80px')};
-  background-color: var(--color-white);
-  transition: var(--transition);
+  background-color: ${colors.white};
+  transition: ${effects.transition};
   overflow-x: hidden;
 `;
 
@@ -17,7 +21,7 @@ export const MenuButton = styled(Button.Text)`
 
 export const Name = styled.span`
   display: block;
-  color: var(--color-light-blue-grey);
+  color: ${colors.lightBlueGrey};
 `;
 
 export const NavList = styled.ul`
@@ -31,13 +35,13 @@ export const NavItem = styled.li`
   align-items: center;
   justify-content: flex-start;
   border-left: ${(props) =>
-    `solid 3px ${props.selected ? 'var(--color-clear-blue)' : 'transparent'}`};
+    `solid 3px ${props.selected ? colors.clearBlue : 'transparent'}`};
   height: 56px;
   margin: 0 -20px;
   padding: 0 0 0 27px;
   background-color: ${(props) =>
     props.selected ? 'rgba(46, 91, 255, 0.1)' : null};
-  transition: var(--transition);
+  transition: ${effects.transition};
   cursor: pointer;
   ${(props) =>
     !props.selected &&
@@ -50,10 +54,10 @@ export const NavItem = styled.li`
 
 export const NavLabel = styled.span`
   margin-left: 18px;
-  color: ${(props) => (props.selected ? 'var(--color-clear-blue)' : '#b0bac9')};
+  color: ${(props) => (props.selected ? colors.clearBlue : '#b0bac9')};
   opacity: ${(props) => (props.show ? '1' : '0')};
-  transition: var(--transition);
-  transition-delay: var(--transition);
+  transition: ${effects.transition};
+  transition-delay: ${effects.transition};
 `;
 
 export const Welcome = styled.div`
@@ -62,8 +66,8 @@ export const Welcome = styled.div`
   padding: 0 8px;
   width: 215px;
   opacity: ${(props) => (props.show ? '1' : '0')};
-  transition: var(--transition);
-  transition-delay: var(--transition);
+  transition: ${effects.transition};
+  transition-delay: ${effects.transition};
 `;
 
 export const WelcomeText = styled.div`

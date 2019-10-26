@@ -1,10 +1,14 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { Container } from '../../components';
+import { Container, Global } from '../../components';
+
+const {
+  variables: { colors, typography },
+} = Global;
 
 const recharts = css`
   .recharts-area-dot {
-    fill: var(--color-white);
+    fill: ${colors.white};
   }
 
   .recharts-cartesian-axis-tick-value {
@@ -13,8 +17,8 @@ const recharts = css`
 
   .recharts-legend-item {
     margin-left: 12px;
-    color: var(--color-bluey-grey);
-    font-size: var(--base-font-size);
+    color: ${colors.blueyGrey};
+    font-size: ${typography.baseFontSize};
   }
 
   .recharts-legend-item-text {
@@ -80,13 +84,13 @@ export const MetricIcon = styled.div`
 
 export const MetricLabel = styled.div`
   margin-top: 1px;
-  color: var(--color-bluey-grey);
+  color: ${colors.blueyGrey};
   line-height: 1.47;
 `;
 
 export const MetricValue = styled.div`
   font-size: 320%;
-  font-weight: var(--font-weight-light);
+  font-weight: ${typography.fontWeightLight};
   letter-spacing: -0.6px;
 `;
 

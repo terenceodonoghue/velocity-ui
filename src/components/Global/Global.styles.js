@@ -4,7 +4,7 @@ export const variables = {
   colors: {
     black: '#000',
     blueyGrey: '#8798ad',
-    clearBlue: '#2e5bff;',
+    clearBlue: '#2e5bff',
     clearBlueDark: '#0036fa',
     dark: '#2e384d',
     lightBlueGrey: '#bfc5d2',
@@ -13,6 +13,9 @@ export const variables = {
     mediumGreen: '#33ac2e',
     turquoiseBlue: '#00c1d4',
     white: '#fff',
+  },
+  effects: {
+    transition: 'all 0.2s linear',
   },
   typography: {
     baseFontSize: '15px',
@@ -25,10 +28,6 @@ export const variables = {
 };
 
 export default css`
-  :root {
-    --transition: all 0.2s linear;
-  }
-
   :any-link {
     text-decoration: none;
   }

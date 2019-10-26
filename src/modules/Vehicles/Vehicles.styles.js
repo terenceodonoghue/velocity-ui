@@ -1,5 +1,9 @@
 import styled from '@emotion/styled';
-import { Container, Input } from '../../components';
+import { Container, Global, Input } from '../../components';
+
+const {
+  variables: { colors, typography },
+} = Global;
 
 export const Filter = styled(Container.Card)`
   padding: 32px 24px 3px;
@@ -8,15 +12,15 @@ export const Filter = styled(Container.Card)`
 
 export const FilterField = styled(Input.Text)`
   padding: 0 6px 19px;
-  color: var(--color-dark);
+  color: ${colors.dark};
   font-size: 15px;
-  font-weight: var(--font-weight-regular);
+  font-weight: ${typography.fontWeightRegular};
   letter-spacing: normal;
   line-height: 1.47;
   text-transform: none;
 
   input {
-    color: var(--color-clear-blue);
+    color: ${colors.clearBlue};
   }
 `;
 
@@ -29,7 +33,7 @@ export const FilterText = styled.div`
 `;
 
 export const FilterValue = styled.span`
-  color: var(--color-bluey-grey);
+  color: ${colors.blueyGrey};
 `;
 
 export const SliderInput = styled(Input.Slider)`
@@ -37,8 +41,8 @@ export const SliderInput = styled(Input.Slider)`
 `;
 
 export const TextInput = styled(Input.Text)`
-  background: var(--color-white);
-  color: var(--color-clear-blue);
+  background: ${colors.white};
+  color: ${colors.clearBlue};
 `;
 
 export const Vehicles = styled.table``;

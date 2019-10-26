@@ -7,14 +7,14 @@ exports[`Settings Integrations matches snapshot 1`] = `
   border: solid 1px rgba(46,91,255,0.08);
   box-shadow: 0 10px 20px 0 rgba(46,91,255,0.07);
   padding: 32px 24px;
-  background-color: var(--color-white);
+  background-color: #fff;
 }
 
 .emotion-0 {
   margin: 0 0 26px 0;
-  color: var(--color-bluey-grey);
+  color: #8798ad;
   font-size: 13px;
-  font-weight: var(--font-weight-normal);
+  font-weight: 400;
   -webkit-letter-spacing: 1.2px;
   -moz-letter-spacing: 1.2px;
   -ms-letter-spacing: 1.2px;
@@ -60,7 +60,7 @@ exports[`Settings Integrations matches snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: solid 1px var(--color-clear-blue);
+  border: solid 1px #2e5bff;
   border-radius: 5px;
   padding: 19px 21px;
 }
@@ -70,7 +70,7 @@ exports[`Settings Integrations matches snapshot 1`] = `
   right: -8px;
   top: -8px;
   content: '';
-  background-color: var(--color-clear-blue);
+  background-color: #2e5bff;
   background-image: url(./check-white.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -101,14 +101,14 @@ exports[`Settings Integrations matches snapshot 1`] = `
 
 .emotion-6 {
   margin: 0;
-  font-weight: var(--font-weight-medium);
+  font-weight: 500;
   line-height: 1.47;
 }
 
 .emotion-8 {
   margin: 0;
-  color: var(--color-bluey-grey);
-  font-weight: var(--font-weight-regular);
+  color: #8798ad;
+  font-weight: 400;
   line-height: 1.47;
 }
 
@@ -322,14 +322,14 @@ exports[`Settings Notifications matches snapshot 1`] = `
   border: solid 1px rgba(46,91,255,0.08);
   box-shadow: 0 10px 20px 0 rgba(46,91,255,0.07);
   padding: 32px 24px;
-  background-color: var(--color-white);
+  background-color: #fff;
 }
 
 .emotion-0 {
   margin: 0 0 26px 0;
-  color: var(--color-bluey-grey);
+  color: #8798ad;
   font-size: 13px;
-  font-weight: var(--font-weight-normal);
+  font-weight: 400;
   -webkit-letter-spacing: 1.2px;
   -moz-letter-spacing: 1.2px;
   -ms-letter-spacing: 1.2px;
@@ -382,7 +382,7 @@ exports[`Settings Notifications matches snapshot 1`] = `
 
 .emotion-4 {
   margin-right: 58px;
-  font-weight: var(--font-weight-medium);
+  font-weight: 500;
   line-height: 1.47;
 }
 
@@ -391,8 +391,8 @@ exports[`Settings Notifications matches snapshot 1`] = `
 }
 
 .emotion-4 p:nth-of-type(2) {
-  color: var(--color-bluey-grey);
-  font-weight: var(--font-weight-regular);
+  color: #8798ad;
+  font-weight: 400;
 }
 
 .emotion-6 {
@@ -409,8 +409,8 @@ exports[`Settings Notifications matches snapshot 1`] = `
   width: 36px;
   background-color: rgba(135,152,173,0.4);
   cursor: pointer;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .emotion-7:disabled + .emotion-8 {
@@ -418,7 +418,7 @@ exports[`Settings Notifications matches snapshot 1`] = `
 }
 
 .emotion-7:checked:enabled + .emotion-8 {
-  background-color: var(--color-medium-green);
+  background-color: #33ac2e;
 }
 
 .emotion-8::before {
@@ -429,9 +429,9 @@ exports[`Settings Notifications matches snapshot 1`] = `
   border-radius: 50%;
   height: 16px;
   width: 16px;
-  background-color: var(--color-white);
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  background-color: #fff;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .emotion-7:checked + .emotion-8::before {
@@ -551,14 +551,14 @@ exports[`Settings Personal Data matches snapshot 1`] = `
   border: solid 1px rgba(46,91,255,0.08);
   box-shadow: 0 10px 20px 0 rgba(46,91,255,0.07);
   padding: 32px 24px;
-  background-color: var(--color-white);
+  background-color: #fff;
 }
 
 .emotion-0 {
   margin: 0 0 26px 0;
-  color: var(--color-bluey-grey);
+  color: #8798ad;
   font-size: 13px;
-  font-weight: var(--font-weight-normal);
+  font-weight: 400;
   -webkit-letter-spacing: 1.2px;
   -moz-letter-spacing: 1.2px;
   -ms-letter-spacing: 1.2px;
@@ -591,7 +591,7 @@ exports[`Settings Personal Data matches snapshot 1`] = `
   display: inline-block;
   color: #b0bac9;
   font-size: 12px;
-  font-weight: var(--font-weight-medium);
+  font-weight: 500;
   -webkit-letter-spacing: 1.2px;
   -moz-letter-spacing: 1.2px;
   -ms-letter-spacing: 1.2px;
@@ -619,11 +619,11 @@ exports[`Settings Personal Data matches snapshot 1`] = `
   padding: 10px 16px;
   width: 100%;
   background-color: rgba(224,231,255,0.2);
-  color: var(--color-dark);
+  color: #2e384d;
   font-family: inherit;
-  font-size: var(--base-font-size);
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  font-size: 15px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .emotion-4:disabled {
@@ -631,7 +631,7 @@ exports[`Settings Personal Data matches snapshot 1`] = `
 }
 
 .emotion-4:focus {
-  border: solid 1px var(--color-clear-blue);
+  border: solid 1px #2e5bff;
   outline: 0;
 }
 
@@ -650,16 +650,16 @@ exports[`Settings Personal Data matches snapshot 1`] = `
   justify-content: center;
   border: none;
   padding: 0;
-  font-size: var(--base-font-size);
-  font-weight: var(--font-weight-medium);
+  font-size: 15px;
+  font-weight: 500;
   cursor: pointer;
-  -webkit-transition: var(--transition);
-  transition: var(--transition);
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
   border-radius: 4px;
   height: 40px;
   width: 200px;
-  background-color: var(--color-clear-blue);
-  color: white;
+  background-color: #2e5bff;
+  color: #fff;
   margin: 13px 0 18px 8px;
 }
 
@@ -673,7 +673,7 @@ exports[`Settings Personal Data matches snapshot 1`] = `
 }
 
 .emotion-42:enabled:hover {
-  background-color: var(--color-clear-blue-dark);
+  background-color: #0036fa;
 }
 
 <div
@@ -776,14 +776,14 @@ exports[`Settings Theme matches snapshot 1`] = `
   border: solid 1px rgba(46,91,255,0.08);
   box-shadow: 0 10px 20px 0 rgba(46,91,255,0.07);
   padding: 32px 24px;
-  background-color: var(--color-white);
+  background-color: #fff;
 }
 
 .emotion-0 {
   margin: 0 0 26px 0;
-  color: var(--color-bluey-grey);
+  color: #8798ad;
   font-size: 13px;
-  font-weight: var(--font-weight-normal);
+  font-weight: 400;
   -webkit-letter-spacing: 1.2px;
   -moz-letter-spacing: 1.2px;
   -ms-letter-spacing: 1.2px;
@@ -833,7 +833,7 @@ exports[`Settings Theme matches snapshot 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  font-weight: var(--font-weight-medium);
+  font-weight: 500;
   padding: 12px 0;
 }
 
@@ -851,7 +851,7 @@ exports[`Settings Theme matches snapshot 1`] = `
   height: 16px;
   margin: 0 8px 0 0;
   width: 16px;
-  background-color: var(--color-white);
+  background-color: #fff;
 }
 
 .emotion-7:disabled + .emotion-8 {
@@ -859,8 +859,8 @@ exports[`Settings Theme matches snapshot 1`] = `
 }
 
 .emotion-7:checked:enabled + .emotion-8 {
-  border: solid 4px var(--color-clear-blue);
-  background-color: var(--color-white);
+  border: solid 4px #2e5bff;
+  background-color: #fff;
 }
 
 .emotion-15 {

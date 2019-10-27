@@ -53,6 +53,10 @@ exports[`Input Radio matches snapshot 1`] = `
 `;
 
 exports[`Input Slider matches snapshot 1`] = `
+.emotion-2 {
+  display: inline-block;
+}
+
 .emotion-0 {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -95,12 +99,16 @@ exports[`Input Slider matches snapshot 1`] = `
   opacity: 0.3;
 }
 
-<input
-  className="emotion-0 emotion-1"
-  max={100}
-  min={0}
-  type="range"
-/>
+<label
+  className="emotion-2 emotion-3"
+>
+  <input
+    className="emotion-0 emotion-1"
+    max={100}
+    min={0}
+    type="range"
+  />
+</label>
 `;
 
 exports[`Input Switch matches snapshot 1`] = `

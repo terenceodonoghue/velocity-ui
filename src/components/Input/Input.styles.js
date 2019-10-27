@@ -138,6 +138,27 @@ export const SliderInput = styled.input`
   }
 `;
 
+export const SliderLabel = styled.label`
+  display: inline-block;
+`;
+
+export const SliderText = styled.div`
+  display: flex;
+
+  p {
+    line-height: 1.467em;
+    margin: 0;
+  }
+
+  p:nth-of-type(1) {
+    flex: 1;
+  }
+
+  p:nth-of-type(2) {
+    color: ${colors.blueyGrey};
+  }
+`;
+
 export const TextInput = styled.input`
   display: block;
   border: solid 1px #e0e7ff;

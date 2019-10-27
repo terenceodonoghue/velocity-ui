@@ -10,7 +10,11 @@ export const Filter = styled(Container.Card)`
   width: 268px;
 `;
 
-export const FilterField = styled(Input.Text)`
+export const SliderField = styled(Input.Slider)`
+  padding: 0 6px 34px;
+`;
+
+export const TextField = styled(Input.Text)`
   padding: 0 6px 19px;
   color: ${colors.dark};
   font-size: 15px;
@@ -22,27 +26,6 @@ export const FilterField = styled(Input.Text)`
   input {
     color: ${colors.clearBlue};
   }
-`;
-
-export const FilterLabel = styled.span`
-  flex: 1;
-`;
-
-export const FilterText = styled.div`
-  display: flex;
-`;
-
-export const FilterValue = styled.span`
-  color: ${colors.blueyGrey};
-`;
-
-export const SliderInput = styled(Input.Slider)`
-  margin: 12px 0 18px;
-`;
-
-export const TextInput = styled(Input.Text)`
-  background: ${colors.white};
-  color: ${colors.clearBlue};
 `;
 
 export const Vehicles = styled.table``;

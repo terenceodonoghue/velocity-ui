@@ -1,5 +1,5 @@
 import React from 'react';
-import { string } from 'prop-types';
+import { number, oneOfType, string } from 'prop-types';
 import * as S from './Input.styles';
 
 const Radio = ({ className, label, ...rest }) => (
@@ -10,7 +10,17 @@ const Radio = ({ className, label, ...rest }) => (
   </S.RadioLabel>
 );
 
-const Slider = (props) => <S.SliderInput type="range" {...props} />;
+const Slider = ({ className, label, value, ...rest }) => (
+  <S.SliderLabel className={className}>
+    {(label || value) && (
+      <S.SliderText>
+        {label && <p>{label}</p>}
+        {value && <p>{value}</p>}
+      </S.SliderText>
+    )}
+    <S.SliderInput type="range" {...rest} />
+  </S.SliderLabel>
+);
 
 const Switch = ({ className, description, label, ...rest }) => (
   <S.CheckboxLabel className={className}>
@@ -34,6 +44,12 @@ const Text = ({ className, label, ...rest }) => (
 
 Radio.propTypes = { className: string, label: string };
 Radio.defaultProps = { className: null, label: null };
+Slider.propTypes = {
+  className: string,
+  label: string,
+  value: oneOfType[(number, string)],
+};
+Slider.defaultProps = { className: null, label: null, value: null };
 Switch.propTypes = { className: string, description: string, label: string };
 Switch.defaultProps = { className: null, label: null, description: null };
 Text.propTypes = { className: string, label: string };

@@ -34,7 +34,7 @@ export const CheckboxSwitch = styled.span`
   }
 
   ${/* sc-selector */ CheckboxInput}:checked:enabled + & {
-    background-color: ${colors.mediumGreen};
+    background-color: ${colors.green};
   }
 
   &::before {
@@ -96,7 +96,7 @@ export const RadioSwitch = styled.span`
   }
 
   ${/* sc-selector */ RadioInput}:checked:enabled + & {
-    border: solid 4px ${colors.clearBlue};
+    border: solid 4px ${colors.blue};
     background-color: ${colors.white};
   }
 `;
@@ -111,11 +111,11 @@ export const SliderInput = styled.input`
   transition: ${effects.transition};
 
   &::-moz-range-progress {
-    background-color: ${colors.clearBlue};
+    background-color: ${colors.blue};
   }
 
   &::-moz-range-thumb {
-    border: solid 4px ${colors.clearBlue};
+    border: solid 4px ${colors.blue};
     border-radius: 50%;
     height: 8px;
     width: 8px;
@@ -125,7 +125,7 @@ export const SliderInput = styled.input`
 
   &::-webkit-slider-thumb {
     appearance: none;
-    border: solid 4px ${colors.clearBlue};
+    border: solid 4px ${colors.blue};
     border-radius: 50%;
     height: 16px;
     width: 16px;
@@ -169,7 +169,7 @@ export const TextInput = styled.input`
   padding: 10px 16px;
   width: 100%;
   background-color: rgba(224, 231, 255, 0.2);
-  color: ${colors.dark};
+  color: ${colors.black};
   font-family: inherit;
   font-size: ${typography.baseFontSize};
   transition: ${effects.transition};
@@ -179,7 +179,7 @@ export const TextInput = styled.input`
   }
 
   &:focus {
-    border: solid 1px ${colors.clearBlue};
+    border: solid 1px ${colors.blue};
     outline: 0;
   }
 `;

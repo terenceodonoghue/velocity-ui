@@ -116,7 +116,7 @@ export const PaymentLogo = styled.div`
   width: 140px;
   border-radius: 5px;
   border: solid 1px #e0e7ff;
-  background-color: ${(props) => (props.active ? colors.clearBlue : null)};
+  background-color: ${(props) => (props.active ? colors.blue : null)};
 
   img {
     transform: scale(0.5);

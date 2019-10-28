@@ -14,8 +14,7 @@ export const CheckboxText = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  border: ${(props) =>
-    `solid 1px ${props.active ? colors.clearBlue : '#e0e7ff'}`};
+  border: ${(props) => `solid 1px ${props.active ? colors.blue : '#e0e7ff'}`};
   border-radius: 5px;
   padding: 19px 21px;
   ${(props) =>
@@ -25,7 +24,7 @@ export const CheckboxText = styled.div`
     right: -8px;
     top: -8px;
     content: '';
-    background-color: ${colors.clearBlue};
+    background-color: ${colors.blue};
     background-image: url(./check-white.svg);
     background-position: center;
     background-repeat: no-repeat;

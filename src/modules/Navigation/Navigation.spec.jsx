@@ -30,7 +30,7 @@ describe('Navigation', () => {
         expect(component.dive()).toHaveStyleRule('color', '#b0bac9');
 
         component.setProps({ selected: true });
-        expect(component.dive()).toHaveStyleRule('color', colors.clearBlue);
+        expect(component.dive()).toHaveStyleRule('color', colors.blue);
       });
 
       it('changes opacity', () => {

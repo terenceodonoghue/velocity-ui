@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Container, Global } from '../../components';
+import { Container, Global, Input } from '../../components';
 
 const {
   variables: { colors, effects, typography },
@@ -47,6 +47,16 @@ export const Details = styled.div`
   line-height: 1.47;
 `;
 
+export const Dialog = styled.div`
+  background-color: ${colors.white};
+`;
+
+export const Message = styled.div``;
+
+export const Messages = styled.div`
+  padding: 24px;
+`;
+
 export const Name = styled.span`
   flex-grow: 1;
   font-weight: ${typography.fontWeightMedium};
@@ -60,6 +70,10 @@ export const Preview = styled.span`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+`;
+
+export const TextInput = styled(Input.Text)`
+  margin: 24px;
 `;
 
 export const Time = styled.span`

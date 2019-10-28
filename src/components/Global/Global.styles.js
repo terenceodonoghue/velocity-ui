@@ -2,17 +2,17 @@ import { css } from '@emotion/core';
 
 export const variables = {
   colors: {
-    black: '#000',
+    black: '#2e384d',
     blueyGrey: '#8798ad',
-    clearBlue: '#2e5bff',
-    clearBlueDark: '#0036fa',
-    dark: '#2e384d',
+    blue: '#2e5bff',
+    blueDark: '#0036fa',
+    green: '#33ac2e',
     lightBlueGrey: '#bfc5d2',
-    lighterPurple: '#8c54ff',
-    macaroniAndCheese: '#f7c137',
-    mediumGreen: '#33ac2e',
-    turquoiseBlue: '#00c1d4',
+    purple: '#8c54ff',
+    red: '#d63649',
+    teal: '#00c1d4',
     white: '#fff',
+    yellow: '#f7c137',
   },
   effects: {
     transition: 'all 0.2s linear',
@@ -37,7 +37,7 @@ export default css`
   }
 
   body {
-    color: ${variables.colors.dark};
+    color: ${variables.colors.black};
     font-family: ${variables.typography.baseFontFamily};
     font-size: ${variables.typography.baseFontSize};
   }

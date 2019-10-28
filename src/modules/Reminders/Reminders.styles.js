@@ -36,28 +36,28 @@ export const Heading = styled.h3`
   [data-role="service-needed"] & {
     &::after {
       background-color: rgba(46, 91, 255, 0.2);
-      color: ${colors.clearBlue};
+      color: ${colors.blue};
     }
   }
 
   [data-role="waiting"] & {
     &::after {
       background-color: rgba(140, 84, 255, 0.2);
-      color: ${colors.lighterPurple};
+      color: ${colors.purple};
     }
   }
 
   [data-role="in-service"] & {
     &::after {
       background-color: rgba(0, 193, 212, 0.2);
-      color: ${colors.turquoiseBlue};
+      color: ${colors.teal};
     }
   }
 
   [data-role="fully-serviced"] & {
     &::after {
       background-color: rgba(247, 193, 55, 0.2);
-      color: ${colors.macaroniAndCheese};
+      color: ${colors.yellow};
     }
   }
 `;
@@ -94,36 +94,28 @@ export const Ticket = styled(Container.Card)`
   }
 
   [data-role='service-needed'] & {
-    background: linear-gradient(
-        90deg,
-        ${colors.clearBlue} 2px,
-        ${colors.white} 2px
-      )
+    background: linear-gradient(90deg, ${colors.blue} 2px, ${colors.white} 2px)
       no-repeat;
   }
 
   [data-role='waiting'] & {
     background: linear-gradient(
         90deg,
-        ${colors.lighterPurple} 2px,
+        ${colors.purple} 2px,
         ${colors.white} 2px
       )
       no-repeat;
   }
 
   [data-role='in-service'] & {
-    background: linear-gradient(
-        90deg,
-        ${colors.turquoiseBlue} 2px,
-        ${colors.white} 2px
-      )
+    background: linear-gradient(90deg, ${colors.teal} 2px, ${colors.white} 2px)
       no-repeat;
   }
 
   [data-role='fully-serviced'] & {
     background: linear-gradient(
         90deg,
-        ${colors.macaroniAndCheese} 2px,
+        ${colors.yellow} 2px,
         ${colors.white} 2px
       )
       no-repeat;

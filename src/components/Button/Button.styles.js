@@ -32,11 +32,11 @@ export const Contained = styled.button`
   border-radius: 4px;
   height: 40px;
   width: 200px;
-  background-color: ${colors.clearBlue};
+  background-color: ${colors.blue};
   color: ${colors.white};
 
   &:enabled:hover {
-    background-color: ${colors.clearBlueDark};
+    background-color: ${colors.blueDark};
   }
 `;
 
@@ -46,7 +46,7 @@ export const Outlined = styled.button`
   height: 40px;
   width: 200px;
   background: rgba(46, 91, 255, 0.2);
-  color: ${colors.clearBlue};
+  color: ${colors.blue};
 
   &:enabled:hover {
     background-color: rgba(46, 91, 255, 0.3);
@@ -59,7 +59,7 @@ export const Text = styled.button`
   height: 40px;
   width: 200px;
   background: none;
-  color: ${colors.clearBlue};
+  color: ${colors.blue};
 
   &:enabled:hover {
     background-color: rgba(46, 91, 255, 0.1);
@@ -71,10 +71,10 @@ export const Fab = styled.button`
   border-radius: 50%;
   height: 70px;
   width: 70px;
-  background-color: ${colors.clearBlue};
+  background-color: ${colors.blue};
   color: ${colors.white};
 
   &:enabled:hover {
-    background-color: ${colors.clearBlueDark};
+    background-color: ${colors.blueDark};
   }
 `;

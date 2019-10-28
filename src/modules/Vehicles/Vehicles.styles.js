@@ -16,7 +16,7 @@ export const SliderField = styled(Input.Slider)`
 
 export const TextField = styled(Input.Text)`
   padding: 0 6px 19px;
-  color: ${colors.dark};
+  color: ${colors.black};
   font-size: 15px;
   font-weight: ${typography.fontWeightRegular};
   letter-spacing: normal;
@@ -24,7 +24,7 @@ export const TextField = styled(Input.Text)`
   text-transform: none;
 
   input {
-    color: ${colors.clearBlue};
+    color: ${colors.blue};
   }
 `;
 

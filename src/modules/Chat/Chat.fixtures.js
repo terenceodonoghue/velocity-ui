@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 export const conversations = {
   data: [
     {
@@ -50,5 +49,27 @@ export const conversations = {
       preview: 'Sorry to hear about the syncing...',
       time: '10h',
     },
+  ],
+};
+
+export const dialog = {
+  data: [
+    {
+      avatarSrc: './users/joan.png',
+      message:
+        'Hello John, thank you for calling Provide Support. How may I help you?',
+      name: 'Anna',
+      time: '18:54',
+    },
+    {},
+    {
+      avatarSrc: './users/joan.png',
+      message:
+        "I'm sorry, I don't have the answer to that question. May I put you on hold for a few minutes while I check with my manager?",
+      name: 'Anna',
+      time: '18:54',
+    },
+    {},
+    {},
   ],
 };

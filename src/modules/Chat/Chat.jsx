@@ -28,6 +28,17 @@ const Conversations = ({ data }) => (
   </S.Conversations>
 );
 
+const Dialog = ({ data }) => (
+  <S.Dialog>
+    <S.Messages>
+      {data.map((message) => (
+        <S.Message>{JSON.stringify(message)}</S.Message>
+      ))}
+    </S.Messages>
+    <S.TextInput />
+  </S.Dialog>
+);
+
 Conversations.propTypes = {
   data: arrayOf(
     shape({
@@ -40,6 +51,18 @@ Conversations.propTypes = {
   ).isRequired,
 };
 
+Dialog.propTypes = {
+  data: arrayOf(
+    shape({
+      avatarSrc: string.isRequired,
+      message: string.isRequired,
+      name: string.isRequired,
+      time: string.isRequired,
+    }).isRequired,
+  ).isRequired,
+};
+
 export default {
   Conversations,
+  Dialog,
 };

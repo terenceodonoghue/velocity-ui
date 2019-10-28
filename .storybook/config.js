@@ -12,7 +12,7 @@ const theme = create({
   base: 'light',
 
   colorPrimary: 'hotpink',
-  colorSecondary: colors.clearBlue,
+  colorSecondary: colors.blue,
 
   // UI
   appBg: colors.white,
@@ -25,7 +25,7 @@ const theme = create({
   fontCode: 'monospace',
 
   // Text colors
-  textColor: colors.dark,
+  textColor: colors.black,
   textInverseColor: 'rgba(255,255,255,0.9)',
 
   // Toolbar default and active colors
@@ -36,7 +36,7 @@ const theme = create({
   // Form colors
   inputBg: '#f4f6fc',
   inputBorder: 'silver',
-  inputTextColor: colors.dark,
+  inputTextColor: colors.black,
   inputBorderRadius: '5px',
 
   brandTitle: 'Velocity',

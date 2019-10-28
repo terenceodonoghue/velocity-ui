@@ -35,7 +35,7 @@ export const NavItem = styled.li`
   align-items: center;
   justify-content: flex-start;
   border-left: ${(props) =>
-    `solid 3px ${props.selected ? colors.clearBlue : 'transparent'}`};
+    `solid 3px ${props.selected ? colors.blue : 'transparent'}`};
   height: 56px;
   margin: 0 -20px;
   padding: 0 0 0 27px;
@@ -54,7 +54,7 @@ export const NavItem = styled.li`
 
 export const NavLabel = styled.span`
   margin-left: 18px;
-  color: ${(props) => (props.selected ? colors.clearBlue : '#b0bac9')};
+  color: ${(props) => (props.selected ? colors.blue : '#b0bac9')};
   opacity: ${(props) => (props.show ? '1' : '0')};
   transition: ${effects.transition};
   transition-delay: ${effects.transition};

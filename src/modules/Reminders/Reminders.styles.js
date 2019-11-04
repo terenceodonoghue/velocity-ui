@@ -1,9 +1,7 @@
 import styled from '@emotion/styled';
-import { Container, Global } from '../../components';
+import { Container, variables } from '../../components';
 
-const {
-  variables: { colors, effects, typography },
-} = Global;
+const { colors, effects, typography } = variables;
 
 export const Column = styled.div`
   display: inline-block;

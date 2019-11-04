@@ -1,9 +1,7 @@
 import styled from '@emotion/styled';
-import { Button, Global } from '../../components';
+import { Button, variables } from '../../components';
 
-const {
-  variables: { colors, effects },
-} = Global;
+const { colors, effects } = variables;
 
 export const Menu = styled.div`
   height: 100%;

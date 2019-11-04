@@ -1,9 +1,7 @@
 import styled from '@emotion/styled';
-import { Button, Global, Input } from '../../components';
+import { Button, Input, variables } from '../../components';
 
-const {
-  variables: { colors, typography },
-} = Global;
+const { colors, typography } = variables;
 
 export const CheckboxField = styled.label`
   flex: 0 1 365px;

@@ -1,10 +1,8 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { Container, Global } from '../../components';
+import { Container, variables } from '../../components';
 
-const {
-  variables: { colors, typography },
-} = Global;
+const { colors, typography } = variables;
 
 const recharts = css`
   .recharts-area-dot {

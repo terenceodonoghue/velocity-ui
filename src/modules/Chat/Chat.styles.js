@@ -1,9 +1,7 @@
 import styled from '@emotion/styled';
-import { Container, Global, Input } from '../../components';
+import { Container, Input, variables } from '../../components';
 
-const {
-  variables: { colors, effects, typography },
-} = Global;
+const { colors, effects, typography } = variables;
 
 export const Avatar = styled.div`
   flex-grow: 0;

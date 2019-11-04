@@ -2,11 +2,9 @@ import React from 'react';
 import Navigation from './Navigation';
 import { menu } from './Navigation.fixtures';
 import * as S from './Navigation.styles';
-import { Global } from '../../components';
+import { variables } from '../../components';
 
-const {
-  variables: { colors },
-} = Global;
+const { colors } = variables;
 
 describe('Navigation', () => {
   describe('Components', () => {

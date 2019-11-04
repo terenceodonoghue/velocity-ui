@@ -2,11 +2,9 @@
 import React from 'react';
 import { addDecorator, addParameters, configure } from '@storybook/react';
 import { create } from '@storybook/theming';
-import { Global } from '../src/components';
+import { Global, variables } from '../src/components';
 
-const {
-  variables: { colors, typography },
-} = Global;
+const { colors, typography } = variables;
 
 const theme = create({
   base: 'light',
@@ -53,7 +51,7 @@ addDecorator((storyFn) => (
       padding: '110px',
     }}
   >
-    <Global.Styles />
+    <Global />
     {storyFn()}
   </div>
 ));

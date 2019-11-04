@@ -1,9 +1,7 @@
 import styled from '@emotion/styled';
-import { Container, Global, Input } from '../../components';
+import { Container, Input, variables } from '../../components';
 
-const {
-  variables: { colors, typography },
-} = Global;
+const { colors, typography } = variables;
 
 export const Filter = styled(Container.Card)`
   padding: 32px 24px 3px;

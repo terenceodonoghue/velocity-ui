@@ -1,9 +1,7 @@
 import styled from '@emotion/styled';
-import Global from '../Global/Global';
+import { variables } from '../Global/Global';
 
-const {
-  variables: { colors },
-} = Global;
+const { colors } = variables;
 
 export const AppBar = styled.div`
   display: flex;

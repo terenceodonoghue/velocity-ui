@@ -1,9 +1,7 @@
 import styled from '@emotion/styled';
-import { Container, Global } from '../../components';
+import { Container, variables } from '../../components';
 
-const {
-  variables: { colors, typography },
-} = Global;
+const { colors, typography } = variables;
 
 export const Heading = styled.h2`
   margin: 0 0 13px;

@@ -1,9 +1,7 @@
 import styled from '@emotion/styled';
-import Global from '../Global/Global';
+import { variables } from '../Global/Global';
 
-const {
-  variables: { colors, typography },
-} = Global;
+const { colors, typography } = variables;
 
 export const Card = styled.div`
   display: block;

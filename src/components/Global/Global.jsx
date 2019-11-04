@@ -1,10 +1,7 @@
 import React from 'react';
 import { Global } from '@emotion/core';
-import Base, { variables } from './Global.styles';
+import css, { variables } from './Global.styles';
 
-const Styles = () => <Global styles={Base} />;
+export { variables };
 
-export default {
-  Styles,
-  variables,
-};
+export default () => <Global styles={css} />;

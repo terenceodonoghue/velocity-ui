@@ -1,9 +1,7 @@
 import styled from '@emotion/styled';
-import { Avatar, Container, Global } from '../../components';
+import { Avatar, Container, variables } from '../../components';
 
-const {
-  variables: { colors, typography },
-} = Global;
+const { colors, typography } = variables;
 
 export const Address = styled.div`
   flex: 1;

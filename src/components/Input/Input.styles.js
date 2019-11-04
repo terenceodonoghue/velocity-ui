@@ -1,9 +1,7 @@
 import styled from '@emotion/styled';
-import Global from '../Global/Global';
+import { variables } from '../Global/Global';
 
-const {
-  variables: { colors, effects, typography },
-} = Global;
+const { colors, effects, typography } = variables;
 
 export const CheckboxInput = styled.input`
   height: 0;

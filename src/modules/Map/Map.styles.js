@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
-import { Avatar, Container, variables } from '../../components';
-
-const { colors, typography } = variables;
+import { Avatar, Container } from '../../components';
 
 export const Address = styled.div`
   flex: 1;
@@ -15,12 +13,12 @@ export const Address = styled.div`
     line-height: 1.47;
 
     &:nth-of-type(1) {
-      font-weight: ${typography.fontWeightMedium};
+      font-weight: ${(props) => props.theme.typography.fontWeightMedium};
     }
 
     &:nth-of-type(2) {
-      color: ${colors.blueyGrey};
-      font-weight: ${typography.fontWeightRegular};
+      color: ${(props) => props.theme.colors.blueyGrey};
+      font-weight: ${(props) => props.theme.typography.fontWeightRegular};
     }
   }
 `;
@@ -70,14 +68,14 @@ export const IconGroup = styled.div`
 
 export const Interactions = styled.p`
   margin: 0;
-  color: ${colors.blueyGrey};
+  color: ${(props) => props.theme.colors.blueyGrey};
 `;
 
 export const Label = styled.dt`
   color: #b0bac9;
   margin-bottom: 10px;
   font-size: 12px;
-  font-weight: ${typography.fontWeightMedium};
+  font-weight: ${(props) => props.theme.typography.fontWeightMedium};
   letter-spacing: 1.1px;
   text-transform: uppercase;
 `;
@@ -90,7 +88,7 @@ export const Line = styled.span`
 export const Name = styled.p`
   margin: 0 0 2px;
   font-size: 15px;
-  font-weight: ${typography.fontWeightMedium};
+  font-weight: ${(props) => props.theme.typography.fontWeightMedium};
   line-height: 1.47;
 `;
 
@@ -114,7 +112,8 @@ export const PaymentLogo = styled.div`
   width: 140px;
   border-radius: 5px;
   border: solid 1px #e0e7ff;
-  background-color: ${(props) => (props.active ? colors.blue : null)};
+  background-color: ${(props) =>
+    props.active ? props.theme.colors.blue : null};
 
   img {
     transform: scale(0.5);
@@ -149,12 +148,12 @@ export const Stat = styled.div`
     line-height: 1.47;
 
     &:nth-of-type(1) {
-      font-weight: ${typography.fontWeightMedium};
+      font-weight: ${(props) => props.theme.typography.fontWeightMedium};
     }
 
     &:nth-of-type(2) {
-      color: ${colors.blueyGrey};
-      font-weight: ${typography.fontWeightRegular};
+      color: ${(props) => props.theme.colors.blueyGrey};
+      font-weight: ${(props) => props.theme.typography.fontWeightRegular};
     }
   }
 `;

@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
-import { Container, variables } from '../../components';
-
-const { colors, effects, typography } = variables;
+import { Container } from '../../components';
 
 export const Column = styled.div`
   display: inline-block;
@@ -14,7 +12,7 @@ export const Heading = styled.h3`
   margin: 7px 0;
   color: #b0bac9;
   font-size: 80%;
-  font-weight: ${typography.fontWeightMedium};
+  font-weight: ${(props) => props.theme.typography.fontWeightMedium};
   letter-spacing: 1.1px;
   text-transform: uppercase;
 
@@ -34,28 +32,28 @@ export const Heading = styled.h3`
   [data-role="service-needed"] & {
     &::after {
       background-color: rgba(46, 91, 255, 0.2);
-      color: ${colors.blue};
+      color: ${(props) => props.theme.colors.blue};
     }
   }
 
   [data-role="waiting"] & {
     &::after {
       background-color: rgba(140, 84, 255, 0.2);
-      color: ${colors.purple};
+      color: ${(props) => props.theme.colors.purple};
     }
   }
 
   [data-role="in-service"] & {
     &::after {
       background-color: rgba(0, 193, 212, 0.2);
-      color: ${colors.teal};
+      color: ${(props) => props.theme.colors.teal};
     }
   }
 
   [data-role="fully-serviced"] & {
     &::after {
       background-color: rgba(247, 193, 55, 0.2);
-      color: ${colors.yellow};
+      color: ${(props) => props.theme.colors.yellow};
     }
   }
 `;
@@ -70,11 +68,11 @@ export const Row = styled.div`
   line-height: 1.47;
 
   &:nth-of-type(1) {
-    font-weight: ${typography.fontWeightMedium};
+    font-weight: ${(props) => props.theme.typography.fontWeightMedium};
   }
 
   &:nth-of-type(2) {
-    color: ${colors.blueyGrey};
+    color: ${(props) => props.theme.colors.blueyGrey};
   }
 `;
 
@@ -85,38 +83,42 @@ export const Ticket = styled(Container.Card)`
   margin: 5px 0;
   padding: 22px 25px;
   width: 100%;
-  transition: ${effects.transition};
+  transition: ${(props) => props.theme.effects.transition};
 
   &:not(:hover) {
     box-shadow: none;
   }
 
   [data-role='service-needed'] & {
-    background: linear-gradient(90deg, ${colors.blue} 2px, ${colors.white} 2px)
-      no-repeat;
+    background: ${(
+      props,
+    ) => `linear-gradient(90deg, ${props.theme.colors.blue} 2px, ${props.theme.colors.white} 2px)
+      no-repeat`};
   }
 
   [data-role='waiting'] & {
-    background: linear-gradient(
+    background: ${(props) => `linear-gradient(
         90deg,
-        ${colors.purple} 2px,
-        ${colors.white} 2px
+        ${props.theme.colors.purple} 2px,
+        ${props.theme.colors.white} 2px
       )
-      no-repeat;
+      no-repeat`};
   }
 
   [data-role='in-service'] & {
-    background: linear-gradient(90deg, ${colors.teal} 2px, ${colors.white} 2px)
-      no-repeat;
+    background: ${(
+      props,
+    ) => `linear-gradient(90deg, ${props.theme.colors.teal} 2px, ${props.theme.colors.white} 2px)
+      no-repeat`};
   }
 
   [data-role='fully-serviced'] & {
-    background: linear-gradient(
+    background: ${(props) => `linear-gradient(
         90deg,
-        ${colors.yellow} 2px,
-        ${colors.white} 2px
+        ${props.theme.colors.yellow} 2px,
+        ${props.theme.colors.white} 2px
       )
-      no-repeat;
+      no-repeat`};
   }
 `;
 

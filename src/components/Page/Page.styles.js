@@ -1,7 +1,4 @@
 import styled from '@emotion/styled';
-import { variables } from '../Global/Global';
-
-const { colors } = variables;
 
 export const AppBar = styled.div`
   display: flex;
@@ -9,7 +6,7 @@ export const AppBar = styled.div`
   border-bottom: solid 1px #e4e8f0;
   padding: 0 112px;
   height: 80px;
-  background-color: ${colors.white};
+  background-color: ${(props) => props.theme.colors.white};
 `;
 
 export const Logo = styled.img`

@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
-import { Container, Input, variables } from '../../components';
-
-const { colors, effects, typography } = variables;
+import { Container, Input } from '../../components';
 
 export const Avatar = styled.div`
   flex-grow: 0;
@@ -21,7 +19,7 @@ export const Conversation = styled(Container.Card)`
   border-top: 0;
   padding: 17px 25px;
   cursor: pointer;
-  transition: ${effects.transition};
+  transition: ${(props) => props.theme.effects.transition};
 
   &:hover {
     background-color: rgba(46, 91, 255, 0.08);
@@ -34,7 +32,7 @@ export const Conversations = styled.ul`
   margin: 0;
   padding: 0;
   width: 378px;
-  background-color: ${colors.white};
+  background-color: ${(props) => props.theme.colors.white};
   list-style: none;
   overflow: hidden;
 `;
@@ -46,7 +44,7 @@ export const Details = styled.div`
 `;
 
 export const Dialog = styled.div`
-  background-color: ${colors.white};
+  background-color: ${(props) => props.theme.colors.white};
 `;
 
 export const Message = styled.div``;
@@ -57,12 +55,12 @@ export const Messages = styled.div`
 
 export const Name = styled.span`
   flex-grow: 1;
-  font-weight: ${typography.fontWeightMedium};
+  font-weight: ${(props) => props.theme.typography.fontWeightMedium};
 `;
 
 export const Preview = styled.span`
   display: block;
-  color: ${colors.blueyGrey};
+  color: ${(props) => props.theme.colors.blueyGrey};
   line-height: 1.47;
   max-width: 259px;
   white-space: nowrap;
@@ -75,5 +73,5 @@ export const TextInput = styled(Input.Text)`
 `;
 
 export const Time = styled.span`
-  color: ${colors.blueyGrey};
+  color: ${(props) => props.theme.colors.blueyGrey};
 `;

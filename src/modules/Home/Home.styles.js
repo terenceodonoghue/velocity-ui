@@ -1,19 +1,17 @@
 import styled from '@emotion/styled';
-import { Container, variables } from '../../components';
-
-const { colors, typography } = variables;
+import { Container } from '../../components';
 
 export const Heading = styled.h2`
   margin: 0 0 13px;
   width: 135px;
   font-size: 28px;
-  font-weight: ${typography.fontWeightLight};
+  font-weight: ${(props) => props.theme.typography.fontWeightLight};
   line-height: 1.14;
 `;
 
 export const Paragraph = styled.p`
   margin: 0;
-  color: ${colors.blueyGrey};
+  color: ${(props) => props.theme.colors.blueyGrey};
   line-height: 1.47;
 `;
 

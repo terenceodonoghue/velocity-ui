@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
-import { Button, Input, variables } from '../../components';
-
-const { colors, typography } = variables;
+import { Button, Input } from '../../components';
 
 export const CheckboxField = styled.label`
   flex: 0 1 365px;
@@ -12,7 +10,8 @@ export const CheckboxText = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  border: ${(props) => `solid 1px ${props.active ? colors.blue : '#e0e7ff'}`};
+  border: ${(props) =>
+    `solid 1px ${props.active ? props.theme.colors.blue : '#e0e7ff'}`};
   border-radius: 5px;
   padding: 19px 21px;
   ${(props) =>
@@ -22,7 +21,7 @@ export const CheckboxText = styled.div`
     right: -8px;
     top: -8px;
     content: '';
-    background-color: ${colors.blue};
+    background-color: ${props.theme.colors.blue};
     background-image: url(./check-white.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -34,8 +33,8 @@ export const CheckboxText = styled.div`
 
 export const Description = styled.p`
   margin: 0;
-  color: ${colors.blueyGrey};
-  font-weight: ${typography.fontWeightRegular};
+  color: ${(props) => props.theme.colors.blueyGrey};
+  font-weight: ${(props) => props.theme.typography.fontWeightRegular};
   line-height: 1.47;
 `;
 
@@ -59,7 +58,7 @@ export const Icon = styled.div`
 
 export const Label = styled.p`
   margin: 0;
-  font-weight: ${typography.fontWeightMedium};
+  font-weight: ${(props) => props.theme.typography.fontWeightMedium};
   line-height: 1.47;
 `;
 

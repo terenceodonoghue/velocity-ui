@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
-import { Container, Input, variables } from '../../components';
-
-const { colors, typography } = variables;
+import { Container, Input } from '../../components';
 
 export const Filter = styled(Container.Card)`
   padding: 32px 24px 3px;
@@ -14,15 +12,15 @@ export const SliderField = styled(Input.Slider)`
 
 export const TextField = styled(Input.Text)`
   padding: 0 6px 19px;
-  color: ${colors.black};
+  color: ${(props) => props.theme.colors.black};
   font-size: 15px;
-  font-weight: ${typography.fontWeightRegular};
+  font-weight: ${(props) => props.theme.typography.fontWeightRegular};
   letter-spacing: normal;
   line-height: 1.47;
   text-transform: none;
 
   input {
-    color: ${colors.blue};
+    color: ${(props) => props.theme.colors.blue};
   }
 `;
 

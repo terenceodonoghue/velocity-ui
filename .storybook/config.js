@@ -2,46 +2,10 @@
 import React from 'react';
 import { addDecorator, addParameters, configure } from '@storybook/react';
 import { create } from '@storybook/theming';
-import { Global, variables } from '../src/components';
+import { ThemeProvider } from 'emotion-theming';
+import { Global, theme } from '../src/components';
 
-const { colors, typography } = variables;
-
-const theme = create({
-  base: 'light',
-
-  colorPrimary: 'hotpink',
-  colorSecondary: colors.blue,
-
-  // UI
-  appBg: colors.white,
-  appContentBg: '#f4f6fc',
-  appBorderColor: 'rgba(46, 91, 255, 0.08)',
-  appBorderRadius: '1px',
-
-  // Typography
-  fontBase: typography.baseFontFamily,
-  fontCode: 'monospace',
-
-  // Text colors
-  textColor: colors.black,
-  textInverseColor: 'rgba(255,255,255,0.9)',
-
-  // Toolbar default and active colors
-  barTextColor: colors.blueyGrey,
-  barSelectedColor: colors.black,
-  barBg: colors.white,
-
-  // Form colors
-  inputBg: '#f4f6fc',
-  inputBorder: 'silver',
-  inputTextColor: colors.black,
-  inputBorderRadius: '5px',
-
-  brandTitle: 'Velocity',
-  brandUrl:
-    'https://www.invisionapp.com/inside-design/design-resources/design-system-dashboard-ui-kit',
-  brandImage: './logo.svg',
-});
+const { colors, typography } = theme;
 
 addDecorator((storyFn) => (
   <div
@@ -51,15 +15,52 @@ addDecorator((storyFn) => (
       padding: '110px',
     }}
   >
-    <Global />
-    {storyFn()}
+    <ThemeProvider theme={theme}>
+      <Global />
+      {storyFn()}
+    </ThemeProvider>
   </div>
 ));
 
 addParameters({
   options: {
     showPanel: false,
-    theme,
+    theme: create({
+      base: 'light',
+
+      colorPrimary: 'hotpink',
+      colorSecondary: colors.blue,
+
+      // UI
+      appBg: colors.white,
+      appContentBg: '#f4f6fc',
+      appBorderColor: 'rgba(46, 91, 255, 0.08)',
+      appBorderRadius: '1px',
+
+      // Typography
+      fontBase: typography.baseFontFamily,
+      fontCode: 'monospace',
+
+      // Text colors
+      textColor: colors.black,
+      textInverseColor: 'rgba(255,255,255,0.9)',
+
+      // Toolbar default and active colors
+      barTextColor: colors.blueyGrey,
+      barSelectedColor: colors.black,
+      barBg: colors.white,
+
+      // Form colors
+      inputBg: '#f4f6fc',
+      inputBorder: 'silver',
+      inputTextColor: colors.black,
+      inputBorderRadius: '5px',
+
+      brandTitle: 'Velocity',
+      brandUrl:
+        'https://www.invisionapp.com/inside-design/design-resources/design-system-dashboard-ui-kit',
+      brandImage: './logo.svg',
+    }),
   },
 });
 

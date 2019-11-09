@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
-import { Avatar, Button, Container, variables } from '../../components';
-
-const { colors, typography } = variables;
+import { Avatar, Button, Container } from '../../components';
 
 export const Buttons = styled.div`
   display: flex;
@@ -25,7 +23,7 @@ export const Label = styled.dt`
 export const Name = styled.h2`
   margin: 0 0 3px;
   font-size: 28px;
-  font-weight: ${typography.fontWeightLight};
+  font-weight: ${(props) => props.theme.typography.fontWeightLight};
   text-align: center;
 `;
 
@@ -56,9 +54,9 @@ export const StatusButton = styled(Button.Outlined)`
 
 export const Title = styled.h3`
   margin: 0 0 33px;
-  color: ${colors.blueyGrey};
-  font-size: ${typography.baseFontSize};
-  font-weight: ${typography.fontWeightRegular};
+  color: ${(props) => props.theme.colors.blueyGrey};
+  font-size: ${(props) => props.theme.typography.baseFontSize};
+  font-weight: ${(props) => props.theme.typography.fontWeightRegular};
   text-align: center;
 `;
 

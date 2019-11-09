@@ -21,6 +21,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@emotion/styled": "^10.0.23",
+    "emotion-theming": "^10.0.19",
     "numeral": "^2.0.6",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",

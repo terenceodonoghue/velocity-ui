@@ -2,9 +2,9 @@ import React from 'react';
 import Navigation from './Navigation';
 import { menu } from './Navigation.fixtures';
 import * as S from './Navigation.styles';
-import { variables } from '../../components';
+import { theme } from '../../components';
 
-const { colors } = variables;
+const { colors } = theme;
 
 describe('Navigation', () => {
   describe('Components', () => {

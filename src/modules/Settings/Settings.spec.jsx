@@ -4,7 +4,7 @@ import Settings from './Settings';
 describe('Settings', () => {
   describe('Personal Data', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(<Settings.Personal />).toJSON();
+      const tree = renderer.create(withTheme(<Settings.Personal />)).toJSON();
 
       expect(tree).toMatchSnapshot();
     });
@@ -12,7 +12,9 @@ describe('Settings', () => {
 
   describe('Integrations', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(<Settings.Integrations />).toJSON();
+      const tree = renderer
+        .create(withTheme(<Settings.Integrations />))
+        .toJSON();
 
       expect(tree).toMatchSnapshot();
     });
@@ -20,7 +22,9 @@ describe('Settings', () => {
 
   describe('Notifications', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(<Settings.Notifications />).toJSON();
+      const tree = renderer
+        .create(withTheme(<Settings.Notifications />))
+        .toJSON();
 
       expect(tree).toMatchSnapshot();
     });
@@ -28,7 +32,7 @@ describe('Settings', () => {
 
   describe('Theme', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(<Settings.Theme />).toJSON();
+      const tree = renderer.create(withTheme(<Settings.Theme />)).toJSON();
 
       expect(tree).toMatchSnapshot();
     });

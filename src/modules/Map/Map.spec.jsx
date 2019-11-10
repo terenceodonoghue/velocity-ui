@@ -6,19 +6,28 @@ import * as S from './Map.styles';
 describe('Map', () => {
   describe('Passenger', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(<Map.Passenger {...passenger} />).toJSON();
+      const tree = renderer
+        .create(withTheme(<Map.Passenger {...passenger} />))
+        .toJSON();
 
       expect(tree).toMatchSnapshot();
     });
 
     it('uses correct plurality', () => {
-      const component = shallow(<Map.Passenger {...passenger} />);
+      const component = renderer.create(
+        withTheme(<Map.Passenger {...passenger} interactions={1} />),
+      );
 
-      component.setProps({ interactions: 1 });
-      expect(component.find(S.Interactions).text()).toEqual('1 interaction');
+      expect(component.root.findByType(S.Interactions).props.children).toBe(
+        '1 interaction',
+      );
 
-      component.setProps({ interactions: 2 });
-      expect(component.find(S.Interactions).text()).toEqual('2 interactions');
+      component.update(
+        withTheme(<Map.Passenger {...passenger} interactions={2} />),
+      );
+      expect(component.root.findByType(S.Interactions).props.children).toBe(
+        '2 interactions',
+      );
     });
   });
 });

@@ -7,84 +7,63 @@ import * as S from './Reminders.styles';
 describe('Reminders', () => {
   describe('Kanban', () => {
     it('renders first column', () => {
-      const component = shallow(<Reminders.Kanban {...kanban} />);
+      const component = renderer.create(
+        withTheme(<Reminders.Kanban {...kanban} />),
+      ).root;
 
       expect(
-        component
-          .find(S.Column)
-          .at(0)
-          .prop('data-role'),
-      ).toBe('service-needed');
-
+        component.findAllByType(S.Column)[0].findByType(S.Heading).props
+          .children,
+      ).toBe('Service needed');
       expect(
-        component
-          .find(S.Column)
-          .at(0)
-          .contains(
-            <S.Heading count={kanban.data[0].length}>Service needed</S.Heading>,
-          ),
-      ).toBeTruthy();
+        component.findAllByType(S.Column)[0].findByType(S.Heading).props.count,
+      ).toBe(4);
     });
 
     it('renders second column', () => {
-      const component = shallow(<Reminders.Kanban {...kanban} />);
+      const component = renderer.create(
+        withTheme(<Reminders.Kanban {...kanban} />),
+      ).root;
 
       expect(
-        component
-          .find(S.Column)
-          .at(1)
-          .prop('data-role'),
-      ).toBe('waiting');
+        component.findAllByType(S.Column)[1].findByType(S.Heading).props
+          .children,
+      ).toBe('Waiting');
       expect(
-        component
-          .find(S.Column)
-          .at(1)
-          .contains(
-            <S.Heading count={kanban.data[1].length}>Waiting</S.Heading>,
-          ),
-      ).toBeTruthy();
+        component.findAllByType(S.Column)[1].findByType(S.Heading).props.count,
+      ).toBe(3);
     });
 
     it('renders third column', () => {
-      const component = shallow(<Reminders.Kanban {...kanban} />);
+      const component = renderer.create(
+        withTheme(<Reminders.Kanban {...kanban} />),
+      ).root;
 
       expect(
-        component
-          .find(S.Column)
-          .at(2)
-          .prop('data-role'),
-      ).toBe('in-service');
+        component.findAllByType(S.Column)[2].findByType(S.Heading).props
+          .children,
+      ).toBe('In service');
       expect(
-        component
-          .find(S.Column)
-          .at(2)
-          .contains(
-            <S.Heading count={kanban.data[2].length}>In service</S.Heading>,
-          ),
-      ).toBeTruthy();
+        component.findAllByType(S.Column)[2].findByType(S.Heading).props.count,
+      ).toBe(2);
     });
 
     it('renders fourth column', () => {
-      const component = shallow(<Reminders.Kanban {...kanban} />);
+      const component = renderer.create(
+        withTheme(<Reminders.Kanban {...kanban} />),
+      ).root;
 
       expect(
-        component
-          .find(S.Column)
-          .at(3)
-          .prop('data-role'),
-      ).toBe('fully-serviced');
+        component.findAllByType(S.Column)[3].findByType(S.Heading).props
+          .children,
+      ).toBe('Fully serviced');
       expect(
-        component
-          .find(S.Column)
-          .at(3)
-          .contains(
-            <S.Heading count={kanban.data[3].length}>Fully serviced</S.Heading>,
-          ),
-      ).toBeTruthy();
+        component.findAllByType(S.Column)[3].findByType(S.Heading).props.count,
+      ).toBe(4);
     });
 
     it('shows a ticket count in each column', () => {
-      const component = mount(<Reminders.Kanban {...kanban} />);
+      const component = mount(withTheme(<Reminders.Kanban {...kanban} />));
 
       expect(component.find(S.Heading).at(0)).toHaveStyleRule(
         'content',
@@ -109,7 +88,9 @@ describe('Reminders', () => {
     });
 
     it('updates state', () => {
-      const component = mount(<Reminders.Kanban {...kanban} />);
+      const component = mount(
+        withTheme(<Reminders.Kanban {...kanban} />),
+      ).children();
 
       act(() =>
         component

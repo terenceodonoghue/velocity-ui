@@ -6,7 +6,7 @@ describe('Chat', () => {
   describe('Conversations', () => {
     it('matches snapshot', () => {
       const tree = renderer
-        .create(<Chat.Conversations {...conversations} />)
+        .create(withTheme(<Chat.Conversations {...conversations} />))
         .toJSON();
 
       expect(tree).toMatchSnapshot();

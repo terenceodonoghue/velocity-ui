@@ -6,7 +6,11 @@ describe('Container', () => {
     it('matches snapshot', () => {
       const tree = renderer
         .create(
-          <Container.Card heading="Card Heading">Card Content</Container.Card>,
+          withTheme(
+            <Container.Card heading="Card Heading">
+              Card Content
+            </Container.Card>,
+          ),
         )
         .toJSON();
 

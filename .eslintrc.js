@@ -11,6 +11,7 @@ module.exports = {
     renderer: 'readonly',
     shallow: 'readonly',
     SharedArrayBuffer: 'readonly',
+    withTheme: 'readonly',
   },
   parser: 'babel-eslint',
   parserOptions: {

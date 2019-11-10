@@ -2,9 +2,9 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { Container } from '../../components';
 
-const recharts = css`
+const recharts = (props) => css`
   .recharts-area-dot {
-    fill: ${(props) => props.theme.colors.white};
+    fill: ${props.theme.colors.white};
   }
 
   .recharts-cartesian-axis-tick-value {
@@ -13,8 +13,8 @@ const recharts = css`
 
   .recharts-legend-item {
     margin-left: 12px;
-    color: ${(props) => props.theme.colors.blueyGrey};
-    font-size: ${(props) => props.theme.typography.baseFontSize};
+    color: ${props.theme.colors.blueyGrey};
+    font-size: ${props.theme.typography.baseFontSize};
   }
 
   .recharts-legend-item-text {

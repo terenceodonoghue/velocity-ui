@@ -5,7 +5,9 @@ import { metrics, revenue, weekday } from './Analytics.fixtures';
 describe('Analytics', () => {
   describe('Metrics', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(<Analytics.Metrics {...metrics} />).toJSON();
+      const tree = renderer
+        .create(withTheme(<Analytics.Metrics {...metrics} />))
+        .toJSON();
 
       expect(tree).toMatchSnapshot();
     });
@@ -14,7 +16,7 @@ describe('Analytics', () => {
   describe('Revenue', () => {
     it('matches snapshot', () => {
       const tree = renderer
-        .create(<Analytics.Revenue {...revenue} />, {
+        .create(withTheme(<Analytics.Revenue {...revenue} />), {
           createNodeMock: () => ({
             parentElement: document.implementation.createHTMLDocument().body,
           }),
@@ -28,7 +30,7 @@ describe('Analytics', () => {
   describe('Weekday', () => {
     it('matches snapshot', () => {
       const tree = renderer
-        .create(<Analytics.Weekday {...weekday} />, {
+        .create(withTheme(<Analytics.Weekday {...weekday} />), {
           createNodeMock: () => ({
             parentElement: document.implementation.createHTMLDocument().body,
           }),

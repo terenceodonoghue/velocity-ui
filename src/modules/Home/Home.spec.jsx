@@ -6,7 +6,7 @@ describe('Home', () => {
   describe('Welcome', () => {
     it('matches snapshot', () => {
       const tree = renderer
-        .create(<Home.Welcome />, {
+        .create(withTheme(<Home.Welcome />), {
           createNodeMock: () => ({
             parentElement: document.implementation.createHTMLDocument().body,
           }),
@@ -20,7 +20,7 @@ describe('Home', () => {
   describe('renderCustomizedLabel', () => {
     it('matches snapshot', () => {
       const tree = renderer
-        .create(<CustomizedLabel {...customizedLabel} />)
+        .create(withTheme(<CustomizedLabel {...customizedLabel} />))
         .toJSON();
 
       expect(tree).toMatchSnapshot();

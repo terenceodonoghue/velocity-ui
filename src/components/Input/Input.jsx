@@ -47,7 +47,7 @@ Radio.defaultProps = { className: null, label: null };
 Slider.propTypes = {
   className: string,
   label: string,
-  value: oneOfType[(number, string)],
+  value: oneOfType([number, string]),
 };
 Slider.defaultProps = { className: null, label: null, value: null };
 Switch.propTypes = { className: string, description: string, label: string };

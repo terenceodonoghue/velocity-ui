@@ -5,7 +5,9 @@ import { sidebar } from './Profile.fixtures';
 describe('Profile', () => {
   describe('Sidebar', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(<Profile.Sidebar {...sidebar} />).toJSON();
+      const tree = renderer
+        .create(withTheme(<Profile.Sidebar {...sidebar} />))
+        .toJSON();
 
       expect(tree).toMatchSnapshot();
     });

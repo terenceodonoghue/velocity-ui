@@ -5,7 +5,7 @@ describe('Page', () => {
   describe('AppBar', () => {
     it('matches snapshot', () => {
       const tree = renderer
-        .create(<Page.AppBar>AppBar Content</Page.AppBar>)
+        .create(withTheme(<Page.AppBar>AppBar Content</Page.AppBar>))
         .toJSON();
 
       expect(tree).toMatchSnapshot();

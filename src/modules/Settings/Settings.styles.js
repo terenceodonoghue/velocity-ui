@@ -74,11 +74,7 @@ export const Palette = styled.div`
   height: 65px;
   width: 120px;
   background: ${(props) =>
-    `linear-gradient(90deg, ${props.colors[0]} 33.33%, ${
-      props.colors[1]
-    } 33.33%, ${props.colors[1]} 66.66%, ${
-      props.colors[2]
-    } 66.66%) no-repeat;`};
+    `linear-gradient(90deg, ${props.colors[0]} 33.33%, ${props.colors[1]} 33.33%, ${props.colors[1]} 66.66%, ${props.colors[2]} 66.66%) no-repeat;`};
 `;
 
 export const RadioField = styled(Input.Radio)`

@@ -65,10 +65,5 @@
     "stylelint-prettier": "^1.1.1",
     "typescript": "^3.7.2",
     "webpack": "^4.41.2"
-  },
-  "prettier": {
-    "arrowParens": "always",
-    "singleQuote": true,
-    "trailingComma": "all"
   }
 }

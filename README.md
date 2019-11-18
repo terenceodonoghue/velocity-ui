@@ -1,6 +1,6 @@
 # velocity-ui
 
-[![CircleCI](https://circleci.com/gh/terenceodonoghue/velocity-ui.svg?style=svg)](https://circleci.com/gh/terenceodonoghue/velocity-ui)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![dependencies Status](https://david-dm.org/terenceodonoghue/velocity-ui/status.svg)](https://david-dm.org/terenceodonoghue/velocity-ui)
 [![devDependencies Status](https://david-dm.org/terenceodonoghue/velocity-ui/dev-status.svg)](https://david-dm.org/terenceodonoghue/velocity-ui?type=dev)
 

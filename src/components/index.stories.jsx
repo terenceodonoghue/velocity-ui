@@ -28,9 +28,9 @@ storiesOf('Basics|Style Guide', module).add('Components', () => (
     </S.Story>
     <S.Story heading="Buttons">
       <S.Components>
-        <Button.Contained>Button Text</Button.Contained>
-        <Button.Outlined>Button Text</Button.Outlined>
-        <Button.Text>Button Text</Button.Text>
+        <Button.Contained>Contained</Button.Contained>
+        <Button.Outlined>Outlined</Button.Outlined>
+        <Button.Text>Text</Button.Text>
         <Button.Fab>
           <img alt="Fab" src="./plus.svg" />
         </Button.Fab>

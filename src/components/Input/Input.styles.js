@@ -75,6 +75,7 @@ export const RadioLabel = styled.label`
   display: flex;
   align-items: center;
   font-weight: ${(props) => props.theme.typography.fontWeightMedium};
+  cursor: pointer;
 `;
 
 export const RadioSwitch = styled.span`

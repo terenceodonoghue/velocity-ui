@@ -1,10 +1,10 @@
 import React from 'react';
-import Input from './Input';
+import * as Inputs from './Input';
 
 describe('Input', () => {
   describe('Radio', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(withTheme(<Input.Radio />)).toJSON();
+      const tree = renderer.create(withTheme(<Inputs.Radio />)).toJSON();
 
       expect(tree).toMatchSnapshot();
     });
@@ -13,7 +13,7 @@ describe('Input', () => {
   describe('Slider', () => {
     it('matches snapshot', () => {
       const tree = renderer
-        .create(withTheme(<Input.Slider min={0} max={100} />))
+        .create(withTheme(<Inputs.Slider min={0} max={100} />))
         .toJSON();
 
       expect(tree).toMatchSnapshot();
@@ -22,7 +22,7 @@ describe('Input', () => {
 
   describe('Switch', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(withTheme(<Input.Switch />)).toJSON();
+      const tree = renderer.create(withTheme(<Inputs.Switch />)).toJSON();
 
       expect(tree).toMatchSnapshot();
     });
@@ -33,7 +33,7 @@ describe('Input', () => {
       const tree = renderer
         .create(
           withTheme(
-            <Input.Text
+            <Inputs.Text
               label="Label Text"
               placeholder="Placeholder"
               type="text"

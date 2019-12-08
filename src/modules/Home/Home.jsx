@@ -44,7 +44,7 @@ export const renderCustomizedLabel = ({ index, percent }) =>
     </>
   );
 
-const Welcome = () => (
+export const Welcome = () => (
   <S.Welcome>
     <ResponsiveContainer width={203.5}>
       <PieChart>
@@ -86,8 +86,4 @@ const Welcome = () => (
 renderCustomizedLabel.propTypes = {
   index: number.isRequired,
   percent: number.isRequired,
-};
-
-export default {
-  Welcome,
 };

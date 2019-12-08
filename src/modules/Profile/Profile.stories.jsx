@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Profile from './Profile';
-import { sidebar } from './Profile.fixtures';
+import { Sidebar } from './Profile';
+import * as fixtures from './Profile.fixtures';
 
 storiesOf('Modules|User Profile', module).add('Sidebar', () => (
-  <Profile.Sidebar {...sidebar} />
+  <Sidebar {...fixtures.sidebar} />
 ));

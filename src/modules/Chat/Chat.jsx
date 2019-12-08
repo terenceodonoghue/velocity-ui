@@ -1,9 +1,9 @@
 import React from 'react';
 import { arrayOf, bool, shape, string } from 'prop-types';
-import { Avatar } from '../../components';
+import { Avatars } from '../../components';
 import * as S from './Chat.styles';
 
-const Conversations = ({ data }) => (
+export const Conversations = ({ data }) => (
   <S.Conversations>
     {data.map((conversation, index) => (
       <S.Conversation
@@ -14,7 +14,7 @@ const Conversations = ({ data }) => (
           .toLowerCase()}-${index}`}
       >
         <S.Avatar>
-          <Avatar.Round src={conversation.avatarSrc} height="48" width="48" />
+          <Avatars.Round src={conversation.avatarSrc} height="48" width="48" />
         </S.Avatar>
         <S.Body>
           <S.Details>
@@ -28,7 +28,7 @@ const Conversations = ({ data }) => (
   </S.Conversations>
 );
 
-const Dialog = ({ data }) => (
+export const Dialog = ({ data }) => (
   <S.Dialog>
     <S.Messages>
       {data.map((message) => (
@@ -60,9 +60,4 @@ Dialog.propTypes = {
       time: string.isRequired,
     }).isRequired,
   ).isRequired,
-};
-
-export default {
-  Conversations,
-  Dialog,
 };

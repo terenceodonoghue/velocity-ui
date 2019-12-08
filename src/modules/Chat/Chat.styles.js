@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Container, Input } from '../../components';
+import { Inputs, Surfaces } from '../../components';
 
 export const Avatar = styled.div`
   flex-grow: 0;
@@ -13,7 +13,7 @@ export const Body = styled.div`
   flex-grow: 1;
 `;
 
-export const Conversation = styled(Container.Card)`
+export const Conversation = styled(Surfaces.Card)`
   display: flex;
   border-left: 0;
   border-top: 0;
@@ -68,7 +68,7 @@ export const Preview = styled.span`
   text-overflow: ellipsis;
 `;
 
-export const TextInput = styled(Input.Text)`
+export const TextInput = styled(Inputs.Text)`
   margin: 24px;
 `;
 

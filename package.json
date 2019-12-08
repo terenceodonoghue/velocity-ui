@@ -16,7 +16,7 @@
     "prepublish": "yarn run build",
     "storybook": "start-storybook -s ./static --quiet",
     "stylelint-check": "stylelint-config-prettier-check",
-    "test": "jest"
+    "test": "jest --silent"
   },
   "dependencies": {
     "@emotion/core": "^10.0.22",

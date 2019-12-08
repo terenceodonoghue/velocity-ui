@@ -48,7 +48,7 @@ export const onDragEnd = (dragResult, tickets, setTickets) => {
   }
 };
 
-const Kanban = ({ data }) => {
+export const Kanban = ({ data }) => {
   const [tickets, setTickets] = useState(data);
 
   return (
@@ -122,8 +122,4 @@ Kanban.propTypes = {
       }).isRequired,
     ).isRequired,
   ).isRequired,
-};
-
-export default {
-  Kanban,
 };

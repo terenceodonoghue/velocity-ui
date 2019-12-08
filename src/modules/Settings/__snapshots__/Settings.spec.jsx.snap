@@ -834,6 +834,7 @@ exports[`Settings Theme matches snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   font-weight: 500;
+  cursor: pointer;
   padding: 12px 0;
 }
 

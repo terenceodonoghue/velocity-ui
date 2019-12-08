@@ -1,7 +1,7 @@
 import React from 'react';
 import * as S from './Vehicles.styles';
 
-const Filter = () => (
+export const Filter = () => (
   <S.Filter heading="Filter">
     <S.SliderField label="Trips taken" value={753}></S.SliderField>
     <S.SliderField label="Service due" value="14 days"></S.SliderField>
@@ -25,9 +25,4 @@ const Filter = () => (
   </S.Filter>
 );
 
-const Vehicles = () => <S.Vehicles />;
-
-export default {
-  Filter,
-  Vehicles,
-};
+export const Vehicles = () => <S.Vehicles />;

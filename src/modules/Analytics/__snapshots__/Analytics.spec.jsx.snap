@@ -201,7 +201,7 @@ exports[`Analytics Revenue matches snapshot 1`] = `
   transform: translateY(-60%);
 }
 
-.emotion-3 .recharts-responsive-container {
+.emotion-3 .recharts-responsive-Surface {
   margin: 45px -10px 0;
 }
 
@@ -301,7 +301,7 @@ exports[`Analytics Weekday matches snapshot 1`] = `
   transform: translateY(-60%);
 }
 
-.emotion-3 .recharts-responsive-container {
+.emotion-3 .recharts-responsive-Surface {
   margin: 45px -10px 0;
 }
 

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Container } from '../../components';
+import { Surfaces } from '../../components';
 import * as S from './Settings.styles';
 
-const Personal = () => (
-  <Container.Card heading="Personal data">
+export const Personal = () => (
+  <Surfaces.Card heading="Personal data">
     <S.FieldSet>
       <S.Legend>
         Use this page to update your contact information and change your
@@ -26,11 +26,11 @@ const Personal = () => (
       <S.TextField label="Confirm" type="password" />
     </S.FieldSet>
     <S.SaveButton>Save Changes</S.SaveButton>
-  </Container.Card>
+  </Surfaces.Card>
 );
 
-const Integrations = () => (
-  <Container.Card heading="Integrations">
+export const Integrations = () => (
+  <Surfaces.Card heading="Integrations">
     <S.FieldSet>
       <S.Legend>Manage third-party app integrations.</S.Legend>
       <S.CheckboxField>
@@ -100,11 +100,11 @@ const Integrations = () => (
         </S.CheckboxText>
       </S.CheckboxField>
     </S.FieldSet>
-  </Container.Card>
+  </Surfaces.Card>
 );
 
-const Notifications = () => (
-  <Container.Card heading="Notifications">
+export const Notifications = () => (
+  <Surfaces.Card heading="Notifications">
     <S.FieldSet>
       <S.Legend>Control your notification and auto-follow settings.</S.Legend>
       <S.SwitchField
@@ -124,11 +124,11 @@ const Notifications = () => (
         label="Quarter Reports"
       />
     </S.FieldSet>
-  </Container.Card>
+  </Surfaces.Card>
 );
 
 export const Theme = () => (
-  <Container.Card heading="Theme">
+  <Surfaces.Card heading="Theme">
     <S.FieldSet>
       <S.Legend>Select a color scheme for your Velocity app.</S.Legend>
       <S.Theme>
@@ -152,12 +152,5 @@ export const Theme = () => (
         <S.RadioField label="Grima" name="theme" />
       </S.Theme>
     </S.FieldSet>
-  </Container.Card>
+  </Surfaces.Card>
 );
-
-export default {
-  Personal,
-  Integrations,
-  Notifications,
-  Theme,
-};

@@ -1,12 +1,12 @@
 import React from 'react';
-import Chat from './Chat';
-import { conversations } from './Chat.fixtures';
+import { Conversations } from './Chat';
+import * as fixtures from './Chat.fixtures';
 
 describe('Chat', () => {
   describe('Conversations', () => {
     it('matches snapshot', () => {
       const tree = renderer
-        .create(withTheme(<Chat.Conversations {...conversations} />))
+        .create(withTheme(<Conversations {...fixtures.conversations} />))
         .toJSON();
 
       expect(tree).toMatchSnapshot();

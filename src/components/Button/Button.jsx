@@ -1,17 +1,10 @@
 import React from 'react';
 import * as S from './Button.styles';
 
-const Contained = (props) => <S.Contained {...props} />;
+export const Contained = (props) => <S.Contained {...props} />;
 
-const Outlined = (props) => <S.Outlined {...props} />;
+export const Outlined = (props) => <S.Outlined {...props} />;
 
-const Text = (props) => <S.Text {...props} />;
+export const Text = (props) => <S.Text {...props} />;
 
-const Fab = (props) => <S.Fab {...props} />;
-
-export default {
-  Contained,
-  Outlined,
-  Text,
-  Fab,
-};
+export const Fab = (props) => <S.Fab {...props} />;

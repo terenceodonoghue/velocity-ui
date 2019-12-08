@@ -1,6 +1,7 @@
-export { default as Avatar } from './Avatar/Avatar';
-export { default as Button } from './Button/Button';
-export { default as Container } from './Container/Container';
+import * as Avatars from './Avatar/Avatar';
+import * as Buttons from './Button/Button';
+import * as Surfaces from './Surface/Surface';
+import * as Inputs from './Input/Input';
+
+export { Avatars, Buttons, Surfaces, Inputs };
 export { default as Global, theme } from './Global/Global';
-export { default as Input } from './Input/Input';
-export { default as Page } from './Page/Page';

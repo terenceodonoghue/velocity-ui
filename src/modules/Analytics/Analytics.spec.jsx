@@ -1,12 +1,12 @@
 import React from 'react';
-import Analytics from './Analytics';
-import { metrics, revenue, weekday } from './Analytics.fixtures';
+import { Metrics, Revenue, Weekday, yTickFormatter } from './Analytics';
+import * as fixtures from './Analytics.fixtures';
 
 describe('Analytics', () => {
   describe('Metrics', () => {
     it('matches snapshot', () => {
       const tree = renderer
-        .create(withTheme(<Analytics.Metrics {...metrics} />))
+        .create(withTheme(<Metrics {...fixtures.metrics} />))
         .toJSON();
 
       expect(tree).toMatchSnapshot();
@@ -16,7 +16,7 @@ describe('Analytics', () => {
   describe('Revenue', () => {
     it('matches snapshot', () => {
       const tree = renderer
-        .create(withTheme(<Analytics.Revenue {...revenue} />), {
+        .create(withTheme(<Revenue {...fixtures.revenue} />), {
           createNodeMock: () => ({
             parentElement: document.implementation.createHTMLDocument().body,
           }),
@@ -30,7 +30,7 @@ describe('Analytics', () => {
   describe('Weekday', () => {
     it('matches snapshot', () => {
       const tree = renderer
-        .create(withTheme(<Analytics.Weekday {...weekday} />), {
+        .create(withTheme(<Weekday {...fixtures.weekday} />), {
           createNodeMock: () => ({
             parentElement: document.implementation.createHTMLDocument().body,
           }),
@@ -42,8 +42,6 @@ describe('Analytics', () => {
   });
 
   describe('yTickFormatter', () => {
-    const { yTickFormatter } = Analytics;
-
     it("doesn't format values <= 999", () => {
       const value = yTickFormatter(999);
       expect(value).toBe(999);

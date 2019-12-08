@@ -1,8 +1,9 @@
+/* eslint-disable import/prefer-default-export */
 import React from 'react';
 import { string } from 'prop-types';
 import * as S from './Profile.styles';
 
-const Sidebar = ({
+export const Sidebar = ({
   avatarSrc,
   bio,
   email,
@@ -16,10 +17,10 @@ const Sidebar = ({
     <S.ProfilePicture src={avatarSrc} />
     <S.Name>{name}</S.Name>
     <S.Title>{title}</S.Title>
-    <S.Buttons>
+    <S.ButtonGroup>
       <S.EditButton>Edit profile</S.EditButton>
       <S.StatusButton>Change status</S.StatusButton>
-    </S.Buttons>
+    </S.ButtonGroup>
     <S.Rule />
     <dl>
       <S.Label>Role</S.Label>
@@ -47,8 +48,4 @@ Sidebar.propTypes = {
   phone: string.isRequired,
   roles: string.isRequired,
   title: string.isRequired,
-};
-
-export default {
-  Sidebar,
 };

@@ -1,10 +1,10 @@
 import React from 'react';
-import Vehicles from './Vehicles';
+import { Filter, Vehicles } from './Vehicles';
 
 describe('Vehicles', () => {
   describe('Filter', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(withTheme(<Vehicles.Filter />)).toJSON();
+      const tree = renderer.create(withTheme(<Filter />)).toJSON();
 
       expect(tree).toMatchSnapshot();
     });
@@ -12,7 +12,7 @@ describe('Vehicles', () => {
 
   describe('Vehicles', () => {
     it('matches snapshot', () => {
-      const tree = renderer.create(withTheme(<Vehicles.Vehicles />)).toJSON();
+      const tree = renderer.create(withTheme(<Vehicles />)).toJSON();
 
       expect(tree).toMatchSnapshot();
     });

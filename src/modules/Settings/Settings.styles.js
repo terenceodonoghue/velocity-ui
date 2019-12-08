@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Button, Input } from '../../components';
+import { Buttons, Inputs } from '../../components';
 
 export const CheckboxField = styled.label`
   flex: 0 1 365px;
@@ -77,20 +77,20 @@ export const Palette = styled.div`
     `linear-gradient(90deg, ${props.colors[0]} 33.33%, ${props.colors[1]} 33.33%, ${props.colors[1]} 66.66%, ${props.colors[2]} 66.66%) no-repeat;`};
 `;
 
-export const RadioField = styled(Input.Radio)`
+export const RadioField = styled(Inputs.Radio)`
   padding: 12px 0;
 `;
 
-export const SaveButton = styled(Button.Contained)`
+export const SaveButton = styled(Buttons.Contained)`
   margin: 13px 0 18px 8px;
 `;
 
-export const SwitchField = styled(Input.Switch)`
+export const SwitchField = styled(Inputs.Switch)`
   margin: 0 87px 0 0;
   padding: 10px 11px;
 `;
 
-export const TextField = styled(Input.Text)`
+export const TextField = styled(Inputs.Text)`
   flex: 0 1 290px;
   padding: 12px 11px;
 

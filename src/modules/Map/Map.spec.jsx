@@ -1,13 +1,13 @@
 import React from 'react';
-import Map from './Map';
-import { passenger } from './Map.fixtures';
+import { Passenger } from './Map';
+import * as fixtures from './Map.fixtures';
 import * as S from './Map.styles';
 
 describe('Map', () => {
   describe('Passenger', () => {
     it('matches snapshot', () => {
       const tree = renderer
-        .create(withTheme(<Map.Passenger {...passenger} />))
+        .create(withTheme(<Passenger {...fixtures.passenger} />))
         .toJSON();
 
       expect(tree).toMatchSnapshot();
@@ -15,7 +15,7 @@ describe('Map', () => {
 
     it('uses correct plurality', () => {
       const component = renderer.create(
-        withTheme(<Map.Passenger {...passenger} interactions={1} />),
+        withTheme(<Passenger {...fixtures.passenger} interactions={1} />),
       );
 
       expect(component.root.findByType(S.Interactions).props.children).toBe(
@@ -23,7 +23,7 @@ describe('Map', () => {
       );
 
       component.update(
-        withTheme(<Map.Passenger {...passenger} interactions={2} />),
+        withTheme(<Passenger {...fixtures.passenger} interactions={2} />),
       );
       expect(component.root.findByType(S.Interactions).props.children).toBe(
         '2 interactions',

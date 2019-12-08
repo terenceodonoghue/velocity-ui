@@ -1,12 +1,12 @@
 import React from 'react';
-import Home, { renderCustomizedLabel as CustomizedLabel } from './Home';
-import { customizedLabel } from './Home.fixtures';
+import { Welcome, renderCustomizedLabel as CustomizedLabel } from './Home';
+import * as fixtures from './Home.fixtures';
 
 describe('Home', () => {
   describe('Welcome', () => {
     it('matches snapshot', () => {
       const tree = renderer
-        .create(withTheme(<Home.Welcome />), {
+        .create(withTheme(<Welcome />), {
           createNodeMock: () => ({
             parentElement: document.implementation.createHTMLDocument().body,
           }),
@@ -20,7 +20,7 @@ describe('Home', () => {
   describe('renderCustomizedLabel', () => {
     it('matches snapshot', () => {
       const tree = renderer
-        .create(withTheme(<CustomizedLabel {...customizedLabel} />))
+        .create(withTheme(<CustomizedLabel {...fixtures.customizedLabel} />))
         .toJSON();
 
       expect(tree).toMatchSnapshot();

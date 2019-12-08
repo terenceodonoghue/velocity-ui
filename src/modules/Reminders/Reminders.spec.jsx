@@ -1,14 +1,14 @@
 import React from 'react';
 import { act } from 'react-dom/test-utils';
-import Reminders, { move, onDragEnd, reorder } from './Reminders';
-import { kanban } from './Reminders.fixtures';
+import { Kanban, move, onDragEnd, reorder } from './Reminders';
+import * as fixtures from './Reminders.fixtures';
 import * as S from './Reminders.styles';
 
 describe('Reminders', () => {
   describe('Kanban', () => {
     it('renders first column', () => {
       const component = renderer.create(
-        withTheme(<Reminders.Kanban {...kanban} />),
+        withTheme(<Kanban {...fixtures.kanban} />),
       ).root;
 
       expect(
@@ -22,7 +22,7 @@ describe('Reminders', () => {
 
     it('renders second column', () => {
       const component = renderer.create(
-        withTheme(<Reminders.Kanban {...kanban} />),
+        withTheme(<Kanban {...fixtures.kanban} />),
       ).root;
 
       expect(
@@ -36,7 +36,7 @@ describe('Reminders', () => {
 
     it('renders third column', () => {
       const component = renderer.create(
-        withTheme(<Reminders.Kanban {...kanban} />),
+        withTheme(<Kanban {...fixtures.kanban} />),
       ).root;
 
       expect(
@@ -50,7 +50,7 @@ describe('Reminders', () => {
 
     it('renders fourth column', () => {
       const component = renderer.create(
-        withTheme(<Reminders.Kanban {...kanban} />),
+        withTheme(<Kanban {...fixtures.kanban} />),
       ).root;
 
       expect(
@@ -63,33 +63,33 @@ describe('Reminders', () => {
     });
 
     it('shows a ticket count in each column', () => {
-      const component = mount(withTheme(<Reminders.Kanban {...kanban} />));
+      const component = mount(withTheme(<Kanban {...fixtures.kanban} />));
 
       expect(component.find(S.Heading).at(0)).toHaveStyleRule(
         'content',
-        `"${kanban.data[0].length}"`,
+        `"${fixtures.kanban.data[0].length}"`,
         { target: '::after' },
       );
       expect(component.find(S.Heading).at(1)).toHaveStyleRule(
         'content',
-        `"${kanban.data[1].length}"`,
+        `"${fixtures.kanban.data[1].length}"`,
         { target: '::after' },
       );
       expect(component.find(S.Heading).at(2)).toHaveStyleRule(
         'content',
-        `"${kanban.data[2].length}"`,
+        `"${fixtures.kanban.data[2].length}"`,
         { target: '::after' },
       );
       expect(component.find(S.Heading).at(3)).toHaveStyleRule(
         'content',
-        `"${kanban.data[3].length}"`,
+        `"${fixtures.kanban.data[3].length}"`,
         { target: '::after' },
       );
     });
 
     it('updates state', () => {
       const component = mount(
-        withTheme(<Reminders.Kanban {...kanban} />),
+        withTheme(<Kanban {...fixtures.kanban} />),
       ).children();
 
       act(() =>
@@ -106,7 +106,7 @@ describe('Reminders', () => {
 
   describe('move', () => {
     it('moves ticket to a different column', () => {
-      const columns = Array.from(kanban.data);
+      const columns = Array.from(fixtures.kanban.data);
       const result = move(
         { droppableId: 0, index: 0 },
         { droppableId: 1, index: 1 },
@@ -122,7 +122,7 @@ describe('Reminders', () => {
 
   describe('reorder', () => {
     it('moves ticket within same column', () => {
-      const columns = Array.from(kanban.data);
+      const columns = Array.from(fixtures.kanban.data);
       const result = reorder(
         { droppableId: 0, index: 0 },
         { droppableId: 0, index: 1 },
@@ -144,7 +144,7 @@ describe('Reminders', () => {
     });
 
     it('triggers callback when source matches destination', () => {
-      const columns = Array.from(kanban.data);
+      const columns = Array.from(fixtures.kanban.data);
 
       onDragEnd(
         {
@@ -159,7 +159,7 @@ describe('Reminders', () => {
     });
 
     it('triggers callback when source does not match destination', () => {
-      const columns = Array.from(kanban.data);
+      const columns = Array.from(fixtures.kanban.data);
 
       onDragEnd(
         {
@@ -174,7 +174,7 @@ describe('Reminders', () => {
     });
 
     it('does not trigger callback when destination is invalid', () => {
-      const columns = Array.from(kanban.data);
+      const columns = Array.from(fixtures.kanban.data);
 
       onDragEnd(
         { source: { droppableId: 0, index: 0 }, destination: null },

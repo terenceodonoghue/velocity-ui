@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { string } from 'prop-types';
-import { Avatar } from '../../components';
+import { Avatars } from '../../components';
 import * as S from './Navigation.styles';
 
 const Menu = ({ avatarSrc, name }) => {
@@ -12,7 +12,7 @@ const Menu = ({ avatarSrc, name }) => {
         <img alt="Menu" src="./menu.svg" />
       </S.MenuButton>
       <S.Welcome show={open}>
-        <Avatar.Square src={avatarSrc} alt="Welcome" height="32" width="32" />
+        <Avatars.Square src={avatarSrc} alt="Welcome" height="32" width="32" />
         <S.WelcomeText>
           <span>Welcome</span>
           <S.Name>{name}</S.Name>

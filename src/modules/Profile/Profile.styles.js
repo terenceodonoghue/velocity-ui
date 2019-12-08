@@ -1,12 +1,12 @@
 import styled from '@emotion/styled';
-import { Avatar, Button, Container } from '../../components';
+import { Avatars, Buttons, Surfaces } from '../../components';
 
-export const Buttons = styled.div`
+export const ButtonGroup = styled.div`
   display: flex;
   margin: 0 -8px 40px;
 `;
 
-export const EditButton = styled(Button.Contained)`
+export const EditButton = styled(Buttons.Contained)`
   flex: 1;
   margin: 0 8px;
   width: unset;
@@ -27,7 +27,7 @@ export const Name = styled.h2`
   text-align: center;
 `;
 
-export const ProfilePicture = styled(Avatar.Round)`
+export const ProfilePicture = styled(Avatars.Round)`
   display: block;
   height: 140px;
   margin: 32px auto 19px;
@@ -41,12 +41,12 @@ export const Rule = styled.hr`
   background-color: #e4e8f0;
 `;
 
-export const Sidebar = styled(Container.Card)`
+export const Sidebar = styled(Surfaces.Card)`
   height: 100%;
   width: 357px;
 `;
 
-export const StatusButton = styled(Button.Outlined)`
+export const StatusButton = styled(Buttons.Outlined)`
   flex: 1;
   margin: 0 8px;
   width: unset;

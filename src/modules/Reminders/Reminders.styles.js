@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Container } from '../../components';
+import { Surfaces } from '../../components';
 
 export const Column = styled.div`
   display: inline-block;
@@ -76,7 +76,7 @@ export const Row = styled.div`
   }
 `;
 
-export const Ticket = styled(Container.Card)`
+export const Ticket = styled(Surfaces.Card)`
   display: inline-block;
   border: none;
   border-radius: 5px;

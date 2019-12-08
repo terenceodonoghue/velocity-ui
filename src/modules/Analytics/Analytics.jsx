@@ -15,10 +15,10 @@ import {
 } from 'recharts';
 import * as S from './Analytics.styles';
 
-const yTickFormatter = (value) =>
+export const yTickFormatter = (value) =>
   value > 999 ? numeral(Math.abs(value)).format('$0[.]0a') : Math.abs(value);
 
-const Metrics = ({ data }) => (
+export const Metrics = ({ data }) => (
   <S.Metrics>
     {data.map((metric, index) => (
       <S.Metric
@@ -40,7 +40,7 @@ const Metrics = ({ data }) => (
   </S.Metrics>
 );
 
-const Revenue = ({ data }) => (
+export const Revenue = ({ data }) => (
   <S.Revenue heading="Revenue">
     <ResponsiveContainer width="100%" height={340}>
       <AreaChart data={data}>
@@ -102,7 +102,7 @@ const Revenue = ({ data }) => (
   </S.Revenue>
 );
 
-const Weekday = ({ data }) => (
+export const Weekday = ({ data }) => (
   <S.Weekday heading="Trips by Weekday">
     <ResponsiveContainer width="100%" height={340}>
       <ComposedChart
@@ -193,11 +193,4 @@ Weekday.propTypes = {
       premium: number.isRequired,
     }),
   ).isRequired,
-};
-
-export default {
-  Metrics,
-  Revenue,
-  Weekday,
-  yTickFormatter,
 };

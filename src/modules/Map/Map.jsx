@@ -2,7 +2,7 @@ import React from 'react';
 import { number, shape, string } from 'prop-types';
 import * as S from './Map.styles';
 
-const Passenger = ({
+export const Passenger = ({
   avatarSrc,
   email,
   interactions,
@@ -57,7 +57,7 @@ const Passenger = ({
   </S.Passenger>
 );
 
-const Trip = ({ distance, energy, from, price, time, to }) => (
+export const Trip = ({ distance, energy, from, price, time, to }) => (
   <S.Trip>
     <S.IconGroup>
       <S.CircleIcon>
@@ -124,9 +124,4 @@ Trip.propTypes = {
   price: number.isRequired,
   time: number.isRequired,
   to: shape({ streetAddress: string, suburb: string }).isRequired,
-};
-
-export default {
-  Passenger,
-  Trip,
 };

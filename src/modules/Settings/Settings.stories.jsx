@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Settings from './Settings';
+import { Integrations, Notifications, Personal, Theme } from './Settings';
 
 storiesOf('Modules|Settings', module)
-  .add('Personal Data', () => <Settings.Personal />)
-  .add('Integrations', () => <Settings.Integrations />)
-  .add('Notifications', () => <Settings.Notifications />)
-  .add('Theme', () => <Settings.Theme />);
+  .add('Personal Data', () => <Personal />)
+  .add('Integrations', () => <Integrations />)
+  .add('Notifications', () => <Notifications />)
+  .add('Theme', () => <Theme />);

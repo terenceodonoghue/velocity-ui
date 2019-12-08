@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import Chat from './Chat';
-import { conversations, dialog } from './Chat.fixtures';
+import { Conversations, Dialog } from './Chat';
+import * as fixtures from './Chat.fixtures';
 
 storiesOf('Modules|Chat', module)
-  .add('Conversations', () => <Chat.Conversations {...conversations} />)
-  .add('Dialog', () => <Chat.Dialog {...dialog} />);
+  .add('Conversations', () => <Conversations {...fixtures.conversations} />)
+  .add('Dialog', () => <Dialog {...fixtures.dialog} />);

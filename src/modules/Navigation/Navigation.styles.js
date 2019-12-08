@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Button } from '../../components';
+import { Buttons } from '../../components';
 
 export const Menu = styled.div`
   height: 100%;
@@ -10,7 +10,7 @@ export const Menu = styled.div`
   overflow-x: hidden;
 `;
 
-export const MenuButton = styled(Button.Text)`
+export const MenuButton = styled(Buttons.Text)`
   margin: 0 0 58px;
   width: 40px;
 `;

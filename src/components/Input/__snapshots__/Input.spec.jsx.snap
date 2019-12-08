@@ -11,6 +11,7 @@ exports[`Input Radio matches snapshot 1`] = `
   -ms-flex-align: center;
   align-items: center;
   font-weight: 500;
+  cursor: pointer;
 }
 
 .emotion-0 {

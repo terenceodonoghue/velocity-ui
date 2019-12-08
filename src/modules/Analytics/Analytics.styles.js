@@ -1,6 +1,6 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { Container } from '../../components';
+import { Surfaces } from '../../components';
 
 const recharts = (props) => css`
   .recharts-area-dot {
@@ -27,12 +27,12 @@ const recharts = (props) => css`
     transform: translateY(-60%);
   }
 
-  .recharts-responsive-container {
+  .recharts-responsive-Surface {
     margin: 45px -10px 0;
   }
 `;
 
-export const Metric = styled(Container.Card)`
+export const Metric = styled(Surfaces.Card)`
   flex: 0 0 264px;
   margin: 12px;
   padding: 18px 24px;
@@ -90,11 +90,11 @@ export const MetricValue = styled.div`
   letter-spacing: -0.6px;
 `;
 
-export const Revenue = styled(Container.Card)`
+export const Revenue = styled(Surfaces.Card)`
   ${recharts};
 `;
 
-export const Weekday = styled(Container.Card)`
+export const Weekday = styled(Surfaces.Card)`
   ${recharts};
   width: 752px;
 `;

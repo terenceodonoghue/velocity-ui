@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Container } from '../../components';
+import { Surfaces } from '../../components';
 
 export const Heading = styled.h2`
   margin: 0 0 13px;
@@ -19,7 +19,7 @@ export const Text = styled.div`
   padding: 45px 0 42px 61px;
 `;
 
-export const Welcome = styled(Container.Card)`
+export const Welcome = styled(Surfaces.Card)`
   display: flex;
   height: 230px;
   padding: 0 27px 0 46px;

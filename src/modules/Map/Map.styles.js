@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Avatar, Container } from '../../components';
+import { Avatars, Surfaces } from '../../components';
 
 export const Address = styled.div`
   flex: 1;
@@ -92,7 +92,7 @@ export const Name = styled.p`
   line-height: 1.47;
 `;
 
-export const Passenger = styled(Container.Card)`
+export const Passenger = styled(Surfaces.Card)`
   width: 655px;
 `;
 
@@ -129,7 +129,7 @@ export const Profile = styled.div`
   margin: 9px 0 19px;
 `;
 
-export const ProfilePicture = styled(Avatar.Round)`
+export const ProfilePicture = styled(Avatars.Round)`
   height: 48px;
   width: 48px;
   transform: translate(6px, -2px);
@@ -171,7 +171,7 @@ export const Stats = styled.div`
   }
 `;
 
-export const Trip = styled(Container.Card)`
+export const Trip = styled(Surfaces.Card)`
   padding: 24px;
   width: 463px;
 `;

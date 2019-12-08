@@ -1,13 +1,13 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import faker from 'faker';
-import { Avatar, Button, Input, Page } from '.';
-import * as S from './index.styles';
+import { Avatars, Buttons, Inputs, Surfaces } from '.';
+import * as S from '../../.storybook/config.styles';
 
 storiesOf('Basics|Style Guide', module).add('Components', () => (
   <>
-    <Page.AppBar>
-      <Avatar.Round
+    <Surfaces.AppBar>
+      <Avatars.Round
         alt="Avatar"
         src={faker.image.avatar()}
         height="40"
@@ -19,30 +19,30 @@ storiesOf('Basics|Style Guide', module).add('Components', () => (
       <S.IconButton width="40px">
         <img alt="Notifications" src="./notifications.svg" />
       </S.IconButton>
-    </Page.AppBar>
+    </Surfaces.AppBar>
     <S.Story heading="Avatars">
       <S.Components>
-        <Avatar.Round src={faker.image.avatar()} height="48" width="48" />
-        <Avatar.Square src={faker.image.avatar()} height="48" width="48" />
+        <Avatars.Round src={faker.image.avatar()} height="48" width="48" />
+        <Avatars.Square src={faker.image.avatar()} height="48" width="48" />
       </S.Components>
     </S.Story>
     <S.Story heading="Buttons">
       <S.Components>
-        <Button.Contained>Contained</Button.Contained>
-        <Button.Outlined>Outlined</Button.Outlined>
-        <Button.Text>Text</Button.Text>
-        <Button.Fab>
+        <Buttons.Contained>Contained</Buttons.Contained>
+        <Buttons.Outlined>Outlined</Buttons.Outlined>
+        <Buttons.Text>Text</Buttons.Text>
+        <Buttons.Fab>
           <img alt="Fab" src="./plus.svg" />
-        </Button.Fab>
+        </Buttons.Fab>
       </S.Components>
     </S.Story>
     <S.Story heading="Inputs">
       <S.Components>
-        <Input.Text label="Label" type="text" placeholder="Placeholder" />
-        <Input.Slider min={0} max={100} />
-        <Input.Switch description="Description" label="Label" />
-        <Input.Radio defaultChecked label="Label" name="storybook" />
-        <Input.Radio label="Label" name="storybook" />
+        <Inputs.Text label="Label" type="text" placeholder="Placeholder" />
+        <Inputs.Slider min={0} max={100} />
+        <Inputs.Switch description="Description" label="Label" />
+        <Inputs.Radio defaultChecked label="Label" name="storybook" />
+        <Inputs.Radio label="Label" name="storybook" />
       </S.Components>
     </S.Story>
   </>

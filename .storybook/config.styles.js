@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { Button, Container } from '.';
+import { Buttons, Surfaces } from '../src/components';
 
 export const Components = styled.div`
   display: flex;
@@ -12,10 +12,10 @@ export const Components = styled.div`
   }
 `;
 
-export const IconButton = styled(Button.Text)`
+export const IconButton = styled(Buttons.Text)`
   width: 40px;
 `;
 
-export const Story = styled(Container.Card)`
+export const Story = styled(Surfaces.Card)`
   margin: 24px 0;
 `;

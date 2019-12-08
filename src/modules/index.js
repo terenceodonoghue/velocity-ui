@@ -1,9 +1,21 @@
-export { default as Analytics } from './Analytics/Analytics';
-export { default as Chat } from './Chat/Chat';
-export { default as Home } from './Home/Home';
-export { default as Map } from './Map/Map';
-export { default as Navigation } from './Navigation/Navigation';
-export { default as Profile } from './Profile/Profile';
-export { default as Reminders } from './Reminders/Reminders';
-export { default as Settings } from './Settings/Settings';
-export { default as Vehicles } from './Vehicles/Vehicles';
+import * as Analytics from './Analytics/Analytics';
+import * as Chat from './Chat/Chat';
+import * as Home from './Home/Home';
+import * as Map from './Map/Map';
+import * as Navigation from './Navigation/Navigation';
+import * as Profile from './Profile/Profile';
+import * as Reminders from './Reminders/Reminders';
+import * as Settings from './Settings/Settings';
+import * as Vehicles from './Vehicles/Vehicles';
+
+export {
+  Analytics,
+  Chat,
+  Home,
+  Map,
+  Navigation,
+  Profile,
+  Reminders,
+  Settings,
+  Vehicles,
+};

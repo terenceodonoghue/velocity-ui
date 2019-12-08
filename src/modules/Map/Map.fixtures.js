@@ -1,5 +1,7 @@
+import faker from 'faker';
+
 export const passenger = {
-  avatarSrc: './users/nora.png',
+  avatarSrc: faker.image.avatar(),
   email: 'invision@invisionapp.com',
   interactions: 4,
   location: 'New York, NY',

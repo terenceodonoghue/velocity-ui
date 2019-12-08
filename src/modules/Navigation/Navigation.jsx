@@ -1,9 +1,10 @@
+/* eslint-disable import/prefer-default-export */
 import React, { useState } from 'react';
 import { string } from 'prop-types';
-import { Avatars } from '../../components';
+import { Avatars, Icons } from '../../components';
 import * as S from './Navigation.styles';
 
-const Menu = ({ avatarSrc, name }) => {
+export const Menu = ({ avatarSrc, name }) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -21,33 +22,33 @@ const Menu = ({ avatarSrc, name }) => {
       <nav>
         <S.NavList>
           <S.NavItem selected>
-            <img alt="Overview" src="./overview.svg" />
+            <Icons.Dashboard title="Overview" />
             <S.NavLabel show={open} selected>
               Overview
             </S.NavLabel>
           </S.NavItem>
           <S.NavItem>
-            <img alt="Analytics" src="./analytics.svg" />
+            <Icons.Analytics title="Analytics" />
             <S.NavLabel show={open}>Analytics</S.NavLabel>
           </S.NavItem>
           <S.NavItem>
-            <img alt="Vehicles" src="./vehicles.svg" />
+            <Icons.Vehicles title="Vehicles" />
             <S.NavLabel show={open}>Vehicles</S.NavLabel>
           </S.NavItem>
           <S.NavItem>
-            <img alt="Service" src="./service.svg" />
+            <Icons.Service title="Service" />
             <S.NavLabel show={open}>Service</S.NavLabel>
           </S.NavItem>
           <S.NavItem>
-            <img alt="Map" src="./map.svg" />
+            <Icons.Map title="Map" />
             <S.NavLabel show={open}>Map</S.NavLabel>
           </S.NavItem>
           <S.NavItem>
-            <img alt="Chat" src="./chat.svg" />
+            <Icons.Chat title="Chat" />
             <S.NavLabel show={open}>Chat</S.NavLabel>
           </S.NavItem>
           <S.NavItem>
-            <img alt="Settings" src="./settings.svg" />
+            <Icons.Settings title="Settings" />
             <S.NavLabel show={open}>Settings</S.NavLabel>
           </S.NavItem>
         </S.NavList>
@@ -59,8 +60,4 @@ const Menu = ({ avatarSrc, name }) => {
 Menu.propTypes = {
   avatarSrc: string.isRequired,
   name: string.isRequired,
-};
-
-export default {
-  Menu,
 };

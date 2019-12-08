@@ -34,7 +34,7 @@ export const NavItem = styled.li`
     `solid 3px ${props.selected ? props.theme.colors.blue : 'transparent'}`};
   height: 56px;
   margin: 0 -20px;
-  padding: 0 0 0 27px;
+  padding: 0 0 0 25px;
   background-color: ${(props) =>
     props.selected ? 'rgba(46, 91, 255, 0.1)' : null};
   transition: ${(props) => props.theme.effects.transition};
@@ -46,10 +46,14 @@ export const NavItem = styled.li`
       background-color: rgba(46, 91, 255, 0.1);
     }
   `}
+
+  & > svg {
+    flex-shrink: 0;
+  }
 `;
 
 export const NavLabel = styled.span`
-  margin-left: 18px;
+  margin-left: 16px;
   color: ${(props) => (props.selected ? props.theme.colors.blue : '#b0bac9')};
   opacity: ${(props) => (props.show ? '1' : '0')};
   transition: ${(props) => props.theme.effects.transition};

@@ -161,7 +161,7 @@ exports[`Profile Sidebar matches snapshot 1`] = `
 >
   <img
     className="emotion-0 emotion-1 emotion-2"
-    src="./users/joan.png"
+    src="https://s3.amazonaws.com/uifaces/faces/twitter/xravil/128.jpg"
   />
   <h2
     className="emotion-3 emotion-4"

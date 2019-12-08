@@ -26,7 +26,12 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['.storybook/*', '**/*.spec.jsx', '**/*.stories.jsx'],
+        devDependencies: [
+          '.storybook/*',
+          '**/*.fixtures.js',
+          '**/*.spec.jsx',
+          '**/*.stories.jsx',
+        ],
       },
     ],
     'react/jsx-props-no-spreading': 'off',

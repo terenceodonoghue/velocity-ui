@@ -184,7 +184,7 @@ exports[`Map Passenger matches snapshot 1`] = `
       >
         <img
           className="emotion-2 emotion-3 emotion-4"
-          src="./users/nora.png"
+          src="https://s3.amazonaws.com/uifaces/faces/twitter/xravil/128.jpg"
         />
         <div
           className="emotion-9 emotion-10"

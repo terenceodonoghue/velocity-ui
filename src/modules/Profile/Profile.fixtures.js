@@ -1,6 +1,8 @@
 /* eslint-disable import/prefer-default-export */
+import faker from 'faker';
+
 export const sidebar = {
-  avatarSrc: './users/joan.png',
+  avatarSrc: faker.image.avatar(),
   bio:
     "This theme adds additional client and channel information. It's useful for Admins when you need any ID of a user without searching for it",
   email: 'invision@invisionapp.com',

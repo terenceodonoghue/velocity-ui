@@ -1,5 +1,7 @@
 /* eslint-disable import/prefer-default-export */
+import faker from 'faker';
+
 export const menu = {
-  avatarSrc: './users/joan.png',
+  avatarSrc: faker.image.avatar(),
   name: 'Joan Wilkins',
 };

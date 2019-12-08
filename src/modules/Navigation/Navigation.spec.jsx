@@ -1,6 +1,6 @@
 import React from 'react';
-import Navigation from './Navigation';
-import { menu } from './Navigation.fixtures';
+import { Menu } from './Navigation';
+import * as fixtures from './Navigation.fixtures';
 import * as S from './Navigation.styles';
 import { theme } from '../../components';
 
@@ -58,16 +58,15 @@ describe('Navigation', () => {
   describe('Menu', () => {
     it('matches snapshot', () => {
       const tree = renderer
-        .create(withTheme(<Navigation.Menu {...menu} />))
+        .create(withTheme(<Menu {...fixtures.menu} />))
         .toJSON();
 
       expect(tree).toMatchSnapshot();
     });
 
     it('toggles on button click', () => {
-      const component = renderer.create(
-        withTheme(<Navigation.Menu {...menu} />),
-      ).root;
+      const component = renderer.create(withTheme(<Menu {...fixtures.menu} />))
+        .root;
 
       act(() => component.findByType(S.MenuButton).props.onClick());
 

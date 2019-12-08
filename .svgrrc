@@ -1,0 +1,5 @@
+ext: jsx
+icon: true
+replaceAttrValues: { '#BFC5D2': '{fill || theme.colors.lightBlueGrey}' }
+svgProps: { height: '{height}', width: '{width}' }
+titleProp: true

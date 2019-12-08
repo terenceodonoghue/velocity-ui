@@ -170,7 +170,7 @@ exports[`Navigation Menu matches snapshot 1`] = `
       alt="Welcome"
       className="emotion-3 emotion-4"
       height="32"
-      src="./users/joan.png"
+      src="https://s3.amazonaws.com/uifaces/faces/twitter/xravil/128.jpg"
       width="32"
     />
     <div

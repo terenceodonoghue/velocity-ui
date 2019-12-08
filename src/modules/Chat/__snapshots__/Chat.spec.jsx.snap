@@ -111,7 +111,7 @@ exports[`Chat Conversations matches snapshot 1`] = `
       <img
         className="emotion-0 emotion-1"
         height="48"
-        src="./users/lisa.png"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/xravil/128.jpg"
         width="48"
       />
     </div>
@@ -148,7 +148,7 @@ exports[`Chat Conversations matches snapshot 1`] = `
       <img
         className="emotion-0 emotion-1"
         height="48"
-        src="./users/kathey.png"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/vladyn/128.jpg"
         width="48"
       />
     </div>
@@ -185,7 +185,7 @@ exports[`Chat Conversations matches snapshot 1`] = `
       <img
         className="emotion-0 emotion-1"
         height="48"
-        src="./users/nora.png"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/iduuck/128.jpg"
         width="48"
       />
     </div>
@@ -222,7 +222,7 @@ exports[`Chat Conversations matches snapshot 1`] = `
       <img
         className="emotion-0 emotion-1"
         height="48"
-        src="./users/james.png"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/safrankov/128.jpg"
         width="48"
       />
     </div>
@@ -259,7 +259,7 @@ exports[`Chat Conversations matches snapshot 1`] = `
       <img
         className="emotion-0 emotion-1"
         height="48"
-        src="./users/emma.png"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/giancarlon/128.jpg"
         width="48"
       />
     </div>
@@ -296,7 +296,7 @@ exports[`Chat Conversations matches snapshot 1`] = `
       <img
         className="emotion-0 emotion-1"
         height="48"
-        src="./users/martin.png"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/johnsmithagency/128.jpg"
         width="48"
       />
     </div>
@@ -333,7 +333,7 @@ exports[`Chat Conversations matches snapshot 1`] = `
       <img
         className="emotion-0 emotion-1"
         height="48"
-        src="./users/angel.png"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/_kkga/128.jpg"
         width="48"
       />
     </div>

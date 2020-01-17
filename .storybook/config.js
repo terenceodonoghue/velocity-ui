@@ -1,21 +1,20 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
+import { css } from '@emotion/core';
 import { addDecorator, addParameters, configure } from '@storybook/react';
 import { create } from '@storybook/theming';
-import { ThemeProvider } from 'emotion-theming';
-import { Global, theme } from '../src/components';
+import { Global, ThemeProvider } from '../src/components';
+import theme from './theme';
 
-const { colors, typography } = theme;
+const story = css`
+  position: 'relative';
+  max-width: '1360px';
+  padding: '110px';
+`;
 
 addDecorator((storyFn) => (
-  <div
-    style={{
-      position: 'relative',
-      maxWidth: '1360px',
-      padding: '110px',
-    }}
-  >
-    <ThemeProvider theme={theme}>
+  <div css={story}>
+    <ThemeProvider>
       <Global />
       {storyFn()}
     </ThemeProvider>
@@ -24,43 +23,7 @@ addDecorator((storyFn) => (
 
 addParameters({
   options: {
-    showPanel: false,
-    theme: create({
-      base: 'light',
-
-      colorPrimary: 'hotpink',
-      colorSecondary: colors.blue,
-
-      // UI
-      appBg: colors.white,
-      appContentBg: '#f4f6fc',
-      appBorderColor: 'rgba(46, 91, 255, 0.08)',
-      appBorderRadius: '1px',
-
-      // Typography
-      fontBase: typography.baseFontFamily,
-      fontCode: 'monospace',
-
-      // Text colors
-      textColor: colors.black,
-      textInverseColor: 'rgba(255,255,255,0.9)',
-
-      // Toolbar default and active colors
-      barTextColor: colors.blueyGrey,
-      barSelectedColor: colors.black,
-      barBg: colors.white,
-
-      // Form colors
-      inputBg: '#f4f6fc',
-      inputBorder: 'silver',
-      inputTextColor: colors.black,
-      inputBorderRadius: '5px',
-
-      brandTitle: 'Velocity',
-      brandUrl:
-        'https://www.invisionapp.com/inside-design/design-resources/design-system-dashboard-ui-kit',
-      brandImage: './logo.svg',
-    }),
+    theme,
   },
 });
 

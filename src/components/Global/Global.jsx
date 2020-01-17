@@ -1,5 +1,7 @@
 import React from 'react';
+import { arrayOf, node, oneOfType } from 'prop-types';
 import { Global } from '@emotion/core';
+import { ThemeProvider as EmotionProvider } from 'emotion-theming';
 import css from './Global.styles';
 
 export const theme = {
@@ -29,4 +31,12 @@ export const theme = {
   },
 };
 
+export const ThemeProvider = ({ children }) => (
+  <EmotionProvider theme={theme}>{children}</EmotionProvider>
+);
+
 export default () => <Global styles={css} />;
+
+ThemeProvider.propTypes = {
+  children: oneOfType([arrayOf(node), node]).isRequired,
+};

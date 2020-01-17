@@ -4,7 +4,7 @@ import faker from 'faker';
 import { Avatars, Buttons, Inputs, Surfaces } from '.';
 import * as S from '../../.storybook/config.styles';
 
-storiesOf('Basics|Style Guide', module).add('Components', () => (
+storiesOf('Style Guide', module).add('Components', () => (
   <>
     <Surfaces.AppBar>
       <Avatars.Round

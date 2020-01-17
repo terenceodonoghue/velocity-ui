@@ -39,6 +39,11 @@ export const NavItem = styled.li`
     props.selected ? 'rgba(46, 91, 255, 0.1)' : null};
   transition: ${(props) => props.theme.effects.transition};
   cursor: pointer;
+
+  & > svg {
+    flex-shrink: 0;
+  }
+
   ${(props) =>
     !props.selected &&
     `
@@ -46,10 +51,6 @@ export const NavItem = styled.li`
       background-color: rgba(46, 91, 255, 0.1);
     }
   `}
-
-  & > svg {
-    flex-shrink: 0;
-  }
 `;
 
 export const NavLabel = styled.span`

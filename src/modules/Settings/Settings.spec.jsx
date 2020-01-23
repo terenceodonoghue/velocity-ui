@@ -1,4 +1,5 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import { Integrations, Notifications, Personal, Theme } from './Settings';
 
 describe('Settings', () => {

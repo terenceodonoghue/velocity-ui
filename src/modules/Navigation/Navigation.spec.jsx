@@ -1,4 +1,5 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import { Menu } from './Navigation';
 import * as fixtures from './Navigation.fixtures';
 import * as S from './Navigation.styles';

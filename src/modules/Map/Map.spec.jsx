@@ -1,4 +1,5 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import { Passenger } from './Map';
 import * as fixtures from './Map.fixtures';
 import * as S from './Map.styles';

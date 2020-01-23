@@ -1,4 +1,5 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import * as Inputs from './Input';
 
 describe('Input', () => {

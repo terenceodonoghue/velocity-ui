@@ -1,4 +1,5 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import { Welcome, renderCustomizedLabel as CustomizedLabel } from './Home';
 import * as fixtures from './Home.fixtures';
 

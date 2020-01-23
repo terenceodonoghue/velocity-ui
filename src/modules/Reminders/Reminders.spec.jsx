@@ -1,4 +1,5 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import { act } from 'react-dom/test-utils';
 import { Kanban, move, onDragEnd, reorder } from './Reminders';
 import * as fixtures from './Reminders.fixtures';

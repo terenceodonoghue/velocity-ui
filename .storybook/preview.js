@@ -12,8 +12,22 @@ addDecorator((storyFn) => (
     `}
   >
     <ThemeProvider>
-      <Global />
-      {storyFn()}
+      <div
+        css={css`
+          display: flex;
+          flex-flow: row wrap;
+          align-items: center;
+          margin: -12px;
+
+          & > * {
+            flex-shrink: 0;
+            margin: 12px;
+          }
+        `}
+      >
+        <Global />
+        {storyFn()}
+      </div>
     </ThemeProvider>
   </div>
 ));

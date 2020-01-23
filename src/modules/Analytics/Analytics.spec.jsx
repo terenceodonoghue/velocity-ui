@@ -1,4 +1,5 @@
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import { Metrics, Revenue, Weekday, yTickFormatter } from './Analytics';
 import * as fixtures from './Analytics.fixtures';
 

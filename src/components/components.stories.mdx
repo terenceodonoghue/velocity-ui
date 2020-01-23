@@ -1,0 +1,47 @@
+import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import faker from 'faker';
+import { Avatars, Buttons, Inputs, Surfaces } from '.';
+
+<Meta title="Style Guide/Components" />
+
+# Components
+
+## Avatars
+
+<Preview>
+  <Story name="Avatars">
+    <>
+      <Avatars.Round src={faker.image.avatar()} height="48" width="48" />
+      <Avatars.Square src={faker.image.avatar()} height="48" width="48" />
+    </>
+  </Story>
+</Preview>
+
+## Buttons
+
+<Preview>
+  <Story name="Buttons">
+    <>
+      <Buttons.Contained>Contained</Buttons.Contained>
+      <Buttons.Outlined>Outlined</Buttons.Outlined>
+      <Buttons.Text>Text</Buttons.Text>
+      <Buttons.Fab>
+        <img alt="Fab" src="./plus.svg" />
+      </Buttons.Fab>
+    </>
+  </Story>
+</Preview>
+
+## Inputs
+
+<Preview>
+  <Story name="Inputs">
+    <>
+      <Inputs.Text label="Label" type="text" placeholder="Placeholder" />
+      <Inputs.Slider min={0} max={100} />
+      <Inputs.Switch description="Description" label="Label" />
+      <Inputs.Radio defaultChecked label="Label" name="storybook" />
+      <Inputs.Radio label="Label" name="storybook" />
+    </>
+  </Story>
+</Preview>

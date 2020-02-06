@@ -2,7 +2,6 @@
 import { jsx } from '@emotion/core';
 import { Passenger } from './Map';
 import * as fixtures from './Map.fixtures';
-import * as S from './Map.styles';
 
 describe('Map', () => {
   describe('Passenger', () => {
@@ -19,16 +18,27 @@ describe('Map', () => {
         withTheme(<Passenger {...fixtures.passenger} interactions={1} />),
       );
 
-      expect(component.root.findByType(S.Interactions).props.children).toBe(
-        '1 interaction',
-      );
+      expect(
+        component.root.findAll(
+          (el) =>
+            el.type === 'p' &&
+            el.children &&
+            el.children[0] === '1 interaction',
+        ),
+      ).toHaveLength(1);
 
       component.update(
         withTheme(<Passenger {...fixtures.passenger} interactions={2} />),
       );
-      expect(component.root.findByType(S.Interactions).props.children).toBe(
-        '2 interactions',
-      );
+
+      expect(
+        component.root.findAll(
+          (el) =>
+            el.type === 'p' &&
+            el.children &&
+            el.children[0] === '2 interactions',
+        ),
+      ).toHaveLength(1);
     });
   });
 });

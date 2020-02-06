@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { IconProps } from '../Icon';
 
 const SvgService: React.FunctionComponent<IconProps> = ({

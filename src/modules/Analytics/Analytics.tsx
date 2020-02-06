@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { FunctionComponent } from 'react';
-import * as numeral from 'numeral';
+import numeral from 'numeral';
 import {
   AreaChart,
   AreaChartProps,

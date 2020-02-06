@@ -1,0 +1,243 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Radio matches snapshot 1`] = `
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.emotion-0 {
+  height: 0;
+  margin: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.emotion-1 {
+  display: inline-block;
+  border: solid 1px rgba(128,151,177,0.5);
+  border-radius: 50%;
+  height: 16px;
+  margin: 0 8px 0 0;
+  width: 16px;
+  background-color: #fff;
+}
+
+.css-e5bvf:disabled + .emotion-1 {
+  opacity: 0.4;
+}
+
+.css-e5bvf:checked:enabled + .emotion-1 {
+  border: solid 4px #2e5bff;
+  background-color: #fff;
+}
+
+<label
+  className="emotion-2"
+>
+  <input
+    className="emotion-0"
+    type="radio"
+  />
+  <span
+    className="emotion-1"
+  />
+</label>
+`;
+
+exports[`Input Slider matches snapshot 1`] = `
+.emotion-1 {
+  display: inline-block;
+}
+
+.emotion-0 {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 7px;
+  height: 4px;
+  width: 210px;
+  background-color: rgba(46,91,255,0.15);
+  outline: none;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.emotion-0::-moz-range-progress {
+  background-color: #2e5bff;
+}
+
+.emotion-0::-moz-range-thumb {
+  border: solid 4px #2e5bff;
+  border-radius: 50%;
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.emotion-0::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: solid 4px #2e5bff;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.emotion-0:disabled {
+  opacity: 0.3;
+}
+
+<label
+  className="emotion-1"
+>
+  <input
+    className="emotion-0"
+    max={100}
+    min={0}
+    type="range"
+  />
+</label>
+`;
+
+exports[`Input Switch matches snapshot 1`] = `
+.emotion-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-width: 36px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-0 {
+  height: 0;
+  margin: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.emotion-1 {
+  position: relative;
+  border-radius: 10px;
+  height: 20px;
+  width: 36px;
+  background-color: rgba(135,152,173,0.4);
+  cursor: pointer;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.css-e5bvf:disabled + .emotion-1 {
+  opacity: 0.4;
+}
+
+.css-e5bvf:checked:enabled + .emotion-1 {
+  background-color: #33ac2e;
+}
+
+.emotion-1::before {
+  position: absolute;
+  content: '';
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.css-e5bvf:checked + .emotion-1::before {
+  -webkit-transform: translateX(16px);
+  -ms-transform: translateX(16px);
+  transform: translateX(16px);
+}
+
+<label
+  className="emotion-2"
+>
+  <input
+    className="emotion-0"
+    type="checkbox"
+  />
+  <span
+    className="emotion-1"
+  />
+</label>
+`;
+
+exports[`Input Text matches snapshot 1`] = `
+.emotion-1 {
+  display: inline-block;
+  color: #b0bac9;
+  font-size: 12px;
+  font-weight: 500;
+  -webkit-letter-spacing: 1.2px;
+  -moz-letter-spacing: 1.2px;
+  -ms-letter-spacing: 1.2px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.emotion-0 {
+  display: block;
+  border: solid 1px #e0e7ff;
+  border-radius: 5px;
+  height: 38px;
+  margin: 7px 0;
+  max-width: 270px;
+  padding: 10px 16px;
+  width: 100%;
+  background-color: rgba(224,231,255,0.2);
+  color: #2e384d;
+  font-family: inherit;
+  font-size: 15px;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.emotion-0:disabled {
+  opacity: 0.3;
+}
+
+.emotion-0:focus {
+  border: solid 1px #2e5bff;
+  outline: 0;
+}
+
+<label
+  className="emotion-1"
+  label="Label Text"
+  placeholder="Placeholder"
+  type="text"
+>
+  <input
+    className="emotion-0"
+  />
+</label>
+`;

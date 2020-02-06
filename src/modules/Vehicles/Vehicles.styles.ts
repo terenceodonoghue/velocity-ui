@@ -7,11 +7,11 @@ export const filter = css`
 `;
 
 export const sliderInput = css`
-  padding: 0 6px 34px;
+  margin: 0 6px 34px;
 `;
 
 export const textInput: InterpolationWithTheme<Theme> = (theme) => css`
-  padding: 0 6px 19px;
+  margin: 0 0 19px;
   color: ${theme.colors.black};
   font-size: 15px;
   font-weight: ${theme.typography.fontWeightRegular};

@@ -1,89 +1,128 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Menu } from './Navigation';
+import { Icons } from '../../components';
+import {
+  Drawer,
+  Menu,
+  MenuHeader,
+  NavListItem,
+  NavListItemContent,
+} from './Navigation';
 import * as fixtures from './Navigation.fixtures';
-import * as S from './Navigation.styles';
-import { theme } from '../../components';
-
-const { act } = renderer;
-const { colors } = theme;
 
 describe('Navigation', () => {
   describe('Components', () => {
-    describe('S.Menu', () => {
+    describe('Drawer', () => {
       it('changes width', () => {
-        const component = renderer.create(withTheme(<S.Menu open={false} />));
+        const component = renderer.create(withTheme(<Drawer show={false} />));
         expect(component.toJSON()).toHaveStyleRule('width', '80px');
 
-        component.update(withTheme(<S.Menu open />));
+        component.update(withTheme(<Drawer show />));
         expect(component.toJSON()).toHaveStyleRule('width', '215px');
       });
     });
 
-    describe('S.NavLabel', () => {
-      it('changes color', () => {
-        const component = renderer.create(
-          withTheme(<S.NavLabel selected={false} />),
-        );
-        expect(component.toJSON()).toHaveStyleRule('color', '#b0bac9');
-
-        component.update(withTheme(<S.NavLabel selected />));
-        expect(component.toJSON()).toHaveStyleRule('color', colors.blue);
-      });
-
+    describe('MenuHeader', () => {
       it('changes opacity', () => {
         const component = renderer.create(
-          withTheme(<S.NavLabel show={false} />),
+          withTheme(<MenuHeader show={false} />),
         );
-
         expect(component.toJSON()).toHaveStyleRule('opacity', '0');
 
-        component.update(withTheme(<S.NavLabel show />));
+        component.update(withTheme(<MenuHeader show />));
         expect(component.toJSON()).toHaveStyleRule('opacity', '1');
       });
     });
 
-    describe('S.Welcome', () => {
-      it('changes opacity', () => {
+    describe('NavListItem', () => {
+      it('changes background color', () => {
         const component = renderer.create(
-          withTheme(<S.Welcome show={false} />),
+          withTheme(<NavListItem icon={Icons.Analytics} selected={false} />),
         );
-        expect(component.toJSON()).toHaveStyleRule('opacity', '0');
+        expect(component.toJSON()).not.toHaveStyleRule('background-color');
 
-        component.update(withTheme(<S.Welcome show />));
-        expect(component.toJSON()).toHaveStyleRule('opacity', '1');
+        component.update(
+          withTheme(<NavListItem icon={Icons.Analytics} selected />),
+        );
+        expect(component.toJSON()).toHaveStyleRule(
+          'background-color',
+          'rgba(46,91,255,0.1)',
+        );
+      });
+
+      it('changes border style', () => {
+        const component = renderer.create(
+          withTheme(<NavListItem icon={Icons.Analytics} selected={false} />),
+        );
+        expect(component.toJSON()).toHaveStyleRule(
+          'border-left',
+          'solid 3px transparent',
+        );
+
+        component.update(
+          withTheme(<NavListItem icon={Icons.Analytics} selected />),
+        );
+        expect(component.toJSON()).toHaveStyleRule(
+          'border-left',
+          'solid 3px #2e5bff',
+        );
       });
     });
   });
 
-  describe('Menu', () => {
-    it('matches snapshot', () => {
-      const tree = renderer
-        .create(withTheme(<Menu {...fixtures.menu} />))
-        .toJSON();
+  describe('NavListItemContent', () => {
+    it('changes color', () => {
+      const component = renderer.create(
+        withTheme(<NavListItemContent selected={false} />),
+      );
+      expect(component.toJSON()).toHaveStyleRule('color', '#b0bac9');
 
-      expect(tree).toMatchSnapshot();
+      component.update(withTheme(<NavListItemContent selected />));
+      expect(component.toJSON()).toHaveStyleRule('color', '#2e5bff');
     });
 
-    it('toggles on button click', () => {
-      const component = renderer.create(withTheme(<Menu {...fixtures.menu} />))
-        .root;
+    it('changes opacity', () => {
+      const component = renderer.create(
+        withTheme(<NavListItemContent show={false} />),
+      );
+      expect(component.toJSON()).toHaveStyleRule('opacity', '0');
 
-      act(() => component.findByType(S.MenuButton).props.onClick());
-
-      expect(component.findByType(S.Menu).props.open).toBeTruthy();
-      expect(component.findByType(S.Welcome).props.show).toBeTruthy();
-      component
-        .findAllByType(S.NavLabel)
-        .forEach((node) => expect(node.props.show).toBeTruthy());
-
-      act(() => component.findByType(S.MenuButton).props.onClick());
-
-      expect(component.findByType(S.Menu).props.open).toBeFalsy();
-      expect(component.findByType(S.Welcome).props.show).toBeFalsy();
-      component
-        .findAllByType(S.NavLabel)
-        .forEach((node) => expect(node.props.show).toBeFalsy());
+      component.update(withTheme(<NavListItemContent show />));
+      expect(component.toJSON()).toHaveStyleRule('opacity', '1');
     });
+  });
+});
+
+describe('Menu', () => {
+  it('matches snapshot', () => {
+    const tree = renderer
+      .create(withTheme(<Menu {...fixtures.menu} />))
+      .toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('toggles on button click', () => {
+    const component = mount(withTheme(<Menu {...fixtures.menu} />));
+
+    component.find('button').simulate('click');
+
+    expect(component.find(Drawer).props().show).toBeTruthy();
+
+    expect(component.find(MenuHeader).props().show).toBeTruthy();
+
+    component
+      .find(NavListItem)
+      .forEach((node) => expect(node.props().show).toBeTruthy());
+
+    component.find('button').simulate('click');
+
+    expect(component.find(Drawer).props().show).toBeFalsy();
+
+    expect(component.find(MenuHeader).props().show).toBeFalsy();
+
+    component
+      .find(NavListItem)
+      .forEach((node) => expect(node.props().show).toBeFalsy());
   });
 });

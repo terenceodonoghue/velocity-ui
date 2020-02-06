@@ -24,15 +24,19 @@ interface NavListItemProps extends Selectable, Showable {
   label: string;
 }
 
-const Drawer: FunctionComponent<Showable> = ({ children, show }) => (
+interface NavListItemContentProps extends Selectable, Showable {
+  label: string;
+}
+
+export const Drawer: FunctionComponent<Showable> = ({ children, show }) => (
   <div css={css.drawer({ show })}>{children}</div>
 );
 
-const MenuHeader: FunctionComponent<Showable> = ({ children, show }) => (
+export const MenuHeader: FunctionComponent<Showable> = ({ children, show }) => (
   <div css={css.menuHeader({ show })}>{children}</div>
 );
 
-const NavListItem: FunctionComponent<NavListItemProps & Showable> = ({
+export const NavListItem: FunctionComponent<NavListItemProps> = ({
   icon: Icon,
   label,
   selected,
@@ -43,10 +47,16 @@ const NavListItem: FunctionComponent<NavListItemProps & Showable> = ({
   return (
     <li css={css.navListItem({ selected })}>
       <Icon theme={theme} title={label} />
-      <span css={css.navListItemContent({ selected, show })}>{label}</span>
+      <NavListItemContent label={label} selected={selected} show={show} />
     </li>
   );
 };
+
+export const NavListItemContent: FunctionComponent<NavListItemContentProps> = ({
+  label,
+  selected,
+  show,
+}) => <span css={css.navListItemContent({ selected, show })}>{label}</span>;
 
 export const Menu: FunctionComponent<MenuProps> = ({ name, src }) => {
   const [show, setShow] = useState(false);

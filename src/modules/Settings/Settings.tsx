@@ -33,8 +33,8 @@ const Integration: FunctionComponent<IntegrationProps> = ({
   </div>
 );
 
-const Palette: FunctionComponent<PaletteProps> = (props) => (
-  <div css={css.palette} {...props} />
+const Palette: FunctionComponent<PaletteProps> = ({ colors }) => (
+  <div css={css.palette({ colors })} />
 );
 
 export const Personal: FunctionComponent = () => (
@@ -152,25 +152,33 @@ export const Theme: FunctionComponent = () => (
       </p>
       <div css={css.theme}>
         <Palette colors={['#2e5bff', '#e0e7ff', '#8097b1']} />
-        <Inputs.Radio defaultChecked name="theme">
+        <Inputs.Radio css={css.radioInput} defaultChecked name="theme">
           Shelob
         </Inputs.Radio>
       </div>
       <div css={css.theme}>
         <Palette colors={['#8c54ff', '#00c1d4', '#fad050']} />
-        <Inputs.Radio name="theme">Denethor</Inputs.Radio>
+        <Inputs.Radio css={css.radioInput} name="theme">
+          Denethor
+        </Inputs.Radio>
       </div>
       <div css={css.theme}>
         <Palette colors={['#00a4de', '#3b7ed5', '#00a550']} />
-        <Inputs.Radio name="theme">Quickbeam</Inputs.Radio>
+        <Inputs.Radio css={css.radioInput} name="theme">
+          Quickbeam
+        </Inputs.Radio>
       </div>
       <div css={css.theme}>
         <Palette colors={['#232a64', '#85c800', '#616266']} />
-        <Inputs.Radio name="theme">Shadowfax</Inputs.Radio>
+        <Inputs.Radio css={css.radioInput} name="theme">
+          Shadowfax
+        </Inputs.Radio>
       </div>
       <div css={css.theme}>
         <Palette colors={['#a728a3', '#f7e0ff', '#7675ac']} />
-        <Inputs.Radio name="theme">Grima</Inputs.Radio>
+        <Inputs.Radio css={css.radioInput} name="theme">
+          Grima
+        </Inputs.Radio>
       </div>
     </div>
   </Surfaces.Card>

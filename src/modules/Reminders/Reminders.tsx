@@ -14,7 +14,7 @@ import {
   Droppable,
   DropResult,
 } from 'react-beautiful-dnd';
-import { Measurable, Surfaces } from '../../components';
+import { Surfaces } from '../../components';
 import * as css from './Reminders.styles';
 
 interface Ticket {
@@ -27,11 +27,6 @@ interface Ticket {
 interface KanbanProps {
   data: Ticket[][];
 }
-
-const KanbanColumnHeading: FunctionComponent<Measurable> = ({
-  children,
-  length,
-}) => <h3 css={css.kanbanColumnHeading({ length })}>{children}</h3>;
 
 const COLUMNS = ['Service needed', 'Waiting', 'In service', 'Fully serviced'];
 
@@ -112,9 +107,9 @@ export const Kanban: FunctionComponent<KanbanProps> = ({ data }) => {
               .join('-')
               .toLowerCase()}
           >
-            <KanbanColumnHeading length={tickets[i].length}>
+            <h3 css={css.kanbanColumnHeading({ length: tickets[i].length })}>
               {columnName}
-            </KanbanColumnHeading>
+            </h3>
             <Droppable droppableId={`${i}`}>
               {(providedDrop): ReactElement => (
                 <ul

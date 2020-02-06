@@ -17,22 +17,33 @@ export const Filter: FunctionComponent = () => (
       primary="Service due"
       secondary="14 days"
     ></Inputs.Slider>
-    <Inputs.Text css={css.textInput} placeholder="Vehicle model" type="text">
+    <Inputs.Text
+      css={css.textInput}
+      inputProps={{
+        placeholder: 'Vehicle model',
+        type: 'text',
+      }}
+      type="text"
+    >
       Vehicle model
     </Inputs.Text>
     <Inputs.Text
       css={css.textInput}
-      defaultValue="Service needed"
-      placeholder="Status"
-      type="text"
+      inputProps={{
+        defaultValue: 'Service needed',
+        placeholder: 'Status',
+        type: 'text',
+      }}
     >
       Status
     </Inputs.Text>
     <Inputs.Text
       css={css.textInput}
-      defaultValue="USA"
-      placeholder="Location"
-      type="text"
+      inputProps={{
+        defaultValue: 'USA',
+        placeholder: 'Location',
+        type: 'text',
+      }}
     >
       Location
     </Inputs.Text>

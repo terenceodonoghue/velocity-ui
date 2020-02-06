@@ -20,7 +20,6 @@ addDecorator((storyFn) => (
           margin: -12px;
 
           & > * {
-            flex-shrink: 0;
             margin: 12px;
           }
         `}

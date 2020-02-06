@@ -8,11 +8,18 @@ interface Label {
   secondary: string;
 }
 
-export const Radio: FunctionComponent<InputHTMLAttributes<
-  HTMLInputElement
->> = ({ children, ...props }) => (
-  <label css={css.radioLabel}>
-    <input css={css.radioInput} type="radio" {...props} />
+interface InputProps extends InputHTMLAttributes<HTMLLabelElement> {
+  inputProps?: InputHTMLAttributes<HTMLInputElement>;
+}
+
+export const Radio: FunctionComponent<InputProps> = ({
+  children,
+  inputProps,
+  name,
+  ...props
+}) => (
+  <label css={css.radioLabel} {...props}>
+    <input css={css.radioInput} name={name} type="radio" {...inputProps} />
     <span css={css.radioSwitch} />
     {children}
   </label>
@@ -35,30 +42,31 @@ export const Slider: FunctionComponent<Label &
   </label>
 );
 
-export const Switch: FunctionComponent<Label &
-  InputHTMLAttributes<HTMLInputElement>> = ({
+export const Switch: FunctionComponent<InputProps & Label> = ({
+  inputProps,
   primary,
   secondary,
   ...props
 }) => (
-  <label css={css.checkboxLabel}>
+  <label css={css.checkboxLabel} {...props}>
     {(primary || secondary) && (
       <div css={css.checkboxText}>
         {primary && <p>{primary}</p>}
         {secondary && <p>{secondary}</p>}
       </div>
     )}
-    <input css={css.checkboxInput} type="checkbox" {...props} />
+    <input css={css.checkboxInput} type="checkbox" {...inputProps} />
     <span css={css.checkboxSwitch} />
   </label>
 );
 
-export const Text: FunctionComponent<InputHTMLAttributes<HTMLInputElement>> = ({
+export const Text: FunctionComponent<InputProps> = ({
   children,
+  inputProps,
   ...props
 }) => (
-  <label css={css.textLabel}>
+  <label css={css.textLabel} {...props}>
     {children}
-    <input css={css.textInput} {...props} />
+    <input css={css.textInput} {...inputProps} />
   </label>
 );

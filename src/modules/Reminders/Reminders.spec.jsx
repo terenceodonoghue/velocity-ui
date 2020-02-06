@@ -3,85 +3,44 @@ import { jsx } from '@emotion/core';
 import { act } from 'react-dom/test-utils';
 import { Kanban, move, onDragEnd, reorder } from './Reminders';
 import * as fixtures from './Reminders.fixtures';
-import * as S from './Reminders.styles';
 
 describe('Reminders', () => {
   describe('Kanban', () => {
-    it('renders first column', () => {
+    it('renders columns with headings', () => {
       const component = renderer.create(
         withTheme(<Kanban {...fixtures.kanban} />),
-      ).root;
+      );
 
-      expect(
-        component.findAllByType(S.Column)[0].findByType(S.Heading).props
-          .children,
-      ).toBe('Service needed');
-      expect(
-        component.findAllByType(S.Column)[0].findByType(S.Heading).props.count,
-      ).toBe(4);
-    });
+      const headings = component.root.findAllByType('h3');
 
-    it('renders second column', () => {
-      const component = renderer.create(
-        withTheme(<Kanban {...fixtures.kanban} />),
-      ).root;
+      expect(headings[0].props.children).toBe('Service needed');
 
-      expect(
-        component.findAllByType(S.Column)[1].findByType(S.Heading).props
-          .children,
-      ).toBe('Waiting');
-      expect(
-        component.findAllByType(S.Column)[1].findByType(S.Heading).props.count,
-      ).toBe(3);
-    });
+      expect(headings[1].props.children).toBe('Waiting');
 
-    it('renders third column', () => {
-      const component = renderer.create(
-        withTheme(<Kanban {...fixtures.kanban} />),
-      ).root;
+      expect(headings[2].props.children).toBe('In service');
 
-      expect(
-        component.findAllByType(S.Column)[2].findByType(S.Heading).props
-          .children,
-      ).toBe('In service');
-      expect(
-        component.findAllByType(S.Column)[2].findByType(S.Heading).props.count,
-      ).toBe(2);
-    });
-
-    it('renders fourth column', () => {
-      const component = renderer.create(
-        withTheme(<Kanban {...fixtures.kanban} />),
-      ).root;
-
-      expect(
-        component.findAllByType(S.Column)[3].findByType(S.Heading).props
-          .children,
-      ).toBe('Fully serviced');
-      expect(
-        component.findAllByType(S.Column)[3].findByType(S.Heading).props.count,
-      ).toBe(4);
+      expect(headings[3].props.children).toBe('Fully serviced');
     });
 
     it('shows a ticket count in each column', () => {
       const component = mount(withTheme(<Kanban {...fixtures.kanban} />));
 
-      expect(component.find(S.Heading).at(0)).toHaveStyleRule(
+      expect(component.find('h3').at(0)).toHaveStyleRule(
         'content',
         `"${fixtures.kanban.data[0].length}"`,
         { target: '::after' },
       );
-      expect(component.find(S.Heading).at(1)).toHaveStyleRule(
+      expect(component.find('h3').at(1)).toHaveStyleRule(
         'content',
         `"${fixtures.kanban.data[1].length}"`,
         { target: '::after' },
       );
-      expect(component.find(S.Heading).at(2)).toHaveStyleRule(
+      expect(component.find('h3').at(2)).toHaveStyleRule(
         'content',
         `"${fixtures.kanban.data[2].length}"`,
         { target: '::after' },
       );
-      expect(component.find(S.Heading).at(3)).toHaveStyleRule(
+      expect(component.find('h3').at(3)).toHaveStyleRule(
         'content',
         `"${fixtures.kanban.data[3].length}"`,
         { target: '::after' },

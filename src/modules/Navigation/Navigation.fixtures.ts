@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import * as faker from 'faker';
+import faker from 'faker';
 
 export const menu = {
   name: 'Joan Wilkins',

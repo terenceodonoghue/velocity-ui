@@ -25,11 +25,11 @@ export const checkboxSwitch: InterpolationWithTheme<Theme> = (theme) => css`
   cursor: pointer;
   transition: ${theme.effects.transition};
 
-  ${/* sc-selector */ checkboxInput}:disabled + & {
+  .css-${/* sc-selector */ checkboxInput.name}:disabled + & {
     opacity: 0.4;
   }
 
-  ${/* sc-selector */ checkboxInput}:checked:enabled + & {
+  .css-${/* sc-selector */ checkboxInput.name}:checked:enabled + & {
     background-color: ${theme.colors.green};
   }
 
@@ -44,7 +44,7 @@ export const checkboxSwitch: InterpolationWithTheme<Theme> = (theme) => css`
     background-color: ${theme.colors.white};
     transition: ${theme.effects.transition};
 
-    ${/* sc-selector */ checkboxInput}:checked + & {
+    .css-${/* sc-selector */ checkboxInput.name}:checked + & {
       transform: translateX(16px);
     }
   }
@@ -88,11 +88,11 @@ export const radioSwitch: InterpolationWithTheme<Theme> = (theme) => css`
   width: 16px;
   background-color: ${theme.colors.white};
 
-  ${/* sc-selector */ radioInput}:disabled + & {
+  .css-${/* sc-selector */ radioInput.name}:disabled + & {
     opacity: 0.4;
   }
 
-  ${/* sc-selector */ radioInput}:checked:enabled + & {
+  .css-${/* sc-selector */ radioInput.name}:checked:enabled + & {
     border: solid 4px ${theme.colors.blue};
     background-color: ${theme.colors.white};
   }

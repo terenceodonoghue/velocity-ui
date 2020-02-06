@@ -63,9 +63,11 @@ export const integrationName: InterpolationWithTheme<Theme> = (theme) => css`
   line-height: 1.47;
 `;
 
-export const palette: InterpolationWithTheme<{ colors: string[] }> = ({
+export const palette = ({
   colors,
-}) => css`
+}: {
+  colors: string[];
+}) => (): SerializedStyles => css`
   border-radius: 4px;
   height: 65px;
   width: 120px;

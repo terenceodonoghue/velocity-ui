@@ -1,9 +1,17 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { Metrics, Revenue, Weekday } from './Analytics';
+import React, { FunctionComponent } from 'react';
+import * as Analytics from './Analytics';
 import * as fixtures from './Analytics.fixtures';
 
-storiesOf('Modules/Analytics', module)
-  .add('Metrics', () => <Metrics {...fixtures.metrics} />)
-  .add('Revenue', () => <Revenue {...fixtures.revenue} />)
-  .add('Trips by Weekday', () => <Weekday {...fixtures.weekday} />);
+export default {
+  title: 'Modules/Analytics',
+};
+
+export const Metrics: FunctionComponent = () => (
+  <Analytics.Metrics {...fixtures.metrics} />
+);
+export const Revenue: FunctionComponent = () => (
+  <Analytics.Revenue {...fixtures.revenue} />
+);
+export const TripsByWeekday: FunctionComponent = () => (
+  <Analytics.Weekday {...fixtures.weekday} />
+);

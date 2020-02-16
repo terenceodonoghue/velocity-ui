@@ -1,8 +1,11 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { Menu } from './Navigation';
+import React, { FunctionComponent } from 'react';
+import * as Navigation from './Navigation';
 import * as fixtures from './Navigation.fixtures';
 
-storiesOf('Modules/Navigation', module).add('Menu', () => (
-  <Menu {...fixtures.menu} />
-));
+export default {
+  title: 'Modules/Navigation',
+};
+
+export const Menu: FunctionComponent = () => (
+  <Navigation.Menu {...fixtures.menu} />
+);

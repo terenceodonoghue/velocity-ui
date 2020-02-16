@@ -9,9 +9,11 @@ export default {
 export const Metrics: FunctionComponent = () => (
   <Analytics.Metrics {...fixtures.metrics} />
 );
+
 export const Revenue: FunctionComponent = () => (
   <Analytics.Revenue {...fixtures.revenue} />
 );
+
 export const TripsByWeekday: FunctionComponent = () => (
   <Analytics.Weekday {...fixtures.weekday} />
 );

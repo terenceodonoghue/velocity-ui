@@ -1,8 +1,11 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { Sidebar } from './Profile';
+import React, { FunctionComponent } from 'react';
+import * as Profile from './Profile';
 import * as fixtures from './Profile.fixtures';
 
-storiesOf('Modules/User Profile', module).add('Sidebar', () => (
-  <Sidebar {...fixtures.sidebar} />
-));
+export default {
+  title: 'Modules/User Profile',
+};
+
+export const Sidebar: FunctionComponent = () => (
+  <Profile.Sidebar {...fixtures.sidebar} />
+);

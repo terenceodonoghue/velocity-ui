@@ -1,5 +1,8 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { Filter } from './Vehicles';
+import React, { FunctionComponent } from 'react';
+import * as Vehicles from './Vehicles';
 
-storiesOf('Modules/Vehicles Dashboard', module).add('Filter', () => <Filter />);
+export default {
+  title: 'Modules/Vehicles Dashboard',
+};
+
+export const Filter: FunctionComponent = () => <Vehicles.Filter />;

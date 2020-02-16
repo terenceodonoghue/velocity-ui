@@ -1,8 +1,14 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { Conversations, Dialog } from './Chat';
+import React, { FunctionComponent } from 'react';
+import * as Chat from './Chat';
 import * as fixtures from './Chat.fixtures';
 
-storiesOf('Modules/Chat', module)
-  .add('Conversations', () => <Conversations {...fixtures.conversations} />)
-  .add('Dialog', () => <Dialog {...fixtures.dialog} />);
+export default {
+  title: 'Modules/Chat',
+};
+
+export const Conversations: FunctionComponent = () => (
+  <Chat.Conversations {...fixtures.conversations} />
+);
+export const Dialog: FunctionComponent = () => (
+  <Chat.Dialog {...fixtures.dialog} />
+);

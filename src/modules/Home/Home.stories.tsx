@@ -1,5 +1,8 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { Welcome } from './Home';
+import React, { FunctionComponent } from 'react';
+import * as Home from './Home';
 
-storiesOf('Modules/Home', module).add('Welcome', () => <Welcome />);
+export default {
+  title: 'Modules/Home',
+};
+
+export const Welcome: FunctionComponent = () => <Home.Welcome />;

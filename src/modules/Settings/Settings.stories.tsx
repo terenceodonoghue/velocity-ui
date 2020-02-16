@@ -1,9 +1,16 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { Integrations, Notifications, Personal, Theme } from './Settings';
+import React, { FunctionComponent } from 'react';
+import * as Settings from './Settings';
 
-storiesOf('Modules/Settings', module)
-  .add('Personal Data', () => <Personal />)
-  .add('Integrations', () => <Integrations />)
-  .add('Notifications', () => <Notifications />)
-  .add('Theme', () => <Theme />);
+export default {
+  title: 'Modules/Settings',
+};
+
+export const PersonalData: FunctionComponent = () => <Settings.Personal />;
+
+export const Integrations: FunctionComponent = () => <Settings.Integrations />;
+
+export const Notifications: FunctionComponent = () => (
+  <Settings.Notifications />
+);
+
+export const Theme: FunctionComponent = () => <Settings.Theme />;

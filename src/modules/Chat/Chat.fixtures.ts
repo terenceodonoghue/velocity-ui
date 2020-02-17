@@ -55,20 +55,46 @@ export const conversations = {
 };
 
 export const dialog = {
-  data: [
-    {
-      message:
-        'Hello John, thank you for calling Provide Support. How may I help you?',
-      name: 'Anna',
-      src: faker.image.avatar(),
-      time: '18:54',
-    },
-    {
-      message:
-        "I'm sorry, I don't have the answer to that question. May I put you on hold for a few minutes while I check with my manager?",
-      name: 'Anna',
-      src: faker.image.avatar(),
-      time: '18:54',
-    },
-  ],
+  data: {
+    currentUser: 123,
+    messages: [
+      {
+        message:
+          'Hello John, thank you for calling Provide Support. How may I help you?',
+        name: 'Anna',
+        sentBy: 123,
+        src: faker.image.avatar(),
+        time: '18:54',
+      },
+      {
+        message: "Please hold for one moment, I'll check with my manager.",
+        name: 'Nora',
+        sentBy: 456,
+        src: faker.image.avatar(),
+        time: '18:54',
+      },
+      {
+        message:
+          "I'm sorry, I don't have the answer to that question. May I put you on hold for a few minutes while I check with my manager?",
+        name: 'Anna',
+        sentBy: 123,
+        src: faker.image.avatar(),
+        time: '18:54',
+      },
+      {
+        message: "Please hold for one moment, I'll check with my manager.",
+        name: 'Nora',
+        sentBy: 456,
+        src: faker.image.avatar(),
+        time: '18:54',
+      },
+      {
+        message: "Please hold for one moment, I'll check with my manager.",
+        name: 'Nora',
+        sentBy: 456,
+        src: faker.image.avatar(),
+        time: '18:54',
+      },
+    ],
+  },
 };

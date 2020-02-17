@@ -1,4 +1,4 @@
-import { css, InterpolationWithTheme } from '@emotion/core';
+import { css, InterpolationWithTheme, SerializedStyles } from '@emotion/core';
 import { Theme } from '../../components';
 
 export const avatar = css`
@@ -75,3 +75,13 @@ export const dialogInput = css`
 export const dialogMessages = css`
   padding: 24px;
 `;
+
+export const dialogMessage = ({
+  currentUser,
+}: {
+  currentUser: boolean;
+}): InterpolationWithTheme<Theme> => (theme): SerializedStyles =>
+  css`
+    background-color: ${currentUser ? theme.colors.blue : theme.colors.white};
+    color: ${currentUser ? theme.colors.white : theme.colors.black};
+  `;

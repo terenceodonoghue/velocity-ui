@@ -11,6 +11,7 @@ interface Conversation extends Dialog {
 interface Dialog {
   message: string;
   name: string;
+  sentBy: number;
   src: string;
   time: string;
 }
@@ -20,7 +21,10 @@ interface ConversationsProps {
 }
 
 interface DialogProps {
-  data: Dialog[];
+  data: {
+    currentUser: number;
+    messages: Dialog[];
+  };
 }
 
 export const Conversations: FunctionComponent<ConversationsProps> = ({
@@ -51,8 +55,14 @@ export const Conversations: FunctionComponent<ConversationsProps> = ({
 export const Dialog: FunctionComponent<DialogProps> = ({ data }) => (
   <div css={css.dialog}>
     <div css={css.dialogMessages}>
-      {data.map((message) => (
-        <div>{JSON.stringify(message)}</div>
+      {data.messages.map((message) => (
+        <div
+          css={css.dialogMessage({
+            currentUser: data.currentUser === message.sentBy,
+          })}
+        >
+          {JSON.stringify(message)}
+        </div>
       ))}
     </div>
     <Inputs.Text css={css.dialogInput} />

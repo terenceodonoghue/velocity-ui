@@ -17,6 +17,10 @@ export interface Showable {
   show: boolean;
 }
 
+export interface Themeable {
+  theme: Theme;
+}
+
 export interface Theme {
   colors: {
     black: string;
@@ -42,10 +46,6 @@ export interface Theme {
     fontWeightMedium: number;
     fontWeightBold: number;
   };
-}
-
-export interface Themeable {
-  theme: Theme;
 }
 
 export { Avatars, Buttons, Global, Icons, Inputs, Surfaces, ThemeProvider };

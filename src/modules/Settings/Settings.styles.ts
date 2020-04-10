@@ -6,7 +6,7 @@ export const button = css`
 `;
 
 export const integration = css`
-  flex: 0 1 365px;
+  flex: 0 1 364px;
   padding: 13px 11px;
 `;
 

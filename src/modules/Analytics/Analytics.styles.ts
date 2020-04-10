@@ -31,6 +31,10 @@ const recharts: InterpolationWithTheme<Theme> = (theme) => css`
   }
 `;
 
+export const chart: InterpolationWithTheme<Theme> = (theme) => css`
+  ${recharts(theme)};
+`;
+
 export const metric = css`
   flex: 0 0 264px;
   margin: 12px;
@@ -40,7 +44,7 @@ export const metric = css`
 export const metrics = css`
   display: flex;
   flex-flow: row wrap;
-  align-items: stretch;
+  justify-content: space-around;
   margin: -12px;
 `;
 
@@ -87,14 +91,4 @@ export const metricValue: InterpolationWithTheme<Theme> = (theme) => css`
   font-size: 320%;
   font-weight: ${theme.typography.fontWeightLight};
   letter-spacing: -0.6px;
-`;
-
-export const revenue: InterpolationWithTheme<Theme> = (theme) => css`
-  ${recharts(theme)};
-  width: 752px;
-`;
-
-export const weekday: InterpolationWithTheme<Theme> = (theme) => css`
-  ${recharts(theme)};
-  width: 752px;
 `;

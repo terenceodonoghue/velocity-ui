@@ -44,9 +44,9 @@ exports[`Settings Integrations matches snapshot 1`] = `
 }
 
 .emotion-6 {
-  -webkit-flex: 0 1 365px;
-  -ms-flex: 0 1 365px;
-  flex: 0 1 365px;
+  -webkit-flex: 0 1 364px;
+  -ms-flex: 0 1 364px;
+  flex: 0 1 364px;
   padding: 13px 11px;
 }
 

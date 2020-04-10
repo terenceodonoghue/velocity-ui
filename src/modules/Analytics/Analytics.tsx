@@ -49,7 +49,7 @@ export const Metrics: FunctionComponent<MetricsProps> = ({ data }) => (
 );
 
 export const Revenue: FunctionComponent<AreaChartProps> = ({ data }) => (
-  <Surfaces.Card css={css.revenue} heading="Revenue">
+  <Surfaces.Card css={css.chart} heading="Revenue">
     <ResponsiveContainer width="100%" height={340}>
       <AreaChart data={data}>
         <defs>
@@ -111,7 +111,7 @@ export const Revenue: FunctionComponent<AreaChartProps> = ({ data }) => (
 );
 
 export const Weekday: FunctionComponent<ComposedChartProps> = ({ data }) => (
-  <Surfaces.Card css={css.weekday} heading="Trips by Weekday">
+  <Surfaces.Card css={css.chart} heading="Trips by Weekday">
     <ResponsiveContainer width="100%" height={340}>
       <ComposedChart
         data={data}

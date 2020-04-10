@@ -9,7 +9,7 @@ export const kanbanColumn = css`
   display: inline-block;
   vertical-align: top;
   padding: 0 12px;
-  width: 291px;
+  width: 290px;
 `;
 
 export const kanbanColumnHeading = ({

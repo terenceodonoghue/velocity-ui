@@ -43,7 +43,7 @@ export const Passenger: FunctionComponent<PassengerProps> = ({
     <div css={css.passengerContent}>
       <div css={css.passengerDetails}>
         <div css={css.passengerProfile}>
-          <Avatars.Round css={css.passengerAvatar} src={src}></Avatars.Round>
+          <Avatars.Round css={css.passengerAvatar} src={src} />
           <div css={css.passengerBio}>
             <p css={css.passengerName}>{name}</p>
             <p css={css.passengerInteractions}>

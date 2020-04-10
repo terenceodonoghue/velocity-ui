@@ -64,7 +64,7 @@ export const navListItem = ({
   }
 
   ${!selected &&
-    `
+  `
     &:hover {
       background-color: rgba(46, 91, 255, 0.1);
     }

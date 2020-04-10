@@ -22,7 +22,7 @@ export const integrationContent = ({
   border-radius: 5px;
   padding: 19px 21px;
   ${selected &&
-    `&::after {
+  `&::after {
     position: absolute;
     right: -8px;
     top: -8px;

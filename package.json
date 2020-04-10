@@ -38,7 +38,7 @@
     "@storybook/preset-typescript": "^1.2.0",
     "@storybook/react": "^5.3.18",
     "@storybook/theming": "^5.3.18",
-    "@terenceodonoghue/eslint-config-js-build": "^0.0.3",
+    "@terenceodonoghue/eslint-config-js-build": "^0.0.4",
     "@types/faker": "^4.1.11",
     "@types/node": "^13.11.1",
     "@types/numeral": "^0.0.26",

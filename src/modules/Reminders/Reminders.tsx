@@ -98,14 +98,8 @@ export const Kanban: FunctionComponent<KanbanProps> = ({ data }) => {
         {COLUMNS.map((columnName, i) => (
           <div
             css={css.kanbanColumn}
-            data-role={columnName
-              .split(' ')
-              .join('-')
-              .toLowerCase()}
-            key={columnName
-              .split(' ')
-              .join('-')
-              .toLowerCase()}
+            data-role={columnName.split(' ').join('-').toLowerCase()}
+            key={columnName.split(' ').join('-').toLowerCase()}
           >
             <h3 css={css.kanbanColumnHeading({ length: tickets[i].length })}>
               {columnName}

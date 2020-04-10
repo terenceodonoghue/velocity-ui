@@ -36,15 +36,9 @@ export const Metrics: FunctionComponent<MetricsProps> = ({ data }) => (
     {data.map((metric, index) => (
       <Surfaces.Card
         css={css.metric}
-        data-role={metric.label
-          .split(' ')
-          .join('-')
-          .toLowerCase()}
+        data-role={metric.label.split(' ').join('-').toLowerCase()}
         // eslint-disable-next-line react/no-array-index-key
-        key={`${metric.label
-          .split(' ')
-          .join('-')
-          .toLowerCase()}-${index}`}
+        key={`${metric.label.split(' ').join('-').toLowerCase()}-${index}`}
       >
         <div css={css.metricIcon} />
         <div css={css.metricValue}>{metric.value}</div>

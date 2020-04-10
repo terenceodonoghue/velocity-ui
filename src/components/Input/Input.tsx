@@ -25,12 +25,9 @@ export const Radio: FunctionComponent<InputProps> = ({
   </label>
 );
 
-export const Slider: FunctionComponent<Label &
-  InputHTMLAttributes<HTMLInputElement>> = ({
-  primary,
-  secondary,
-  ...props
-}) => (
+export const Slider: FunctionComponent<
+  Label & InputHTMLAttributes<HTMLInputElement>
+> = ({ primary, secondary, ...props }) => (
   <label css={css.sliderLabel}>
     {(primary || secondary) && (
       <div css={css.sliderText}>

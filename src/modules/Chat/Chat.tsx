@@ -31,10 +31,7 @@ export const Conversations: FunctionComponent<ConversationsProps> = ({
       <Surfaces.Card
         css={css.conversation}
         // eslint-disable-next-line react/no-array-index-key
-        key={`${conversation.name
-          .split(' ')
-          .join('-')
-          .toLowerCase()}-${index}`}
+        key={`${conversation.name.split(' ').join('-').toLowerCase()}-${index}`}
       >
         <div css={css.avatar}>
           <Avatars.Round src={conversation.src} height="48" width="48" />

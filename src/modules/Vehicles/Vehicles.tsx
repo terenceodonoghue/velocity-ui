@@ -11,12 +11,12 @@ export const Filter: FunctionComponent = () => (
       css={css.sliderInput}
       primary="Trips taken"
       secondary="753"
-    ></Inputs.Slider>
+    />
     <Inputs.Slider
       css={css.sliderInput}
       primary="Service due"
       secondary="14 days"
-    ></Inputs.Slider>
+    />
     <Inputs.Text
       css={css.textInput}
       inputProps={{

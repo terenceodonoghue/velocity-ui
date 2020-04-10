@@ -2,7 +2,6 @@ const path = require('path');
 
 module.exports = {
   addons: [
-    '@storybook/addon-docs',
     {
       name: '@storybook/preset-typescript',
       options: {
@@ -20,7 +19,7 @@ module.exports = {
     },
   ],
   stories: [
-    '../src/components/**/*.stories.(ts|md)x',
-    '../src/modules/**/*.stories.(ts|md)x',
+    '../src/components/**/*.stories.tsx',
+    '../src/modules/**/*.stories.tsx',
   ],
 };

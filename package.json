@@ -9,12 +9,12 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "build-storybook": "build-storybook -c .storybook --docs -o .out -s ./static --quiet",
+    "build-storybook": "build-storybook -c .storybook -o .out -s ./static --quiet",
     "eslint-check": "eslint --print-config src/components/index.ts | eslint-config-prettier-check",
     "lint": "eslint --ext .ts,.tsx ./ && stylelint './**/*.styles.ts'",
     "prebuild": "rimraf dist",
     "prepublishOnly": "yarn run build",
-    "storybook": "start-storybook --docs -s ./static --quiet",
+    "storybook": "start-storybook -s ./static --quiet",
     "stylelint-check": "stylelint-config-prettier-check",
     "test": "jest --silent"
   },
@@ -35,7 +35,6 @@
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
     "@babel/preset-typescript": "^7.8.3",
-    "@storybook/addon-docs": "^5.3.13",
     "@storybook/preset-typescript": "^1.2.0",
     "@storybook/react": "^5.3.13",
     "@storybook/theming": "^5.3.13",

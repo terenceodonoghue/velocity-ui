@@ -161,17 +161,17 @@ exports[`Profile Sidebar matches snapshot 1`] = `
 >
   <img
     className="emotion-0"
-    src="https://s3.amazonaws.com/uifaces/faces/twitter/xravil/128.jpg"
+    src="https://s3.amazonaws.com/uifaces/faces/twitter/adrienths/128.jpg"
   />
   <h2
     className="emotion-1"
   >
-    Anna Black
+    Dante Feest
   </h2>
   <h3
     className="emotion-2"
   >
-    Sr. Customer Manager
+    Legacy Communications Director
   </h3>
   <div
     className="emotion-5"
@@ -211,7 +211,7 @@ exports[`Profile Sidebar matches snapshot 1`] = `
     <dd
       className="emotion-8"
     >
-      invision@invisionapp.com
+      Elian_Stanton@example.com
     </dd>
     <dt
       className="emotion-7"
@@ -221,7 +221,7 @@ exports[`Profile Sidebar matches snapshot 1`] = `
     <dd
       className="emotion-8"
     >
-      +144-3412-4422
+      +296-707-4041
     </dd>
     <dt
       className="emotion-7"
@@ -241,7 +241,7 @@ exports[`Profile Sidebar matches snapshot 1`] = `
     <dd
       className="emotion-8"
     >
-      New York, NY
+      Hayleeborough, NC
     </dd>
     <dt
       className="emotion-7"
@@ -251,7 +251,7 @@ exports[`Profile Sidebar matches snapshot 1`] = `
     <dd
       className="emotion-8"
     >
-      This theme adds additional client and channel information. It's useful for Admins when you need any ID of a user without searching for it
+      Quis molestiae tempora eligendi omnis quisquam quisquam quos. Dolor voluptatibus velit nobis culpa deleniti. Reprehenderit in nisi et. Quia odio et inventore eligendi in deserunt id. Sit odio quia vitae provident quo provident molestiae.
     </dd>
   </dl>
 </div>

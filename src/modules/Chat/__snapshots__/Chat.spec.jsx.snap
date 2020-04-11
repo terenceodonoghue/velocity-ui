@@ -93,7 +93,7 @@ exports[`Chat Conversations matches snapshot 1`] = `
   display: block;
   color: #8798ad;
   line-height: 1.47;
-  max-width: 259px;
+  max-width: 255px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -111,7 +111,7 @@ exports[`Chat Conversations matches snapshot 1`] = `
       <img
         className="emotion-0"
         height="48"
-        src="https://s3.amazonaws.com/uifaces/faces/twitter/xravil/128.jpg"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/barputro/128.jpg"
         width="48"
       />
     </div>
@@ -124,18 +124,18 @@ exports[`Chat Conversations matches snapshot 1`] = `
         <span
           className="emotion-2"
         >
-          Lisa F. Bogar
+          Roslyn Kulas
         </span>
         <span
           className="emotion-3"
         >
-          2m
+          15m
         </span>
       </div>
       <span
         className="emotion-5"
       >
-        If you're still having trouble loading...
+        Molestiae tempora eligendi omnis quisquam. Quos nihil dolor voluptatibus velit nobis culpa deleniti. Reprehenderit in nisi et. Quia odio et inventore eligendi in deserunt id. Sit odio quia vitae provident quo provident molestiae.
       </span>
     </div>
   </div>
@@ -148,7 +148,7 @@ exports[`Chat Conversations matches snapshot 1`] = `
       <img
         className="emotion-0"
         height="48"
-        src="https://s3.amazonaws.com/uifaces/faces/twitter/vladyn/128.jpg"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/nitinhayaran/128.jpg"
         width="48"
       />
     </div>
@@ -161,18 +161,18 @@ exports[`Chat Conversations matches snapshot 1`] = `
         <span
           className="emotion-2"
         >
-          Kathey K. Hernandez
+          Johnpaul Kutch
         </span>
         <span
           className="emotion-3"
         >
-          40m
+          32m
         </span>
       </div>
       <span
         className="emotion-5"
       >
-        You are most welcome Kathey!
+        Esse quia expedita commodi autem tempora ut exercitationem. Harum voluptas sunt omnis et accusantium et quia quos sequi. Beatae enim necessitatibus molestiae placeat saepe.
       </span>
     </div>
   </div>
@@ -185,7 +185,7 @@ exports[`Chat Conversations matches snapshot 1`] = `
       <img
         className="emotion-0"
         height="48"
-        src="https://s3.amazonaws.com/uifaces/faces/twitter/iduuck/128.jpg"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/muringa/128.jpg"
         width="48"
       />
     </div>
@@ -198,18 +198,18 @@ exports[`Chat Conversations matches snapshot 1`] = `
         <span
           className="emotion-2"
         >
-          Nora M. Buchanan
+          Reyes Schmeler V
         </span>
         <span
           className="emotion-3"
         >
-          51m
+          50m
         </span>
       </div>
       <span
         className="emotion-5"
       >
-        I have an issue with...
+        Voluptatem dolores esse nobis et. Magnam aut atque dolores maiores incidunt occaecati iusto laborum facere.
       </span>
     </div>
   </div>
@@ -222,7 +222,7 @@ exports[`Chat Conversations matches snapshot 1`] = `
       <img
         className="emotion-0"
         height="48"
-        src="https://s3.amazonaws.com/uifaces/faces/twitter/safrankov/128.jpg"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/jitachi/128.jpg"
         width="48"
       />
     </div>
@@ -235,18 +235,18 @@ exports[`Chat Conversations matches snapshot 1`] = `
         <span
           className="emotion-2"
         >
-          James A. Parker
+          Mrs. Norene Toy
         </span>
         <span
           className="emotion-3"
         >
-          2h
+          1h
         </span>
       </div>
       <span
         className="emotion-5"
       >
-        Let's look into this together.
+        Corporis laboriosam esse. Soluta accusamus officiis ut excepturi blanditiis libero ut. Quo fuga enim tempore non voluptas quia.
       </span>
     </div>
   </div>
@@ -259,7 +259,7 @@ exports[`Chat Conversations matches snapshot 1`] = `
       <img
         className="emotion-0"
         height="48"
-        src="https://s3.amazonaws.com/uifaces/faces/twitter/giancarlon/128.jpg"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/0therplanet/128.jpg"
         width="48"
       />
     </div>
@@ -272,55 +272,18 @@ exports[`Chat Conversations matches snapshot 1`] = `
         <span
           className="emotion-2"
         >
-          Emma R. Joiner
+          Merle Hermiston
         </span>
         <span
           className="emotion-3"
         >
-          7h
+          6h
         </span>
       </div>
       <span
         className="emotion-5"
       >
-        We're happy to take a look into...
-      </span>
-    </div>
-  </div>
-  <div
-    className="emotion-7"
-  >
-    <div
-      className="emotion-1"
-    >
-      <img
-        className="emotion-0"
-        height="48"
-        src="https://s3.amazonaws.com/uifaces/faces/twitter/johnsmithagency/128.jpg"
-        width="48"
-      />
-    </div>
-    <div
-      className="emotion-6"
-    >
-      <div
-        className="emotion-4"
-      >
-        <span
-          className="emotion-2"
-        >
-          Martin L. Sherrod
-        </span>
-        <span
-          className="emotion-3"
-        >
-          7h
-        </span>
-      </div>
-      <span
-        className="emotion-5"
-      >
-        The download should now start...
+        Explicabo occaecati rerum nesciunt. Sint est asperiores sit voluptatum mollitia enim iste. Nesciunt minima sequi voluptas optio aut voluptatem. Eligendi voluptates iste eius iure commodi molestiae.
       </span>
     </div>
   </div>
@@ -346,18 +309,55 @@ exports[`Chat Conversations matches snapshot 1`] = `
         <span
           className="emotion-2"
         >
-          Angel V. Mason
+          Aletha O'Reilly
         </span>
         <span
           className="emotion-3"
         >
-          10h
+          12h
         </span>
       </div>
       <span
         className="emotion-5"
       >
-        Sorry to hear about the syncing...
+        In unde nihil iste asperiores consequatur. Quidem omnis inventore deserunt ipsa. Officiis voluptatem nostrum in omnis labore consequatur nisi.
+      </span>
+    </div>
+  </div>
+  <div
+    className="emotion-7"
+  >
+    <div
+      className="emotion-1"
+    >
+      <img
+        className="emotion-0"
+        height="48"
+        src="https://s3.amazonaws.com/uifaces/faces/twitter/justme_timothyg/128.jpg"
+        width="48"
+      />
+    </div>
+    <div
+      className="emotion-6"
+    >
+      <div
+        className="emotion-4"
+      >
+        <span
+          className="emotion-2"
+        >
+          Andreanne Hauck
+        </span>
+        <span
+          className="emotion-3"
+        >
+          9h
+        </span>
+      </div>
+      <span
+        className="emotion-5"
+      >
+        Quia praesentium distinctio adipisci nulla exercitationem omnis illum at natus. Cum ipsam consequatur ex accusamus ipsum.
       </span>
     </div>
   </div>

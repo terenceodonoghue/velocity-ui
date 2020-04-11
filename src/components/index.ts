@@ -13,6 +13,13 @@ export interface Selectable {
   selected?: boolean;
 }
 
+export interface Sendable {
+  message: string;
+  name: string;
+  src: string;
+  time: string;
+}
+
 export interface Showable {
   show: boolean;
 }

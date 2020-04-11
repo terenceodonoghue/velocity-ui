@@ -1,100 +1,110 @@
 import faker from 'faker';
+import moment from 'moment';
 
 export const conversations = {
   data: [
     {
-      isOnline: true,
-      message: "If you're still having trouble loading...",
-      name: 'Lisa F. Bogar',
+      isOnline: faker.random.boolean(),
+      message: faker.lorem.sentences(),
+      name: faker.name.findName(),
       src: faker.image.avatar(),
-      time: '2m',
+      time: moment()
+        .minutes(faker.random.number({ min: 1, max: 19 }))
+        .format('m[m]'),
     },
     {
-      isOnline: false,
-      message: 'You are most welcome Kathey!',
-      name: 'Kathey K. Hernandez',
+      isOnline: faker.random.boolean(),
+      message: faker.lorem.sentences(),
+      name: faker.name.findName(),
       src: faker.image.avatar(),
-      time: '40m',
+      time: moment()
+        .minutes(faker.random.number({ min: 20, max: 39 }))
+        .format('m[m]'),
     },
     {
-      isOnline: true,
-      message: 'I have an issue with...',
-      name: 'Nora M. Buchanan',
+      isOnline: faker.random.boolean(),
+      message: faker.lorem.sentences(),
+      name: faker.name.findName(),
       src: faker.image.avatar(),
-      time: '51m',
+      time: moment()
+        .minutes(faker.random.number({ min: 40, max: 59 }))
+        .format('m[m]'),
     },
     {
-      isOnline: false,
-      message: "Let's look into this together.",
-      name: 'James A. Parker',
+      isOnline: faker.random.boolean(),
+      message: faker.lorem.sentences(),
+      name: faker.name.findName(),
       src: faker.image.avatar(),
-      time: '2h',
+      time: moment()
+        .hours(faker.random.number({ min: 1, max: 5 }))
+        .format('h[h]'),
     },
     {
-      isOnline: false,
-      message: "We're happy to take a look into...",
-      name: 'Emma R. Joiner',
+      isOnline: faker.random.boolean(),
+      message: faker.lorem.sentences(),
+      name: faker.name.findName(),
       src: faker.image.avatar(),
-      time: '7h',
+      time: moment()
+        .hours(faker.random.number({ min: 6, max: 11 }))
+        .format('h[h]'),
     },
     {
-      isOnline: false,
-      message: 'The download should now start...',
-      name: 'Martin L. Sherrod',
+      isOnline: faker.random.boolean(),
+      message: faker.lorem.sentences(),
+      name: faker.name.findName(),
       src: faker.image.avatar(),
-      time: '7h',
+      time: moment()
+        .hours(faker.random.number({ min: 12, max: 17 }))
+        .format('h[h]'),
     },
     {
-      isOnline: true,
-      message: 'Sorry to hear about the syncing...',
-      name: 'Angel V. Mason',
+      isOnline: faker.random.boolean(),
+      message: faker.lorem.sentences(),
+      name: faker.name.findName(),
       src: faker.image.avatar(),
-      time: '10h',
+      time: moment()
+        .hours(faker.random.number({ min: 18, max: 23 }))
+        .format('h[h]'),
     },
   ],
 };
 
 export const dialog = {
-  data: {
-    currentUser: 123,
-    messages: [
-      {
-        message:
-          'Hello John, thank you for calling Provide Support. How may I help you?',
-        name: 'Anna',
-        sentBy: 123,
-        src: faker.image.avatar(),
-        time: '18:54',
-      },
-      {
-        message: "Please hold for one moment, I'll check with my manager.",
-        name: 'Nora',
-        sentBy: 456,
-        src: faker.image.avatar(),
-        time: '18:54',
-      },
-      {
-        message:
-          "I'm sorry, I don't have the answer to that question. May I put you on hold for a few minutes while I check with my manager?",
-        name: 'Anna',
-        sentBy: 123,
-        src: faker.image.avatar(),
-        time: '18:54',
-      },
-      {
-        message: "Please hold for one moment, I'll check with my manager.",
-        name: 'Nora',
-        sentBy: 456,
-        src: faker.image.avatar(),
-        time: '18:54',
-      },
-      {
-        message: "Please hold for one moment, I'll check with my manager.",
-        name: 'Nora',
-        sentBy: 456,
-        src: faker.image.avatar(),
-        time: '18:54',
-      },
-    ],
-  },
+  data: [
+    {
+      isCurrentUser: faker.random.boolean(),
+      message: faker.lorem.sentences(),
+      name: faker.name.firstName(),
+      src: faker.image.avatar(),
+      time: '18:54',
+    },
+    {
+      isCurrentUser: faker.random.boolean(),
+      message: faker.lorem.sentences(),
+      name: faker.name.firstName(),
+      src: faker.image.avatar(),
+      time: '18:54',
+    },
+    {
+      isCurrentUser: faker.random.boolean(),
+      message: faker.lorem.sentences(),
+      name: faker.name.firstName(),
+      src: faker.image.avatar(),
+      time: '18:54',
+    },
+    {
+      isCurrentUser: faker.random.boolean(),
+      message: faker.lorem.sentences(),
+      name: faker.name.firstName(),
+      src: faker.image.avatar(),
+      time: '18:54',
+    },
+    {
+      isCurrentUser: faker.random.boolean(),
+      message: faker.lorem.sentences(),
+      name: faker.name.firstName(),
+      src: faker.image.avatar(),
+      time: '18:54',
+    },
+  ],
 };

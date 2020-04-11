@@ -54,7 +54,7 @@ export const conversationPreview: InterpolationWithTheme<Theme> = (
   display: block;
   color: ${theme.colors.blueyGrey};
   line-height: 1.47;
-  max-width: 259px;
+  max-width: 255px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -77,11 +77,11 @@ export const dialogMessages = css`
 `;
 
 export const dialogMessage = ({
-  currentUser,
+  isCurrentUser,
 }: {
-  currentUser: boolean;
+  isCurrentUser: boolean;
 }): InterpolationWithTheme<Theme> => (theme): SerializedStyles =>
   css`
-    background-color: ${currentUser ? theme.colors.blue : theme.colors.white};
-    color: ${currentUser ? theme.colors.white : theme.colors.black};
+    background-color: ${isCurrentUser ? theme.colors.blue : theme.colors.white};
+    color: ${isCurrentUser ? theme.colors.white : theme.colors.black};
   `;

@@ -1,19 +1,15 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { FunctionComponent } from 'react';
-import { Avatars, Inputs, Surfaces } from '../../components';
+import { Avatars, Inputs, Sendable, Surfaces } from '../../components';
 import * as css from './Chat.styles';
 
-interface Conversation extends Dialog {
+interface Conversation extends Sendable {
   isOnline: boolean;
 }
 
-interface Dialog {
-  message: string;
-  name: string;
-  sentBy: number;
-  src: string;
-  time: string;
+interface Message extends Sendable {
+  isCurrentUser: boolean;
 }
 
 interface ConversationsProps {
@@ -21,10 +17,7 @@ interface ConversationsProps {
 }
 
 interface DialogProps {
-  data: {
-    currentUser: number;
-    messages: Dialog[];
-  };
+  data: Message[];
 }
 
 export const Conversations: FunctionComponent<ConversationsProps> = ({
@@ -55,10 +48,10 @@ export const Conversations: FunctionComponent<ConversationsProps> = ({
 export const Dialog: FunctionComponent<DialogProps> = ({ data }) => (
   <div css={css.dialog}>
     <div css={css.dialogMessages}>
-      {data.messages.map((message) => (
+      {data.map((message) => (
         <div
           css={css.dialogMessage({
-            currentUser: data.currentUser === message.sentBy,
+            isCurrentUser: message.isCurrentUser,
           })}
         >
           {JSON.stringify(message)}

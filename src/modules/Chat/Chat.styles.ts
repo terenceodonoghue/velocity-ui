@@ -64,16 +64,28 @@ export const conversationTime: InterpolationWithTheme<Theme> = (theme) => css`
   color: ${theme.colors.blueyGrey};
 `;
 
-export const dialog: InterpolationWithTheme<Theme> = (theme) => css`
-  background-color: ${theme.colors.white};
+export const dialog = css`
+  display: flex;
+  flex-direction: column;
+  padding: 24px 70px;
+`;
+
+export const dialogAvatar = ({
+  isCurrentUser,
+}: {
+  isCurrentUser: boolean;
+}): SerializedStyles => css`
+  position: absolute;
+  bottom: 0;
+  ${isCurrentUser ? 'right: 0' : 'left: 0'};
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  transform: translateX(${isCurrentUser ? '48px' : '-48px'});
 `;
 
 export const dialogInput = css`
   margin: 24px;
-`;
-
-export const dialogMessages = css`
-  padding: 24px;
 `;
 
 export const dialogMessage = ({
@@ -82,6 +94,12 @@ export const dialogMessage = ({
   isCurrentUser: boolean;
 }): InterpolationWithTheme<Theme> => (theme): SerializedStyles =>
   css`
+    position: relative;
+    align-self: ${isCurrentUser ? 'flex-end' : 'flex-start'};
+    border-radius: 25px 25px ${isCurrentUser ? '0 25px' : '25px 0'};
+    margin: 16px 0;
+    max-width: 70%;
+    padding: 16px;
     background-color: ${isCurrentUser ? theme.colors.blue : theme.colors.white};
     color: ${isCurrentUser ? theme.colors.white : theme.colors.black};
   `;

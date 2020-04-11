@@ -47,17 +47,20 @@ export const Conversations: FunctionComponent<ConversationsProps> = ({
 
 export const Dialog: FunctionComponent<DialogProps> = ({ data }) => (
   <div css={css.dialog}>
-    <div css={css.dialogMessages}>
-      {data.map((message) => (
-        <div
-          css={css.dialogMessage({
-            isCurrentUser: message.isCurrentUser,
-          })}
-        >
-          {JSON.stringify(message)}
-        </div>
-      ))}
-    </div>
+    {data.map((message) => (
+      <div
+        css={css.dialogMessage({
+          isCurrentUser: message.isCurrentUser,
+        })}
+      >
+        {message.message}
+        <img
+          alt={message.name}
+          css={css.dialogAvatar({ isCurrentUser: message.isCurrentUser })}
+          src={message.src}
+        />
+      </div>
+    ))}
     <Inputs.Text css={css.dialogInput} />
   </div>
 );

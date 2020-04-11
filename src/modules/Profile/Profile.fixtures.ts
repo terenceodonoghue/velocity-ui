@@ -2,13 +2,12 @@
 import faker from 'faker';
 
 export const sidebar = {
-  bio:
-    "This theme adds additional client and channel information. It's useful for Admins when you need any ID of a user without searching for it",
-  email: 'invision@invisionapp.com',
-  jobTitle: 'Sr. Customer Manager',
-  location: 'New York, NY',
-  name: 'Anna Black',
-  phone: '+144-3412-4422',
+  bio: faker.lorem.sentences(),
+  email: faker.internet.exampleEmail(),
+  jobTitle: faker.name.jobTitle(),
+  location: `${faker.address.city()}, ${faker.address.stateAbbr()}`,
+  name: faker.name.findName(),
+  phone: `+${faker.phone.phoneNumberFormat()}`,
   roles: 'Administrator, Moderator',
   src: faker.image.avatar(),
 };

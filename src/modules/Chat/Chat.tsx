@@ -53,7 +53,13 @@ export const Dialog: FunctionComponent<DialogProps> = ({ data }) => (
           isCurrentUser: message.isCurrentUser,
         })}
       >
+        <span css={css.dialogName({ isCurrentUser: message.isCurrentUser })}>
+          {message.name}
+        </span>
         {message.message}
+        <span css={css.dialogTime({ isCurrentUser: message.isCurrentUser })}>
+          {message.time}
+        </span>
         <img
           alt={message.name}
           css={css.dialogAvatar({ isCurrentUser: message.isCurrentUser })}

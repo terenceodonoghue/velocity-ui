@@ -68,6 +68,7 @@ export const dialog = css`
   display: flex;
   flex-direction: column;
   padding: 24px 70px;
+  line-height: 1.47em;
 `;
 
 export const dialogAvatar = ({
@@ -103,3 +104,30 @@ export const dialogMessage = ({
     background-color: ${isCurrentUser ? theme.colors.blue : theme.colors.white};
     color: ${isCurrentUser ? theme.colors.white : theme.colors.black};
   `;
+
+export const dialogName = ({
+  isCurrentUser,
+}: {
+  isCurrentUser: boolean;
+}): InterpolationWithTheme<Theme> => (theme): SerializedStyles => css`
+  position: absolute;
+  ${isCurrentUser ? 'right: 1px' : 'left: 1px'};
+  display: block;
+  font-size: 14px;
+  text-align: ${isCurrentUser ? 'right' : 'left'};
+  color: #8097b1;
+  transform: translateY(-38px);
+`;
+
+export const dialogTime = ({
+  isCurrentUser,
+}: {
+  isCurrentUser: boolean;
+}): InterpolationWithTheme<Theme> => (theme): SerializedStyles => css`
+  display: block;
+  font-size: 11px;
+  font-weight: ${theme.typography.fontWeightMedium};
+  letter-spacing: 2.2px;
+  text-align: right;
+  color: ${isCurrentUser ? '#e4e8f0' : '#8097b1'};
+`;

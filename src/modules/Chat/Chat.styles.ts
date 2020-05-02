@@ -109,7 +109,7 @@ export const dialogName = ({
   isCurrentUser,
 }: {
   isCurrentUser: boolean;
-}): InterpolationWithTheme<Theme> => (theme): SerializedStyles => css`
+}): SerializedStyles => css`
   position: absolute;
   ${isCurrentUser ? 'right: 1px' : 'left: 1px'};
   display: block;

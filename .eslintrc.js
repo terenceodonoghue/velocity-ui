@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['@terenceodonoghue/js-build'],
+  extends: ['@terenceodonoghue/react'],
   globals: {
     mount: 'readonly',
     renderer: 'readonly',

@@ -11,14 +11,14 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: Setup
         uses: actions/setup-node@v1
         with:
           always-auth: true
-          node-version: '12.x'
+          node-version: "12.x"
           registry-url: https://npm.pkg.github.com
-          scope: '@terenceodonoghue'
+          scope: "@terenceodonoghue"
       - name: Install
         run: |
           npm install -g --silent gh-pages

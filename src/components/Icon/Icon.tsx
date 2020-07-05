@@ -21,7 +21,7 @@ const withTheme = (
   const theme = useTheme<Theme>();
 
   return (
-    <BaseIcon css={icon} fill={fill} theme={theme} title={title} {...props} />
+    <BaseIcon {...props} css={icon} fill={fill} theme={theme} title={title} />
   );
 };
 

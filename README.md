@@ -7,5 +7,5 @@
 ```bash
 git clone git@github.com:terenceodonoghue/velocity-ui.git
 
-yarn && yarn storybook
+yarn dev
 ```

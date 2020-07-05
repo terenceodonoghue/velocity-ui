@@ -102,3 +102,12 @@ dist
 
 # TernJS port file
 .tern-port
+
+# yarn
+# https://yarnpkg.com/advanced/qa#which-files-should-be-gitignored
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

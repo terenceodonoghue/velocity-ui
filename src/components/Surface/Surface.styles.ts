@@ -16,12 +16,8 @@ export const appBarContent = css`
   align-items: center;
   margin: 0 -5px;
 
-  & > button {
-    margin: 0 5px;
-  }
-
   & > img {
-    margin: 0 5px 0 8px;
+    margin: 0 4px 0 8px;
   }
 `;
 

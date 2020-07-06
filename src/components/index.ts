@@ -9,6 +9,10 @@ export interface Measurable {
   length: number;
 }
 
+export interface Resizeable {
+  size?: number;
+}
+
 export interface Selectable {
   selected?: boolean;
 }
@@ -25,7 +29,7 @@ export interface Showable {
 }
 
 export interface Themeable {
-  theme: Theme;
+  theme?: Theme;
 }
 
 export interface Theme {

@@ -1,6 +1,6 @@
-import { css } from '@emotion/core';
+import { css, SerializedStyles } from '@emotion/core';
 
-export default css`
-  height: 24px;
-  width: 24px;
+export default (size: number) => (): SerializedStyles => css`
+  height: ${size}px;
+  width: ${size}px;
 `;

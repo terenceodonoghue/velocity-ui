@@ -7,6 +7,10 @@ export const Contained: FunctionComponent<ButtonHTMLAttributes<
   HTMLButtonElement
 >> = (props) => <button css={css.contained} type="button" {...props} />;
 
+export const Icon: FunctionComponent<ButtonHTMLAttributes<
+  HTMLButtonElement
+>> = (props) => <button css={css.icon} type="button" {...props} />;
+
 export const Outlined: FunctionComponent<ButtonHTMLAttributes<
   HTMLButtonElement
 >> = (props) => <button css={css.outlined} type="button" {...props} />;

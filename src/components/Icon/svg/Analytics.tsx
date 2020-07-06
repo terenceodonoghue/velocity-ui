@@ -3,17 +3,18 @@ import { IconProps } from '../Icon';
 
 const SvgAnalytics: React.FunctionComponent<IconProps> = ({
   fill,
+  size,
   theme,
   title,
   ...props
 }) => (
-  <svg viewBox="0 0 24 24" fill="none" {...props}>
+  <svg viewBox={`0 0 ${size} ${size}`} fill="none" {...props}>
     {title ? <title>{title}</title> : null}
     <path
       fillRule="evenodd"
       clipRule="evenodd"
       d="M13.953 2h-3.906c-.324 0-.586.312-.586.698v18.6c0 .386.262.698.586.698h3.906c.324 0 .586-.312.586-.697V2.698c0-.386-.262-.698-.586-.698zm-.586 18.601h-2.734v-6.975h2.734V20.6zm0-8.37h-2.734V3.395h2.734v8.836zm-6.875-1.86H2.586c-.324 0-.586.312-.586.697v10.23c0 .386.262.698.586.698h3.906c.324 0 .586-.312.586-.697v-10.23c0-.386-.262-.699-.586-.699zM3.172 20.6h2.734v-2.325H3.172v2.325zm2.734-3.72H3.172v-5.115h2.734v5.115zm11.602-6.51h3.906c.324 0 .586.312.586.697v10.23c0 .386-.262.698-.586.698h-3.906c-.324 0-.586-.312-.586-.697v-10.23c0-.386.262-.699.586-.699zm3.32 10.23h-2.734v-2.325h2.734v2.325zm-2.734-3.72h2.734v-5.115h-2.734v5.115z"
-      fill={fill || theme.colors.lightBlueGrey}
+      fill={fill || theme?.colors.lightBlueGrey}
     />
     <mask
       id="Analytics_svg__a"

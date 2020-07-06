@@ -35,12 +35,8 @@ exports[`Surface AppBar matches snapshot 1`] = `
   margin: 0 -5px;
 }
 
-.emotion-1 > button {
-  margin: 0 5px;
-}
-
 .emotion-1 > img {
-  margin: 0 5px 0 8px;
+  margin: 0 4px 0 8px;
 }
 
 <div

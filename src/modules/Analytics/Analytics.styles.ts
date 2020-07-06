@@ -44,7 +44,6 @@ export const metric = css`
 export const metrics = css`
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
   margin: -12px;
 `;
 

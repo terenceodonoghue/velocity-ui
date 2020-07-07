@@ -1,4 +1,4 @@
-import { css, InterpolationWithTheme, SerializedStyles } from '@emotion/core';
+import { css, Interpolation, InterpolationWithTheme } from '@emotion/core';
 import { Selectable, Showable, Theme } from '../../components';
 
 export const button = css`
@@ -8,7 +8,7 @@ export const button = css`
 
 export const drawer = ({ show }: Showable): InterpolationWithTheme<Theme> => (
   theme,
-): SerializedStyles => css`
+): Interpolation => css`
   height: 100%;
   padding: 20px;
   width: ${show ? '215px' : '80px'};
@@ -19,7 +19,7 @@ export const drawer = ({ show }: Showable): InterpolationWithTheme<Theme> => (
 
 export const menuHeader = ({
   show,
-}: Showable): InterpolationWithTheme<Theme> => (theme): SerializedStyles => css`
+}: Showable): InterpolationWithTheme<Theme> => (theme): Interpolation => css`
   display: flex;
   margin: 0 0 24px;
   padding: 0 8px;
@@ -45,9 +45,7 @@ export const navList = css`
 
 export const navListItem = ({
   selected,
-}: Selectable): InterpolationWithTheme<Theme> => (
-  theme,
-): SerializedStyles => css`
+}: Selectable): InterpolationWithTheme<Theme> => (theme): Interpolation => css`
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -76,7 +74,7 @@ export const navListItemContent = ({
   show,
 }: Selectable & Showable): InterpolationWithTheme<Theme> => (
   theme,
-): SerializedStyles => css`
+): Interpolation => css`
   margin-left: 16px;
   color: ${selected ? theme.colors.blue : '#b0bac9'};
   opacity: ${show ? '1' : '0'};

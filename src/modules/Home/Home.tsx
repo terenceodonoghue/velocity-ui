@@ -8,8 +8,20 @@ import {
   PieLabelRenderProps,
   ResponsiveContainer,
 } from 'recharts';
-import { Surfaces } from '../../components';
+import { Avatars, Surfaces } from '../../components';
 import * as css from './Home.styles';
+
+interface Driver {
+  src: string;
+  name: string;
+  vehicle: string;
+  earnings: number;
+  distance: number;
+}
+
+export interface TopDriversProps {
+  drivers: Driver[];
+}
 
 const outerTicks = [
   { name: 'score', value: 86, fill: '#2e5bff' },
@@ -53,6 +65,22 @@ export const renderCustomizedLabel:
       </text>
     </Fragment>
   );
+
+export const TopDrivers: FunctionComponent<TopDriversProps> = ({ drivers }) => (
+  <Surfaces.Card heading="Top Drivers">
+    {drivers.map(({ distance, earnings, name, src, vehicle }, i) => (
+      <div>
+        <div css={css.topDriverImg(i + 1)}>
+          <Avatars.Round css={css.topDriversAvatar} src={src} />
+        </div>
+        <span>{name}</span>
+        <span>{earnings}</span>
+        <span>{vehicle}</span>
+        <span>{distance}</span>
+      </div>
+    ))}
+  </Surfaces.Card>
+);
 
 export const Welcome: FunctionComponent = () => (
   <Surfaces.Card css={css.welcome}>

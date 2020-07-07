@@ -1,6 +1,6 @@
-import { css, SerializedStyles } from '@emotion/core';
+import { css, Interpolation } from '@emotion/core';
 
-export default (size: number) => (): SerializedStyles => css`
+export default (size: number) => (): Interpolation => css`
   height: ${size}px;
   width: ${size}px;
 `;

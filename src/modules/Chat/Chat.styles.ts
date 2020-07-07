@@ -1,4 +1,4 @@
-import { css, InterpolationWithTheme, SerializedStyles } from '@emotion/core';
+import { css, Interpolation, InterpolationWithTheme } from '@emotion/core';
 import { Theme } from '../../components';
 
 export const avatar = css`
@@ -75,7 +75,7 @@ export const dialogAvatar = ({
   isCurrentUser,
 }: {
   isCurrentUser: boolean;
-}): SerializedStyles => css`
+}): Interpolation => css`
   position: absolute;
   bottom: 0;
   ${isCurrentUser ? 'right: 0' : 'left: 0'};
@@ -93,7 +93,7 @@ export const dialogMessage = ({
   isCurrentUser,
 }: {
   isCurrentUser: boolean;
-}): InterpolationWithTheme<Theme> => (theme): SerializedStyles =>
+}): InterpolationWithTheme<Theme> => (theme): Interpolation =>
   css`
     position: relative;
     align-self: ${isCurrentUser ? 'flex-end' : 'flex-start'};
@@ -109,7 +109,7 @@ export const dialogName = ({
   isCurrentUser,
 }: {
   isCurrentUser: boolean;
-}): SerializedStyles => css`
+}): Interpolation => css`
   position: absolute;
   ${isCurrentUser ? 'right: 1px' : 'left: 1px'};
   display: block;
@@ -123,7 +123,7 @@ export const dialogTime = ({
   isCurrentUser,
 }: {
   isCurrentUser: boolean;
-}): InterpolationWithTheme<Theme> => (theme): SerializedStyles => css`
+}): InterpolationWithTheme<Theme> => (theme): Interpolation => css`
   display: block;
   font-size: 11px;
   font-weight: ${theme.typography.fontWeightMedium};

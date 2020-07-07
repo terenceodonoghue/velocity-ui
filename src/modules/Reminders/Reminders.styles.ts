@@ -1,4 +1,4 @@
-import { css, InterpolationWithTheme, SerializedStyles } from '@emotion/core';
+import { css, Interpolation, InterpolationWithTheme } from '@emotion/core';
 import { Measurable, Theme } from '../../components';
 
 export const kanban = css`
@@ -14,9 +14,7 @@ export const kanbanColumn = css`
 
 export const kanbanColumnHeading = ({
   length,
-}: Measurable): InterpolationWithTheme<Theme> => (
-  theme,
-): SerializedStyles => css`
+}: Measurable): InterpolationWithTheme<Theme> => (theme): Interpolation => css`
   margin: 7px 0;
   color: #b0bac9;
   font-size: 80%;

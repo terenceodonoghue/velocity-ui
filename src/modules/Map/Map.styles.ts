@@ -1,4 +1,4 @@
-import { css, InterpolationWithTheme, SerializedStyles } from '@emotion/core';
+import { css, Interpolation, InterpolationWithTheme } from '@emotion/core';
 import { Selectable, Theme } from '../../components';
 
 export const passenger = css`
@@ -79,9 +79,7 @@ export const passengerProfile = css`
 
 export const paymentLogo = ({
   selected,
-}: Selectable): InterpolationWithTheme<Theme> => (
-  theme,
-): SerializedStyles => css`
+}: Selectable): InterpolationWithTheme<Theme> => (theme): Interpolation => css`
   display: flex;
   align-items: center;
   justify-content: center;

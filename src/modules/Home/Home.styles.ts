@@ -1,5 +1,16 @@
-import { css, InterpolationWithTheme } from '@emotion/core';
+import { css, Interpolation, InterpolationWithTheme } from '@emotion/core';
 import { Theme } from '../../components';
+
+export const topDriversAvatar = css`
+  height: 48px;
+  width: 48px;
+`;
+
+export const topDriverImg = (position: number) => (): Interpolation => css`
+  &::after {
+    content: '${position}';
+  }
+`;
 
 export const welcome = css`
   display: flex;

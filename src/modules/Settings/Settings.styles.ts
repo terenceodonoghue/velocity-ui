@@ -1,4 +1,4 @@
-import { css, InterpolationWithTheme, SerializedStyles } from '@emotion/core';
+import { css, Interpolation, InterpolationWithTheme } from '@emotion/core';
 import { Selectable, Theme } from '../../components';
 
 export const button = css`
@@ -12,9 +12,7 @@ export const integration = css`
 
 export const integrationContent = ({
   selected,
-}: Selectable): InterpolationWithTheme<Theme> => (
-  theme,
-): SerializedStyles => css`
+}: Selectable): InterpolationWithTheme<Theme> => (theme): Interpolation => css`
   position: relative;
   display: flex;
   align-items: center;
@@ -67,7 +65,7 @@ export const palette = ({
   colors,
 }: {
   colors: string[];
-}) => (): SerializedStyles => css`
+}) => (): Interpolation => css`
   border-radius: 4px;
   height: 65px;
   width: 120px;

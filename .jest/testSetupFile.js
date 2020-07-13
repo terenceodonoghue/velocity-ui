@@ -1,17 +1,19 @@
-import { ThemeProvider } from 'emotion-theming';
 import { configure, mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import faker from 'faker';
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 import { matchers } from 'jest-emotion';
-import { theme } from '../src/components/Global/Global';
+import Global, { ThemeProvider, theme } from '../src/components/Global/Global';
 
 configure({ adapter: new Adapter() });
 faker.seed(123);
 
 const withTheme = (component) => (
-  <ThemeProvider theme={theme}>{component}</ThemeProvider>
+  <ThemeProvider theme={theme}>
+    <Global />
+    {component}
+  </ThemeProvider>
 );
 
 expect.extend(matchers);

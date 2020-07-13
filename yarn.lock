@@ -3617,7 +3617,7 @@ __metadata:
     "@types/faker": ^4.1.12
     "@types/node": 14.0.22
     "@types/numeral": ^0.0.28
-    "@types/react": 16.9.43
+    "@types/react": 16.9.19
     "@types/react-beautiful-dnd": ^13.0.0
     "@types/react-test-renderer": ^16.9.2
     "@types/recharts": ^1.8.14
@@ -3949,23 +3949,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*":
+"@types/react@npm:*, @types/react@npm:16.9.19":
   version: 16.9.19
   resolution: "@types/react@npm:16.9.19"
   dependencies:
     "@types/prop-types": "*"
     csstype: ^2.2.0
   checksum: 0517d996fd9e52d8bf0ed9d4890189344d1c8d893acdb4cb2a59fd5ce029a1e057ec7b2bed9d1891d62cf91fd4570ec70a37a47a6b056cb99f4473c34ff03249
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:16.9.43":
-  version: 16.9.43
-  resolution: "@types/react@npm:16.9.43"
-  dependencies:
-    "@types/prop-types": "*"
-    csstype: ^2.2.0
-  checksum: b9d4491463ab013e0752bf6f99bd578f91504f74dfd1ebd7fbceebbdffe89762b040494a78403e249bb72d1645d2784f844890e7b1acdb3634432533ff9732fb
   languageName: node
   linkType: hard
 

@@ -1,5 +1,8 @@
 module.exports = {
   extends: ['@terenceodonoghue/react'],
+  env: {
+    jest: true,
+  },
   globals: {
     mount: 'readonly',
     renderer: 'readonly',

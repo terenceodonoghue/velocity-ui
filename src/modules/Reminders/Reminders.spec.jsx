@@ -4,6 +4,30 @@ import { act } from 'react-dom/test-utils';
 import { Kanban, move, onDragEnd, reorder } from './Reminders';
 import * as fixtures from './Reminders.fixtures';
 
+jest.mock('react-beautiful-dnd', () => ({
+  Droppable: ({ children }) =>
+    children(
+      {
+        draggableProps: {
+          style: {},
+        },
+        innerRef: jest.fn(),
+      },
+      {},
+    ),
+  Draggable: ({ children }) =>
+    children(
+      {
+        draggableProps: {
+          style: {},
+        },
+        innerRef: jest.fn(),
+      },
+      {},
+    ),
+  DragDropContext: ({ children }) => children,
+}));
+
 describe('Reminders', () => {
   describe('Kanban', () => {
     it('renders columns with headings', () => {
@@ -48,15 +72,12 @@ describe('Reminders', () => {
     });
 
     it('updates state', () => {
-      const component = mount(
-        withTheme(<Kanban {...fixtures.kanban} />),
-      ).children();
+      const component = mount(withTheme(<Kanban {...fixtures.kanban} />))
+        .children()
+        .children();
 
       act(() =>
-        component
-          .children()
-          .at(0)
-          .invoke('onDragEnd')({
+        component.children().at(1).invoke('onDragEnd')({
           source: { droppableId: 0, index: 0 },
           destination: { droppableId: 1, index: 1 },
         }),

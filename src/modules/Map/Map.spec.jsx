@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Passenger } from './Map';
+import { Passenger, Trip } from './Map';
 import * as fixtures from './Map.fixtures';
 
 describe('Map', () => {
@@ -39,6 +39,16 @@ describe('Map', () => {
             el.children[0] === '2 interactions',
         ),
       ).toHaveLength(1);
+    });
+  });
+
+  describe('Trip', () => {
+    it('matches snapshot', () => {
+      const tree = renderer
+        .create(withTheme(<Trip {...fixtures.trip} />))
+        .toJSON();
+
+      expect(tree).toMatchSnapshot();
     });
   });
 });

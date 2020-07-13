@@ -17,7 +17,7 @@ module.exports = {
           '.storybook/*',
           '**/*.d.ts',
           '**/*.fixtures.ts',
-          '**/*.spec.tsx',
+          '**/*.spec.jsx',
           '**/*.stories.tsx',
         ],
       },

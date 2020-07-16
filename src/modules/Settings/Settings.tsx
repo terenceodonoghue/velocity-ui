@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { FunctionComponent } from 'react';
-import { Buttons, Inputs, Selectable, Surfaces } from '../../components';
+import { Buttons, Inputs, Selectable, Surfaces } from '~/components';
 import * as css from './Settings.styles';
 
 interface IntegrationProps extends Selectable {

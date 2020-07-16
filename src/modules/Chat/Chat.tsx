@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { FunctionComponent } from 'react';
-import { Avatars, Inputs, Sendable, Surfaces } from '../../components';
+import { Avatars, Inputs, Sendable, Surfaces } from '~/components';
 import * as css from './Chat.styles';
 
 interface Conversation extends Sendable {

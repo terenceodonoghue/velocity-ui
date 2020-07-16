@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Icons } from '../../components';
+import { Icons } from '~/components';
 import {
   Drawer,
   Menu,

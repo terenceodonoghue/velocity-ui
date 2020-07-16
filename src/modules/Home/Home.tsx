@@ -8,7 +8,7 @@ import {
   PieLabelRenderProps,
   ResponsiveContainer,
 } from 'recharts';
-import { Avatars, Surfaces } from '../../components';
+import { Avatars, Surfaces } from '~/components';
 import * as css from './Home.styles';
 
 interface Driver {

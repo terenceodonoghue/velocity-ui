@@ -1,5 +1,5 @@
 import { css, Interpolation, InterpolationWithTheme } from '@emotion/core';
-import { Selectable, Theme } from '../../components';
+import { Selectable, Theme } from '~/components';
 
 export const passenger = css`
   width: 655px;

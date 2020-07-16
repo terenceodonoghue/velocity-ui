@@ -1,5 +1,5 @@
 import { css, InterpolationWithTheme } from '@emotion/core';
-import { Theme } from '../../components';
+import { Theme } from '~/components';
 
 const recharts: InterpolationWithTheme<Theme> = (theme) => css`
   .recharts-area-dot {

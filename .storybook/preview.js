@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core';
 import { addDecorator } from '@storybook/react';
-import { Global, ThemeProvider } from '../src/components';
+import { Global, ThemeProvider } from '~/components';
 
 addDecorator((storyFn) => (
   <div

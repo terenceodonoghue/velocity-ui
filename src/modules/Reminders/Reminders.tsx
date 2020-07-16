@@ -14,7 +14,7 @@ import {
   Droppable,
   DropResult,
 } from 'react-beautiful-dnd';
-import { Surfaces } from '../../components';
+import { Surfaces } from '~/components';
 import * as css from './Reminders.styles';
 
 interface Ticket {

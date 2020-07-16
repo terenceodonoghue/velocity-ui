@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { FunctionComponent } from 'react';
-import { Inputs, Surfaces } from '../../components';
+import { Inputs, Surfaces } from '~/components';
 import * as css from './Vehicles.styles';
 
 export const Filter: FunctionComponent = () => (

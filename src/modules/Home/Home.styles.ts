@@ -1,5 +1,5 @@
 import { css, Interpolation, InterpolationWithTheme } from '@emotion/core';
-import { Theme } from '../../components';
+import { Theme } from '~/components';
 
 export const topDriversAvatar = css`
   height: 48px;

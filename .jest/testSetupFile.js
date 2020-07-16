@@ -4,7 +4,7 @@ import faker from 'faker';
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 import { matchers } from 'jest-emotion';
-import Global, { ThemeProvider, theme } from '../src/components/Global/Global';
+import { Global, ThemeProvider, theme } from '~/components';
 
 configure({ adapter: new Adapter() });
 faker.seed(123);

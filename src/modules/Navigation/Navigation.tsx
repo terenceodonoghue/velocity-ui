@@ -10,8 +10,8 @@ import {
   Selectable,
   Showable,
   Theme,
-} from '../../components';
-import { IconProps } from '../../components/Icon/Icon';
+} from '~/components';
+import { IconProps } from '~/components/Icon/Icon';
 import * as css from './Navigation.styles';
 
 interface MenuProps {

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { FunctionComponent } from 'react';
-import { Avatars, Selectable, Surfaces } from '../../components';
+import { Avatars, Selectable, Surfaces } from '~/components';
 import * as css from './Map.styles';
 
 type Address = {

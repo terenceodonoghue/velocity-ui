@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { FunctionComponent } from 'react';
-import { Avatars, Buttons, Surfaces } from '../../components';
+import { Avatars, Buttons, Surfaces } from '~/components';
 import * as css from './Profile.styles';
 
 interface SidebarProps {

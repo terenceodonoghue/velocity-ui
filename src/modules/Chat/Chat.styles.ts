@@ -1,5 +1,5 @@
 import { css, Interpolation, InterpolationWithTheme } from '@emotion/core';
-import { Theme } from '../../components';
+import { Theme } from '~/components';
 
 export const avatar = css`
   flex-grow: 0;

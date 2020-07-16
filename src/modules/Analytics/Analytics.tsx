@@ -16,7 +16,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import { Surfaces } from '../../components';
+import { Surfaces } from '~/components';
 import * as css from './Analytics.styles';
 
 type Metric = {

@@ -1,5 +1,5 @@
 import { css, InterpolationWithTheme } from '@emotion/core';
-import { Measurable, Theme } from '../../components';
+import { Measurable, Theme } from '~/components';
 
 export const kanban = css`
   margin: 0 -12px;

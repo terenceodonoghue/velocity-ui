@@ -1,5 +1,5 @@
 import { css, Interpolation, InterpolationWithTheme } from '@emotion/core';
-import { Selectable, Showable, Theme } from '../../components';
+import { Selectable, Showable, Theme } from '~/components';
 
 export const button = css`
   margin: 0 0 58px;

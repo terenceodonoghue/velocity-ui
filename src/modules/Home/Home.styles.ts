@@ -11,6 +11,7 @@ export const topDriver = css`
 
 export const topDrivers = css`
   max-width: 364px;
+  padding: 32px 24px 15px;
 `;
 
 export const topDriverAvatar = css`

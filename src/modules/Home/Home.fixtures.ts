@@ -22,5 +22,33 @@ export const topDrivers: TopDriversProps = {
       earnings: 5342,
       distance: 945,
     },
+    {
+      src: faker.image.avatar(),
+      name: 'Belafonte',
+      vehicle: 'Infiniti Q50S',
+      earnings: 5133,
+      distance: 834,
+    },
+    {
+      src: faker.image.avatar(),
+      name: 'Chester',
+      vehicle: 'Audi RS 7',
+      earnings: 4755,
+      distance: 812,
+    },
+    {
+      src: faker.image.avatar(),
+      name: 'Expedia',
+      vehicle: 'Tesla Model X',
+      earnings: 4140,
+      distance: 724,
+    },
+    {
+      src: faker.image.avatar(),
+      name: 'Aeolus',
+      vehicle: 'Tesla Model S',
+      earnings: 3323,
+      distance: 466,
+    },
   ],
 };

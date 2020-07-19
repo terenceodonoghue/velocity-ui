@@ -71,7 +71,7 @@ export const kanbanTicket: InterpolationWithTheme<Theme> = (theme) => css`
   margin: 5px 0;
   padding: 22px 25px;
   width: 100%;
-  transition: ${theme.effects.transition};
+  transition: box-shadow 0.2s linear;
 
   &:not(:hover) {
     box-shadow: none;

@@ -95,54 +95,58 @@ export const Kanban: FunctionComponent<KanbanProps> = ({ data }) => {
       }
     >
       <div css={css.kanban}>
-        {COLUMNS.map((columnName, i) => (
-          <div
-            css={css.kanbanColumn}
-            data-role={columnName.split(' ').join('-').toLowerCase()}
-            key={columnName.split(' ').join('-').toLowerCase()}
-          >
-            <h3 css={css.kanbanColumnHeading({ length: tickets[i].length })}>
-              {columnName}
-            </h3>
-            <Droppable droppableId={`${i}`}>
-              {(providedDrop): ReactElement => (
-                <ul
-                  css={css.kanbanTickets}
-                  ref={providedDrop.innerRef}
-                  {...providedDrop.droppableProps}
-                >
-                  {tickets[i].map((ticket, j) => (
-                    <Draggable
-                      draggableId={`${ticket.name.toLowerCase()}-${i}${j}`}
-                      index={j}
-                      // eslint-disable-next-line react/no-array-index-key
-                      key={`${ticket.name.toLowerCase()}-${i}${j}`}
-                    >
-                      {(providedDrag): ReactElement => (
-                        <Surfaces.Card
-                          css={css.kanbanTicket}
-                          ref={providedDrag.innerRef}
-                          {...providedDrag.draggableProps}
-                          {...providedDrag.dragHandleProps}
+        {COLUMNS.map((columnName, i) => {
+          const columnKey = columnName.split(' ').join('-').toLowerCase();
+          return (
+            <div css={css.kanbanColumn} data-role={columnKey} key={columnKey}>
+              <h3 css={css.kanbanColumnHeading({ length: tickets[i].length })}>
+                {columnName}
+              </h3>
+              <Droppable droppableId={`${i}`}>
+                {(providedDrop): ReactElement => (
+                  <ul
+                    css={css.kanbanTickets}
+                    ref={providedDrop.innerRef}
+                    {...providedDrop.droppableProps}
+                  >
+                    {tickets[i].map((ticket, j) => {
+                      const draggableKey = `${ticket.name.toLowerCase()}-${ticket.type
+                        .split(' ')
+                        .join('-')
+                        .toLowerCase()}`;
+                      return (
+                        <Draggable
+                          draggableId={draggableKey}
+                          index={j}
+                          key={draggableKey}
                         >
-                          <div css={css.kanbanTicketText}>
-                            <span>{ticket.name}</span>
-                            <span>{ticket.price}</span>
-                          </div>
-                          <div css={css.kanbanTicketText}>
-                            <span>{ticket.type}</span>
-                            <span>{ticket.date}</span>
-                          </div>
-                        </Surfaces.Card>
-                      )}
-                    </Draggable>
-                  ))}
-                  {providedDrop.placeholder}
-                </ul>
-              )}
-            </Droppable>
-          </div>
-        ))}
+                          {(providedDrag): ReactElement => (
+                            <Surfaces.Card
+                              css={css.kanbanTicket}
+                              ref={providedDrag.innerRef}
+                              {...providedDrag.draggableProps}
+                              {...providedDrag.dragHandleProps}
+                            >
+                              <div css={css.kanbanTicketText}>
+                                <span>{ticket.name}</span>
+                                <span>{ticket.price}</span>
+                              </div>
+                              <div css={css.kanbanTicketText}>
+                                <span>{ticket.type}</span>
+                                <span>{ticket.date}</span>
+                              </div>
+                            </Surfaces.Card>
+                          )}
+                        </Draggable>
+                      );
+                    })}
+                    {providedDrop.placeholder}
+                  </ul>
+                )}
+              </Droppable>
+            </div>
+          );
+        })}
       </div>
     </DragDropContext>
   );

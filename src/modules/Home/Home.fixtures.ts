@@ -15,5 +15,12 @@ export const topDrivers: TopDriversProps = {
       earnings: 6432,
       distance: 1232,
     },
+    {
+      src: faker.image.avatar(),
+      name: 'Gran Tesoro',
+      vehicle: 'Chevrolet Bolt',
+      earnings: 5342,
+      distance: 945,
+    },
   ],
 };

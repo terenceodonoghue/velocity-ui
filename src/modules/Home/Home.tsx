@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { Fragment, FunctionComponent } from 'react';
+import numeral from 'numeral';
 import {
   ContentRenderer,
   Pie,
@@ -67,16 +68,22 @@ export const renderCustomizedLabel:
   );
 
 export const TopDrivers: FunctionComponent<TopDriversProps> = ({ drivers }) => (
-  <Surfaces.Card heading="Top Drivers">
+  <Surfaces.Card css={css.topDrivers} heading="Top Drivers">
     {drivers.map(({ distance, earnings, name, src, vehicle }, i) => (
-      <div>
-        <div css={css.topDriverImg(i + 1)}>
-          <Avatars.Round css={css.topDriversAvatar} src={src} />
+      <div css={css.topDriver}>
+        <div css={css.topDriverRank(i + 1)}>
+          <Avatars.Round css={css.topDriverAvatar} src={src} />
         </div>
-        <span>{name}</span>
-        <span>{earnings}</span>
-        <span>{vehicle}</span>
-        <span>{distance}</span>
+        <div css={css.topDriverDetails}>
+          <div>
+            <span css={css.topDriverName}>{name}</span>
+            <span>{numeral(earnings).format('$0')}</span>
+          </div>
+          <div css={css.topDriverVehicle}>
+            <span>{vehicle}</span>
+            <span>{numeral(distance).format('0,0')} miles</span>
+          </div>
+        </div>
       </div>
     ))}
   </Surfaces.Card>

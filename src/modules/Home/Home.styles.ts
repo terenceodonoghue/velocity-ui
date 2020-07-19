@@ -1,15 +1,64 @@
-import { css, Interpolation, InterpolationWithTheme } from '@emotion/core';
+import { css, InterpolationWithTheme } from '@emotion/core';
 import { Theme } from '~/components';
+import { hexRgb } from '~/utils';
 
-export const topDriversAvatar = css`
+export const topDriver = css`
+  position: relative;
+  display: flex;
+  margin: 12px 0;
+  line-height: 1.47em;
+`;
+
+export const topDrivers = css`
+  max-width: 364px;
+`;
+
+export const topDriverAvatar = css`
+  vertical-align: middle;
   height: 48px;
   width: 48px;
 `;
 
-export const topDriverImg = (position: number) => (): Interpolation => css`
-  &::after {
-    content: '${position}';
+export const topDriverDetails = css`
+  flex: 1;
+
+  & > div {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
   }
+`;
+
+export const topDriverName: InterpolationWithTheme<Theme> = (theme) => css`
+  font-weight: ${theme.typography.fontWeightMedium};
+`;
+
+export const topDriverRank = (
+  position: number,
+): InterpolationWithTheme<Theme> => (theme) => css`
+margin: 0 16px 0 0;  
+
+&::after {
+    content: '${position}';
+    position: absolute;
+    top: 0;
+    left: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 16px;
+    width: 16px;
+    box-shadow: 0px 3px 10px ${hexRgb(theme.colors.blue, 0.297866)};
+    background: ${theme.colors.white};
+    color: #8097B1;
+    font-size: 66.67%;
+    font-weight: ${theme.typography.fontWeightMedium};
+  }
+`;
+
+export const topDriverVehicle: InterpolationWithTheme<Theme> = (theme) => css`
+  color: ${theme.colors.blueyGrey};
 `;
 
 export const welcome = css`

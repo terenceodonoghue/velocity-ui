@@ -1,6 +1,6 @@
 import { css, InterpolationWithTheme } from '@emotion/core';
 import { Theme } from '~/components';
-import { hexRgb } from '~/utils';
+import { hexRgb as hexrgb } from '~/utils';
 
 export const topDriver = css`
   position: relative;
@@ -50,7 +50,7 @@ margin: 0 16px 0 0;
     border-radius: 50%;
     height: 16px;
     width: 16px;
-    box-shadow: 0px 3px 10px ${hexRgb(theme.colors.blue, 0.297866)};
+    box-shadow: 0 3px 10px ${hexrgb(theme.colors.blue, 0.297866)};
     background: ${theme.colors.white};
     color: #8097B1;
     font-size: 66.67%;

@@ -25,3 +25,17 @@ export const AppBar: FunctionComponent = () => (
     </Buttons.Icon>
   </Surfaces.AppBar>
 );
+
+export const Icon: FunctionComponent = () => (
+  <Surfaces.Card>
+    <Icons.Analytics />
+    <Icons.Chat />
+    <Icons.Dashboard />
+    <Icons.Map />
+    <Icons.Messages />
+    <Icons.Notifications />
+    <Icons.Service />
+    <Icons.Settings />
+    <Icons.Vehicles />
+  </Surfaces.Card>
+);

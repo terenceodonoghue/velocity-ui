@@ -26,7 +26,6 @@ const withTheme = (
       {...props}
       css={icon(size)}
       fill={fill}
-      size={size}
       theme={theme}
       title={title}
     />

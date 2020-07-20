@@ -39,7 +39,7 @@ export const icon: InterpolationWithTheme<Theme> = (theme) => css`
   ${button(theme)}
   background: none;
   border-radius: 5px;
-  padding: 8px;
+  padding: 4px;
   &:enabled:hover {
     background-color: rgba(46, 91, 255, 0.1);
   }

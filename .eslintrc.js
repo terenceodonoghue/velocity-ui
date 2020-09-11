@@ -10,27 +10,15 @@ module.exports = {
     withTheme: 'readonly',
   },
   rules: {
-    'import/no-extraneous-dependencies': [
-      'error',
-      {
-        devDependencies: [
-          '.storybook/*',
-          '**/*.d.ts',
-          '**/*.fixtures.ts',
-          '**/*.spec.jsx',
-          '**/*.stories.tsx',
-        ],
-      },
-    ],
     'jsx-a11y/label-has-associated-control': ['error', { assert: 'either' }],
-    'react/jsx-fragments': 'off',
-    'react/jsx-props-no-spreading': 'off',
-    'react/prop-types': 'off',
   },
   settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
     'import/resolver': {
-      'babel-module': {
-        extensions: ['.ts', '.tsx'],
+      typescript: {
+        alwaysTryTypes: true,
       },
     },
   },

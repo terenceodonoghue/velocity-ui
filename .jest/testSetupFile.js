@@ -1,7 +1,8 @@
 import { configure, mount, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import faker from 'faker';
-import React from 'react';
+/** @jsx jsx */
+import { jsx } from '@emotion/core';
 import TestRenderer from 'react-test-renderer';
 import { matchers } from 'jest-emotion';
 import { Global, ThemeProvider, theme } from '~/components';

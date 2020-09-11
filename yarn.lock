@@ -3807,7 +3807,7 @@ __metadata:
     "@terenceodonoghue/eslint-config-react": ^1.0.0
     "@terenceodonoghue/stylelint-config-base": ^1.0.0
     "@types/faker": ^4.1.12
-    "@types/node": 14.6.4
+    "@types/node": 13.5.3
     "@types/numeral": ^0.0.28
     "@types/react": 16.9.19
     "@types/react-beautiful-dnd": ^13.0.0
@@ -4040,17 +4040,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
+"@types/node@npm:*, @types/node@npm:13.5.3":
   version: 13.5.3
   resolution: "@types/node@npm:13.5.3"
   checksum: f9bdab0cddd43a2452ceb1e41a78a6e4a46378dd8c6c78d1c506566c3df689aa7505e5df07e49f4ce6e6b43ce870a33c4ec69f74361b4d60722b76ec8413e180
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:14.6.4":
-  version: 14.6.4
-  resolution: "@types/node@npm:14.6.4"
-  checksum: bff274e362080628c96e51b1948be668b68117e35d6353691c753052e490efc0934a0c0a3ba5d2739ac70e745932a9f6b049b7d01a1d96c9ae0c93c3b1b88ed0
   languageName: node
   linkType: hard
 

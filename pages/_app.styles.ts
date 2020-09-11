@@ -9,7 +9,9 @@ export const button = css`
 export const drawer = ({ show }: Showable): InterpolationWithTheme<Theme> => (
   theme,
 ): Interpolation => css`
-  height: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
   padding: 20px;
   width: ${show ? '215px' : '80px'};
   background-color: ${theme.colors.white};

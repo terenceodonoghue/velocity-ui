@@ -2,6 +2,10 @@ import { css, InterpolationWithTheme } from '@emotion/core';
 import { Theme } from '~/types';
 import { hexRgb as hexrgb } from '~/utils';
 
+export const page = css`
+  margin: -34px -24px;
+`;
+
 export const topDriver = css`
   position: relative;
   display: flex;

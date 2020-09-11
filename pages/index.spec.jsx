@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Welcome, renderCustomizedLabel as CustomizedLabel } from './Home';
-import * as fixtures from './Home.fixtures';
+import { Welcome, renderCustomizedLabel as CustomizedLabel } from './index';
 
 describe('Home', () => {
   describe('Welcome', () => {
@@ -21,7 +20,7 @@ describe('Home', () => {
   describe('renderCustomizedLabel', () => {
     it('matches snapshot', () => {
       const tree = renderer
-        .create(withTheme(<CustomizedLabel {...fixtures.customizedLabel} />))
+        .create(withTheme(<CustomizedLabel index={0} percent={86} />))
         .toJSON();
 
       expect(tree).toMatchSnapshot();

@@ -3,18 +3,24 @@ import { jsx } from '@emotion/core';
 import { useTheme } from 'emotion-theming';
 import faker from 'faker';
 import { AppProps } from 'next/app';
+import { useRouter } from 'next/router';
 import { FunctionComponent, useState } from 'react';
 import { Avatar, Button, Global, Icon, Layout } from '~/components';
 import { DrawerProps, NavListItemProps, Theme } from '~/types';
 import * as css from './_app.styles';
 
+faker.seed(123);
+
 const NavListItem: FunctionComponent<NavListItemProps> = ({
+  href,
   icon: NavIcon,
   label,
-  selected,
   show,
 }) => {
+  const router = useRouter();
   const theme = useTheme<Theme>();
+
+  const selected = router.pathname === href;
 
   return (
     <li css={css.navListItem({ selected })}>
@@ -42,17 +48,37 @@ const Drawer: FunctionComponent<DrawerProps> = ({ name, src }) => {
       <nav>
         <ul css={css.navList}>
           <NavListItem
+            href="/"
             icon={Icon.Dashboard}
             label="Overview"
-            selected
             show={show}
           />
-          <NavListItem icon={Icon.Analytics} label="Analytics" show={show} />
-          <NavListItem icon={Icon.Vehicles} label="Vehicles" show={show} />
-          <NavListItem icon={Icon.Service} label="Service" show={show} />
-          <NavListItem icon={Icon.Map} label="Map" show={show} />
-          <NavListItem icon={Icon.Chat} label="Chat" show={show} />
-          <NavListItem icon={Icon.Settings} label="Settings" show={show} />
+          <NavListItem
+            href="/analytics"
+            icon={Icon.Analytics}
+            label="Analytics"
+            show={show}
+          />
+          <NavListItem
+            href="/vehicles"
+            icon={Icon.Vehicles}
+            label="Vehicles"
+            show={show}
+          />
+          <NavListItem
+            href="/service"
+            icon={Icon.Service}
+            label="Service"
+            show={show}
+          />
+          <NavListItem href="/map" icon={Icon.Map} label="Map" show={show} />
+          <NavListItem href="/chat" icon={Icon.Chat} label="Chat" show={show} />
+          <NavListItem
+            href="/settings"
+            icon={Icon.Settings}
+            label="Settings"
+            show={show}
+          />
         </ul>
       </nav>
     </div>
@@ -61,9 +87,12 @@ const Drawer: FunctionComponent<DrawerProps> = ({ name, src }) => {
 
 const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
   <Global.ThemeProvider>
+    <Global.Styles />
     <Layout.AppBar />
     <Drawer name={faker.name.findName()} src={faker.image.avatar()} />
-    <Component {...pageProps} />
+    <main>
+      <Component {...pageProps} />
+    </main>
   </Global.ThemeProvider>
 );
 

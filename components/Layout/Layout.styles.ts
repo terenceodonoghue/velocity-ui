@@ -2,6 +2,8 @@ import { css, InterpolationWithTheme } from '@emotion/core';
 import { Theme } from '~/types';
 
 export const appBar: InterpolationWithTheme<Theme> = (theme) => css`
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   border-bottom: solid 1px #e4e8f0;
@@ -26,6 +28,7 @@ export const card: InterpolationWithTheme<Theme> = (theme) => css`
   border-radius: 1px;
   border: solid 1px rgba(46, 91, 255, 0.08);
   box-shadow: 0 10px 20px 0 rgba(46, 91, 255, 0.07);
+  margin: 34px 24px;
   padding: 32px 24px;
   background-color: ${theme.colors.white};
 `;

@@ -1,5 +1,13 @@
 import { ComponentType, HTMLProps } from 'react';
 
+interface Driver {
+  src: string;
+  name: string;
+  vehicle: string;
+  earnings: number;
+  distance: number;
+}
+
 export interface Measurable {
   length: number;
 }
@@ -69,6 +77,11 @@ export interface IconProps extends Resizeable, Themeable {
 }
 
 export interface NavListItemProps extends Selectable, Showable {
+  href: string;
   icon: ComponentType<IconProps>;
   label: string;
+}
+
+export interface TopDriversProps {
+  drivers: Driver[];
 }

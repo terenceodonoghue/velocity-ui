@@ -2,6 +2,7 @@
 import { jsx } from '@emotion/core';
 import faker from 'faker';
 import { FunctionComponent } from 'react';
+import { NextPage } from 'next';
 import numeral from 'numeral';
 import {
   ContentRenderer,
@@ -11,26 +12,8 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { Avatar, Layout } from '~/components';
-import * as css from './Home.styles';
-
-interface Driver {
-  src: string;
-  name: string;
-  vehicle: string;
-  earnings: number;
-  distance: number;
-}
-
-export interface TopDriversProps {
-  drivers: Driver[];
-}
-
-const outerTicks = [
-  { name: 'score', value: 86, fill: '#2e5bff' },
-  { name: 'max', value: 14, fill: '#e0e7ff' },
-];
-
-const innerTicks = [{ name: 'score', value: 100, fill: '#e0e7ff' }];
+import { TopDriversProps } from '~/types';
+import * as css from './index.styles';
 
 export const renderCustomizedLabel:
   | ContentRenderer<PieLabelRenderProps>
@@ -102,7 +85,7 @@ export const Welcome: FunctionComponent = () => (
         <Pie
           cx="50%"
           cy="64%"
-          data={innerTicks}
+          data={[{ name: 'score', value: 100, fill: '#e0e7ff' }]}
           dataKey="value"
           innerRadius={66}
           outerRadius={69}
@@ -112,7 +95,10 @@ export const Welcome: FunctionComponent = () => (
         <Pie
           cx="50%"
           cy="64%"
-          data={outerTicks}
+          data={[
+            { name: 'score', value: 86, fill: '#2e5bff' },
+            { name: 'max', value: 14, fill: '#e0e7ff' },
+          ]}
           dataKey="value"
           paddingAngle={3}
           innerRadius={75}
@@ -133,3 +119,59 @@ export const Welcome: FunctionComponent = () => (
     </div>
   </Layout.Card>
 );
+
+const IndexPage: NextPage = () => {
+  return (
+    <div css={css.page}>
+      <Welcome />
+      <TopDrivers
+        drivers={[
+          {
+            src: faker.image.avatar(),
+            name: 'Bebop',
+            vehicle: 'Volvo Intellisafe',
+            earnings: 6432,
+            distance: 1232,
+          },
+          {
+            src: faker.image.avatar(),
+            name: 'Gran Tesoro',
+            vehicle: 'Chevrolet Bolt',
+            earnings: 5342,
+            distance: 945,
+          },
+          {
+            src: faker.image.avatar(),
+            name: 'Belafonte',
+            vehicle: 'Infiniti Q50S',
+            earnings: 5133,
+            distance: 834,
+          },
+          {
+            src: faker.image.avatar(),
+            name: 'Chester',
+            vehicle: 'Audi RS 7',
+            earnings: 4755,
+            distance: 812,
+          },
+          {
+            src: faker.image.avatar(),
+            name: 'Expedia',
+            vehicle: 'Tesla Model X',
+            earnings: 4140,
+            distance: 724,
+          },
+          {
+            src: faker.image.avatar(),
+            name: 'Aeolus',
+            vehicle: 'Tesla Model S',
+            earnings: 3323,
+            distance: 466,
+          },
+        ]}
+      />
+    </div>
+  );
+};
+
+export default IndexPage;

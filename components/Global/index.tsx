@@ -43,9 +43,16 @@ export const Styles = (): ReactElement => (
       }
 
       body {
+        margin: 0;
+        background-color: rgba(46, 91, 255, 0.08);
         color: ${theme.colors.black};
         font-family: ${theme.typography.baseFontFamily};
         font-size: ${theme.typography.baseFontSize};
+      }
+
+      main {
+        margin-left: 80px;
+        padding: 64px 110px;
       }
     `}
   />

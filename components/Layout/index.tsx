@@ -27,6 +27,10 @@ export const CardGroup: FunctionComponent = ({ children }) => (
   <div css={css.cardGroup}>{children}</div>
 );
 
+export const Header: FunctionComponent = ({ children }) => (
+  <div>{children}</div>
+);
+
 export const Page: FunctionComponent = ({ children }) => (
   <div css={css.page}>{children}</div>
 );

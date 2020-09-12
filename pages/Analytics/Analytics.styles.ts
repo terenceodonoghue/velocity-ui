@@ -43,13 +43,9 @@ export const metricIcon = css`
   height: 48px;
   margin-bottom: 16px;
   width: 48px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 19px;
 
   [data-role='vehicles-on-track'] & {
     background-color: rgba(51, 172, 46, 0.15);
-    background-image: url(./check-purple.svg);
   }
 
   [data-role='distance-driven'] & {

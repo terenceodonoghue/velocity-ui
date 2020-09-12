@@ -29,6 +29,7 @@ const withTheme = (
 
 export const Analytics = withTheme(svg.Analytics);
 export const Chat = withTheme(svg.Chat);
+export const Check = withTheme(svg.Check);
 export const Dashboard = withTheme(svg.Dashboard);
 export const Map = withTheme(svg.Map);
 export const Messages = withTheme(svg.Messages);

@@ -17,27 +17,53 @@ import {
   XAxis,
   YAxis,
 } from 'recharts';
-import { Layout } from '~/components';
+import { Global, Icon, Layout } from '~/components';
 import { MetricsProps } from '~/types';
 import * as css from './analytics.styles';
+
+const iconMap = {
+  'vehicles-on-track': {
+    color: Global.theme.colors.purple,
+    component: Icon.Check,
+  },
+  'distance-driven': {
+    color: Global.theme.colors.purple,
+    component: Icon.Check,
+  },
+  'energy-consumed': {
+    color: Global.theme.colors.purple,
+    component: Icon.Check,
+  },
+  'total-drive-time': {
+    color: Global.theme.colors.purple,
+    component: Icon.Check,
+  },
+};
 
 export const yTickFormatter = (value: number): number | string =>
   value > 999 ? numeral(Math.abs(value)).format('$0[.]0a') : Math.abs(value);
 
 export const Metrics: FunctionComponent<MetricsProps> = ({ data }) => (
   <>
-    {data.map((metric, index) => (
-      <Layout.Card
-        css={css.metric}
-        data-role={metric.label.split(' ').join('-').toLowerCase()}
-        // eslint-disable-next-line react/no-array-index-key
-        key={`${metric.label.split(' ').join('-').toLowerCase()}-${index}`}
-      >
-        <div css={css.metricIcon} />
-        <div css={css.metricValue}>{metric.value}</div>
-        <div css={css.metricLabel}>{metric.label}</div>
-      </Layout.Card>
-    ))}
+    {data.map((metric, index) => {
+      const label = metric.label.split(' ').join('-').toLowerCase();
+      const IconComponent = iconMap[label].component;
+
+      return (
+        <Layout.Card
+          css={css.metric}
+          data-role={label}
+          // eslint-disable-next-line react/no-array-index-key
+          key={`${label}-${index}`}
+        >
+          <div css={css.metricIcon}>
+            <IconComponent fill={iconMap[label].color} size={19} />
+          </div>
+          <div css={css.metricValue}>{metric.value}</div>
+          <div css={css.metricLabel}>{metric.label}</div>
+        </Layout.Card>
+      );
+    })}
   </>
 );
 

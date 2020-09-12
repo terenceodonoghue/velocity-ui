@@ -68,6 +68,7 @@ export const topDriverVehicle: InterpolationWithTheme<Theme> = (theme) => css`
 export const welcome = css`
   display: flex;
   flex-basis: 100%;
+  height: 230px;
   padding: 0 27px 0 46px;
 `;
 

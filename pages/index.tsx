@@ -54,7 +54,7 @@ export const renderCustomizedLabel:
 export const TopDrivers: FunctionComponent<TopDriversProps> = ({ drivers }) => (
   <Layout.Card css={css.topDrivers} heading="Top Drivers">
     {drivers.map(({ distance, earnings, name, src, vehicle }, i) => (
-      <div css={css.topDriver}>
+      <div css={css.topDriver} key={`${earnings}-${distance}`}>
         <div css={css.topDriverRank(i + 1)}>
           <Avatar
             alt={faker.name.findName()}

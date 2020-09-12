@@ -2454,7 +2454,7 @@ __metadata:
     "@terenceodonoghue/eslint-config-react": ^1.0.3
     "@terenceodonoghue/stylelint-config-base": ^1.0.1
     "@types/faker": ^5.1.0
-    "@types/node": 14.10.0
+    "@types/node": 14.10.1
     "@types/numeral": ^0.0.28
     "@types/react": 16.9.49
     "@types/react-beautiful-dnd": ^13.0.0
@@ -2473,7 +2473,7 @@ __metadata:
     eslint-plugin-jsx-a11y: ^6.3.1
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-react: ^7.20.6
-    eslint-plugin-react-hooks: ^4.1.1
+    eslint-plugin-react-hooks: ^4.1.2
     faker: ^5.1.0
     hex-rgb: ^4.2.0
     jest: ^26.4.2
@@ -2490,7 +2490,7 @@ __metadata:
     react-test-renderer: ^16.13.1
     recharts: ^1.8.5
     rimraf: ^3.0.2
-    stylelint: ^13.7.0
+    stylelint: ^13.7.1
     stylelint-prettier: ^1.1.2
     typescript: ^4.0.2
   languageName: unknown
@@ -2643,10 +2643,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:14.10.0":
-  version: 14.10.0
-  resolution: "@types/node@npm:14.10.0"
-  checksum: 03093b4991611c31b80e836d06359391a76f4bd8ff12d0286fc7da7b994612e60c503b0b6fece8983c6ab2cec3921f69f480386c293882b68edab90ce0f12564
+"@types/node@npm:14.10.1":
+  version: 14.10.1
+  resolution: "@types/node@npm:14.10.1"
+  checksum: 086b4baffc1f13eee84fb4ff072d685b3fecad59f4166c4367f1ab0db6aa30fc81cf67e6469775072b51126c52bcfec40bae6fafef4e4dc8f4c42f94211e28f4
   languageName: node
   linkType: hard
 
@@ -6077,12 +6077,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-react-hooks@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "eslint-plugin-react-hooks@npm:4.1.1"
+"eslint-plugin-react-hooks@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "eslint-plugin-react-hooks@npm:4.1.2"
   peerDependencies:
     eslint: ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0
-  checksum: 368e53a41c91179a2124c3a5a97240c45723658149069b10519e7efa97078678767a80cc8e83d4dde06ee6f04659d55de274e5f0df88e03257882cc1fc0807fa
+  checksum: 252496dbaaafa6812fbd3aeaafac1192a1e35238172d8271eb370025b43604e10f04cecec3583da395358a3e6be3ace6958ec938102fe3c1b77caf30f1393c91
   languageName: node
   linkType: hard
 
@@ -12753,9 +12753,9 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"stylelint@npm:^13.7.0":
-  version: 13.7.0
-  resolution: "stylelint@npm:13.7.0"
+"stylelint@npm:^13.7.1":
+  version: 13.7.1
+  resolution: "stylelint@npm:13.7.1"
   dependencies:
     "@stylelint/postcss-css-in-js": ^0.37.2
     "@stylelint/postcss-markdown": ^0.36.1
@@ -12807,7 +12807,7 @@ fsevents@~2.1.2:
     write-file-atomic: ^3.0.3
   bin:
     stylelint: bin/stylelint.js
-  checksum: 8020975140e5a2923ce56d31da96fda071bd3bc3d208bb4d477022dca78dd0dd1e7f64f8612c5d88e094bcd33aeb8312e5c41ceb1d1bcc2538ac2416c2372279
+  checksum: 09111dd7a84ec640c68f73e33e3791a7129706a384bbb581bac575b336bf290debd89b25a452d6b4fc85ed8abe97acf750e5807ddf8d970e09cbe2f7714b8427
   languageName: node
   linkType: hard
 

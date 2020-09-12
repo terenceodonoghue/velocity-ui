@@ -96,6 +96,10 @@ export interface NavListItemProps extends Selectable, Showable {
   label: string;
 }
 
+export interface PageHeaderProps {
+  heading: string;
+}
+
 export interface TopDriversProps {
   drivers: Driver[];
 }

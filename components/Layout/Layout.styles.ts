@@ -59,6 +59,12 @@ export const page = css`
   margin: -34px -24px;
 `;
 
+export const pageHeader = css`
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 24px;
+`;
+
 export const row = css`
   display: flex;
   margin: 17px 12px;

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { forwardRef, FunctionComponent, HTMLAttributes } from 'react';
-import { CardProps } from '~/types';
+import { CardProps, PageHeaderProps } from '~/types';
 import * as css from './Layout.styles';
 
 export const AppBar: FunctionComponent<HTMLAttributes<HTMLDivElement>> = ({
@@ -27,12 +27,18 @@ export const CardGroup: FunctionComponent = ({ children }) => (
   <div css={css.cardGroup}>{children}</div>
 );
 
-export const Header: FunctionComponent = ({ children }) => (
-  <div>{children}</div>
-);
-
 export const Page: FunctionComponent = ({ children }) => (
   <div css={css.page}>{children}</div>
+);
+
+export const PageHeader: FunctionComponent<PageHeaderProps> = ({
+  children,
+  heading,
+}) => (
+  <div css={css.pageHeader}>
+    <h1>{heading}</h1>
+    {children && <div>{children}</div>}
+  </div>
 );
 
 export const Row: FunctionComponent = ({ children }) => (

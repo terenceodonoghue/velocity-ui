@@ -55,6 +55,15 @@ export const Styles = (): ReactElement => (
         max-width: 1360px;
         padding: 64px 110px;
       }
+
+      h1 {
+        margin-top: 0;
+        font-style: normal;
+        font-weight: ${theme.typography.fontWeightLight};
+        font-size: 28px;
+        line-height: 1.14em;
+        color: ${theme.colors.black};
+      }
     `}
   />
 );

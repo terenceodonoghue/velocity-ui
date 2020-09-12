@@ -199,6 +199,7 @@ const AnalyticsPage: NextPage = () => {
       <Helmet>
         <title>Velocity | Analytics</title>
       </Helmet>
+      <Layout.PageHeader heading="Analytics" />
       <Layout.Page>
         <Layout.Row>
           <Layout.CardGroup>

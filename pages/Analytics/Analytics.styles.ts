@@ -50,17 +50,14 @@ export const metricIcon = css`
 
   [data-role='distance-driven'] & {
     background-color: rgba(0, 193, 212, 0.15);
-    background-image: url(./marker-blue.svg);
   }
 
   [data-role='energy-consumed'] & {
     background-color: rgba(140, 84, 255, 0.15);
-    background-image: url(./energy.svg);
   }
 
   [data-role='total-drive-time'] & {
     background-color: rgba(247, 193, 55, 0.15);
-    background-image: url(./dynamic.svg);
   }
 `;
 

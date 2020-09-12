@@ -2486,6 +2486,7 @@ __metadata:
     react: ^16.13.1
     react-beautiful-dnd: ^13.0.0
     react-dom: ^16.13.1
+    react-helmet: ^6.1.0
     react-is: ^16.13.1
     react-test-renderer: ^16.13.1
     recharts: ^1.8.5
@@ -10949,6 +10950,27 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
+"react-fast-compare@npm:^3.1.1":
+  version: 3.2.0
+  resolution: "react-fast-compare@npm:3.2.0"
+  checksum: 6fe65c889eb4f326e97769135f97b3d63ac68737866f9c37f9625c9de4f5eaa9abed6f748eb3fd6a66808392118842916309cab7cfa99c67991f0c837433d6d2
+  languageName: node
+  linkType: hard
+
+"react-helmet@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "react-helmet@npm:6.1.0"
+  dependencies:
+    object-assign: ^4.1.1
+    prop-types: ^15.7.2
+    react-fast-compare: ^3.1.1
+    react-side-effect: ^2.1.0
+  peerDependencies:
+    react: ">=16.3.0"
+  checksum: 56fd795b0aecc89bac8d2733268751f0ef463bf6764090f8a801778741d4a6eaf135234cdaa50188bbda29c8e2d3ec43e9a42d1ec06b60092645c8754c7bad81
+  languageName: node
+  linkType: hard
+
 "react-is@npm:16.13.1, react-is@npm:^16.13.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -11012,6 +11034,15 @@ fsevents@~2.1.2:
   peerDependencies:
     react: ^0.14.7 || ^15.0.0 || ^16.0.0
   checksum: 669970c716d6a2725e78875fca9c525d143b835c3e8f0230bd2889c7decd1440974e8cc51134f45f8a80ce7a23ffe13f0f5b6ac07bbc8752ebd7173c0e9d9ea0
+  languageName: node
+  linkType: hard
+
+"react-side-effect@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "react-side-effect@npm:2.1.0"
+  peerDependencies:
+    react: ^16.3.0
+  checksum: 643a9898953776783515df3510a438f262f6dff059c3f880b7bbc180957cd0f9a0c4d7b3ae72c347d0f7c56bbd16466e850c5d9e213abad024df3b6c3a430564
   languageName: node
   linkType: hard
 

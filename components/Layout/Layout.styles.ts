@@ -1,5 +1,5 @@
 import { css, InterpolationWithTheme } from '@emotion/core';
-import { Theme } from '~/types';
+import { Sizable, Theme } from '~/types';
 
 export const appBar: InterpolationWithTheme<Theme> = (theme) => css`
   position: sticky;
@@ -23,14 +23,23 @@ export const appBarContent = css`
   }
 `;
 
-export const card: InterpolationWithTheme<Theme> = (theme) => css`
+export const card = ({ size }: Sizable): InterpolationWithTheme<Theme> => (
+  theme,
+) => css`
+  ${size && `flex: ${size}`};
   display: block;
   border-radius: 1px;
   border: solid 1px rgba(46, 91, 255, 0.08);
   box-shadow: 0 10px 20px 0 rgba(46, 91, 255, 0.07);
-  margin: 34px 24px;
+  margin: 12px;
   padding: 32px 24px;
   background-color: ${theme.colors.white};
+`;
+
+export const cardGroup = css`
+  flex: 1 0 50%;
+  display: flex;
+  flex-flow: row wrap;
 `;
 
 export const cardHeading: InterpolationWithTheme<Theme> = (theme) => `
@@ -44,4 +53,13 @@ export const cardHeading: InterpolationWithTheme<Theme> = (theme) => `
 
 export const logo = css`
   cursor: pointer;
+`;
+
+export const page = css`
+  margin: -34px -24px;
+`;
+
+export const row = css`
+  display: flex;
+  margin: 17px 12px;
 `;

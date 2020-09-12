@@ -3,6 +3,7 @@ import { jsx } from '@emotion/core';
 import { useTheme } from 'emotion-theming';
 import faker from 'faker';
 import { AppProps } from 'next/app';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { FunctionComponent, useState } from 'react';
 import { Avatar, Button, Global, Icon, Layout } from '~/components';
@@ -23,10 +24,12 @@ const NavListItem: FunctionComponent<NavListItemProps> = ({
   const selected = router.pathname === href;
 
   return (
-    <li css={css.navListItem({ selected })}>
-      <NavIcon theme={theme} title={label} />
-      <span css={css.navListItemContent({ selected, show })}>{label}</span>
-    </li>
+    <Link href={href}>
+      <li css={css.navListItem({ selected })}>
+        <NavIcon theme={theme} title={label} />
+        <span css={css.navListItemContent({ selected, show })}>{label}</span>
+      </li>
+    </Link>
   );
 };
 

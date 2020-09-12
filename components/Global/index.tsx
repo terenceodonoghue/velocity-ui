@@ -19,7 +19,7 @@ export const theme: Theme = {
     yellow: '#f7c137',
   },
   effects: {
-    transition: 'all 0.2s linear',
+    transition: 'all 0.1s linear',
   },
   typography: {
     baseFontSize: '15px',
@@ -52,6 +52,7 @@ export const Styles = (): ReactElement => (
 
       main {
         margin-left: 80px;
+        max-width: 1360px;
         padding: 64px 110px;
       }
     `}

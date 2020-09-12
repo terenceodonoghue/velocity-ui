@@ -2,8 +2,8 @@ import { css, InterpolationWithTheme } from '@emotion/core';
 import { Theme } from '~/types';
 import { hexRgb as hexrgb } from '~/utils';
 
-export const page = css`
-  margin: -34px -24px;
+export const row = css`
+  display: flex;
 `;
 
 export const topDriver = css`
@@ -14,7 +14,6 @@ export const topDriver = css`
 `;
 
 export const topDrivers = css`
-  max-width: 364px;
   padding: 32px 24px 15px;
 `;
 
@@ -68,9 +67,8 @@ export const topDriverVehicle: InterpolationWithTheme<Theme> = (theme) => css`
 
 export const welcome = css`
   display: flex;
-  height: 230px;
+  flex-basis: 100%;
   padding: 0 27px 0 46px;
-  width: 558px;
 `;
 
 export const welcomeContent = css`

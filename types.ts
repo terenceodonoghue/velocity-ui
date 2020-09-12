@@ -31,6 +31,10 @@ export interface Showable {
   show: boolean;
 }
 
+export interface Sizable {
+  size?: number;
+}
+
 export interface Theme {
   colors: {
     black: string;
@@ -62,9 +66,10 @@ export interface Themeable {
   theme?: Theme;
 }
 
-export interface CardProps extends HTMLProps<HTMLDivElement> {
-  heading?: string;
-}
+export type CardProps = HTMLProps<HTMLDivElement> &
+  Sizable & {
+    heading?: string;
+  };
 
 export interface DrawerProps {
   name: string;

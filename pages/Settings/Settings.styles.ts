@@ -19,6 +19,7 @@ export const integrationContent = ({
   border: solid 1px ${selected ? theme.colors.blue : '#e0e7ff'};
   border-radius: 5px;
   padding: 19px 21px;
+  cursor: pointer;
   ${selected &&
   `&::after {
     position: absolute;

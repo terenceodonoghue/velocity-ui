@@ -1,19 +1,19 @@
 import { css, InterpolationWithTheme } from '@emotion/core';
 import { Theme } from '~/types';
 
-export const checkboxInput = css`
-  height: 0;
-  margin: 0;
-  width: 0;
-  opacity: 0;
-`;
-
 export const checkboxLabel = css`
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-width: 36px;
   user-select: none;
+
+  input {
+    height: 0;
+    margin: 0;
+    width: 0;
+    opacity: 0;
+  }
 `;
 
 export const checkboxSwitch: InterpolationWithTheme<Theme> = (theme) => css`
@@ -25,11 +25,11 @@ export const checkboxSwitch: InterpolationWithTheme<Theme> = (theme) => css`
   cursor: pointer;
   transition: ${theme.effects.transition};
 
-  .css-${/* sc-selector */ checkboxInput.name}:disabled + & {
+  input:disabled + & {
     opacity: 0.4;
   }
 
-  .css-${/* sc-selector */ checkboxInput.name}:checked:enabled + & {
+  input:checked:enabled + & {
     background-color: ${theme.colors.green};
   }
 
@@ -44,7 +44,7 @@ export const checkboxSwitch: InterpolationWithTheme<Theme> = (theme) => css`
     background-color: ${theme.colors.white};
     transition: ${theme.effects.transition};
 
-    .css-${/* sc-selector */ checkboxInput.name}:checked + & {
+    input:checked + & {
       transform: translateX(16px);
     }
   }

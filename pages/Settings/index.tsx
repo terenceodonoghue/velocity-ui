@@ -1,19 +1,11 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import { FunctionComponent } from 'react';
+import { Helmet } from 'react-helmet';
+import { NextPage } from 'next';
 import { Button, Input, Layout } from '~/components';
-import { Selectable } from '~/types';
-import * as css from './Settings.styles';
-
-interface IntegrationProps extends Selectable {
-  description: string;
-  name: string;
-  src: string;
-}
-
-interface PaletteProps {
-  colors: string[];
-}
+import { IntegrationProps, PaletteProps } from '~/types';
+import * as css from './settings.styles';
 
 const Integration: FunctionComponent<IntegrationProps> = ({
   description,
@@ -184,3 +176,28 @@ export const Theme: FunctionComponent = () => (
     </div>
   </Layout.Card>
 );
+
+const SettingsPage: NextPage = () => (
+  <>
+    <Helmet>
+      <title>Velocity | Settings</title>
+    </Helmet>
+    <Layout.PageHeader heading="Settings" />
+    <Layout.Page>
+      <Layout.Row>
+        <Personal />
+      </Layout.Row>
+      <Layout.Row>
+        <Integrations />
+      </Layout.Row>
+      <Layout.Row>
+        <Notifications />
+      </Layout.Row>
+      <Layout.Row>
+        <Theme />
+      </Layout.Row>
+    </Layout.Page>
+  </>
+);
+
+export default SettingsPage;

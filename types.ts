@@ -86,6 +86,12 @@ export interface IconProps extends Resizeable, Themeable {
   title?: string;
 }
 
+export interface IntegrationProps extends Selectable {
+  description: string;
+  name: string;
+  src: string;
+}
+
 export interface MetricsProps {
   data: Metric[];
 }
@@ -98,6 +104,10 @@ export interface NavListItemProps extends Selectable, Showable {
 
 export interface PageHeaderProps {
   heading: string;
+}
+
+export interface PaletteProps {
+  colors: string[];
 }
 
 export interface TopDriversProps {

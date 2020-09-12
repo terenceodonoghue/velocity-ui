@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { FunctionComponent, InputHTMLAttributes } from 'react';
+import { FunctionComponent, InputHTMLAttributes, useRef } from 'react';
 import * as css from './Input.styles';
 
 interface Label {
@@ -52,7 +52,7 @@ export const Switch: FunctionComponent<InputProps & Label> = ({
         {secondary && <p>{secondary}</p>}
       </div>
     )}
-    <input css={css.checkboxInput} type="checkbox" {...inputProps} />
+    <input type="checkbox" {...inputProps} />
     <span css={css.checkboxSwitch} />
   </label>
 );

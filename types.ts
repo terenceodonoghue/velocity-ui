@@ -8,6 +8,11 @@ interface Driver {
   distance: number;
 }
 
+interface Metric {
+  label: string;
+  value: string;
+}
+
 export interface Measurable {
   length: number;
 }
@@ -79,6 +84,10 @@ export interface DrawerProps {
 export interface IconProps extends Resizeable, Themeable {
   fill?: string;
   title?: string;
+}
+
+export interface MetricsProps {
+  data: Metric[];
 }
 
 export interface NavListItemProps extends Selectable, Showable {

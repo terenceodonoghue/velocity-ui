@@ -37,7 +37,7 @@ export const card = ({ size }: Sizable): InterpolationWithTheme<Theme> => (
 `;
 
 export const cardGroup = css`
-  flex: 1 0 50%;
+  flex: 1;
   display: flex;
   flex-flow: row wrap;
 `;

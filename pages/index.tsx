@@ -13,7 +13,7 @@ import {
 } from 'recharts';
 import { Avatar, Layout } from '~/components';
 import { TopDriversProps } from '~/types';
-import * as css from './Home.styles';
+import * as css from './home.styles';
 
 export const renderCustomizedLabel:
   | ContentRenderer<PieLabelRenderProps>
@@ -120,7 +120,7 @@ export const Welcome: FunctionComponent = () => (
   </Layout.Card>
 );
 
-const IndexPage: NextPage = () => {
+const HomePage: NextPage = () => {
   return (
     <Layout.Page>
       <Layout.Row>
@@ -190,4 +190,4 @@ const IndexPage: NextPage = () => {
   );
 };
 
-export default IndexPage;
+export default HomePage;

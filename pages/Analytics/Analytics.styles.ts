@@ -1,7 +1,7 @@
 import { css, InterpolationWithTheme } from '@emotion/core';
 import { Theme } from '~/types';
 
-const recharts: InterpolationWithTheme<Theme> = (theme) => css`
+export const chart: InterpolationWithTheme<Theme> = (theme) => css`
   .recharts-area-dot {
     fill: ${theme.colors.white};
   }
@@ -31,20 +31,8 @@ const recharts: InterpolationWithTheme<Theme> = (theme) => css`
   }
 `;
 
-export const chart: InterpolationWithTheme<Theme> = (theme) => css`
-  ${recharts(theme)};
-`;
-
 export const metric = css`
-  flex: 0 0 264px;
-  margin: 12px;
-  padding: 18px 24px;
-`;
-
-export const metrics = css`
-  display: flex;
-  flex-flow: row wrap;
-  margin: -12px;
+  padding: 16px 24px;
 `;
 
 export const metricIcon = css`

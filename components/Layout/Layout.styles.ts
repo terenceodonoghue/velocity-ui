@@ -23,7 +23,8 @@ export const card = ({
   fullWidth,
   size,
 }: Sizable): InterpolationWithTheme<Theme> => (theme) => css`
-  ${size && `flex: ${size} 1 ${fullWidth ? '100%' : 'auto'}`};
+  ${size && `flex: ${size}`};
+  ${fullWidth && `flex-basis: 100%`};
   display: block;
   border-radius: 1px;
   border: solid 1px rgba(46, 91, 255, 0.08);

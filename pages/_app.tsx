@@ -143,6 +143,7 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
 
   return (
     <Global.ThemeProvider>
+      <Global.GitHubCorner />
       <Global.Styles />
       <Layout.AppBar>
         <Button.Icon onClick={() => toggleSidebar(!showSidebar)}>

@@ -17,10 +17,6 @@ export const appBarContent = css`
   flex-direction: row-reverse;
   align-items: center;
   margin: 0 -5px;
-
-  & > img {
-    margin: 0 4px 0 8px;
-  }
 `;
 
 export const card = ({ size }: Sizable): InterpolationWithTheme<Theme> => (

@@ -89,7 +89,16 @@ const Drawer: FunctionComponent<DrawerProps> = ({ name, src }) => {
 const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => (
   <Global.ThemeProvider>
     <Global.Styles />
-    <Layout.AppBar />
+    <Layout.AppBar>
+      <Button.Icon>
+        <Avatar
+          alt={faker.name.findName()}
+          css={css.avatar}
+          round
+          src={faker.image.avatar()}
+        />
+      </Button.Icon>
+    </Layout.AppBar>
     <Drawer name={faker.name.findName()} src={faker.image.avatar()} />
     <main>
       <Component {...pageProps} />

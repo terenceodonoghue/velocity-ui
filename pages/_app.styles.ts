@@ -1,6 +1,11 @@
 import { css, Interpolation, InterpolationWithTheme } from '@emotion/core';
 import { Selectable, Showable, Theme } from '~/types';
 
+export const avatar = css`
+  height: 40px;
+  width: 40px;
+`;
+
 export const button = css`
   margin: 0 0 58px;
   width: 40px;

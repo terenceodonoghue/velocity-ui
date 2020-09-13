@@ -19,10 +19,11 @@ export const appBarContent = css`
   margin: 0 -5px;
 `;
 
-export const card = ({ size }: Sizable): InterpolationWithTheme<Theme> => (
-  theme,
-) => css`
-  ${size && `flex: ${size}`};
+export const card = ({
+  fullWidth,
+  size,
+}: Sizable): InterpolationWithTheme<Theme> => (theme) => css`
+  ${size && `flex: ${size} 1 ${fullWidth ? '100%' : 'auto'}`};
   display: block;
   border-radius: 1px;
   border: solid 1px rgba(46, 91, 255, 0.08);

@@ -80,7 +80,7 @@ export const TopDrivers: FunctionComponent<TopDriversProps> = ({ drivers }) => (
 );
 
 export const Welcome: FunctionComponent = () => (
-  <Layout.Card css={css.welcome}>
+  <Layout.Card css={css.welcome} fullWidth>
     <ResponsiveContainer width={203.5}>
       <PieChart>
         <Pie

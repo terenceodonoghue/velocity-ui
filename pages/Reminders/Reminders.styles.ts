@@ -1,8 +1,12 @@
 import { css, InterpolationWithTheme } from '@emotion/core';
 import { Measurable, Theme } from '~/types';
 
+export const draggable = css`
+  padding: 5px 0;
+`;
+
 export const kanban = css`
-  margin: 0 -12px;
+  margin: 13px 0 0;
 `;
 
 export const kanbanColumn = css`
@@ -68,7 +72,7 @@ export const kanbanTicket: InterpolationWithTheme<Theme> = (theme) => css`
   display: inline-block;
   border: none;
   border-radius: 5px;
-  margin: 5px 0;
+  margin: 0;
   padding: 22px 25px;
   width: 100%;
   transition: box-shadow 0.2s linear;

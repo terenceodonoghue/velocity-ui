@@ -8,11 +8,14 @@ import NextDocument, {
   Main,
   NextScript,
 } from 'next/document';
+import { resetServerContext } from 'react-beautiful-dnd';
 
 class Document extends NextDocument {
   static async getInitialProps(
     ctx: DocumentContext,
   ): Promise<DocumentInitialProps> {
+    resetServerContext();
+
     const initialProps = await NextDocument.getInitialProps(ctx);
     return { ...initialProps };
   }

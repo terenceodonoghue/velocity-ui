@@ -37,6 +37,7 @@ export interface Showable {
 }
 
 export interface Sizable {
+  fullWidth?: boolean;
   size?: number;
 }
 
@@ -71,6 +72,13 @@ export interface Themeable {
   theme?: Theme;
 }
 
+export interface Ticket {
+  date: string;
+  name: string;
+  price: string;
+  type: string;
+}
+
 export interface BaseIconProps extends Resizeable {
   title?: string;
 }
@@ -93,6 +101,10 @@ export interface IntegrationProps extends Selectable {
   description: string;
   icon: ComponentType<IconProps>;
   name: string;
+}
+
+export interface KanbanProps {
+  data: Ticket[][];
 }
 
 export interface MetricsProps {

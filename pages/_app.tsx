@@ -78,7 +78,7 @@ const Drawer: FunctionComponent<DrawerProps> = ({ name, src }) => {
             show={show}
           />
           <NavListItem
-            href="/service"
+            href="/reminders"
             icon={Icon.Service}
             label="Service"
             show={show}

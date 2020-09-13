@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { NextPage } from 'next';
 import {
   Dispatch,
   FunctionComponent,
@@ -7,6 +8,7 @@ import {
   SetStateAction,
   useState,
 } from 'react';
+import Helmet from 'react-helmet';
 import {
   DragDropContext,
   Draggable,
@@ -15,18 +17,8 @@ import {
   DropResult,
 } from 'react-beautiful-dnd';
 import { Layout } from '~/components';
-import * as css from './Reminders.styles';
-
-interface Ticket {
-  date: string;
-  name: string;
-  price: string;
-  type: string;
-}
-
-interface KanbanProps {
-  data: Ticket[][];
-}
+import { KanbanProps, Ticket } from '~/types';
+import * as css from './reminders.styles';
 
 const COLUMNS = ['Service needed', 'Waiting', 'In service', 'Fully serviced'];
 
@@ -121,21 +113,23 @@ export const Kanban: FunctionComponent<KanbanProps> = ({ data }) => {
                           key={draggableKey}
                         >
                           {(providedDrag): ReactElement => (
-                            <Layout.Card
-                              css={css.kanbanTicket}
+                            <div
+                              css={css.draggable}
                               ref={providedDrag.innerRef}
                               {...providedDrag.draggableProps}
                               {...providedDrag.dragHandleProps}
                             >
-                              <div css={css.kanbanTicketText}>
-                                <span>{ticket.name}</span>
-                                <span>{ticket.price}</span>
-                              </div>
-                              <div css={css.kanbanTicketText}>
-                                <span>{ticket.type}</span>
-                                <span>{ticket.date}</span>
-                              </div>
-                            </Layout.Card>
+                              <Layout.Card css={css.kanbanTicket}>
+                                <div css={css.kanbanTicketText}>
+                                  <span>{ticket.name}</span>
+                                  <span>{ticket.price}</span>
+                                </div>
+                                <div css={css.kanbanTicketText}>
+                                  <span>{ticket.type}</span>
+                                  <span>{ticket.date}</span>
+                                </div>
+                              </Layout.Card>
+                            </div>
                           )}
                         </Draggable>
                       );
@@ -151,3 +145,117 @@ export const Kanban: FunctionComponent<KanbanProps> = ({ data }) => {
     </DragDropContext>
   );
 };
+
+const RemindersPage: NextPage = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Velocity | Service Reminders</title>
+      </Helmet>
+      <Layout.PageHeader heading="Service Reminders" />
+      <Layout.Page>
+        <Layout.Row>
+          <Kanban
+            data={[
+              [
+                {
+                  date: 'June 12',
+                  name: 'Spire',
+                  price: '$233',
+                  type: 'Tire replacement',
+                },
+                {
+                  date: 'May 2',
+                  name: 'Eos',
+                  price: '$120',
+                  type: 'Engine check-up',
+                },
+                {
+                  date: 'June 6',
+                  name: 'Eagle',
+                  price: '$180',
+                  type: 'Tire replacement',
+                },
+                {
+                  date: 'June 12',
+                  name: 'Bebop',
+                  price: '$1400',
+                  type: 'Monthly service',
+                },
+              ],
+              [
+                {
+                  date: 'June 3',
+                  name: 'Expedition',
+                  price: '$766',
+                  type: 'Tire replacement',
+                },
+                {
+                  date: 'June 12',
+                  name: 'Bliss',
+                  price: '$199',
+                  type: 'Engine check-up',
+                },
+                {
+                  date: 'June 5',
+                  name: 'Vigor',
+                  price: '$690',
+                  type: 'Monthly service',
+                },
+              ],
+              [
+                {
+                  date: 'June 4',
+                  name: 'Scorpion',
+                  price: '$430',
+                  type: 'Monthly service',
+                },
+                {
+                  date: 'June 22',
+                  name: 'Resolve',
+                  price: '$560',
+                  type: 'Tire replacement',
+                },
+              ],
+              [
+                {
+                  date: 'June 24',
+                  name: 'Empire',
+                  price: '$430',
+                  type: 'Monthly service',
+                },
+                {
+                  date: 'June 27',
+                  name: 'Eos',
+                  price: '$560',
+                  type: 'Tire replacement',
+                },
+                {
+                  date: 'June 28',
+                  name: 'Spire',
+                  price: '$430',
+                  type: 'Monthly service',
+                },
+                {
+                  date: 'June 29',
+                  name: 'Nebula',
+                  price: '$560',
+                  type: 'Tire replacement',
+                },
+              ],
+            ]}
+          />
+        </Layout.Row>
+        <Layout.Row>
+          <Layout.Card />
+          <Layout.CardGroup>
+            <Layout.Card fullWidth />
+            <Layout.Card fullWidth />
+          </Layout.CardGroup>
+        </Layout.Row>
+      </Layout.Page>
+    </>
+  );
+};
+
+export default RemindersPage;

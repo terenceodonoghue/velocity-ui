@@ -15,8 +15,8 @@ export const AppBar: FunctionComponent<HTMLAttributes<HTMLDivElement>> = ({
 );
 
 export const Card = forwardRef<HTMLDivElement, CardProps>(
-  ({ children, heading, size = 1, ...props }, ref) => (
-    <div css={css.card({ size })} ref={ref} {...props}>
+  ({ children, fullWidth, heading, size = 1, ...props }, ref) => (
+    <div css={css.card({ fullWidth, size })} ref={ref} {...props}>
       {heading && <h3 css={css.cardHeading}>{heading}</h3>}
       {children}
     </div>

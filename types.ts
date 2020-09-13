@@ -113,6 +113,18 @@ export interface PaletteProps {
   colors: string[];
 }
 
+export interface SidebarProps {
+  bio: string;
+  email: string;
+  jobTitle: string;
+  location: string;
+  name: string;
+  phone: string;
+  roles: string;
+  show: boolean;
+  src: string;
+}
+
 export interface TopDriversProps {
   drivers: Driver[];
 }

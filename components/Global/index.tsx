@@ -19,7 +19,7 @@ export const theme: Theme = {
     yellow: '#f7c137',
   },
   effects: {
-    transition: 'all 0.1s linear',
+    transition: 'all 0.2s ease-out',
   },
   typography: {
     baseFontSize: '15px',

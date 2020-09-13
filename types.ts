@@ -71,6 +71,10 @@ export interface Themeable {
   theme?: Theme;
 }
 
+export interface BaseIconProps extends Resizeable {
+  title?: string;
+}
+
 export type CardProps = HTMLProps<HTMLDivElement> &
   Sizable & {
     heading?: string;
@@ -81,15 +85,14 @@ export interface DrawerProps {
   src: string;
 }
 
-export interface IconProps extends Resizeable, Themeable {
+export interface IconProps extends BaseIconProps, Themeable {
   fill?: string;
-  title?: string;
 }
 
 export interface IntegrationProps extends Selectable {
   description: string;
+  icon: ComponentType<IconProps>;
   name: string;
-  src: string;
 }
 
 export interface MetricsProps {

@@ -3,20 +3,20 @@ import { jsx } from '@emotion/core';
 import { FunctionComponent } from 'react';
 import { Helmet } from 'react-helmet';
 import { NextPage } from 'next';
-import { Button, Input, Layout } from '~/components';
+import { Button, Icon, Input, Layout } from '~/components';
 import { IntegrationProps, PaletteProps } from '~/types';
 import * as css from './settings.styles';
 
 const Integration: FunctionComponent<IntegrationProps> = ({
   description,
+  icon: IconComponent,
   name,
   selected,
-  src,
 }) => (
   <div css={css.integration}>
     <div css={css.integrationContent({ selected })}>
       <div css={css.integrationIcon}>
-        <img alt={name} src={src} />
+        <IconComponent size={30} />
       </div>
       <div>
         <p css={css.integrationName}>{name}</p>
@@ -73,35 +73,35 @@ export const Integrations: FunctionComponent = () => (
       <p css={css.settingsDescription}>Manage third-party app integrations.</p>
       <Integration
         description="Boards and prototypes"
+        icon={Icon.InVision}
         name="InVision"
         selected
-        src="./invision.svg"
       />
       <Integration
         description="Commits data and history"
+        icon={Icon.GitHub}
         name="GitHub"
         selected
-        src="./github.svg"
       />
       <Integration
         description="Messages and channels"
+        icon={Icon.Slack}
         name="Slack"
-        src="./slack.svg"
       />
       <Integration
         description="Subscribers list"
+        icon={Icon.Mailchimp}
         name="Mailchimp"
-        src="./mailchimp.svg"
       />
       <Integration
         description="Tweets data"
+        icon={Icon.Twitter}
         name="Twitter"
-        src="./twitter.svg"
       />
       <Integration
         description="Followers count"
+        icon={Icon.Medium}
         name="Medium"
-        src="./medium.svg"
       />
     </div>
   </Layout.Card>

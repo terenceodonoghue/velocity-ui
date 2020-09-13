@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { FunctionComponent, InputHTMLAttributes, useRef } from 'react';
+import { FunctionComponent, InputHTMLAttributes } from 'react';
 import * as css from './Input.styles';
 
 interface Label {

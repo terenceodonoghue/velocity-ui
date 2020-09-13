@@ -51,9 +51,9 @@ export const Filter: FunctionComponent = () => (
 const VehiclesPage: NextPage = () => (
   <>
     <Helmet>
-      <title>Velocity | Settings</title>
+      <title>Velocity | Vehicles Dashboard</title>
     </Helmet>
-    <Layout.PageHeader heading="Settings" />
+    <Layout.PageHeader heading="Vehicles Dashboard" />
     <Layout.Page>
       <Layout.Row>
         <div css={css.vehicles} />

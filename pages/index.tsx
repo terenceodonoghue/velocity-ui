@@ -12,14 +12,14 @@ import {
   PieLabelRenderProps,
   ResponsiveContainer,
 } from 'recharts';
-import { Avatar, Layout } from '~/components';
+import { Avatar, Global, Layout } from '~/components';
 import { TopDriversProps } from '~/types';
 import * as css from './home.styles';
 
 export const renderCustomizedLabel:
   | ContentRenderer<PieLabelRenderProps>
-  | boolean = ({ index, percent = 0 }) =>
-  index === 0 && (
+  | boolean = ({ index }) =>
+  index === 0 ? (
     <>
       <text
         fill="#2e384d"
@@ -30,7 +30,9 @@ export const renderCustomizedLabel:
         x="50%"
         y="50%"
       >
-        <tspan x="75" y="140">{`${(percent * 100).toFixed(0)}`}</tspan>
+        <tspan x="75" y="140">
+          86
+        </tspan>
       </text>
       <text
         dominantBaseline="central"
@@ -50,7 +52,7 @@ export const renderCustomizedLabel:
         </tspan>
       </text>
     </>
-  );
+  ) : null;
 
 export const TopDrivers: FunctionComponent<TopDriversProps> = ({ drivers }) => (
   <Layout.Card css={css.topDrivers} heading="Top Drivers">
@@ -86,20 +88,41 @@ export const Welcome: FunctionComponent = () => (
         <Pie
           cx="50%"
           cy="64%"
-          data={[{ name: 'score', value: 100, fill: '#e0e7ff' }]}
+          data={Array(41)
+            .fill(41)
+            .map(() => ({
+              name: 'score',
+              value: 1,
+              fill: '#e0e7ff',
+            }))}
           dataKey="value"
           innerRadius={66}
           outerRadius={69}
           startAngle={190}
+          paddingAngle={3}
           endAngle={-10}
         />
         <Pie
           cx="50%"
           cy="64%"
-          data={[
-            { name: 'score', value: 86, fill: '#2e5bff' },
-            { name: 'max', value: 14, fill: '#e0e7ff' },
-          ]}
+          data={Array(41)
+            .fill(41)
+            .map((_, i) => ({
+              name: 'score',
+              value: 1,
+              fill: (() => {
+                const value = i + 1;
+                if (value + (1 % 2)) {
+                  if (value <= 33) {
+                    return Global.theme.colors.blue;
+                  }
+
+                  return '#e0e7ff';
+                }
+
+                return Global.theme.colors.white;
+              })(),
+            }))}
           dataKey="value"
           paddingAngle={3}
           innerRadius={75}

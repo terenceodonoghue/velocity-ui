@@ -10,8 +10,6 @@ import { Avatar, Button, Global, Icon, Layout } from '~/components';
 import { DrawerProps, NavListItemProps, Theme } from '~/types';
 import * as css from './_app.styles';
 
-faker.seed(123);
-
 const NavListItem: FunctionComponent<NavListItemProps> = ({
   href,
   icon: NavIcon,

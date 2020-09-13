@@ -65,18 +65,18 @@ export const checkboxText: InterpolationWithTheme<Theme> = (theme) => css`
   }
 `;
 
-export const radioInput = css`
-  height: 0;
-  margin: 0;
-  width: 0;
-  opacity: 0;
-`;
-
 export const radioLabel: InterpolationWithTheme<Theme> = (theme) => css`
   display: flex;
   align-items: center;
   font-weight: ${theme.typography.fontWeightMedium};
   cursor: pointer;
+
+  input {
+    height: 0;
+    margin: 0;
+    width: 0;
+    opacity: 0;
+  }
 `;
 
 export const radioSwitch: InterpolationWithTheme<Theme> = (theme) => css`
@@ -88,11 +88,11 @@ export const radioSwitch: InterpolationWithTheme<Theme> = (theme) => css`
   width: 16px;
   background-color: ${theme.colors.white};
 
-  .css-${/* sc-selector */ radioInput.name}:disabled + & {
+  input:disabled + & {
     opacity: 0.4;
   }
 
-  .css-${/* sc-selector */ radioInput.name}:checked:enabled + & {
+  input:checked:enabled + & {
     border: solid 4px ${theme.colors.blue};
     background-color: ${theme.colors.white};
   }

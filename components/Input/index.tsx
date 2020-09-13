@@ -14,12 +14,18 @@ interface InputProps extends InputHTMLAttributes<HTMLLabelElement> {
 
 export const Radio: FunctionComponent<InputProps> = ({
   children,
+  defaultChecked,
   inputProps,
   name,
   ...props
 }) => (
   <label css={css.radioLabel} {...props}>
-    <input css={css.radioInput} name={name} type="radio" {...inputProps} />
+    <input
+      defaultChecked={defaultChecked}
+      name={name}
+      type="radio"
+      {...inputProps}
+    />
     <span css={css.radioSwitch} />
     {children}
   </label>

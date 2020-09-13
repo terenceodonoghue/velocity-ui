@@ -35,9 +35,9 @@ jobs:
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
       - name: Build
         if: success()
-        run: yarn build-storybook
+        run: yarn build && yarn export
       - name: Deploy
         if: success()
         run: |
-          touch .out/.nojekyll
-          gh-pages --dist .out --dotfiles --message "${GITHUB_REF##*/}-${GITHUB_SHA::8}"
+          touch out/.nojekyll
+          gh-pages --dist out --dotfiles --message "${GITHUB_REF##*/}-${GITHUB_SHA::8}"

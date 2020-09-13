@@ -102,7 +102,7 @@ export const sliderInput: InterpolationWithTheme<Theme> = (theme) => css`
   appearance: none;
   border-radius: 7px;
   height: 4px;
-  width: 210px;
+  width: 100%;
   background-color: rgba(46, 91, 255, 0.15);
   outline: none;
   transition: ${theme.effects.transition};
@@ -133,10 +133,6 @@ export const sliderInput: InterpolationWithTheme<Theme> = (theme) => css`
   &:disabled {
     opacity: 0.3;
   }
-`;
-
-export const sliderLabel = css`
-  display: inline-block;
 `;
 
 export const sliderText: InterpolationWithTheme<Theme> = (theme) => css`

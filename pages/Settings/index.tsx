@@ -1,8 +1,8 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { NextPage } from 'next';
 import { FunctionComponent } from 'react';
 import { Helmet } from 'react-helmet';
-import { NextPage } from 'next';
 import { Button, Icon, Input, Layout } from '~/components';
 import { IntegrationProps, PaletteProps } from '~/types';
 import * as css from './settings.styles';

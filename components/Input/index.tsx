@@ -34,7 +34,7 @@ export const Radio: FunctionComponent<InputProps> = ({
 export const Slider: FunctionComponent<
   Label & InputHTMLAttributes<HTMLInputElement>
 > = ({ primary, secondary, ...props }) => (
-  <label css={css.sliderLabel}>
+  <label>
     {(primary || secondary) && (
       <div css={css.sliderText}>
         {primary && <p>{primary}</p>}

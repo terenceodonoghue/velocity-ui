@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Integrations, Notifications, Personal, Theme } from './Settings';
+import { Integrations, Notifications, Personal, Theme } from './index';
 
 describe('Settings', () => {
   describe('Personal Data', () => {

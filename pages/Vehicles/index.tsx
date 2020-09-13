@@ -1,18 +1,20 @@
 /* eslint-disable import/prefer-default-export */
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
+import { NextPage } from 'next';
 import { FunctionComponent } from 'react';
+import { Helmet } from 'react-helmet';
 import { Input, Layout } from '~/components';
-import * as css from './Vehicles.styles';
+import * as css from './vehicles.styles';
 
 export const Filter: FunctionComponent = () => (
   <Layout.Card css={css.filter} heading="Filter">
-    <Input.Slider css={css.sliderInput} primary="Trips taken" secondary="753" />
-    <Input.Slider
-      css={css.sliderInput}
-      primary="Service due"
-      secondary="14 days"
-    />
+    <div css={css.sliderInput}>
+      <Input.Slider primary="Trips taken" secondary="753" />
+    </div>
+    <div css={css.sliderInput}>
+      <Input.Slider primary="Service due" secondary="14 days" />
+    </div>
     <Input.Text
       css={css.textInput}
       inputProps={{
@@ -45,3 +47,20 @@ export const Filter: FunctionComponent = () => (
     </Input.Text>
   </Layout.Card>
 );
+
+const VehiclesPage: NextPage = () => (
+  <>
+    <Helmet>
+      <title>Velocity | Settings</title>
+    </Helmet>
+    <Layout.PageHeader heading="Settings" />
+    <Layout.Page>
+      <Layout.Row>
+        <div css={css.vehicles} />
+        <Filter />
+      </Layout.Row>
+    </Layout.Page>
+  </>
+);
+
+export default VehiclesPage;

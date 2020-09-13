@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { Filter } from './Vehicles';
+import { Filter } from './index';
 
 describe('Vehicles', () => {
   describe('Filter', () => {

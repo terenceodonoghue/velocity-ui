@@ -1,33 +1,21 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 import faker from 'faker';
+import { NextPage } from 'next';
 import { FunctionComponent } from 'react';
+import { Helmet } from 'react-helmet';
 import { Avatar, Layout } from '~/components';
-import { Selectable } from '~/types';
-import * as css from './Map.styles';
+import { PassengerProps, Selectable, TripProps } from '~/types';
+import * as css from './map.styles';
 
-type Address = {
-  streetAddress: string;
-  suburb: string;
+const fixtures = {
+  avatar: faker.image.avatar(),
+  city: faker.address.city(),
+  email: faker.internet.exampleEmail(),
+  name: faker.name.findName(),
+  phone: faker.phone.phoneNumberFormat(),
+  state: faker.address.stateAbbr(),
 };
-
-interface PassengerProps {
-  email: string;
-  interactions: number;
-  location: string;
-  name: string;
-  phone: string;
-  src: string;
-}
-
-interface TripProps {
-  distance: number;
-  energy: number;
-  from: Address;
-  price: number;
-  time: number;
-  to: Address;
-}
 
 const PaymentLogo: FunctionComponent<Selectable> = ({ children, selected }) => (
   <div css={css.paymentLogo({ selected })}>{children}</div>
@@ -41,7 +29,7 @@ export const Passenger: FunctionComponent<PassengerProps> = ({
   phone,
   src,
 }) => (
-  <Layout.Card css={css.passenger} heading="Passenger info">
+  <Layout.Card heading="Passenger info" size={1.2474}>
     <div css={css.passengerContent}>
       <div css={css.passengerDetails}>
         <div css={css.passengerProfile}>
@@ -101,7 +89,7 @@ export const Trip: FunctionComponent<TripProps> = ({
   time,
   to,
 }) => (
-  <Layout.Card css={css.trip}>
+  <Layout.Card css={css.trip} fullWidth>
     <div css={css.tripIcons}>
       <div css={css.tripIcon}>
         <img alt="From" src="./check-blue.svg" />
@@ -150,3 +138,44 @@ export const Trip: FunctionComponent<TripProps> = ({
     </div>
   </Layout.Card>
 );
+
+const MapPage: NextPage = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Velocity | Map</title>
+      </Helmet>
+      <Layout.Page>
+        <Layout.Row>
+          <Passenger
+            email={fixtures.email}
+            interactions={4}
+            location={`${fixtures.city}, ${fixtures.state}`}
+            name={fixtures.name}
+            phone={`+${fixtures.phone}`}
+            src={fixtures.avatar}
+          />
+          <Layout.CardGroup>
+            <Trip
+              distance={12.3}
+              energy={12.4}
+              from={{
+                streetAddress: '37-27 74th Street',
+                suburb: 'Jackson Heights',
+              }}
+              price={34.2}
+              time={42}
+              to={{
+                streetAddress: '81 Gate St Brooklyn',
+                suburb: 'Greenpoint',
+              }}
+            />
+            <Layout.Card />
+          </Layout.CardGroup>
+        </Layout.Row>
+      </Layout.Page>
+    </>
+  );
+};
+
+export default MapPage;

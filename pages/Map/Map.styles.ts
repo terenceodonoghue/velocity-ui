@@ -1,10 +1,6 @@
 import { css, Interpolation, InterpolationWithTheme } from '@emotion/core';
 import { Selectable, Theme } from '~/types';
 
-export const passenger = css`
-  width: 655px;
-`;
-
 export const passengerAvatar = css`
   height: 48px;
   width: 48px;
@@ -36,7 +32,7 @@ export const passengerFieldLabel: InterpolationWithTheme<Theme> = (
 
 export const passengerFieldValue = css`
   margin: 0 0 20px;
-  max-width: 241px;
+  max-width: 221px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -96,7 +92,6 @@ export const paymentLogo = ({
 
 export const trip = css`
   padding: 24px;
-  width: 463px;
 `;
 
 export const tripAddress: InterpolationWithTheme<Theme> = (theme) => css`

@@ -1,5 +1,10 @@
 import { ComponentType, HTMLProps } from 'react';
 
+export interface Address {
+  streetAddress: string;
+  suburb: string;
+}
+
 interface Driver {
   src: string;
   name: string;
@@ -125,6 +130,15 @@ export interface PaletteProps {
   colors: string[];
 }
 
+export interface PassengerProps {
+  email: string;
+  interactions: number;
+  location: string;
+  name: string;
+  phone: string;
+  src: string;
+}
+
 export interface SidebarProps {
   bio: string;
   email: string;
@@ -139,4 +153,13 @@ export interface SidebarProps {
 
 export interface TopDriversProps {
   drivers: Driver[];
+}
+
+export interface TripProps {
+  distance: number;
+  energy: number;
+  from: Address;
+  price: number;
+  time: number;
+  to: Address;
 }

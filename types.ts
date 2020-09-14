@@ -1,4 +1,4 @@
-import { ComponentType, HTMLProps } from 'react';
+import { ComponentType, HTMLProps, ImgHTMLAttributes } from 'react';
 
 export interface Address {
   streetAddress: string;
@@ -13,13 +13,13 @@ interface Driver {
   distance: number;
 }
 
+export interface Measurable {
+  length: number;
+}
+
 interface Metric {
   label: string;
   value: string;
-}
-
-export interface Measurable {
-  length: number;
 }
 
 export interface Resizeable {
@@ -35,6 +35,14 @@ export interface Sendable {
   name: string;
   src: string;
   time: string;
+}
+
+export interface Conversation extends Sendable {
+  isOnline: boolean;
+}
+
+export interface Message extends Sendable {
+  isCurrentUser: boolean;
 }
 
 export interface Showable {
@@ -84,6 +92,13 @@ export interface Ticket {
   type: string;
 }
 
+export interface AvatarProps
+  extends ImgHTMLAttributes<HTMLImageElement>,
+    Sizable {
+  alt: string;
+  round?: boolean;
+}
+
 export interface BaseIconProps extends Resizeable {
   title?: string;
 }
@@ -92,6 +107,14 @@ export type CardProps = HTMLProps<HTMLDivElement> &
   Sizable & {
     heading?: string;
   };
+
+export interface ConversationsProps {
+  data: Conversation[];
+}
+
+export interface DialogProps {
+  data: Message[];
+}
 
 export interface DrawerProps {
   name: string;

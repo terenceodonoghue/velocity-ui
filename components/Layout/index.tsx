@@ -23,24 +23,31 @@ export const Card = forwardRef<HTMLDivElement, CardProps>(
   ),
 );
 
-export const CardGroup: FunctionComponent = ({ children }) => (
-  <div css={css.cardGroup}>{children}</div>
+export const CardGroup: FunctionComponent = ({ children, ...props }) => (
+  <div css={css.cardGroup} {...props}>
+    {children}
+  </div>
 );
 
-export const Page: FunctionComponent = ({ children }) => (
-  <div css={css.page}>{children}</div>
+export const Page: FunctionComponent = ({ children, ...props }) => (
+  <div css={css.page} {...props}>
+    {children}
+  </div>
 );
 
 export const PageHeader: FunctionComponent<PageHeaderProps> = ({
   children,
   heading,
+  ...props
 }) => (
-  <div css={css.pageHeader}>
+  <div css={css.pageHeader} {...props}>
     <h1>{heading}</h1>
     {children && <div>{children}</div>}
   </div>
 );
 
-export const Row: FunctionComponent = ({ children }) => (
-  <div css={css.row}>{children}</div>
+export const Row: FunctionComponent = ({ children, ...props }) => (
+  <div css={css.row} {...props}>
+    {children}
+  </div>
 );

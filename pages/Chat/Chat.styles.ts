@@ -10,6 +10,8 @@ export const conversation: InterpolationWithTheme<Theme> = (theme) => css`
   display: flex;
   border-left: 0;
   border-top: 0;
+  box-shadow: none;
+  margin: 0;
   padding: 17px 25px;
   cursor: pointer;
   transition: ${theme.effects.transition};
@@ -27,7 +29,7 @@ export const conversations: InterpolationWithTheme<Theme> = (theme) => css`
   width: 378px;
   background-color: ${theme.colors.white};
   list-style: none;
-  overflow: hidden;
+  overflow: scroll;
 `;
 
 export const conversationBody = css`
@@ -130,4 +132,12 @@ export const dialogTime = ({
   letter-spacing: 2.2px;
   text-align: right;
   color: ${isCurrentUser ? '#e4e8f0' : '#8097b1'};
+`;
+
+export const page = css`
+  position: fixed;
+  top: 80px;
+  left: 80px;
+  bottom: 0;
+  margin: 0;
 `;

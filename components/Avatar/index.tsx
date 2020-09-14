@@ -1,15 +1,20 @@
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
-import { FunctionComponent, ImgHTMLAttributes } from 'react';
+import { FunctionComponent } from 'react';
+import { AvatarProps } from '~/types';
 import * as css from './Avatar.styles';
 
-interface AvatarProps extends ImgHTMLAttributes<HTMLImageElement> {
-  alt: string;
-  round?: boolean;
-}
-
-const Avatar: FunctionComponent<AvatarProps> = ({ alt, round, ...props }) => (
-  <img alt={alt} css={round ? css.round : css.square} {...props} />
+const Avatar: FunctionComponent<AvatarProps> = ({
+  alt,
+  round,
+  size,
+  ...props
+}) => (
+  <img
+    alt={alt}
+    css={round ? css.round({ size }) : css.square({ size })}
+    {...props}
+  />
 );
 
 export default Avatar;

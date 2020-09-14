@@ -54,6 +54,7 @@ export const global: InterpolationWithTheme<Theme> = (theme) => css`
   }
 
   main {
+    position: relative;
     margin-left: 80px;
     max-width: 1360px;
     padding: 64px 110px;

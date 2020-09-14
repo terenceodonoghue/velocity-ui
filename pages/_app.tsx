@@ -51,7 +51,7 @@ const Drawer: FunctionComponent<DrawerProps> = ({ name, src }) => {
         <img alt="Menu" src="./menu.svg" />
       </Button.Text>
       <div css={css.menuHeader({ show })}>
-        <Avatar src={src} alt="Welcome" height="32" width="32" />
+        <Avatar alt="Welcome" size={32} src={src} />
         <div css={css.menuHeaderContent}>
           <span>Welcome</span>
           <span css={css.name}>{name}</span>
@@ -110,7 +110,13 @@ export const Sidebar: FunctionComponent<SidebarProps> = ({
 }) => (
   <Layout.Card css={css.sidebar({ show })}>
     <div css={css.sidebarContent({ show })}>
-      <Avatar alt={fixtures.name} css={css.sidebarAvatar} round src={src} />
+      <Avatar
+        alt={fixtures.name}
+        css={css.sidebarAvatar}
+        round
+        size={140}
+        src={src}
+      />
       <h2 css={css.sidebarName}>{name}</h2>
       <h3 css={css.sidebarJobTitle}>{jobTitle}</h3>
       <div css={css.sidebarButtons}>
@@ -151,6 +157,7 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
             alt={fixtures.name}
             css={css.avatar}
             round
+            size={40}
             src={fixtures.avatar}
           />
         </Button.Icon>

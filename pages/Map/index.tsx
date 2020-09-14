@@ -37,6 +37,7 @@ export const Passenger: FunctionComponent<PassengerProps> = ({
             alt={faker.name.findName()}
             css={css.passengerAvatar}
             round
+            size={48}
             src={src}
           />
           <div css={css.passengerBio}>

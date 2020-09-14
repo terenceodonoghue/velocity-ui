@@ -2458,6 +2458,7 @@ __metadata:
     "@types/numeral": ^0.0.28
     "@types/react": 16.9.49
     "@types/react-beautiful-dnd": ^13.0.0
+    "@types/react-helmet": ^6.1.0
     "@types/react-test-renderer": ^16.9.3
     "@types/recharts": ^1.8.15
     "@typescript-eslint/eslint-plugin": ^4.1.0
@@ -2692,6 +2693,15 @@ __metadata:
   dependencies:
     "@types/react": "*"
   checksum: 2f946d2dbfef86fb823758058056f2c4a52d2b7b12fcb1bbdca6a8077891f339b992691cd3dfc084acabb8515c315e87e028b451302fadfaeff902f974c3e0e5
+  languageName: node
+  linkType: hard
+
+"@types/react-helmet@npm:^6.1.0":
+  version: 6.1.0
+  resolution: "@types/react-helmet@npm:6.1.0"
+  dependencies:
+    "@types/react": "*"
+  checksum: b7aaa3aa2d81cd3b14a0e77a858de86934a3400f4ec35945117edb3979b8a41130e70b8a27241de295195e365962a9b5bc149a2a029d23795fd0f6c740d1de77
   languageName: node
   linkType: hard
 

@@ -8,13 +8,11 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "next build",
+    "build": "rimraf dist && next build",
     "dev": "next dev",
     "eslint-check": "eslint --print-config src/components/index.ts | eslint-config-prettier-check",
     "export": "next export",
     "lint": "concurrently \"eslint --ext .ts,.tsx ./\" \"stylelint './**/*.styles.ts'\"",
-    "prebuild": "rimraf dist",
-    "prepublishOnly": "yarn run build",
     "start": "next start",
     "stylelint-check": "stylelint-config-prettier-check",
     "test": "jest --silent"
@@ -33,7 +31,8 @@
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
     "react-is": "^16.13.1",
-    "recharts": "^1.8.5"
+    "recharts": "^1.8.5",
+    "~": "link: ./"
   },
   "devDependencies": {
     "@terenceodonoghue/eslint-config-react": "^1.0.3",

@@ -22,9 +22,6 @@ jobs:
       - name: Install
         run: |
           npm install -g --silent gh-pages
-          yarn
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Configure
         if: success()
         env:
@@ -35,7 +32,12 @@ jobs:
           git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
       - name: Build
         if: success()
-        run: yarn build && yarn export
+        run: |
+          yarn install
+          yarn build
+          yarn export
+        env:
+          YARN_NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy
         if: success()
         run: |

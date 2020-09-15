@@ -10,6 +10,7 @@ export const appBar: InterpolationWithTheme<Theme> = (theme) => css`
   padding: 0 112px;
   height: 80px;
   background-color: ${theme.colors.white};
+  z-index: 100;
 `;
 
 export const appBarContent = css`

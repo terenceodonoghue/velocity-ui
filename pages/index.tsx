@@ -16,6 +16,10 @@ import { Avatar, Global, Layout } from '~/components';
 import { TopDriversProps } from '~/types';
 import * as css from './home.styles';
 
+const fixtures = {
+  drivers: Array.from(Array(6)).map(() => faker.image.avatar()),
+};
+
 export const renderCustomizedLabel:
   | ContentRenderer<PieLabelRenderProps>
   | boolean = ({ index }) =>
@@ -168,42 +172,42 @@ const HomePage: NextPage = () => {
           <TopDrivers
             drivers={[
               {
-                src: faker.image.avatar(),
+                src: fixtures.drivers[0],
                 name: 'Bebop',
                 vehicle: 'Volvo Intellisafe',
                 earnings: 6432,
                 distance: 1232,
               },
               {
-                src: faker.image.avatar(),
+                src: fixtures.drivers[1],
                 name: 'Gran Tesoro',
                 vehicle: 'Chevrolet Bolt',
                 earnings: 5342,
                 distance: 945,
               },
               {
-                src: faker.image.avatar(),
+                src: fixtures.drivers[2],
                 name: 'Belafonte',
                 vehicle: 'Infiniti Q50S',
                 earnings: 5133,
                 distance: 834,
               },
               {
-                src: faker.image.avatar(),
+                src: fixtures.drivers[3],
                 name: 'Chester',
                 vehicle: 'Audi RS 7',
                 earnings: 4755,
                 distance: 812,
               },
               {
-                src: faker.image.avatar(),
+                src: fixtures.drivers[4],
                 name: 'Expedia',
                 vehicle: 'Tesla Model X',
                 earnings: 4140,
                 distance: 724,
               },
               {
-                src: faker.image.avatar(),
+                src: fixtures.drivers[5],
                 name: 'Aeolus',
                 vehicle: 'Tesla Model S',
                 earnings: 3323,

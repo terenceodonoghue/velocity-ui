@@ -4,7 +4,7 @@ import { Theme } from '~/types';
 export const gitHubCorner = css`
   position: sticky;
   top: 0;
-  z-index: 1;
+  z-index: 300;
 
   .github-corner:hover .octo-arm {
     animation: octocat-wave 560ms ease-in-out;

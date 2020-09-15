@@ -22,6 +22,7 @@ export const drawer = ({ show }: Showable): InterpolationWithTheme<Theme> => (
   background-color: ${theme.colors.white};
   transition: ${theme.effects.transition};
   overflow-x: hidden;
+  z-index: 200;
 `;
 
 export const menuHeader = ({

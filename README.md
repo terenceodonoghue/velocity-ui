@@ -2,7 +2,9 @@
 
 🚙 React components that implement InVision's kit [Velocity UI kit](https://www.invisionapp.com/inside-design/design-resources/design-system-dashboard-ui-kit/)
 
-Live demo: [https://terenceodonoghue.dev/velocity-ui](https://terenceodonoghue.dev/velocity-ui)
+## Live Demo
+
+[https://terenceodonoghue.dev/velocity-ui](https://terenceodonoghue.dev/velocity-ui)
 
 ## Quick Start
 

@@ -5,7 +5,7 @@ import faker from 'faker';
 import { AppProps } from 'next/app';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { FunctionComponent, useState } from 'react';
+import { FunctionComponent, useEffect, useState } from 'react';
 import { Avatar, Button, Global, Icon, Layout } from '~/components';
 import { DrawerProps, NavListItemProps, SidebarProps, Theme } from '~/types';
 import * as css from './_app.styles';
@@ -42,12 +42,15 @@ const NavListItem: FunctionComponent<NavListItemProps> = ({
   );
 };
 
-const Drawer: FunctionComponent<DrawerProps> = ({ name, src }) => {
-  const [show, setShow] = useState(false);
-
+const Drawer: FunctionComponent<DrawerProps> = ({
+  name,
+  show,
+  src,
+  toggleShow,
+}) => {
   return (
     <div css={css.drawer({ show })}>
-      <Button.Text css={css.button} onClick={(): void => setShow(!show)}>
+      <Button.Text css={css.button} onClick={(): void => toggleShow(!show)}>
         <img alt="Menu" src="./menu.svg" />
       </Button.Text>
       <div css={css.menuHeader({ show })}>
@@ -145,7 +148,17 @@ export const Sidebar: FunctionComponent<SidebarProps> = ({
 );
 
 const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
+  const router = useRouter();
+  const [showDrawer, toggleDrawer] = useState(false);
   const [showSidebar, toggleSidebar] = useState(false);
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      toggleDrawer(false);
+    };
+
+    router.events.on('beforeHistoryChange', handleRouteChange);
+  }, [router]);
 
   return (
     <Global.ThemeProvider>
@@ -162,7 +175,12 @@ const App: FunctionComponent<AppProps> = ({ Component, pageProps }) => {
           />
         </Button.Icon>
       </Layout.AppBar>
-      <Drawer name={fixtures.name} src={fixtures.avatar} />
+      <Drawer
+        name={fixtures.name}
+        show={showDrawer}
+        src={fixtures.avatar}
+        toggleShow={toggleDrawer}
+      />
       <main>
         <Component {...pageProps} />
       </main>

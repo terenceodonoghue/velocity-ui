@@ -1,4 +1,10 @@
-import { ComponentType, HTMLProps, ImgHTMLAttributes } from 'react';
+import {
+  ComponentType,
+  Dispatch,
+  HTMLProps,
+  ImgHTMLAttributes,
+  SetStateAction,
+} from 'react';
 
 export interface Address {
   streetAddress: string;
@@ -118,7 +124,9 @@ export interface DialogProps {
 
 export interface DrawerProps {
   name: string;
+  show: boolean;
   src: string;
+  toggleShow: Dispatch<SetStateAction<boolean>>;
 }
 
 export interface IconProps extends BaseIconProps, Themeable {

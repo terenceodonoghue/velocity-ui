@@ -2453,6 +2453,7 @@ __metadata:
     "@emotion/core": ^10.0.35
     "@terenceodonoghue/eslint-config-react": ^1.0.3
     "@terenceodonoghue/stylelint-config-base": ^1.0.1
+    "@types/facepaint": ^1.2.1
     "@types/faker": ^5.1.0
     "@types/node": 14.10.1
     "@types/numeral": ^0.0.28
@@ -2475,6 +2476,7 @@ __metadata:
     eslint-plugin-prettier: ^3.1.4
     eslint-plugin-react: ^7.20.6
     eslint-plugin-react-hooks: ^4.1.2
+    facepaint: ^1.2.1
     faker: ^5.1.0
     hex-rgb: ^4.2.0
     jest: ^26.4.2
@@ -2560,6 +2562,13 @@ __metadata:
   dependencies:
     "@types/d3-path": "*"
   checksum: 3f6c582dfd23274c9c0db2dd972f23a4a53f1b13f1fb1193831a56cfb882df417fa40264c906da9269e97416d85a346e065f40e71616c2b3b181d3a345eab813
+  languageName: node
+  linkType: hard
+
+"@types/facepaint@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "@types/facepaint@npm:1.2.1"
+  checksum: 25a65abda881e5d25afb11260987b65650e6b289284c7bcb582b4030d62e3c2257e847d9d77cde5be8f1198044af7a58e5cc959f0305ca4bf43ab7b6edef5509
   languageName: node
   linkType: hard
 
@@ -6466,6 +6475,13 @@ __metadata:
   version: 1.4.0
   resolution: "extsprintf@npm:1.4.0"
   checksum: 092e011574324c5cddd78b5a27f869c2703613c1140eb7763aef8f5b0e33769a9b4c7dbcc50acd39b6afebe79bf66adcec73bf3c84e095c5bcfb42306d128ad0
+  languageName: node
+  linkType: hard
+
+"facepaint@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "facepaint@npm:1.2.1"
+  checksum: 63cf1dff30496814ec3ff8807c91d57dde5842721479c317e6c767dd2649149f97e64c5a4a8043f8a961670ad67b880c82f811309cb0bce5344087ade381d4d0
   languageName: node
   linkType: hard
 

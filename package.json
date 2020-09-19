@@ -20,6 +20,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.35",
     "emotion-theming": "^10.0.27",
+    "facepaint": "^1.2.1",
     "faker": "^5.1.0",
     "hex-rgb": "^4.2.0",
     "moment": "^2.27.0",
@@ -37,6 +38,7 @@
   "devDependencies": {
     "@terenceodonoghue/eslint-config-react": "^1.0.3",
     "@terenceodonoghue/stylelint-config-base": "^1.0.1",
+    "@types/facepaint": "^1.2.1",
     "@types/faker": "^5.1.0",
     "@types/node": "14.10.1",
     "@types/numeral": "^0.0.28",

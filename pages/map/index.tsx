@@ -140,43 +140,41 @@ export const Trip: FunctionComponent<TripProps> = ({
   </Layout.Card>
 );
 
-const MapPage: NextPage = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Velocity | Map</title>
-      </Helmet>
-      <Layout.Page>
-        <Layout.Row>
-          <Passenger
-            email={fixtures.email}
-            interactions={4}
-            location={`${fixtures.city}, ${fixtures.state}`}
-            name={fixtures.name}
-            phone={`+${fixtures.phone}`}
-            src={fixtures.avatar}
+const MapPage: NextPage = () => (
+  <>
+    <Helmet>
+      <title>Velocity | Map</title>
+    </Helmet>
+    <Layout.Page>
+      <Layout.Row>
+        <Passenger
+          email={fixtures.email}
+          interactions={4}
+          location={`${fixtures.city}, ${fixtures.state}`}
+          name={fixtures.name}
+          phone={`+${fixtures.phone}`}
+          src={fixtures.avatar}
+        />
+        <Layout.CardGroup>
+          <Trip
+            distance={12.3}
+            energy={12.4}
+            from={{
+              streetAddress: '37-27 74th Street',
+              suburb: 'Jackson Heights',
+            }}
+            price={34.2}
+            time={42}
+            to={{
+              streetAddress: '81 Gate St Brooklyn',
+              suburb: 'Greenpoint',
+            }}
           />
-          <Layout.CardGroup>
-            <Trip
-              distance={12.3}
-              energy={12.4}
-              from={{
-                streetAddress: '37-27 74th Street',
-                suburb: 'Jackson Heights',
-              }}
-              price={34.2}
-              time={42}
-              to={{
-                streetAddress: '81 Gate St Brooklyn',
-                suburb: 'Greenpoint',
-              }}
-            />
-            <Layout.Card />
-          </Layout.CardGroup>
-        </Layout.Row>
-      </Layout.Page>
-    </>
-  );
-};
+          <Layout.Card />
+        </Layout.CardGroup>
+      </Layout.Row>
+    </Layout.Page>
+  </>
+);
 
 export default MapPage;

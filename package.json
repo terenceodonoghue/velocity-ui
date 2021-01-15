@@ -36,8 +36,8 @@
     "~": "link: ./"
   },
   "devDependencies": {
-    "@terenceodonoghue/eslint-config-react": "^1.0.3",
-    "@terenceodonoghue/stylelint-config-base": "^1.0.1",
+    "@terenceodonoghue/eslint-config-react": "^1.0.0",
+    "@terenceodonoghue/stylelint-config-base": "^1.0.0",
     "@types/facepaint": "^1.2.1",
     "@types/faker": "^5.1.0",
     "@types/node": "14.10.1",

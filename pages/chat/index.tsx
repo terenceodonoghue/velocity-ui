@@ -65,83 +65,81 @@ export const Dialog: FunctionComponent<DialogProps> = ({ data }) => (
   </div>
 );
 
-const ChatPage: NextPage = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Velocity | Chat</title>
-      </Helmet>
-      <Layout.Page css={css.page}>
-        <Conversations
-          data={[
-            {
-              isOnline: faker.random.boolean(),
-              message: faker.lorem.sentences(),
-              name: faker.name.findName(),
-              src: faker.image.avatar(),
-              time: moment()
-                .minutes(faker.random.number({ min: 1, max: 19 }))
-                .format('m[m]'),
-            },
-            {
-              isOnline: faker.random.boolean(),
-              message: faker.lorem.sentences(),
-              name: faker.name.findName(),
-              src: faker.image.avatar(),
-              time: moment()
-                .minutes(faker.random.number({ min: 20, max: 39 }))
-                .format('m[m]'),
-            },
-            {
-              isOnline: faker.random.boolean(),
-              message: faker.lorem.sentences(),
-              name: faker.name.findName(),
-              src: faker.image.avatar(),
-              time: moment()
-                .minutes(faker.random.number({ min: 40, max: 59 }))
-                .format('m[m]'),
-            },
-            {
-              isOnline: faker.random.boolean(),
-              message: faker.lorem.sentences(),
-              name: faker.name.findName(),
-              src: faker.image.avatar(),
-              time: moment()
-                .hours(faker.random.number({ min: 1, max: 5 }))
-                .format('h[h]'),
-            },
-            {
-              isOnline: faker.random.boolean(),
-              message: faker.lorem.sentences(),
-              name: faker.name.findName(),
-              src: faker.image.avatar(),
-              time: moment()
-                .hours(faker.random.number({ min: 6, max: 11 }))
-                .format('h[h]'),
-            },
-            {
-              isOnline: faker.random.boolean(),
-              message: faker.lorem.sentences(),
-              name: faker.name.findName(),
-              src: faker.image.avatar(),
-              time: moment()
-                .hours(faker.random.number({ min: 12, max: 17 }))
-                .format('h[h]'),
-            },
-            {
-              isOnline: faker.random.boolean(),
-              message: faker.lorem.sentences(),
-              name: faker.name.findName(),
-              src: faker.image.avatar(),
-              time: moment()
-                .hours(faker.random.number({ min: 18, max: 23 }))
-                .format('h[h]'),
-            },
-          ]}
-        />
-      </Layout.Page>
-    </>
-  );
-};
+const ChatPage: NextPage = () => (
+  <>
+    <Helmet>
+      <title>Velocity | Chat</title>
+    </Helmet>
+    <Layout.Page css={css.page}>
+      <Conversations
+        data={[
+          {
+            isOnline: faker.random.boolean(),
+            message: faker.lorem.sentences(),
+            name: faker.name.findName(),
+            src: faker.image.avatar(),
+            time: moment()
+              .minutes(faker.random.number({ min: 1, max: 19 }))
+              .format('m[m]'),
+          },
+          {
+            isOnline: faker.random.boolean(),
+            message: faker.lorem.sentences(),
+            name: faker.name.findName(),
+            src: faker.image.avatar(),
+            time: moment()
+              .minutes(faker.random.number({ min: 20, max: 39 }))
+              .format('m[m]'),
+          },
+          {
+            isOnline: faker.random.boolean(),
+            message: faker.lorem.sentences(),
+            name: faker.name.findName(),
+            src: faker.image.avatar(),
+            time: moment()
+              .minutes(faker.random.number({ min: 40, max: 59 }))
+              .format('m[m]'),
+          },
+          {
+            isOnline: faker.random.boolean(),
+            message: faker.lorem.sentences(),
+            name: faker.name.findName(),
+            src: faker.image.avatar(),
+            time: moment()
+              .hours(faker.random.number({ min: 1, max: 5 }))
+              .format('h[h]'),
+          },
+          {
+            isOnline: faker.random.boolean(),
+            message: faker.lorem.sentences(),
+            name: faker.name.findName(),
+            src: faker.image.avatar(),
+            time: moment()
+              .hours(faker.random.number({ min: 6, max: 11 }))
+              .format('h[h]'),
+          },
+          {
+            isOnline: faker.random.boolean(),
+            message: faker.lorem.sentences(),
+            name: faker.name.findName(),
+            src: faker.image.avatar(),
+            time: moment()
+              .hours(faker.random.number({ min: 12, max: 17 }))
+              .format('h[h]'),
+          },
+          {
+            isOnline: faker.random.boolean(),
+            message: faker.lorem.sentences(),
+            name: faker.name.findName(),
+            src: faker.image.avatar(),
+            time: moment()
+              .hours(faker.random.number({ min: 18, max: 23 }))
+              .format('h[h]'),
+          },
+        ]}
+      />
+    </Layout.Page>
+  </>
+);
 
 export default ChatPage;

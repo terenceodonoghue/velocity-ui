@@ -47,58 +47,56 @@ const Drawer: FunctionComponent<DrawerProps> = ({
   show,
   src,
   toggleShow,
-}) => {
-  return (
-    <div css={css.drawer({ show })}>
-      <Button.Text css={css.button} onClick={(): void => toggleShow(!show)}>
-        <img alt="Menu" src="./menu.svg" />
-      </Button.Text>
-      <div css={css.menuHeader({ show })}>
-        <Avatar alt="Welcome" size={32} src={src} />
-        <div css={css.menuHeaderContent}>
-          <span>Welcome</span>
-          <span css={css.name}>{name}</span>
-        </div>
+}) => (
+  <div css={css.drawer({ show })}>
+    <Button.Text css={css.button} onClick={(): void => toggleShow(!show)}>
+      <img alt="Menu" src="./menu.svg" />
+    </Button.Text>
+    <div css={css.menuHeader({ show })}>
+      <Avatar alt="Welcome" size={32} src={src} />
+      <div css={css.menuHeaderContent}>
+        <span>Welcome</span>
+        <span css={css.name}>{name}</span>
       </div>
-      <nav>
-        <ul css={css.navList}>
-          <NavListItem
-            href="/"
-            icon={Icon.Dashboard}
-            label="Overview"
-            show={show}
-          />
-          <NavListItem
-            href="/analytics"
-            icon={Icon.Analytics}
-            label="Analytics"
-            show={show}
-          />
-          <NavListItem
-            href="/vehicles"
-            icon={Icon.Vehicles}
-            label="Vehicles"
-            show={show}
-          />
-          <NavListItem
-            href="/reminders"
-            icon={Icon.Service}
-            label="Service"
-            show={show}
-          />
-          <NavListItem href="/map" icon={Icon.Map} label="Map" show={show} />
-          <NavListItem href="/chat" icon={Icon.Chat} label="Chat" show={show} />
-          <NavListItem
-            href="/settings"
-            icon={Icon.Settings}
-            label="Settings"
-            show={show}
-          />
-        </ul>
-      </nav>
     </div>
-  );
-};
+    <nav>
+      <ul css={css.navList}>
+        <NavListItem
+          href="/"
+          icon={Icon.Dashboard}
+          label="Overview"
+          show={show}
+        />
+        <NavListItem
+          href="/analytics"
+          icon={Icon.Analytics}
+          label="Analytics"
+          show={show}
+        />
+        <NavListItem
+          href="/vehicles"
+          icon={Icon.Vehicles}
+          label="Vehicles"
+          show={show}
+        />
+        <NavListItem
+          href="/reminders"
+          icon={Icon.Service}
+          label="Service"
+          show={show}
+        />
+        <NavListItem href="/map" icon={Icon.Map} label="Map" show={show} />
+        <NavListItem href="/chat" icon={Icon.Chat} label="Chat" show={show} />
+        <NavListItem
+          href="/settings"
+          icon={Icon.Settings}
+          label="Settings"
+          show={show}
+        />
+      </ul>
+    </nav>
+  </div>
+);
 
 export const Sidebar: FunctionComponent<SidebarProps> = ({
   bio,

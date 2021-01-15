@@ -148,79 +148,77 @@ export const Welcome: FunctionComponent = () => (
   </Layout.Card>
 );
 
-const HomePage: NextPage = () => {
-  return (
-    <>
-      <Helmet>
-        <title>Velocity | Dashboard</title>
-      </Helmet>
-      <Layout.Page>
-        <Layout.Row>
-          <Layout.CardGroup>
-            <Welcome />
-            <Layout.Card />
-            <Layout.Card />
-          </Layout.CardGroup>
-          <Layout.CardGroup>
-            <Layout.Card />
-          </Layout.CardGroup>
-        </Layout.Row>
-        <Layout.Row>
-          <Layout.Card />
-        </Layout.Row>
-        <Layout.Row>
-          <TopDrivers
-            drivers={[
-              {
-                src: fixtures.drivers[0],
-                name: 'Bebop',
-                vehicle: 'Volvo Intellisafe',
-                earnings: 6432,
-                distance: 1232,
-              },
-              {
-                src: fixtures.drivers[1],
-                name: 'Gran Tesoro',
-                vehicle: 'Chevrolet Bolt',
-                earnings: 5342,
-                distance: 945,
-              },
-              {
-                src: fixtures.drivers[2],
-                name: 'Belafonte',
-                vehicle: 'Infiniti Q50S',
-                earnings: 5133,
-                distance: 834,
-              },
-              {
-                src: fixtures.drivers[3],
-                name: 'Chester',
-                vehicle: 'Audi RS 7',
-                earnings: 4755,
-                distance: 812,
-              },
-              {
-                src: fixtures.drivers[4],
-                name: 'Expedia',
-                vehicle: 'Tesla Model X',
-                earnings: 4140,
-                distance: 724,
-              },
-              {
-                src: fixtures.drivers[5],
-                name: 'Aeolus',
-                vehicle: 'Tesla Model S',
-                earnings: 3323,
-                distance: 466,
-              },
-            ]}
-          />
+const HomePage: NextPage = () => (
+  <>
+    <Helmet>
+      <title>Velocity | Dashboard</title>
+    </Helmet>
+    <Layout.Page>
+      <Layout.Row>
+        <Layout.CardGroup>
+          <Welcome />
           <Layout.Card />
           <Layout.Card />
-        </Layout.Row>
-      </Layout.Page>
-    </>
-  );
-};
+        </Layout.CardGroup>
+        <Layout.CardGroup>
+          <Layout.Card />
+        </Layout.CardGroup>
+      </Layout.Row>
+      <Layout.Row>
+        <Layout.Card />
+      </Layout.Row>
+      <Layout.Row>
+        <TopDrivers
+          drivers={[
+            {
+              src: fixtures.drivers[0],
+              name: 'Bebop',
+              vehicle: 'Volvo Intellisafe',
+              earnings: 6432,
+              distance: 1232,
+            },
+            {
+              src: fixtures.drivers[1],
+              name: 'Gran Tesoro',
+              vehicle: 'Chevrolet Bolt',
+              earnings: 5342,
+              distance: 945,
+            },
+            {
+              src: fixtures.drivers[2],
+              name: 'Belafonte',
+              vehicle: 'Infiniti Q50S',
+              earnings: 5133,
+              distance: 834,
+            },
+            {
+              src: fixtures.drivers[3],
+              name: 'Chester',
+              vehicle: 'Audi RS 7',
+              earnings: 4755,
+              distance: 812,
+            },
+            {
+              src: fixtures.drivers[4],
+              name: 'Expedia',
+              vehicle: 'Tesla Model X',
+              earnings: 4140,
+              distance: 724,
+            },
+            {
+              src: fixtures.drivers[5],
+              name: 'Aeolus',
+              vehicle: 'Tesla Model S',
+              earnings: 3323,
+              distance: 466,
+            },
+          ]}
+        />
+        <Layout.Card />
+        <Layout.Card />
+      </Layout.Row>
+    </Layout.Page>
+  </>
+);
 
 export default HomePage;

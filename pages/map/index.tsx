@@ -1,12 +1,10 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import faker from 'faker';
 import { NextPage } from 'next';
-import { FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 import { Helmet } from 'react-helmet';
 import { Avatar, Layout } from '~/components';
 import { PassengerProps, Selectable, TripProps } from '~/types';
-import * as css from './map.styles';
+import * as css from './styles';
 
 const fixtures = {
   avatar: faker.image.avatar(),
@@ -140,41 +138,43 @@ export const Trip: FunctionComponent<TripProps> = ({
   </Layout.Card>
 );
 
-const MapPage: NextPage = () => (
-  <>
-    <Helmet>
-      <title>Velocity | Map</title>
-    </Helmet>
-    <Layout.Page>
-      <Layout.Row>
-        <Passenger
-          email={fixtures.email}
-          interactions={4}
-          location={`${fixtures.city}, ${fixtures.state}`}
-          name={fixtures.name}
-          phone={`+${fixtures.phone}`}
-          src={fixtures.avatar}
-        />
-        <Layout.CardGroup>
-          <Trip
-            distance={12.3}
-            energy={12.4}
-            from={{
-              streetAddress: '37-27 74th Street',
-              suburb: 'Jackson Heights',
-            }}
-            price={34.2}
-            time={42}
-            to={{
-              streetAddress: '81 Gate St Brooklyn',
-              suburb: 'Greenpoint',
-            }}
+const MapPage: NextPage = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Velocity | Map</title>
+      </Helmet>
+      <Layout.Page>
+        <Layout.Row>
+          <Passenger
+            email={fixtures.email}
+            interactions={4}
+            location={`${fixtures.city}, ${fixtures.state}`}
+            name={fixtures.name}
+            phone={`+${fixtures.phone}`}
+            src={fixtures.avatar}
           />
-          <Layout.Card />
-        </Layout.CardGroup>
-      </Layout.Row>
-    </Layout.Page>
-  </>
-);
+          <Layout.CardGroup>
+            <Trip
+              distance={12.3}
+              energy={12.4}
+              from={{
+                streetAddress: '37-27 74th Street',
+                suburb: 'Jackson Heights',
+              }}
+              price={34.2}
+              time={42}
+              to={{
+                streetAddress: '81 Gate St Brooklyn',
+                suburb: 'Greenpoint',
+              }}
+            />
+            <Layout.Card />
+          </Layout.CardGroup>
+        </Layout.Row>
+      </Layout.Page>
+    </>
+  );
+};
 
 export default MapPage;

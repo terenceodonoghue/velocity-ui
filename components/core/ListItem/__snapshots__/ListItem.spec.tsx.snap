@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem is unselected by default 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  height: 56px;
+  padding: 0 0 0 25px;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.6, 1);
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.6, 1);
+  cursor: pointer;
+  border-left: solid 3px transparent;
+  color: #b0bac9;
+}
+
+.emotion-0:hover {
+  background-color: rgba(46,91,255,0.1);
+}
+
+<div>
+  <li
+    class="emotion-0"
+    data-testid="listitem"
+  />
+</div>
+`;
+
+exports[`ListItem renders selected item 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  height: 56px;
+  padding: 0 0 0 25px;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.6, 1);
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.6, 1);
+  cursor: pointer;
+  border-left: solid 3px #2e5bff;
+  background-color: rgba(46,91,255,0.1);
+  color: #2e5bff;
+}
+
+<div>
+  <li
+    class="emotion-0"
+    data-testid="listitem"
+  />
+</div>
+`;

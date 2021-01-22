@@ -18,6 +18,9 @@
     "paths": {
       "~/*": [
         "./*"
+      ],
+      "test-utils": [
+        "./components/utils/test-utils"
       ]
     },
     "resolveJsonModule": true,

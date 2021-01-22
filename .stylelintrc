@@ -3,7 +3,6 @@
     "@terenceodonoghue/stylelint-config-base"
   ],
   "rules": {
-    "declaration-empty-line-before": null,
-    "no-empty-source": null
+    "value-keyword-case": null
   }
 }

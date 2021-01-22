@@ -1,11 +1,8 @@
-/* eslint-disable import/prefer-default-export */
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { NextPage } from 'next';
-import { FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 import { Helmet } from 'react-helmet';
 import { Input, Layout } from '~/components';
-import * as css from './vehicles.styles';
+import * as css from './styles';
 
 export const Filter: FunctionComponent = () => (
   <Layout.Card css={css.filter} heading="Filter">

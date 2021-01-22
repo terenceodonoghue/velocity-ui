@@ -1,11 +1,9 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
 import { NextPage } from 'next';
-import { FunctionComponent } from 'react';
+import React, { FunctionComponent } from 'react';
 import { Helmet } from 'react-helmet';
 import { Button, Icon, Input, Layout } from '~/components';
 import { IntegrationProps, PaletteProps } from '~/types';
-import * as css from './settings.styles';
+import * as css from './styles';
 
 const Integration: FunctionComponent<IntegrationProps> = ({
   description,
@@ -26,8 +24,8 @@ const Integration: FunctionComponent<IntegrationProps> = ({
   </div>
 );
 
-const Palette: FunctionComponent<PaletteProps> = ({ colors }) => (
-  <div css={css.palette({ colors })} />
+const Palette: FunctionComponent<PaletteProps> = ({ palette }) => (
+  <div css={css.palette({ palette })} />
 );
 
 export const Personal: FunctionComponent = () => (

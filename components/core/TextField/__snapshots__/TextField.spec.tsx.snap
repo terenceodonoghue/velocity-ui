@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextField renders label 1`] = `
+.emotion-0 {
+  display: inline-block;
+  color: #54657a;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.emotion-1 {
+  display: block;
+  border: solid 1px #e0e7ff;
+  border-radius: 5px;
+  height: 38px;
+  margin: 7px 0;
+  max-width: 270px;
+  padding: 10px 16px;
+  width: 100%;
+  background-color: rgba(224,231,255,0.2);
+  color: #2E384D;
+  font-family: inherit;
+  font-size: 1em;
+  -webkit-transition: border 300ms cubic-bezier(0.4, 0, 0.6, 1),opacity 300ms cubic-bezier(0.4, 0, 0.6, 1);
+  transition: border 300ms cubic-bezier(0.4, 0, 0.6, 1),opacity 300ms cubic-bezier(0.4, 0, 0.6, 1);
+}
+
+.emotion-1:disabled {
+  opacity: 0.3;
+}
+
+.emotion-1:focus {
+  border: solid 1px #2e5bff;
+  outline: 0;
+}
+
+<div>
+  <label
+    class="emotion-0"
+    data-testid="textfield"
+  >
+    The SMS program is down, synthesize the redundant feed so we can synthesize the SQL hard drive!
+    <input
+      class="emotion-1"
+      data-testid="textfield-input"
+    />
+  </label>
+</div>
+`;

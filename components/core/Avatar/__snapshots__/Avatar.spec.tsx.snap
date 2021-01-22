@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar is rounded by default 1`] = `
+.emotion-0 {
+  border-radius: 50%;
+}
+
+<div>
+  <img
+    alt="Clara Keebler"
+    class="emotion-0"
+    data-testid="avatar"
+    src="https://s3.amazonaws.com/uifaces/faces/twitter/giancarlon/128.jpg"
+  />
+</div>
+`;
+
+exports[`Avatar renders rounded variant 1`] = `
+.emotion-0 {
+  border-radius: 50%;
+}
+
+<div>
+  <img
+    alt="Beulah Reichel"
+    class="emotion-0"
+    data-testid="avatar"
+    src="https://s3.amazonaws.com/uifaces/faces/twitter/uxpiper/128.jpg"
+  />
+</div>
+`;
+
+exports[`Avatar renders square variant 1`] = `
+.emotion-0 {
+  border-radius: 6px;
+}
+
+<div>
+  <img
+    alt="Elisa Jenkins"
+    class="emotion-0"
+    data-testid="avatar"
+    src="https://s3.amazonaws.com/uifaces/faces/twitter/betraydan/128.jpg"
+  />
+</div>
+`;

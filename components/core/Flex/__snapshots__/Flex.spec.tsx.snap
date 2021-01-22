@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flex has align-items propery 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="flex"
+  />
+</div>
+`;
+
+exports[`Flex has align-items propery 2`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="flex"
+  />
+</div>
+`;
+
+exports[`Flex has flex-basis property 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 1 50%;
+  -ms-flex: 0 1 50%;
+  flex: 0 1 50%;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="flex"
+  />
+</div>
+`;
+
+exports[`Flex has flex-direction property 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="flex"
+  />
+</div>
+`;
+
+exports[`Flex has flex-grow property 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="flex"
+  />
+</div>
+`;
+
+exports[`Flex has flex-shrink property 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="flex"
+  />
+</div>
+`;
+
+exports[`Flex has flex-wrap property 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="flex"
+  />
+</div>
+`;
+
+exports[`Flex has flex-wrap property 2`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="flex"
+  />
+</div>
+`;
+
+exports[`Flex renders content 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="flex"
+  >
+    The SMS program is down, synthesize the redundant feed so we can synthesize the SQL hard drive!
+  </div>
+</div>
+`;

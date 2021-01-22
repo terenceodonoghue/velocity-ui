@@ -1,22 +1,9 @@
-import {
-  ComponentType,
-  Dispatch,
-  HTMLProps,
-  ImgHTMLAttributes,
-  SetStateAction,
-} from 'react';
+import { Theme } from '@emotion/react';
+import { ComponentType } from 'react';
 
 export interface Address {
   streetAddress: string;
   suburb: string;
-}
-
-interface Driver {
-  src: string;
-  name: string;
-  vehicle: string;
-  earnings: number;
-  distance: number;
 }
 
 export interface Measurable {
@@ -26,10 +13,6 @@ export interface Measurable {
 interface Metric {
   label: string;
   value: string;
-}
-
-export interface Resizeable {
-  size?: number;
 }
 
 export interface Selectable {
@@ -54,39 +37,6 @@ export interface Message extends Sendable {
 export interface Showable {
   show: boolean;
 }
-
-export interface Sizable {
-  fullWidth?: boolean;
-  size?: number;
-}
-
-export interface Theme {
-  colors: {
-    black: string;
-    blueyGrey: string;
-    blue: string;
-    blueDark: string;
-    green: string;
-    lightBlueGrey: string;
-    purple: string;
-    red: string;
-    teal: string;
-    white: string;
-    yellow: string;
-  };
-  effects: {
-    transition: string;
-  };
-  typography: {
-    baseFontSize: string;
-    baseFontFamily: string;
-    fontWeightLight: number;
-    fontWeightRegular: number;
-    fontWeightMedium: number;
-    fontWeightBold: number;
-  };
-}
-
 export interface Themeable {
   theme?: Theme;
 }
@@ -98,22 +48,6 @@ export interface Ticket {
   type: string;
 }
 
-export interface AvatarProps
-  extends ImgHTMLAttributes<HTMLImageElement>,
-    Sizable {
-  alt: string;
-  round?: boolean;
-}
-
-export interface BaseIconProps extends Resizeable {
-  title?: string;
-}
-
-export type CardProps = HTMLProps<HTMLDivElement> &
-  Sizable & {
-    heading?: string;
-  };
-
 export interface ConversationsProps {
   data: Conversation[];
 }
@@ -121,18 +55,6 @@ export interface ConversationsProps {
 export interface DialogProps {
   data: Message[];
 }
-
-export interface DrawerProps {
-  name: string;
-  show: boolean;
-  src: string;
-  toggleShow: Dispatch<SetStateAction<boolean>>;
-}
-
-export interface IconProps extends BaseIconProps, Themeable {
-  fill?: string;
-}
-
 export interface IntegrationProps extends Selectable {
   description: string;
   icon: ComponentType<IconProps>;
@@ -145,16 +67,6 @@ export interface KanbanProps {
 
 export interface MetricsProps {
   data: Metric[];
-}
-
-export interface NavListItemProps extends Selectable, Showable {
-  href: string;
-  icon: ComponentType<IconProps>;
-  label: string;
-}
-
-export interface PageHeaderProps {
-  heading: string;
 }
 
 export interface PaletteProps {
@@ -180,10 +92,6 @@ export interface SidebarProps {
   roles: string;
   show: boolean;
   src: string;
-}
-
-export interface TopDriversProps {
-  drivers: Driver[];
 }
 
 export interface TripProps {

@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Radio renders label 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.emotion-0 input {
+  height: 0;
+  margin: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.emotion-1 {
+  display: inline-block;
+  border: solid 1px rgba(128, 151, 177, 0.5);
+  border-radius: 50%;
+  height: 16px;
+  margin: 0 8px 0 0;
+  width: 16px;
+}
+
+input:disabled+.emotion-1 {
+  opacity: 0.4;
+}
+
+input:checked:enabled+.emotion-1 {
+  border: solid 4px #2e5bff;
+}
+
+<div>
+  <label
+    class="emotion-0"
+    data-testid="radio"
+  >
+    <input
+      data-testid="radio-input"
+      type="radio"
+    />
+    <span
+      class="emotion-1"
+    />
+    The SMS program is down, synthesize the redundant feed so we can synthesize the SQL hard drive!
+  </label>
+</div>
+`;

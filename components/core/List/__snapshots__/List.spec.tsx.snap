@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List is unordered by default 1`] = `
+.emotion-0 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+<div>
+  <ul
+    class="emotion-0 emotion-1"
+    data-testid="list-ul"
+  />
+</div>
+`;
+
+exports[`List renders ordered list 1`] = `
+.emotion-0 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+<div>
+  <ol
+    class="emotion-0 emotion-1"
+    data-testid="list-ol"
+  />
+</div>
+`;
+
+exports[`List renders unordered list 1`] = `
+.emotion-0 {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+<div>
+  <ul
+    class="emotion-0 emotion-1"
+    data-testid="list-ul"
+  />
+</div>
+`;

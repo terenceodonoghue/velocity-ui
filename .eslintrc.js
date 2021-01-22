@@ -1,15 +1,20 @@
 module.exports = {
-  extends: ['@terenceodonoghue/react'],
   env: {
     jest: true,
   },
-  globals: {
-    mount: 'readonly',
-    renderer: 'readonly',
-    shallow: 'readonly',
-    withTheme: 'readonly',
-  },
+  extends: ['@terenceodonoghue/react'],
   rules: {
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          './jest.setup.ts',
+          '**/test-utils.tsx',
+          '**/*.spec.ts',
+          '**/*.spec.tsx',
+        ],
+      },
+    ],
     'jsx-a11y/label-has-associated-control': ['error', { assert: 'either' }],
   },
   settings: {

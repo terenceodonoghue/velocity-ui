@@ -1,28 +1,37 @@
-/** @jsx jsx */
-import { jsx } from '@emotion/core';
+import React, { FunctionComponent, ReactNode } from 'react';
+import { useTheme } from '@emotion/react';
 import faker from 'faker';
 import { NextPage } from 'next';
 import numeral from 'numeral';
-import { FunctionComponent } from 'react';
 import { Helmet } from 'react-helmet';
-import {
-  ContentRenderer,
-  Pie,
-  PieChart,
-  PieLabelRenderProps,
-  ResponsiveContainer,
-} from 'recharts';
-import { Avatar, Global, Layout } from '~/components';
-import { TopDriversProps } from '~/types';
-import * as css from './home.styles';
+import { Pie, PieChart, PieLabelRenderProps } from 'recharts';
+import Avatar from '~/components/core/Avatar';
+import Card from '~/components/core/Card';
+import Container from '~/components/core/Container';
+import Flex from '~/components/core/Flex';
+import * as css from './index.styles';
+
+interface Driver {
+  src: string;
+  name: string;
+  vehicle: string;
+  earnings: number;
+  distance: number;
+}
+
+interface TopDriversProps {
+  drivers: Driver[];
+}
 
 const fixtures = {
   drivers: Array.from(Array(6)).map(() => faker.image.avatar()),
 };
 
-export const renderCustomizedLabel:
-  | ContentRenderer<PieLabelRenderProps>
-  | boolean = ({ index }) =>
+export const renderCustomizedLabel = ({
+  cx,
+  cy,
+  index,
+}: PieLabelRenderProps): ReactNode =>
   index === 0 ? (
     <>
       <text
@@ -31,12 +40,10 @@ export const renderCustomizedLabel:
         fontSize="48"
         fontWeight="300"
         letterSpacing="-0.600000024"
-        x="50%"
-        y="50%"
+        x={cx}
+        y={cy - 5}
       >
-        <tspan x="75" y="140">
-          86
-        </tspan>
+        <tspan textAnchor="middle">86</tspan>
       </text>
       <text
         dominantBaseline="central"
@@ -45,13 +52,11 @@ export const renderCustomizedLabel:
         fontSize="13"
         fontWeight="normal"
         letterSpacing="1.213333"
-        x="50%"
-        y="50%"
       >
-        <tspan x="62" y="162">
+        <tspan dy={15} textAnchor="middle" x={cx} y={cy}>
           OPERATING
         </tspan>
-        <tspan x="78" y="177">
+        <tspan dy={30} textAnchor="middle" x={cx} y={cy}>
           SCORE
         </tspan>
       </text>
@@ -59,15 +64,15 @@ export const renderCustomizedLabel:
   ) : null;
 
 export const TopDrivers: FunctionComponent<TopDriversProps> = ({ drivers }) => (
-  <Layout.Card css={css.topDrivers} heading="Top Drivers">
+  <Card css={css.topDrivers} heading="Top Drivers">
     {drivers.map(({ distance, earnings, name, src, vehicle }, i) => (
       <div css={css.topDriver} key={`${earnings}-${distance}`}>
         <div css={css.topDriverRank(i + 1)}>
           <Avatar
             alt={faker.name.findName()}
             css={css.topDriverAvatar}
-            round
             src={src}
+            variant="rounded"
           />
         </div>
         <div css={css.topDriverDetails}>
@@ -82,92 +87,87 @@ export const TopDrivers: FunctionComponent<TopDriversProps> = ({ drivers }) => (
         </div>
       </div>
     ))}
-  </Layout.Card>
+  </Card>
 );
 
-export const Welcome: FunctionComponent = () => (
-  <Layout.Card css={css.welcome} fullWidth>
-    <ResponsiveContainer width={203.5}>
-      <PieChart>
-        <Pie
-          cx="50%"
-          cy="64%"
-          data={Array(41)
-            .fill(41)
-            .map(() => ({
-              name: 'score',
-              value: 1,
-              fill: '#e0e7ff',
-            }))}
-          dataKey="value"
-          innerRadius={66}
-          outerRadius={69}
-          startAngle={190}
-          paddingAngle={3}
-          endAngle={-10}
-        />
-        <Pie
-          cx="50%"
-          cy="64%"
-          data={Array(41)
-            .fill(41)
-            .map((_, i) => ({
-              name: 'score',
-              value: 1,
-              fill: (() => {
-                const value = i + 1;
-                if (value + (1 % 2)) {
-                  if (value <= 33) {
-                    return Global.theme.colors.blue;
-                  }
+const IndexPage: NextPage = () => {
+  const { palette } = useTheme();
 
-                  return '#e0e7ff';
-                }
+  return (
+    <>
+      <Helmet>
+        <title>Velocity | Dashboard</title>
+      </Helmet>
+      <Container>
+        <Flex>
+          <Flex basis="50%" wrap>
+            <Card>
+              <Flex alignItems="center">
+                <PieChart height={156} width={224}>
+                  <Pie
+                    cy={100}
+                    data={Array(41)
+                      .fill(41)
+                      .map(() => ({
+                        name: 'score',
+                        value: 1,
+                        fill: palette.secondary,
+                      }))}
+                    dataKey="value"
+                    innerRadius={66}
+                    outerRadius={69}
+                    startAngle={190}
+                    paddingAngle={3}
+                    endAngle={-10}
+                  />
+                  <Pie
+                    cy={100}
+                    data={Array(41)
+                      .fill(41)
+                      .map((_, i) => ({
+                        name: 'score',
+                        value: 1,
+                        fill: (() => {
+                          const value = i + 1;
+                          if (value + (1 % 2)) {
+                            if (value <= 33) {
+                              return palette.accent;
+                            }
 
-                return Global.theme.colors.white;
-              })(),
-            }))}
-          dataKey="value"
-          paddingAngle={3}
-          innerRadius={75}
-          outerRadius={101}
-          startAngle={190}
-          endAngle={-10}
-          label={renderCustomizedLabel}
-          labelLine={false}
-        />
-      </PieChart>
-    </ResponsiveContainer>
-    <div css={css.welcomeContent}>
-      <h2 css={css.welcomeHeading}>Welcome to Velocity</h2>
-      <p css={css.welcomeText}>
-        All cars are operating well. There were 1,233 trips since your last
-        login.
-      </p>
-    </div>
-  </Layout.Card>
-);
+                            return '#e0e7ff';
+                          }
 
-const HomePage: NextPage = () => (
-  <>
-    <Helmet>
-      <title>Velocity | Dashboard</title>
-    </Helmet>
-    <Layout.Page>
-      <Layout.Row>
-        <Layout.CardGroup>
-          <Welcome />
-          <Layout.Card />
-          <Layout.Card />
-        </Layout.CardGroup>
-        <Layout.CardGroup>
-          <Layout.Card />
-        </Layout.CardGroup>
-      </Layout.Row>
-      <Layout.Row>
-        <Layout.Card />
-      </Layout.Row>
-      <Layout.Row>
+                          return palette.neutral[50];
+                        })(),
+                      }))}
+                    dataKey="value"
+                    paddingAngle={3}
+                    innerRadius={75}
+                    outerRadius={101}
+                    startAngle={190}
+                    endAngle={-10}
+                    label={renderCustomizedLabel}
+                    labelLine={false}
+                  />
+                </PieChart>
+
+                <div css={css.welcomeContent}>
+                  <h2 css={css.welcomeHeading}>Welcome to Velocity</h2>
+                  <p css={css.welcomeText}>
+                    All cars are operating well. There were 1,233 trips since
+                    your last login.
+                  </p>
+                </div>
+              </Flex>
+            </Card>
+            <Card />
+            <Card />
+          </Flex>
+          <Flex basis="50%">
+            <Card />
+          </Flex>
+        </Flex>
+        <Card />
         <TopDrivers
           drivers={[
             {
@@ -214,11 +214,11 @@ const HomePage: NextPage = () => (
             },
           ]}
         />
-        <Layout.Card />
-        <Layout.Card />
-      </Layout.Row>
-    </Layout.Page>
-  </>
-);
+        <Card />
+        <Card />
+      </Container>
+    </>
+  );
+};
 
-export default HomePage;
+export default IndexPage;

@@ -1,0 +1,93 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Drawer anchors to the left 1`] = `
+.emotion-0 {
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  padding: 20px 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  -webkit-transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1200;
+  left: 0;
+  width: 80px;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="drawer"
+  />
+</div>
+`;
+
+exports[`Drawer anchors to the right 1`] = `
+.emotion-0 {
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  padding: 20px 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  -webkit-transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1200;
+  right: 0;
+  width: 80px;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="drawer"
+  />
+</div>
+`;
+
+exports[`Drawer expands when opened 1`] = `
+.emotion-0 {
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  padding: 20px 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  -webkit-transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1200;
+  left: 0;
+  width: 215px;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="drawer"
+  />
+</div>
+`;
+
+exports[`Drawer is closed by default 1`] = `
+.emotion-0 {
+  position: fixed;
+  top: 80px;
+  bottom: 0;
+  padding: 20px 0;
+  background-color: #fff;
+  overflow-x: hidden;
+  -webkit-transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1200;
+  left: 0;
+  width: 80px;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="drawer"
+  />
+</div>
+`;

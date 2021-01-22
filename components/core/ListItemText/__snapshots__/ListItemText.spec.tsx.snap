@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItemText renders content 1`] = `
+.emotion-0 {
+  margin-left: 16px;
+}
+
+<div>
+  <span
+    class="emotion-0"
+    data-testid="listitemtext"
+  >
+    The SMS program is down, synthesize the redundant feed so we can synthesize the SQL hard drive!
+  </span>
+</div>
+`;

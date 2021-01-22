@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Container renders content 1`] = `
+.emotion-0 {
+  position: relative;
+  max-width: 1360px;
+  padding: 64px 110px;
+}
+
+<div>
+  <div
+    class="emotion-0"
+    data-testid="container"
+  >
+    The SMS program is down, synthesize the redundant feed so we can synthesize the SQL hard drive!
+  </div>
+</div>
+`;
+
+exports[`Container renders content with heading 1`] = `
+.emotion-0 {
+  margin: 0 0 24px;
+}
+
+.emotion-1 {
+  position: relative;
+  max-width: 1360px;
+  padding: 64px 110px;
+}
+
+<div>
+  <h1
+    class="emotion-0"
+    data-testid="container-heading"
+  >
+    You can't input the array without navigating the redundant GB alarm!
+  </h1>
+  <div
+    class="emotion-1"
+    data-testid="container"
+  >
+    You can't quantify the interface without parsing the neural ADP feed!
+  </div>
+</div>
+`;

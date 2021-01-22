@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Fab renders button 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  height: 70px;
+  padding: 0;
+  width: 70px;
+  background-color: #2e5bff;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  -webkit-transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.emotion-0:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.emotion-0:focus {
+  outline: 0;
+}
+
+.emotion-0:enabled:hover {
+  background-color: #002bc7;
+}
+
+<div>
+  <button
+    class="emotion-0"
+    data-testid="fab"
+    type="button"
+  />
+</div>
+`;
